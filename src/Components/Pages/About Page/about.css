@@ -1,0 +1,23 @@
+.text_style{
+    color: #0c5460;
+}
+.alert{
+    margin-bottom: 2rem;
+    padding: 1.4rem 1.5rem;
+    border-radius: 0;
+}
+.alert_info{    
+color: #0c5460;
+background-color: #d1ecf1;
+border-color: #bee5eb;
+font-size: 23px;
+font-weight: 500;
+}
+.about_company{
+font-family: 'Poppins', sans-serif;
+font-size: 1rem;
+line-height: 1.8;
+}
+.team_card{
+    display: inline;
+}

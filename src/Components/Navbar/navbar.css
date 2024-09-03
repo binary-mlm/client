@@ -1,0 +1,20 @@
+.item_nav{
+ 
+  display: inline;
+  padding: 4px 8px;
+  
+  font-size: 20px;
+  font-family:'Barlow', sans-serif;
+  right: 23px;
+}
+.item_nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.item_nav :hover{
+
+  color:#fdd922 ;
+}
+.navbarmenu{
+    background-color: #157ed2;
+}
