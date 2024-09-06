@@ -34,8 +34,27 @@ Text Domain:  Marazzo
   display: inline-block;
   vertical-align: top;
 }
+.text{
+  font-size: 17px;
+}
 ul {
   list-style: none;
+}
+.buybutton{
+  background-color: #157ed2;
+  color: white;
+}
+.tablist{
+  font-size: 15px;;
+}
+.section_title{
+  color: white;
+  background-color:#157ed2;;
+  padding: 1%;
+}
+.productdescrip{
+  font-size: 16px;
+  padding: 1%;
 }
 a {
   -webkit-transition: all 0.2s linear 0s;
@@ -5678,7 +5697,8 @@ font-size: 24px;
 .table > tfoot > tr > td {
   vertical-align: middle;
   border: none;
-  padding: 30px;
+  background-color: transparent;
+  /* padding: 30px; */
 }
 .body-content .my-wishlist-page .my-wishlist table tbody .close-btn a,
 .body-content .my-wishlist-page .my-wishlist table tbody .close-btn a:hover {

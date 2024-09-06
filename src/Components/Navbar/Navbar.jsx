@@ -24,8 +24,16 @@ const Navbar = () => {
         <li className="nav-item item_nav">
           <a className="nav-link" href="#">Compensation Plan</a>
         </li>
-        <li className="nav-item item_nav">
-          <a className="nav-link" href="#">Products</a>
+       
+        <li className="nav-item dropdown item_nav ms-3">
+          <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           All Products
+          </a>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li className='subitem'><a className="dropdown-item" href="/product">Personal care</a></li>
+            <li className='subitem'><a className="dropdown-item " href="/product">Home care</a></li>
+            <li className='subitem'><a className="dropdown-item " href="/product">Animal care</a></li>
+          </ul>
         </li>
         <li className="nav-item item_nav">
           <a className="nav-link" href="/signup">Join us</a>

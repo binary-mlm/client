@@ -6,6 +6,7 @@ import Contactus from './Components/Pages/Contactus/Contactus';
 import Login from "./Components/Pages/Login page/Login";
 import Signup from './Components/Pages/Signup_page/Signup';
 import Productview from "./Components/Productview/Productview";
+import Product from "./Components/Pages/Productpage/Product";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="/signup" element={<Userlayout><Signup/></Userlayout>} />
       <Route path="/signup" element={<Userlayout><Signup/></Userlayout>} />
       <Route path="/productview" element={<Userlayout><Productview/></Userlayout>} />
+      <Route path="/product" element={<Userlayout><Product/></Userlayout>} />
       </Routes>
     </Router>
     </>
