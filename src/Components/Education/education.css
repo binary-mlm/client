@@ -1,0 +1,19 @@
+.education_sectioin{
+    color: #202222;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.education{
+    padding-left: 10%;
+    padding-right: 10px;
+}
+.trainer{
+    background: #1860ac;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-left: 9%;
+    margin-right: 15%;
+}

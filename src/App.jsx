@@ -7,6 +7,8 @@ import Login from "./Components/Pages/Login page/Login";
 import Signup from './Components/Pages/Signup_page/Signup';
 import Productview from "./Components/Productview/Productview";
 import Product from "./Components/Pages/Productpage/Product";
+import Brand from './Components/Brand_page/Brand';
+import Education from './Components/Education/Education';
 
 
 function App() {
@@ -20,9 +22,10 @@ function App() {
       <Route path="/contactus" element={<Userlayout><Contactus/></Userlayout>} />
       <Route path="/login" element={<Userlayout><Login/></Userlayout>} />
       <Route path="/signup" element={<Userlayout><Signup/></Userlayout>} />
-      <Route path="/signup" element={<Userlayout><Signup/></Userlayout>} />
       <Route path="/productview" element={<Userlayout><Productview/></Userlayout>} />
       <Route path="/product" element={<Userlayout><Product/></Userlayout>} />
+      <Route path="/brand" element={<Userlayout><Brand/></Userlayout>} />
+      <Route path="/education" element={<Userlayout><Education/></Userlayout>} />
       </Routes>
     </Router>
     </>

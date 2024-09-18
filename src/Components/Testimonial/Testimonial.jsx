@@ -30,7 +30,6 @@ const Testimonial = ({users}) => {
       <Slider {...settings}>
         {users.map((user) => (
           <>
-           
           <div className="item ">
                 <div className='container newproduct p-3 ms-2'>
               <div className="avatar" ><img src={user.image} className='rounded-full mx-auto' alt="Image"/></div>

@@ -10,20 +10,17 @@ const Product = () => {
         }
 
   ]
- 
-
-
-
   
   return (
  <>
- <div className='container'>
+
 <img src={banner} alt='noimg'/>
-   </div>
-   
    <div className="row">
-   <div className="col-lg-3">
+   <div className="col-lg-3 " >
     <Category/>
+   </div>
+   <div className='col-lg-7'>
+   <h5>hiiiii</h5>
    </div>
    </div>
 
@@ -32,5 +29,4 @@ const Product = () => {
  </>
   )
 }
-
 export default Product

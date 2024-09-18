@@ -24,7 +24,6 @@ const Navbar = () => {
         <li className="nav-item item_nav">
           <a className="nav-link" href="#">Compensation Plan</a>
         </li>
-       
         <li className="nav-item dropdown item_nav ms-3">
           <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            All Products
@@ -35,6 +34,14 @@ const Navbar = () => {
             <li className='subitem'><a className="dropdown-item " href="/product">Animal care</a></li>
           </ul>
         </li>
+        <li className="nav-item item_nav">
+          <a className="nav-link" href="/brand">Brands</a>
+        </li>
+        <li className="nav-item item_nav">
+          <a className="nav-link" href="/education">Education</a>
+        </li>
+       
+       
         <li className="nav-item item_nav">
           <a className="nav-link" href="/signup">Join us</a>
         </li>
@@ -55,9 +62,7 @@ const Navbar = () => {
           </ul>
         </li> */}
       </ul>
-      <div className="navbar-text item" style={{color:"yellow"}} >
-        Navbar text with an inline element
-      </div>
+     
     </div>
   </div>
 </nav>
