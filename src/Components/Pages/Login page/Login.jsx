@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import pic from "../../../assets/images/login.png"
+import { useNavigate } from 'react-router-dom'
 
 import "./login.css"
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [userId, setUserid] = useState();
+  const [password, setPassword] = useState();
+  const handlesubmit =() => {
+    const userid="12345";
+    const pass_word ="pass"
+    if(userid===userId && pass_word===password){
+      alert("login successful");
+      navigate('/userdashboard')
+
+    }else{
+      alert("Invalid user id or password");
+    }
+    
+    // alert("login successful");
+  }
   return (
    <>
     <section >
@@ -29,15 +46,15 @@ const Login = () => {
 
                         <div className="form-group  mb-4">
                           <label className="" htmlFor="exampleInputEmail1">User ID</label>
-                          <input type="email" className="form-control form-control-lg" name='email' placeholder="Enter Your User ID" />
+                          <input type="email" className="form-control " name='email' placeholder="Enter Your User ID" onChange={e => setUserid(e.target.value)}  />
                           </div>
                         <div className="form-group mb-4">
                           <label className="" htmlFor="exampleInputEmail1">Password</label>
-                          <input type="Password" className="form-control form-control-lg" id="password" name='password'  placeholder="Enter  Your Password" />
+                          <input type="Password" className="form-control" id="password" name='password'  placeholder="Enter  Your Password" onChange={e =>setPassword(e.target.value)}/>
                         </div>
 
                         <div className="pt-1 mb-4 text-center">
-                          <button className="btn-primary btn-lg w-50" type="submit">Login</button>
+                          <button className="btn-primary btn-lg w-50" onClick={handlesubmit} type="submit">Login</button>
                         </div>
                         <div className="row">
                         <div className='col-md-6'>

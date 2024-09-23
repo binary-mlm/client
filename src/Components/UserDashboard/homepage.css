@@ -1,0 +1,36 @@
+.business{
+    background-color: #44a5bd;
+    color: black;
+    padding: 1%;
+    border-radius: 10px;
+    width: 25%;
+    font-size: 15px;
+}
+.item{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #1f1f1f;
+}
+.businessmonth{
+background-color: rgb(48, 201, 48);
+color: black;
+padding: 1%;
+border-radius: 10px;
+width: 25%;
+font-size: 15px;
+}
+.card_item{
+    background-color: white;
+    color: black;
+    padding: 1%;
+    border-radius: 10px;
+    width: 25%;
+    font-size: 15px;
+}
+.referral{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+}

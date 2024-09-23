@@ -9,7 +9,10 @@ import Productview from "./Components/Productview/Productview";
 import Product from "./Components/Pages/Productpage/Product";
 import Brand from './Components/Brand_page/Brand';
 import Education from './Components/Education/Education';
-
+import Logistic from './Components/Logistic/Logistic';
+import Dashboardlayout from './Components/UserDashboard/Dashboardlayout';
+import Homepage from './Components/UserDashboard/Homepage';
+import Welcomeuser from './Components/UserDashboard/Welcomeuser';
 
 function App() {
 
@@ -26,6 +29,9 @@ function App() {
       <Route path="/product" element={<Userlayout><Product/></Userlayout>} />
       <Route path="/brand" element={<Userlayout><Brand/></Userlayout>} />
       <Route path="/education" element={<Userlayout><Education/></Userlayout>} />
+      <Route path="/logistic" element={<Userlayout><Logistic/></Userlayout>} />
+      <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
+      <Route path="/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />
       </Routes>
     </Router>
     </>
