@@ -31,7 +31,7 @@ const Userheader = () => {
         <li className='p-2 '>
         <div className='d-flex'>
         <img src={lead} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Genealogy</a></div></li>
+        <a  href="/genealogy" className='fw-bold ms-2 item'>Genealogy</a></div></li>
         <li className='p-2 '>
         <div className='d-flex'>
         <img src={task} width={20} height={24} className='mt-2'/>

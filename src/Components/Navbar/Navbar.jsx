@@ -34,9 +34,9 @@ const Navbar = () => {
             <li className='subitem'><a className="dropdown-item " href="/product">Animal care</a></li>
           </ul>
         </li>
-        <li className="nav-item item_nav">
+        {/* <li className="nav-item item_nav">
           <a className="nav-link" href="#">Women</a>
-        </li>
+        </li> */}
         <li className="nav-item item_nav">
           <a className="nav-link" href="/brand">Brands</a>
         </li>

@@ -1,25 +1,42 @@
 import React, { useState } from 'react'
 import pic from "../../../assets/images/login.png"
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
+import swal from 'sweetalert';
 
 import "./login.css"
 
 const Login = () => {
+  const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const navigate = useNavigate();
-  const [userId, setUserid] = useState();
+  const [email, setemail] = useState();
   const [password, setPassword] = useState();
-  const handlesubmit =() => {
-    const userid="12345";
-    const pass_word ="pass"
-    if(userid===userId && pass_word===password){
-      alert("login successful");
-      navigate('/userdashboard')
-
-    }else{
-      alert("Invalid user id or password");
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (email === "" || password === "") {
+      swal("Opps!", "Please fill out all required fields!", "error");
     }
-    
-    // alert("login successful");
+   
+    else {
+      
+        //  alert("submit");
+      axios.post(ROOT_URL+'/api/auth/login', { email, password })
+        .then(res => {
+          console.log(res);
+          const {userId : userId} = res.data;
+          swal("Yeah", "Login Successful!!", "success");
+          sessionStorage.setItem('userid', userId);
+            navigate('/userdashboard');
+          // navigate('/course');
+
+        })
+        .catch(err => {
+          console.log(err);
+          swal("Opps!", "Email or password icorrect!", "error");
+
+        })
+    }
   }
   return (
    <>
@@ -45,16 +62,16 @@ const Login = () => {
                         {/* <h5 className="fw-normal mb-3 pb-3">Sign into your account</h5> */}
 
                         <div className="form-group  mb-4">
-                          <label className="" htmlFor="exampleInputEmail1">User ID</label>
-                          <input type="email" className="form-control " name='email' placeholder="Enter Your User ID" onChange={e => setUserid(e.target.value)}  />
+                          <label className="mb-1" htmlFor="exampleInputEmail1">Email</label>
+                          <input type="email" className="form-control " name='email' placeholder="Enter Your email ID" onChange={e => setemail(e.target.value)}  />
                           </div>
                         <div className="form-group mb-4">
-                          <label className="" htmlFor="exampleInputEmail1">Password</label>
-                          <input type="Password" className="form-control" id="password" name='password'  placeholder="Enter  Your Password" onChange={e =>setPassword(e.target.value)}/>
+                          <label className="mb-1" htmlFor="exampleInputEmail1">Password</label>
+                          <input type="text" className="form-control" id="password" name='password'  placeholder="Enter  Your Password" onChange={e =>setPassword(e.target.value)}/>
                         </div>
 
                         <div className="pt-1 mb-4 text-center">
-                          <button className="btn-primary btn-lg w-50" onClick={handlesubmit} type="submit">Login</button>
+                          <button className="btn-primary btn-lg w-50" onClick={handleSubmit} type="submit">Login</button>
                         </div>
                         <div className="row">
                         <div className='col-md-6'>

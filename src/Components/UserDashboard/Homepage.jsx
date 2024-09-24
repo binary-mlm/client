@@ -1,6 +1,28 @@
-import React from 'react'
+import React ,{useEffect,useState}from 'react'
+import axios from 'axios';
 import './homepage.css'
 const Homepage = () => {
+  const [userdata, setUserdata] = useState([]);
+  useEffect(() => {
+    const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+    const userId = sessionStorage.getItem("userid");
+    //  console.log(token);
+   if(!userdata.length){
+    axios
+      .get(ROOT_URL + `/api/auth/findUser/${userId}`)
+      .then((res) => {
+        console.log(res);
+        setUserdata(res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+        
+      });
+    }
+  }, []);
+
+  
+
   return (
     <>
        <div className='ms-4'>
@@ -62,8 +84,13 @@ const Homepage = () => {
       <div className='card_item text-center ms-5 fw-bold'>MY TOTAL EARNING (₹)<br/>
       1,380</div>
       </div>
-      <div className='row mt-3 ms-1'>
-      <div className='col-10 referral'>My Direct Referral Link : https://myshpl.com/ibo_register.php?sponsor_code=SH2814552</div>
+      <div className='row mt-3 ms-1 mb-2'>
+      {userdata ? (<>
+        <div className='col-10 referral mb-4'><span>My Left Refferal Link: </span>{userdata.leftRefferalLink}</div>
+        <div className='col-10 referral'><span>My Right Refferal Link: </span>{userdata.rightRefferalLink}</div>
+
+      </>) : <>No link</>}
+     
       </div>
     </div>
     </>

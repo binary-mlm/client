@@ -13,6 +13,7 @@ import Logistic from './Components/Logistic/Logistic';
 import Dashboardlayout from './Components/UserDashboard/Dashboardlayout';
 import Homepage from './Components/UserDashboard/Homepage';
 import Welcomeuser from './Components/UserDashboard/Welcomeuser';
+import Genealogy from './Components/UserDashboard/Genealogy/Genealogy';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
       <Route path="/logistic" element={<Userlayout><Logistic/></Userlayout>} />
       <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
       <Route path="/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />
+      <Route path="/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
       </Routes>
     </Router>
     </>
