@@ -7,6 +7,7 @@ const Productview = () => {
   const { id } = useParams();
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const [productdetails, setproductdetail] = useState(null);
+  const navigate = useNavigate();
   useEffect(() => {
     if (!productdetails) {
     axios
@@ -20,7 +21,8 @@ const Productview = () => {
     }
   }, [id]);
   const buyhandler=()=>{
-    alert('Product added to cart')
+    // alert('Product added to cart')
+    navigate("/ordernow")
   }
   // const ProductteamInfo = [
   //   {

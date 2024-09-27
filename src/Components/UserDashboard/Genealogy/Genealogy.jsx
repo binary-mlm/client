@@ -55,14 +55,12 @@ const Genealogy = () => {
                 style={{width:"90%", height:"80%"}}
               />
             </div>
-            {/* <div className="member-footer">
+            <div className="member-footer">
               <div className="name">
-                <span>Empty</span> 
+               <a href="/usersignup"><span>Signup</span></a>  
               </div>
-              <div className="sponsorId">
-                <span>---</span> 
-              </div>
-            </div> */}
+              
+            </div>
           </div>
         </li>
       );

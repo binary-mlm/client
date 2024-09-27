@@ -21,15 +21,21 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item mb-3">
-            <Link to="/welcomeuser" className="nav-link d-flex align-items-center text-dark">
+            <Link to="/userdasboard/welcomeuser" className="nav-link d-flex align-items-center text-dark">
               <img src={lead} width={20} height={25} className="me-2" alt="Welcome" />
               Welcome
             </Link>
           </li>
           <li className="nav-item mb-3">
-            <Link to="/editprofile" className="nav-link d-flex align-items-center text-dark">
+            <Link to="/userdasboard/editprofile" className="nav-link d-flex align-items-center text-dark">
               <img src={contact} width={20} height={24} className="me-2" alt="Edit Profile" />
               Edit Profile
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/userdasboard/kycverification" className="nav-link d-flex align-items-center text-dark">
+              <img src={contact} width={20} height={24} className="me-2" alt="Edit Profile" />
+              KYC verification
             </Link>
           </li>
           <li className="nav-item mb-3">
@@ -39,7 +45,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item mb-3">
-            <Link to="/genealogy" className="nav-link d-flex align-items-center text-dark">
+            <Link to="/userdasboard/genealogy" className="nav-link d-flex align-items-center text-dark">
               <img src={lead} width={20} height={25} className="me-2" alt="Genealogy" />
               Genealogy
             </Link>

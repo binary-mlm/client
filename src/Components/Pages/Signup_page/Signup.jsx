@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import pic from '../../../assets/images/signup.png'
 import axios from 'axios';
-import swal from 'sweetalert';
+
 import { useNavigate } from 'react-router-dom';
 
 
@@ -10,32 +10,33 @@ const Signup = () => {
   const navigate = useNavigate();
   const [name, setSponsorname] = useState('')
   const [sponsorId, setSponsorid] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  // const [email, setEmail] = useState('')
+  const [city, setCity] = useState('')
 
 
   const handleSubmit = async (event) => {
+    navigate('/usersignup');
     // alert("sumit")
-    event.preventDefault();
-    if (name === "" || sponsorId === "" || email === "" || password === "") {
-        swal("Opps!", "Please fill out all required fields!", "error");
+    // event.preventDefault();
+    // if (name === "" || sponsorId === ""  || city === "") {
+    //     swal("Opps!", "Please fill out all required fields!", "error");
 
-    }
-    else {
+    // }
+    // else {
 
-        await axios.post(ROOT_URL+'/api/auth/register', { name, email, password, sponsorId })
-            .then(res => {
-                console.log(res);
-                swal("Thank You!", "Registration sucessfully completed!", "success");
-                 navigate('/login');
-            })
-            .catch(err => {
-                console.log(err);
-                swal("Error!", err.response.data.message || 'Error registering user', "error");
+    //     await axios.post(ROOT_URL+'/api/auth/register', { name, city, sponsorId })
+    //         .then(res => {
+    //             console.log(res);
+    //             swal("Thank You!", "Registration sucessfully completed!", "success");
+    //              navigate('/login');
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //             swal("Error!", err.response.data.message || 'Error registering user', "error");
                
 
-            })
-    }
+    //         })
+    // }
 
 }
 
@@ -60,22 +61,24 @@ const Signup = () => {
                           <span className="h1 fw-bold mb-0">Signup Page</span>
                         </div>
                         <div className="form-group mb-4">
+
+                          <label className="mb-1 mt-3" htmlFor="exampleInputEmail1" style={{fontSize:"15px"}}>Sponsor sponsorId</label>
+                          <div className='d-flex'>
+                          <input type="text" className="form-control w-75" id="id" name='id'  placeholder="Entersponsorid" onChange={e => setSponsorid(e.target.value)} />
+                          <button className='btn btn-primary ms-4'>Verify</button>
+                          </div>
+                        </div>
+                        <div className="form-group mb-4">
                           <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor Name</label>
                           <input type="text" className="form-control " id="name" name='name'  placeholder="Enter Your Name"  onChange={e => setSponsorname(e.target.value)} />
                         </div>
+                        
                         <div className="form-group  mb-4">
-                          <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor email</label>
-                          <input type="text" className="form-control" name='email' placeholder="Enter Your email" onChange={e => setEmail(e.target.value)} />
-                          </div>
-                        <div className="form-group  mb-4">
-                          <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor password</label>
-                          <input type="text" className="form-control" name='password' placeholder="Enter Password" onChange={e => setPassword(e.target.value)} />
+                          <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor city</label>
+                          <input type="text" className="form-control" name='city' placeholder="Enter Password" onChange={e => setCity(e.target.value)} />
                           </div>
                         
-                        <div className="form-group mb-4">
-                          <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor sponsorId</label>
-                          <input type="text" className="form-control" id="city" name='id'  placeholder="Enter Your sponsorid" onChange={e => setSponsorid(e.target.value)} />
-                        </div>
+                        
 
                         <div className="pt-1 mb-4 text-center">
                           <button className="btn-primary  w-50" type="submit"  onClick={handleSubmit}>Signup</button>

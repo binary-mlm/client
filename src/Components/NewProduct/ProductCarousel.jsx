@@ -52,11 +52,11 @@ const ProductCarousel = ({ products }) => {
                         <div className="cart clearfix animate-effect">
                           <div className="action">
                             <ul className="list-unstyled">
-                              <li className="add-cart-button btn-group">
-                                <button className="btn btn-primary icon" data-toggle="dropdown" type="button"> <i className="fa fa-shopping-cart"></i> </button>
-                                {/* <button class="btn btn-primary cart-btn" type="button">Add to cart</button> */}
+                              <li className=" btn-group">
+                                <button className="btn btn-primary" data-toggle="dropdown" type="button"> Quick view </button>
+                               
                               </li>
-                              <li className="lnk wishlist"> <a className="add-to-cart" href="/" title="Wishlist"> <i className="icon fa fa-heart"></i> </a> </li>
+                              {/* <li className="lnk wishlist"> <a className="add-to-cart" href="/" title="Wishlist"> <i className="icon fa fa-heart"></i> </a> </li> */}
                             </ul>
                           </div>   
                         </div>  

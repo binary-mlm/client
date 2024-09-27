@@ -18,7 +18,10 @@ import Associate from './Components/Associate/Associate';
 import Editprofile from './Components/UserDashboard/Editprofile/Editprofile';
 import Manufacturing from './Components/Manufacturing/Manufacturing';
 import News from './Components/News/News';
-
+import Kycverification from './Components/UserDashboard/Editprofile/Kycverification';
+import Usersignup from "./Components/Pages/Signup_page/Usersignup";
+import Ordernow from "./Components/Ordernow/Ordernow";
+import Productlist from "./Components/Productlist/Productlist";
 function App() {
 
   return (
@@ -30,19 +33,23 @@ function App() {
       <Route path="/contactus" element={<Userlayout><Contactus/></Userlayout>} />
       <Route path="/login" element={<Userlayout><Login/></Userlayout>} />
       <Route path="/signup" element={<Userlayout><Signup/></Userlayout>} />
+      <Route path="/ordernow" element={<Userlayout><Ordernow/></Userlayout>} />
+      <Route path="/usersignup" element={<Userlayout><Usersignup/></Userlayout>} />
       <Route path="/productview/:id" element={<Userlayout><Productview/></Userlayout>} />
       <Route path="/associate" element={<Userlayout><Associate/></Userlayout>} />
       <Route path="/manufacturing" element={<Userlayout><Manufacturing/></Userlayout>} />
       <Route path="/News" element={<Userlayout><News/></Userlayout>} />
       <Route path="/product" element={<Userlayout><Product/></Userlayout>} />
+      <Route path="/productlist" element={<Userlayout><Productlist/></Userlayout>} />
       <Route path="/brand" element={<Userlayout><Brand/></Userlayout>} />
       <Route path="/education" element={<Userlayout><Education/></Userlayout>} />
       <Route path="/logistic" element={<Userlayout><Logistic/></Userlayout>} />
       <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
-      <Route path="/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />
-      <Route path="/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
-      <Route path="/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
-      <Route path="/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
+      <Route path="/userdasboard/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />
+      <Route path="/userdasboard/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
+      <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
+      <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
+
       </Routes>
     </Router>
     </>
