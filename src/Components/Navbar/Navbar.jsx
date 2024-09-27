@@ -22,9 +22,9 @@ const Navbar = () => {
         </li>
         
         <li className="nav-item item_nav">
-          <a className="nav-link" href="#">Manufacturing</a>
+          <a className="nav-link" href="/manufacturing">Manufacturing</a>
         </li>
-        <li className="nav-item dropdown item_nav ms-3">
+        {/* <li className="nav-item dropdown item_nav ms-3">
           <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            All Products
           </a>
@@ -33,7 +33,7 @@ const Navbar = () => {
             <li className='subitem'><a className="dropdown-item " href="/product">Home care</a></li>
             <li className='subitem'><a className="dropdown-item " href="/product">Animal care</a></li>
           </ul>
-        </li>
+        </li> */}
         {/* <li className="nav-item item_nav">
           <a className="nav-link" href="#">Women</a>
         </li> */}
@@ -43,8 +43,29 @@ const Navbar = () => {
         <li className="nav-item item_nav">
           <a className="nav-link" href="/education">Education</a>
         </li>
+        <li className="nav-item item_nav">
+          <a className="nav-link" href="/associate">Associate with us</a>
+        </li>
+        <li className="nav-item item_nav">
+          <a className="nav-link" href="/News">News</a>
+        </li>
+        <li className="nav-item dropdown item_nav ms-4">
+          <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Social media
+          </a>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li className='subitem'><a className="dropdown-item" href="/">Facebook</a></li>
+            <li className='subitem'><a className="dropdown-item " href="/">Instagram</a></li>
+            <li className='subitem'><a className="dropdown-item " href="/">Youtube</a></li>
+          </ul>
+        </li>
        
+        
+        
        
+        <li className="nav-item item_nav">
+          <a className="nav-link" href="/logistic">Logistic Partner</a>
+        </li>
         <li className="nav-item item_nav">
           <a className="nav-link" href="/signup">Join us</a>
         </li>
@@ -53,9 +74,6 @@ const Navbar = () => {
         </li>
         <li className="nav-item item_nav">
           <a className="nav-link" href="/login">Login</a>
-        </li>
-        <li className="nav-item item_nav">
-          <a className="nav-link" href="/logistic">Logistic Partner</a>
         </li>
         {/* <li className="nav-item dropdown item">
           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

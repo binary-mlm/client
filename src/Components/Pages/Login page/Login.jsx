@@ -8,6 +8,7 @@ import "./login.css"
 
 const Login = () => {
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+  console.log(ROOT_URL);
   const navigate = useNavigate();
   const [email, setemail] = useState();
   const [password, setPassword] = useState();
@@ -33,8 +34,7 @@ const Login = () => {
         })
         .catch(err => {
           console.log(err);
-          swal("Opps!", "Email or password icorrect!", "error");
-
+          swal("Opps!", err.message, "error");
         })
     }
   }

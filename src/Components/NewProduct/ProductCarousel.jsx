@@ -2,6 +2,7 @@ import React from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+// import product1 from "../../assets/images/products/p1.jpg"; 
 const ProductCarousel = ({ products }) => {
     const settings = {
         dots: true,
@@ -28,23 +29,24 @@ const ProductCarousel = ({ products }) => {
       return (
         <div className="product-carousel mb-5">
           <Slider {...settings}>
-            {products.map((product) => (
+            {products.map((products) => (
                 <>
+                <a href={`/productview/${products._id}`}>
                 <div className="product p-3">
                         <div className="product-image">
                           <div className="image"> 
-                          <a href="/productview">
-                             <img src={product.image} width="20%" alt=""/> 
+                          
+                             <img src={products.imageURL} className='img-fluid' style={{width:"100%", height:"100%"}}  alt=""/> 
                               {/* <img src={product.hoverimage} alt="" class="hover-image"/> */}
-                          </a> 
+                          
                           </div>   
                           <div className="tag new"><span>new</span></div>
                         </div>
                        <div className="product-info mt-3">
-                          <h3 className="name text-center" ><a href="/" className='text-decoration-none '>Floral Print Buttoned</a></h3>
+                          <h3 className="name text-center" ><a href="/" className='text-decoration-none '>{products.name}</a></h3>
                           <div className="rating rateit-small"></div>
                           <div className="description"></div>
-                          <div className="product-price text-center"> <span className="price"> $450.99 </span> <span className="price-before-discount">$ 800</span> </div>
+                          <div className="product-price text-center"> <span className="price">{products.price}</span> <span className="price-before-discount">$ 800</span> </div>
                         </div>
                        
                         <div className="cart clearfix animate-effect">
@@ -59,6 +61,7 @@ const ProductCarousel = ({ products }) => {
                           </div>   
                         </div>  
                       </div>
+                      </a>
               </>
             ))}
           </Slider>

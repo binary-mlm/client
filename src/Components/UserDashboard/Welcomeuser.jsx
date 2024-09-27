@@ -10,22 +10,25 @@ function Welcomeuser() {
     const generatePDF= useReactToPrint({
         content: ()=>invoicepdf.current,
         documentTitle:"Invoice",
-        onAfterPrint:()=>alert("pdf succesfully saved")
+        // onAfterPrint:()=>alert("pdf succesfully saved")
       });
   return (
 <>
-    <div  className='invoice'>
+    <div  className='invoice mt-5'>
     <div  className='container'>
+    <div className='row'>
+        <div className='col-lg-12'>
    
     
-        <div ref={invoicepdf} className='card'>
+        <div ref={invoicepdf} >
+        <div className='card'>
         <div className='card-body'>
         <div className='double-border'>
         <div  className='row'>
-        <div className='col-lg-2'>
+        {/* <div className='col-sm-2'>
         <div><img src={pic} /></div>
-        </div>
-        <div className='col-lg-8'>
+        </div> */}
+        <div className='col-lg-12'>
         <div className='container mt-4'>
         <h5 className='fw-bold'> Hello Mr. AVIJIT CHAKRABORTY</h5>
             <p style={{fontSize:"14px"}}>
@@ -40,9 +43,7 @@ Thank you for being a part of SHPL. By doing so, you have taken one of the most 
         <p style={{fontSize:"14px"}}><strong style={{fontSize:"14px"}}>Gopal Kundu<br/>CMD, SHPL</strong></p>
         </div>
        </div>
-        <div className='col-lg-2'>
-            <img src={pic2}/>
-        </div>
+        
 
         </div>
         </div>
@@ -52,7 +53,9 @@ Thank you for being a part of SHPL. By doing so, you have taken one of the most 
     </div>
 
     </div>
-
+    </div>
+    </div>
+</div>
     
     
     <div className='text-center'>

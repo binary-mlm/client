@@ -14,6 +14,10 @@ import Dashboardlayout from './Components/UserDashboard/Dashboardlayout';
 import Homepage from './Components/UserDashboard/Homepage';
 import Welcomeuser from './Components/UserDashboard/Welcomeuser';
 import Genealogy from './Components/UserDashboard/Genealogy/Genealogy';
+import Associate from './Components/Associate/Associate';
+import Editprofile from './Components/UserDashboard/Editprofile/Editprofile';
+import Manufacturing from './Components/Manufacturing/Manufacturing';
+import News from './Components/News/News';
 
 function App() {
 
@@ -26,7 +30,10 @@ function App() {
       <Route path="/contactus" element={<Userlayout><Contactus/></Userlayout>} />
       <Route path="/login" element={<Userlayout><Login/></Userlayout>} />
       <Route path="/signup" element={<Userlayout><Signup/></Userlayout>} />
-      <Route path="/productview" element={<Userlayout><Productview/></Userlayout>} />
+      <Route path="/productview/:id" element={<Userlayout><Productview/></Userlayout>} />
+      <Route path="/associate" element={<Userlayout><Associate/></Userlayout>} />
+      <Route path="/manufacturing" element={<Userlayout><Manufacturing/></Userlayout>} />
+      <Route path="/News" element={<Userlayout><News/></Userlayout>} />
       <Route path="/product" element={<Userlayout><Product/></Userlayout>} />
       <Route path="/brand" element={<Userlayout><Brand/></Userlayout>} />
       <Route path="/education" element={<Userlayout><Education/></Userlayout>} />
@@ -34,6 +41,8 @@ function App() {
       <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
       <Route path="/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />
       <Route path="/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
+      <Route path="/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
+      <Route path="/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
       </Routes>
     </Router>
     </>

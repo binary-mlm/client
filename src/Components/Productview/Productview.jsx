@@ -1,58 +1,75 @@
-import React from 'react';
-import pic1 from "../../assets/images/products/alovera.jpg";
-
+import React,{ useState, useEffect} from 'react';
+// import pic1 from "../../assets/images/products/alovera.jpg";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Productview = () => {
+  const { id } = useParams();
+  const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+  const [productdetails, setproductdetail] = useState(null);
+  useEffect(() => {
+    if (!productdetails) {
+    axios
+      .get(ROOT_URL + `/api/user/getProductById/${id}`)
+      .then((productdetail) => {
+        console.log(productdetail.data.product);
+        setproductdetail(productdetail.data.product);
+        console.log(productdetails); 
+      })
+      .catch((err) => console.log(err));
+    }
+  }, [id]);
   const buyhandler=()=>{
     alert('Product added to cart')
   }
-  const ProductteamInfo = [
-    {
-      Product_pic: [pic1],
-      product_name: "Neem Aloevera Shampoo",
-      product_mrp: 990,
-      Product_Category: "Personalcare",
-      Sub_Category:"Haircare",
-      Pack_Size: "200ml",
-      Product_description: "The aloevera and neem condition the hair, strengthen the roots and make the hair silky. It also helps the hair grow faster. Aloe & Neem Keep Dandruff Away. It helps your hair to be smooth, shiny and less frizzy.",
-      Ingredients:"Neem & aloevera extract.",
-      Product_Benefits:"Nourishes hair root and scalp andimproves blood circulation to hair follicles & stimulates growth of hair.",
-      How_to_Use:"Apply to wet hair, work up a rich lather, rinse throughly, repeat if necessary.",
-      Disclaimer:"Make sure to read the label before using. This product is not intended to diagnose, treat or cure any disease. Don't exceed the recommended amount. Keep it out of children's reach. Store in a cool, dry spot away from sunlight. Keep away from heat, light, and moisture. To be used above the age of 12 years."
-    }
+  // const ProductteamInfo = [
+  //   {
+  //     Product_pic: [pic1],
+  //     product_name: "Neem Aloevera Shampoo",
+  //     product_mrp: 990,
+  //     Product_Category: "Personalcare",
+  //     Sub_Category:"Haircare",
+  //     Pack_Size: "200ml",
+  //     Product_description: "The aloevera and neem condition the hair, strengthen the roots and make the hair silky. It also helps the hair grow faster. Aloe & Neem Keep Dandruff Away. It helps your hair to be smooth, shiny and less frizzy.",
+  //     Ingredients:"Neem & aloevera extract.",
+  //     Product_Benefits:"Nourishes hair root and scalp andimproves blood circulation to hair follicles & stimulates growth of hair.",
+  //     How_to_Use:"Apply to wet hair, work up a rich lather, rinse throughly, repeat if necessary.",
+  //     Disclaimer:"Make sure to read the label before using. This product is not intended to diagnose, treat or cure any disease. Don't exceed the recommended amount. Keep it out of children's reach. Store in a cool, dry spot away from sunlight. Keep away from heat, light, and moisture. To be used above the age of 12 years."
+  //   }
 
-  ]
-  const renderproduct=(product)=>{
+  // ]
+  const renderproduct=(productdetails)=>{
     return(
         <>
         <div className='row'>
           <div className='col-4'>
-            <img className='img-fluid' src= {pic1} alt='noimage'/>
+            <img className='img-fluid' src= {productdetails.imageURL} alt='noimage'/>
           </div>
           <div className='col-8'>
           <div className='container'>
           <div>
-            <span className='h1 fw-bold'>{product.product_name}</span>
+            <span className='h1 fw-bold'>{productdetails.name}</span>
           </div>
           <div className='mt-4'>
-            <span className='h4'>MRP: <i className='fa fa-inr'></i> <span className='h4'>{product.product_mrp}</span></span>
+            <span className='h4'>MRP: <i className='fa fa-inr'></i> <span className='h4'>{productdetails.price}</span></span>
           </div>
          <table className='table mt-4 h5'>
          <tbody>
          <tr>
-          <th className='h6 fw-bold' width='30%'>Product Category</th>
+          <th className='h6 fw-bold' width='30%'>Product Stock</th>
           <td width='5%'>:</td>
-          <td>{product. Product_Category}</td>
+          <td>{productdetails.stock}</td>
          </tr>
          <tr>
-          <th className='h6 fw-bold' width='30%'>Sub Category</th>
+          <th className='h6 fw-bold' width='30%'>BV points</th>
           <td width='5%'>:</td>
-          <td>{product.Sub_Category}</td>
+          <td>{productdetails.bvPoints}</td>
          </tr>
+         
          <tr>
-          <th className='h6 fw-bold' width='30%'>Pack Size</th>
+          <th className='h6 fw-bold' width='30%'>Category</th>
           <td width='5%'>:</td>
-          <td className=''>{product.Pack_Size}</td>
+          <td className=''>{productdetails.category[0]}</td>
          </tr>
          <tr>
           <th className='h6 fw-bold' width='30%'>Product Availability</th>
@@ -62,7 +79,7 @@ const Productview = () => {
          </tbody>
          </table>
          <div>
-          <button type="submit" className='btn buybutton w-25' onClick={buyhandler}><i class="fa fa-shopping-cart me-2" ></i>BUY NOW</button>
+          <button type="submit" className='btn btn-primary w-25' onClick={buyhandler}><i class="fa fa-shopping-cart me-2" ></i>BUY NOW</button>
          </div>
           </div>
 
@@ -92,23 +109,23 @@ const Productview = () => {
   <div className="tab-content">
     <div id="home" className="container tab-pane active"><br/>
       <h4>PRODUCT DESCRIPTION</h4>
-      <p className='text'>{product.Product_description}</p>
+      <p className='text'>{productdetails.description}</p>
     </div>
     <div id="menu1" className="container tab-pane fade"><br/>
       <h4>INGREDIENTS</h4>
-      <p className='text'>{product.Ingredients}</p>
+      <p className='text'>hiii</p>
     </div>
     <div id="menu2" className="container tab-pane fade"><br/>
       <h4 className='mt-2'>PRODUCT BENEFITS</h4>
-      <p className='text'>{product.Product_Benefits}</p>
+      <p className='text'></p>
     </div>
     <div id="menu3" className="container tab-pane fade"><br/>
       <h4 className='mt-2'>PRODUCT BENEFITS</h4>
-      <p className='text'>{product.How_to_Use}</p>
+      <p className='text'></p>
     </div>
     <div id="menu4" className="container tab-pane fade"><br/>
       <h4 className='mt-2'>PRODUCT BENEFITS</h4>
-      <p className='text'>{product.Disclaimer}</p>
+      <p className='text'></p>
     </div>
   </div>
 
@@ -142,7 +159,14 @@ const Productview = () => {
   <>
     <div className='my-4'>
         <div className='container my-4'>
-        {ProductteamInfo.map(renderproduct)}
+        {
+          productdetails? (
+            renderproduct(productdetails)
+          ) : (
+            <div className='text-center'>Loading...</div>
+          )
+        }
+        {/* {productdetails.map(renderproduct)} */}
         </div>
         
     </div>

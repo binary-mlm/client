@@ -1,75 +1,91 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import home from "../../assets/images/Home.png";
 import lead from "../../assets/images/lead.png";
 import contact from "../../assets/images/contact.png";
 import quote from "../../assets/images/quote.png";
 import task from "../../assets/images/task.png";
-const Userheader = () => {
-  return (
-    <>
-   
-    <div>
-      <ul style={{backgroundColor:"white",color:"black" }}>
-        <li className='p-2'>
-        <div className='d-flex'>
-        <img src={home} width={20} height={25} className='mt-2' />
-        <a style={{color:"#E52CF0"}} className='fw-bold ms-2 item' href="/userdashboard">Home</a></div></li>
-        
-        <li className='p-2'>
-        <div className='d-flex'>
-        <img src={lead} width={20} height={25} className='mt-2'/>
-        <a  href="/welcomeuser" className='fw-bold ms-2 item'>Welcome</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={contact} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Edit profile</a></div></li>
-          
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={quote} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Reports</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={lead} width={20} height={24} className='mt-2'/>
-        <a  href="/genealogy" className='fw-bold ms-2 item'>Genealogy</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={task} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Payout</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={contact} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Rank achievers</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={contact} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Logistic partners</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={contact} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Wall of fame</a></div></li>
-       
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={contact} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Tour achievers</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={contact} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Resources</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={contact} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>About</a></div></li>
-        <li className='p-2 '>
-        <div className='d-flex'>
-        <img src={contact} width={20} height={24} className='mt-2'/>
-        <a  href="/" className='fw-bold ms-2 item'>Logout</a></div></li>
-      </ul>
-    </div>
-    </>
-    
-  )
-}
 
-export default Userheader
+
+const Sidebar = () => {
+  return (
+    <div className="d-flex">
+      {/* Sidebar container */}
+      <div className="sidebar bg-light p-3" id="sidebar">
+        <h4 className="fw-bold mb-4">Dashboard</h4>
+        <ul className="nav flex-column">
+          <li className="nav-item mb-3">
+            <Link to="/userdashboard" className="nav-link d-flex align-items-center text-dark">
+              <img src={home} width={20} height={25} className="me-2" alt="Home" />
+              Home
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/welcomeuser" className="nav-link d-flex align-items-center text-dark">
+              <img src={lead} width={20} height={25} className="me-2" alt="Welcome" />
+              Welcome
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/editprofile" className="nav-link d-flex align-items-center text-dark">
+              <img src={contact} width={20} height={24} className="me-2" alt="Edit Profile" />
+              Edit Profile
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/reports" className="nav-link d-flex align-items-center text-dark">
+              <img src={quote} width={20} height={24} className="me-2" alt="Reports" />
+              Reports
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/genealogy" className="nav-link d-flex align-items-center text-dark">
+              <img src={lead} width={20} height={25} className="me-2" alt="Genealogy" />
+              Genealogy
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/payout" className="nav-link d-flex align-items-center text-dark">
+              <img src={task} width={20} height={24} className="me-2" alt="Payout" />
+              Payout
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/rank-achievers" className="nav-link d-flex align-items-center text-dark">
+              <img src={contact} width={20} height={24} className="me-2" alt="Rank Achievers" />
+              Rank Achievers
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/logistics" className="nav-link d-flex align-items-center text-dark">
+              <img src={contact} width={20} height={24} className="me-2" alt="Logistics" />
+              Logistic Partners
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/resources" className="nav-link d-flex align-items-center text-dark">
+              <img src={contact} width={20} height={24} className="me-2" alt="Resources" />
+              Resources
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/about" className="nav-link d-flex align-items-center text-dark">
+              <img src={contact} width={20} height={24} className="me-2" alt="About" />
+              About
+            </Link>
+          </li>
+          <li className="nav-item mb-3">
+            <Link to="/logout" className="nav-link d-flex align-items-center text-dark">
+              <img src={contact} width={20} height={24} className="me-2" alt="Logout" />
+              Logout
+            </Link>
+          </li>
+        </ul>
+      </div>
+      
+      
+    </div>
+  );
+};
+
+export default Sidebar;

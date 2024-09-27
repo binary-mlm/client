@@ -27,7 +27,7 @@ const Homepage = () => {
     <>
        <div className='ms-4'>
       <div>
-        <h1 className='text-center mt-2 fw-bold'>Welcome To User  Dashboard</h1>
+        <h1 className='text-center mt-5 fw-bold'>Welcome To User  Dashboard</h1>
       </div>
       <div className='d-flex mt-5'>
       <div className='business text-center fw-bold'>MY BUSINESS DATA</div>
