@@ -75,7 +75,7 @@ const Signup = () => {
                         
                         <div className="form-group  mb-4">
                           <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor city</label>
-                          <input type="text" className="form-control" name='city' placeholder="Enter Password" onChange={e => setCity(e.target.value)} />
+                          <input type="text" className="form-control" name='city' placeholder="Enter City" onChange={e => setCity(e.target.value)} />
                           </div>
                         
                         

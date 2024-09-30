@@ -1,10 +1,10 @@
 import React ,{useState, useEffect} from 'react'
-import "./usersignup.css"
+import "../Pages/Signup_page/usersignup.css"
+import { useParams } from "react-router-dom";
 import axios from 'axios'
-import swal from 'sweetalert'
-import { useNavigate } from 'react-router-dom';
-const Usersignup = () => {
-  const [sponsorId, setsponsorId] = useState('')
+import swal from 'sweetalert';
+const Signupleft = () => {
+
   const [registrationType, setregistrationType] = useState('')
   const [gender, setgender] = useState('')
   const [name, setname] = useState('')
@@ -22,10 +22,9 @@ const Usersignup = () => {
 
     const [token, setToken] = useState(null);
     const [state, setSelectedState] = useState('');
-    const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-    const navigate = useNavigate();
-   
+    const { parentSponsorId } = useParams();
     const API_TOKEN = 'C2dy7lLSGxWm63T6Oem2N9jeUlaE5Y9M59MInjwjc-FksoqRsWk0pa-iKk1LzSfEFy0';
+     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const handleDropdownChange_city = (event) => {
         setSelectedcities(event.target.value);
     };
@@ -39,6 +38,7 @@ const Usersignup = () => {
     const handleChange_genderbutton = (event) => {
       setgender(event.target.value);
     };
+   
     useEffect(() => {
         const getAuthToken = async () => {
             try {
@@ -108,13 +108,14 @@ const Usersignup = () => {
     }
 }, [state, token]);
 
-
+const sponsorId = parentSponsorId;
+console.log(sponsorId);
 const handleSubmit = async (event) => {
   alert("sumit")
   event.preventDefault();
  
 
-      await axios.post(ROOT_URL+'/api/auth/register', { sponsorId, registrationType,  gender, 
+      await axios.post(ROOT_URL+'/api/auth/registerLeft', { sponsorId, registrationType,  gender, 
         name, 
         dob,
         mobileNumber,
@@ -162,9 +163,11 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="text"
+                        readonly
                         className="form-control-plaintext  bg-light textinput"
-                        id="staticEmail" 
-                        onChange={e => setsponsorId(e.target.value)}
+                        id="staticEmail"
+                        value={parentSponsorId}
+                        
                       />
                     </div>
                   </div>
@@ -437,5 +440,4 @@ const handleSubmit = async (event) => {
     </>
   )
 }
-
-export default Usersignup
+export default Signupleft

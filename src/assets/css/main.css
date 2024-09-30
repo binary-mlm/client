@@ -1732,7 +1732,7 @@ header{
   letter-spacing:0.2px;
   font-size:14px;
 }
-.sidebar .side-menu nav .nav > li > a:after {
+/* .sidebar .side-menu nav .nav > li > a:after {
   color: #bababa;
   content: "\f105";
   float: right;
@@ -1745,7 +1745,7 @@ header{
   transition: all 0.3s ease 0s;
   width: 10px;
   font-family: FontAwesome;
-}
+} */
 .sidebar .side-menu nav .nav > li > a .icon {
   font-size: 16px;
   margin-right: 12px;

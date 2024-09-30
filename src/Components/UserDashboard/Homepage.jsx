@@ -3,9 +3,12 @@ import axios from 'axios';
 import './homepage.css'
 const Homepage = () => {
   const [userdata, setUserdata] = useState([]);
+  const [referralleftLink , setReferralleftLink] = useState([]);
+  const [referralrightLink , setReferralrightLink] = useState([]);
   useEffect(() => {
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const userId = sessionStorage.getItem("userid");
+
     //  console.log(token);
    if(!userdata.length){
     axios
@@ -13,6 +16,8 @@ const Homepage = () => {
       .then((res) => {
         console.log(res);
         setUserdata(res.data)
+        setReferralleftLink(res.data.leftRefferalLink)
+        setReferralrightLink(res.data.rightRefferalLink)
       })
       .catch((err) => {
         console.log(err);
@@ -21,11 +26,38 @@ const Homepage = () => {
     }
   }, []);
 
-  
+  const handleCopyLinkleft = () => {
+    if (referralleftLink) {
+     
+      navigator.clipboard.writeText(referralleftLink)
+        .then(() => {
+          // alert('Referral link and code copied to clipboard!');
+        })
+        .catch((error) => {
+          console.error('Error copying referral link and code:', error);
+        });
+    } else {
+      console.error('No referral link to copy');
+    }
+  };
+  const handleCopyLinkright = () => {
+    if (referralrightLink) {
+     
+      navigator.clipboard.writeText(referralrightLink)
+        .then(() => {
+          // alert('Referral link and code copied to clipboard!');
+        })
+        .catch((error) => {
+          console.error('Error copying referral link and code:', error);
+        });
+    } else {
+      console.error('No referral link to copy');
+    }
+  };
 
   return (
     <>
-       <div className='ms-4'>
+       <div className='ms-4 mb-5'>
       <div>
         <h1 className='text-center mt-5 fw-bold'>Welcome To User  Dashboard</h1>
       </div>
@@ -84,15 +116,28 @@ const Homepage = () => {
       <div className='card_item text-center ms-5 fw-bold'>MY TOTAL EARNING (₹)<br/>
       1,380</div>
       </div>
-      <div className='row mt-3 ms-1 mb-2'>
+     
       {userdata ? (<>
-        <div className='col-10 referral mb-4'><span>My Left Refferal Link: </span>{userdata.leftRefferalLink}</div>
-        <div className='col-10 referral'><span>My Right Refferal Link: </span>{userdata.rightRefferalLink}</div>
-
+        <div>
+        <div className='col-2 mt-4'>
+        <span className='leftrefferal'>My Left Refferal Link:</span>
+       
+        </div>
+        <div className='col-10 referrallink mt-2 fw-bold'>
+        {userdata.leftRefferalLink} <i className='fa fa-copy' onClick={handleCopyLinkright}></i>
+        </div>
+    
+      
+        <div className='col-2 mt-4'>
+        <span className='rightrefferal'>My Left Refferal Link:</span>
+        </div>
+        <div className='col-10 referrallink mt-2 fw-bold '>{userdata.rightRefferalLink} <i className='fa fa-copy' onClick={handleCopyLinkright}></i></div>
+        
+        </div>
       </>) : <>No link</>}
      
       </div>
-    </div>
+ 
     </>
   )
 }

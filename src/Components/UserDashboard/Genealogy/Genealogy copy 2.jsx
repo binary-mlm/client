@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./genealogy.css";
 import { useNavigate } from "react-router-dom";
-import user from "../../../assets/images/user.png";
+import user from "../../../assets/images/user.png"
 
 const Genealogy = () => {
   const [activeNodes, setActiveNodes] = useState({});
@@ -11,22 +11,24 @@ const Genealogy = () => {
   const [error, setError] = useState(null);
   const [currentNodeId, setCurrentNodeId] = useState(sessionStorage.getItem("userid"));
   const navigate = useNavigate(); // Hook to handle navigation
-  const userid = sessionStorage.getItem("userid");
+const userid = sessionStorage.getItem("userid");
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
 
   const MAX_LEVEL = 4; // Maximum levels to display
 
   // Fetch tree data for a given nodeId
-  const handleExtremeTop = async () => {
-    try {
-      const response = await axios.get(`${ROOT_URL}/api/auth/getSponsorChildrens/${userid}`);
-      setTreeData(response.data);
-      setLoading(false);
-    } catch (err) {
-      setError("Failed to fetch tree data");
-      setLoading(false);
-    }
-  };
+
+const handleextremetop= async() => {
+  try {
+    const response = await axios.get(`${ROOT_URL}/api/auth/getSponsorChildrens/${userid}`);
+    setTreeData(response.data);
+    setLoading(false);
+  } catch (err) {
+    setError("Failed to fetch tree data");
+    setLoading(false);
+  }
+}
+
 
   const fetchTreeData = async (nodeId) => {
     setLoading(true);
@@ -97,7 +99,10 @@ const Genealogy = () => {
           <a href="#" onClick={(e) => handleNodeClick(e, node._id)}>
             <div className="member-view-box">
               <div className="member-image">
-                <img src={user} alt="Member" />
+                <img
+                  src={user}
+                  alt="Member"
+                />
               </div>
               <div className="member-footer">
                 <div className="name">
@@ -162,7 +167,10 @@ const Genealogy = () => {
         <a href="#" onClick={(e) => handleNodeClick(e, node._id)}>
           <div className="member-view-box">
             <div className="member-image">
-              <img src={user} alt="Member" />
+              <img
+                src={user}
+                alt="Member"
+              />
             </div>
             <div className="member-footer">
               <div className="name">
@@ -185,23 +193,22 @@ const Genealogy = () => {
 
   return (
     <>
-      <div className="flex flex-column">
-        <div className="text-center">
-          <button className="btn btn-primary mt-5" onClick={handleExtremeTop}>
-            Extreme Top
-          </button>
-        </div>
+    <div className="flex flex-column">
+    <div className=" text-center">
+    <button className="btn btn-primary mt-5" onClick={handleextremetop}>Extreme Top</button>
 
-        <div>
-          <div className="body genealogy-body genealogy-scroll">
-            <div className="genealogy-tree">
-              {loading && <p>Loading tree...</p>}
-              {error && <p>{error}</p>}
-              {treeData && <ul>{renderTree(treeData)}</ul>}
-            </div>
-          </div>
-        </div>
+    </div>
+
+    <div>
+    <div className="body genealogy-body genealogy-scroll">
+      <div className="genealogy-tree">
+        {loading && <p>Loading tree...</p>}
+        {error && <p>{error}</p>}
+        {treeData && <ul>{renderTree(treeData)}</ul>}
       </div>
+      </div>
+    </div>
+    </div>
     </>
   );
 };

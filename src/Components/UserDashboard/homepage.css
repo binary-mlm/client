@@ -28,9 +28,33 @@ font-size: 15px;
     font-size: 15px;
 }
 .referral{
+    /* background-color: green; */
     background-color: green;
     color: white;
     padding: 10px;
     font-size: 15px;
+    border-radius: 10px;
+    width: 50%;
+    
+}
+.referrallink{
+    font-size: 19px;
+    border-radius: 10px;
+}
+.leftrefferal{
+    font-size: 18px;
+    font-weight: 300;
+    background-color: rgb(36, 51, 150);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.rightrefferal{
+    font-size: 18px;
+    font-weight: 300;
+    background-color: rgb(34, 34, 147);
+    color: white;
+    padding: 10px;
     border-radius: 10px;
 }

@@ -26,8 +26,10 @@ const Login = () => {
         .then(res => {
           console.log(res);
           const {userId : userId} = res.data;
+          const {username : username} = res.data;
           swal("Yeah", "Login Successful!!", "success");
           sessionStorage.setItem('userid', userId);
+          sessionStorage.setItem('username', username);
             navigate('/userdashboard');
           // navigate('/course');
 

@@ -22,6 +22,8 @@ import Kycverification from './Components/UserDashboard/Editprofile/Kycverificat
 import Usersignup from "./Components/Pages/Signup_page/Usersignup";
 import Ordernow from "./Components/Ordernow/Ordernow";
 import Productlist from "./Components/Productlist/Productlist";
+import Signupleft from "./Components/signupfromleader/Signupleft";
+import Signupright from "./Components/signupfromleader/Signupright";
 function App() {
 
   return (
@@ -49,6 +51,8 @@ function App() {
       <Route path="/userdasboard/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
       <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
+      <Route path="/userdasboard/signupleft/:parentSponsorId" element={<Dashboardlayout><Signupleft/></Dashboardlayout>}/>
+      <Route path="/userdasboard/signupright/:parentSponsorId" element={<Dashboardlayout><Signupright/></Dashboardlayout>}/>
 
       </Routes>
     </Router>

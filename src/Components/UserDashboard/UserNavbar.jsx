@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import "./usernavbar.css"
 
 const UserNavbar = () => {
+  const user_name = sessionStorage.getItem('username')
   return (
     <>
  <header className="header" style={{backgroundColor:"#710977"}}>
@@ -15,7 +16,7 @@ const UserNavbar = () => {
 
         {/* Username Section */}
         <div className="username">
-          <span>Welcome, Srijani Banerjee</span>
+          <span>Welcome, {user_name}</span>
         </div>
 
         {/* Logout Button */}
