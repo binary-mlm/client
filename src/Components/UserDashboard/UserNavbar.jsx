@@ -12,11 +12,12 @@ const UserNavbar = () => {
         {/* Logo Section */}
         <div className="logo">
           <img src={user}  alt="Logo" width={35} className="logo-img" />
+          <span className='ms-2 username'>{user_name}</span>
         </div>
 
         {/* Username Section */}
-        <div className="username">
-          <span>Welcome, {user_name}</span>
+        <div className="name">
+        <h3 className='text-center fw-bold'>Welcome To User  Dashboard</h3>
         </div>
 
         {/* Logout Button */}

@@ -51,8 +51,8 @@ function App() {
       <Route path="/userdasboard/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
       <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
-      <Route path="/userdasboard/signupleft/:parentSponsorId" element={<Dashboardlayout><Signupleft/></Dashboardlayout>}/>
-      <Route path="/userdasboard/signupright/:parentSponsorId" element={<Dashboardlayout><Signupright/></Dashboardlayout>}/>
+      <Route path="/signupleft/:parentSponsorId" element={<Userlayout><Signupleft/></Userlayout>}/>
+      <Route path="/signupright/:parentSponsorId" element={<Userlayout><Signupright/></Userlayout>}/>
 
       </Routes>
     </Router>

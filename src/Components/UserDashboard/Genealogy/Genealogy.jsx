@@ -55,9 +55,9 @@ const Genealogy = () => {
   const handleSignupClick = (e, formType, parentSponsorId) => {
     e.preventDefault();
     if (formType === "left") {
-      navigate(`/userdasboard/signupleft/${parentSponsorId}`);
+      navigate(`/signupleft/${parentSponsorId}`);
     } else if (formType === "right") {
-      navigate(`/userdasboard/signupright/${parentSponsorId}`);
+      navigate(`/signupright/${parentSponsorId}`);
     }
   };
 

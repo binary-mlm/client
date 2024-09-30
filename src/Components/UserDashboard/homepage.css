@@ -38,11 +38,11 @@ font-size: 15px;
     
 }
 .referrallink{
-    font-size: 19px;
+    font-size: 18px;
     border-radius: 10px;
 }
 .leftrefferal{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 300;
     background-color: rgb(36, 51, 150);
     color: white;
@@ -51,7 +51,7 @@ font-size: 15px;
 }
 
 .rightrefferal{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 300;
     background-color: rgb(34, 34, 147);
     color: white;

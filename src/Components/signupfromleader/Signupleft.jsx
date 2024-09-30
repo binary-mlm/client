@@ -144,11 +144,11 @@ const handleSubmit = async (event) => {
 }
   return (
     <>
-        <div className="container my-3">
+        <div className="container my-3 ">
       <div className="row">
         <div className="col-lg-8">
         <div className="row">
-            <div className="card formsignup">
+            <div className="card formsignup" style={{left:"25%"}}>
               <div className="card-body">
               <form>
               <div className="bg-primary">

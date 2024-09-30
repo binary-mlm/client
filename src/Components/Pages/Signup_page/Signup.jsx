@@ -13,8 +13,25 @@ const Signup = () => {
   // const [email, setEmail] = useState('')
   const [city, setCity] = useState('')
 
+  const handleverify = async (event) => {
+    event.preventDefault();
+    await axios.post(ROOT_URL+'/api/auth/verifySponsor', {sponsorId })
+            .then(res => {
+                console.log(res);
 
+                setSponsorname(res.data.sponsor.name);
+                setCity(res.data.sponsor.district)
+                
+            })
+            .catch(err => {
+                console.log(err);
+                swal("Error!", err.response.data.message || 'Error registering user', "error");
+               
+
+            })
+  }
   const handleSubmit = async (event) => {
+    sessionStorage.setItem('sponosorid', sponsorId);
     navigate('/usersignup');
     // alert("sumit")
     // event.preventDefault();
@@ -65,17 +82,18 @@ const Signup = () => {
                           <label className="mb-1 mt-3" htmlFor="exampleInputEmail1" style={{fontSize:"15px"}}>Sponsor sponsorId</label>
                           <div className='d-flex'>
                           <input type="text" className="form-control w-75" id="id" name='id'  placeholder="Entersponsorid" onChange={e => setSponsorid(e.target.value)} />
-                          <button className='btn btn-primary ms-4'>Verify</button>
+                          <button className='btn btn-primary ms-4' onClick={handleverify}>Verify</button>
                           </div>
                         </div>
                         <div className="form-group mb-4">
                           <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor Name</label>
-                          <input type="text" className="form-control " id="name" name='name'  placeholder="Enter Your Name"  onChange={e => setSponsorname(e.target.value)} />
+                          <input type="text" className="form-control " id="name" name='name' readOnly
+                            placeholder="Enter Your Name" value={name} />
                         </div>
                         
                         <div className="form-group  mb-4">
                           <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor city</label>
-                          <input type="text" className="form-control" name='city' placeholder="Enter City" onChange={e => setCity(e.target.value)} />
+                          <input type="text" className="form-control" name='city' readOnly placeholder="Enter City" value={city}  />
                           </div>
                         
                         

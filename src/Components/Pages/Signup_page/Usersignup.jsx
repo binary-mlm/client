@@ -4,7 +4,7 @@ import axios from 'axios'
 import swal from 'sweetalert'
 import { useNavigate } from 'react-router-dom';
 const Usersignup = () => {
-  const [sponsorId, setsponsorId] = useState('')
+  // const [sponsorId, setsponsorId] = useState('')
   const [registrationType, setregistrationType] = useState('')
   const [gender, setgender] = useState('')
   const [name, setname] = useState('')
@@ -24,6 +24,7 @@ const Usersignup = () => {
     const [state, setSelectedState] = useState('');
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const navigate = useNavigate();
+    const sponsorId = sessionStorage.getItem('sponosorid');
    
     const API_TOKEN = 'C2dy7lLSGxWm63T6Oem2N9jeUlaE5Y9M59MInjwjc-FksoqRsWk0pa-iKk1LzSfEFy0';
     const handleDropdownChange_city = (event) => {
@@ -162,9 +163,10 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="text"
+                        readonly
                         className="form-control-plaintext  bg-light textinput"
                         id="staticEmail" 
-                        onChange={e => setsponsorId(e.target.value)}
+                       value={sponsorId}
                       />
                     </div>
                   </div>

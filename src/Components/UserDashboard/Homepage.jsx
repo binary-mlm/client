@@ -59,18 +59,19 @@ const Homepage = () => {
     <>
        <div className='ms-4 mb-5'>
       <div>
-        <h1 className='text-center mt-5 fw-bold'>Welcome To User  Dashboard</h1>
+        
       </div>
+      
       <div className='d-flex mt-5'>
-      <div className='business text-center fw-bold'>MY BUSINESS DATA</div>
-      <div className='businessmonth text-center ms-5 fw-bold '>MY CURRENT MONTH BUSINESS</div>
-      <div className='business text-center ms-5 fw-bold'>MY CUMULATIVE BUSINESS</div>
+      <div className='business text-center'>MY BUSINESS DATA</div>
+      <div className='businessmonth text-center ms-5  '>MY CURRENT MONTH BUSINESS</div>
+      <div className='business text-center ms-5'>MY CUMULATIVE BUSINESS</div>
       <div>
       </div>
       </div>
       <div className='d-flex mt-2'>
-      <div className='card_item text-center fw-bold'>MY DATE OF ACTIVATION<br/>
-      21 Apr 2022</div>
+      <div className='card_item text-center'><span className='fw-bold'>MY DATE OF ACTIVATION</span><br/>
+      <span>21 Apr 2022</span></div>
       <div className='card_item text-center ms-5 fw-bold'>MY DIRECT FBV<br/>
       L - 0  |  R - 0</div>
       <div className='card_item text-center ms-5 fw-bold'>MY DIRECT FBV<br/>
@@ -118,26 +119,25 @@ const Homepage = () => {
       </div>
      
       {userdata ? (<>
-        <div>
-        <div className='col-2 mt-4'>
-        <span className='leftrefferal'>My Left Refferal Link:</span>
+        <div className='d-flex'>
+        <div className=' mt-4'>
+        <span className='leftrefferal'>My Left Refferal Link</span>
        
         </div>
-        <div className='col-10 referrallink mt-2 fw-bold'>
-        {userdata.leftRefferalLink} <i className='fa fa-copy' onClick={handleCopyLinkright}></i>
+        <div className=' referrallink mt-4  ms-2 fw-bold'>
+        {userdata.leftRefferalLink} <i className='fa fa-copy' onClick={handleCopyLinkleft}></i>
+        </div>
         </div>
     
-      
-        <div className='col-2 mt-4'>
-        <span className='rightrefferal'>My Left Refferal Link:</span>
+      <div className='d-flex'>
+        <div className=' mt-4'>
+        <span className='rightrefferal'>My Left Refferal Link</span>
         </div>
-        <div className='col-10 referrallink mt-2 fw-bold '>{userdata.rightRefferalLink} <i className='fa fa-copy' onClick={handleCopyLinkright}></i></div>
-        
+        <div className=' referrallink mt-4 fw-bold ms-2'>{userdata.rightRefferalLink} <i className='fa fa-copy' onClick={handleCopyLinkright}></i></div>
         </div>
       </>) : <>No link</>}
      
       </div>
- 
     </>
   )
 }

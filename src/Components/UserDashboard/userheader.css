@@ -1,0 +1,10 @@
+.sideitem{
+    font-size: 15px;
+    color: black;
+    
+}
+.sideitem a:hover{
+    color: #ff7878;
+    text-decoration: underline;
+
+}

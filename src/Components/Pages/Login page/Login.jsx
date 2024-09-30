@@ -10,19 +10,19 @@ const Login = () => {
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   console.log(ROOT_URL);
   const navigate = useNavigate();
-  const [email, setemail] = useState();
+  const [sponsorId, setsponsorId] = useState();
   const [password, setPassword] = useState();
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (email === "" || password === "") {
+    if (sponsorId === "" || password === "") {
       swal("Opps!", "Please fill out all required fields!", "error");
     }
    
     else {
       
         //  alert("submit");
-      axios.post(ROOT_URL+'/api/auth/login', { email, password })
+      axios.post(ROOT_URL+'/api/auth/login', { sponsorId, password })
         .then(res => {
           console.log(res);
           const {userId : userId} = res.data;
@@ -64,11 +64,11 @@ const Login = () => {
                         {/* <h5 className="fw-normal mb-3 pb-3">Sign into your account</h5> */}
 
                         <div className="form-group  mb-4">
-                          <label className="mb-1" htmlFor="exampleInputEmail1">Email</label>
-                          <input type="email" className="form-control " name='email' placeholder="Enter Your email ID" onChange={e => setemail(e.target.value)}  />
+                          <label className="mb-1" htmlFor="exampleInputEmail1">sponsorId</label>
+                          <input type="text" className="form-control " name='sponsorId' placeholder="Enter Your sponsor ID" onChange={e => setsponsorId(e.target.value)}  />
                           </div>
                         <div className="form-group mb-4">
-                          <label className="mb-1" htmlFor="exampleInputEmail1">Password</label>
+                          <label className="mb-1" htmlFor="exampleInputEmail2">Password</label>
                           <input type="text" className="form-control" id="password" name='password'  placeholder="Enter  Your Password" onChange={e =>setPassword(e.target.value)}/>
                         </div>
 
