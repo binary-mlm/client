@@ -1,0 +1,27 @@
+.teamquote{
+    font-size: 23px;
+    color: rgb(10, 130, 223);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 35px;
+}
+
+.team-title{
+font-size: 25px;
+    font-weight: 700;
+    color: #313383;
+}
+.designation{
+font-size: 16px;
+font-weight: 500;
+color: #313383;
+}
+.team-text{
+font-size: 16px;
+    font-weight: 400;
+   
+}
+.cardteam{
+    background-color: rgb(216, 211, 211);
+    padding: 2%;
+}

@@ -7,7 +7,7 @@ import Login from "./Components/Pages/Login page/Login";
 import Signup from './Components/Pages/Signup_page/Signup';
 import Productview from "./Components/Productview/Productview";
 import Product from "./Components/Pages/Productpage/Product";
-import Brand from './Components/Brand_page/Brand';
+
 import Education from './Components/Education/Education';
 import Logistic from './Components/Logistic/Logistic';
 import Dashboardlayout from './Components/UserDashboard/Dashboardlayout';
@@ -16,7 +16,7 @@ import Welcomeuser from './Components/UserDashboard/Welcomeuser';
 import Genealogy from './Components/UserDashboard/Genealogy/Genealogy';
 import Associate from './Components/Associate/Associate';
 import Editprofile from './Components/UserDashboard/Editprofile/Editprofile';
-import Manufacturing from './Components/Manufacturing/Manufacturing';
+
 import News from './Components/News/News';
 import Kycverification from './Components/UserDashboard/Editprofile/Kycverification';
 import Usersignup from "./Components/Pages/Signup_page/Usersignup";
@@ -24,12 +24,17 @@ import Ordernow from "./Components/Ordernow/Ordernow";
 import Productlist from "./Components/Productlist/Productlist";
 import Signupleft from "./Components/signupfromleader/Signupleft";
 import Signupright from "./Components/signupfromleader/Signupright";
+import Vision from "./Components/Pages/About Page/Visionmission/Vision";
+import Management from "./Components/Pages/About Page/Management/Management";
+import Legaldocument from "./Components/Pages/About Page/Legaldocu/Legaldocument";
+import Award from "./Components/Pages/About Page/Award&reward/Award";
+import Franchiselogin from "./Franchisedashboard/Login";
 function App() {
-
   return (
     <>
     <Router>
       <Routes>
+      <Route path="/franchise/login" element={<Franchiselogin/>} />
       <Route path="/" element={<Userlayout><Home/></Userlayout>} />
       <Route path="/about" element={<Userlayout><About/></Userlayout>} />
       <Route path="/contactus" element={<Userlayout><Contactus/></Userlayout>} />
@@ -39,12 +44,16 @@ function App() {
       <Route path="/usersignup" element={<Userlayout><Usersignup/></Userlayout>} />
       <Route path="/productview/:id" element={<Userlayout><Productview/></Userlayout>} />
       <Route path="/associate" element={<Userlayout><Associate/></Userlayout>} />
-      <Route path="/manufacturing" element={<Userlayout><Manufacturing/></Userlayout>} />
+      {/* <Route path="/manufacturing" element={<Userlayout><Manufacturing/></Userlayout>} /> */}
       <Route path="/News" element={<Userlayout><News/></Userlayout>} />
       <Route path="/product" element={<Userlayout><Product/></Userlayout>} />
       <Route path="/productlist" element={<Userlayout><Productlist/></Userlayout>} />
-      <Route path="/brand" element={<Userlayout><Brand/></Userlayout>} />
+      <Route path="/managment" element={<Userlayout><Management/></Userlayout>} />
+      <Route path="/legaldocument" element={<Userlayout><Legaldocument/></Userlayout>} />
+      <Route path="/award" element={<Userlayout><Award/></Userlayout>} />
+
       <Route path="/education" element={<Userlayout><Education/></Userlayout>} />
+      <Route path="/vision" element={<Userlayout><Vision/></Userlayout>} />
       <Route path="/logistic" element={<Userlayout><Logistic/></Userlayout>} />
       <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
       <Route path="/userdasboard/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />

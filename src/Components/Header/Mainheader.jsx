@@ -1,11 +1,12 @@
 import React from 'react'
 
-import logo from "../../assets/images/nextop1.png"
+// import logo from "../../assets/images/nextop1.png"
 import "../../assets/css/main.css";
 import "../../assets/css/blue.css";
 import "../../assets/css/animate.min.css";
 import  "../../assets/css/rateit.css";
 import "../../assets/css/bootstrap-select.min.css";
+import "./mainheader.css"
 const Mainheader = () => {
   return (
   <>
@@ -13,7 +14,10 @@ const Mainheader = () => {
     <div className="container">
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-3 logo-holder"> 
-         <div className="logo"> <a href="home.html"> <img src={logo} width={190} alt="logo"/> </a> 
+         <div className="logo mt-3"> <a href="home.html" className='text-white'>
+         UDBHAB
+         {/* <img src={logo} width={190} alt="logo"/>  */}
+         </a> 
          </div>
          </div>
         

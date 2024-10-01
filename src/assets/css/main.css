@@ -1737,7 +1737,7 @@ header{
   content: "\f105";
   float: right;
   font-size: 12px;
-  height: 20px;
+  height: 20px
   line-height: 18px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -6415,7 +6415,7 @@ display: none !important;
     padding: 19px 19px;
     position: absolute;
     right: 12px;
-    top:71px;
+    top:206px;
   }
     .main-header .top-search-holder .search-area .categories-filter {
     width: 100%;

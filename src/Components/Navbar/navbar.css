@@ -14,10 +14,10 @@
 .item_nav :active{
 color: white;
 }
-.item_nav :hover{
+/* .item_nav :hover{
 
   color:#fdd922 ;
-}
+} */
 .navbarmenu{
     background-color: #157ed2;
 }
@@ -25,5 +25,5 @@ color: white;
   color: #000;
   }
   .subitem:hover{
-    color: #f5f830;
+    color: #2049ea;
   }

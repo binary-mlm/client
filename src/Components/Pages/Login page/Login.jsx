@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import pic from "../../../assets/images/login.png"
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
+import Swal from 'sweetalert2';
+
 
 import "./login.css"
 
@@ -16,7 +18,12 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (sponsorId === "" || password === "") {
-      swal("Opps!", "Please fill out all required fields!", "error");
+      Swal.fire({
+        title: 'Opps!',
+        text: 'Please fill out all required fields!!!',
+        icon: 'error',  // or 'error', 'warning', 'info', 'question'
+      });
+      // swal("Opps!", "Please fill out all required fields!", "error");
     }
    
     else {
@@ -27,7 +34,12 @@ const Login = () => {
           console.log(res);
           const {userId : userId} = res.data;
           const {username : username} = res.data;
-          swal("Yeah", "Login Successful!!", "success");
+          // swal("Yeah", "Login Successful!!", "success");
+          Swal.fire({
+            title: 'Success!',
+            text: 'Login Successful!!',
+            icon: 'success',  // or 'error', 'warning', 'info', 'question'
+          });
           sessionStorage.setItem('userid', userId);
           sessionStorage.setItem('username', username);
             navigate('/userdashboard');

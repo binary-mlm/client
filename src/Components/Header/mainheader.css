@@ -1,0 +1,12 @@
+@media (max-width: 400px) {
+    .search-button{
+      margin-top:44% ;
+
+    }
+ 
+}
+.logo{
+  font-size: 28px;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

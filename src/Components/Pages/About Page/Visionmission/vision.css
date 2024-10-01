@@ -1,0 +1,19 @@
+
+.visiontitle{
+    font-size: 17px;
+    line-height: 26px;
+    
+}
+.blockquotevision{
+    margin-left: 25%;
+    margin-right: 20%;
+    padding: 5px;
+    background-color: rgb(180, 176, 176);
+    
+    
+}
+.blockquotevision p{
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

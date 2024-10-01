@@ -7,7 +7,7 @@ const UserNavbar = () => {
   const user_name = sessionStorage.getItem('username')
   return (
     <>
- <header className="header" style={{backgroundColor:"#710977"}}>
+ <header className="header" style={{backgroundColor:"#710977",padding:"3%"}}>
       <div className="header-content">
         {/* Logo Section */}
         <div className="logo">
@@ -17,7 +17,7 @@ const UserNavbar = () => {
 
         {/* Username Section */}
         <div className="name">
-        <h3 className='text-center fw-bold'>Welcome To User  Dashboard</h3>
+        <span className=' h3 text-center fw-bold'>Welcome To User  Dashboard</span>
         </div>
 
         {/* Logout Button */}
