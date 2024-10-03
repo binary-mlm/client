@@ -23,12 +23,9 @@ const Login = () => {
         text: 'Please fill out all required fields!!!',
         icon: 'error',  // or 'error', 'warning', 'info', 'question'
       });
-      // swal("Opps!", "Please fill out all required fields!", "error");
     }
    
     else {
-      
-        //  alert("submit");
       axios.post(ROOT_URL+'/api/auth/login', { sponsorId, password })
         .then(res => {
           console.log(res);
@@ -48,7 +45,11 @@ const Login = () => {
         })
         .catch(err => {
           console.log(err);
-          swal("Opps!", err.message, "error");
+          Swal.fire({
+            title: 'Opps!',
+            text: 'Try again',
+            icon: 'error',  // or 'error', 'warning', 'info', 'question'
+          });
         })
     }
   }

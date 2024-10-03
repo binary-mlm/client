@@ -131,7 +131,7 @@ const Homepage = () => {
     
       <div className='d-flex'>
         <div className=' mt-4'>
-        <span className='rightrefferal'>My Left Refferal Link</span>
+        <span className='rightrefferal'>My Right Refferal Link</span>
         </div>
         <div className=' referrallink mt-4 fw-bold ms-2'>{userdata.rightRefferalLink} <i className='fa fa-copy' onClick={handleCopyLinkright}></i></div>
         </div>

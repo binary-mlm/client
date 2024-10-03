@@ -28,13 +28,15 @@ import Vision from "./Components/Pages/About Page/Visionmission/Vision";
 import Management from "./Components/Pages/About Page/Management/Management";
 import Legaldocument from "./Components/Pages/About Page/Legaldocu/Legaldocument";
 import Award from "./Components/Pages/About Page/Award&reward/Award";
-import Franchiselogin from "./Franchisedashboard/Login";
+import Franchiselogin from "./Franchisedashboard/Login/Login";
+import Homefranchise from "./Franchisedashboard/Homefanchise";
 function App() {
   return (
     <>
     <Router>
       <Routes>
       <Route path="/franchise/login" element={<Franchiselogin/>} />
+      <Route path="/franchise/dashboard" element={<Homefranchise/>} />
       <Route path="/" element={<Userlayout><Home/></Userlayout>} />
       <Route path="/about" element={<Userlayout><About/></Userlayout>} />
       <Route path="/contactus" element={<Userlayout><Contactus/></Userlayout>} />
