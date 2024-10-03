@@ -21,18 +21,18 @@ const Footer = () => {
                 <li className="media">
                   <div className="pull-left"> <span className="icon fa-stack fa-sm"> <i className="fa fa-map-marker fa-stack-1x fa-inverse"></i> </span> </div>
                   <div className="media-body" style={{marginLeft:"15%"}}>
-                    <p>ThemesGround, 789 Main rd, Anytown, CA 12345 USA</p>
+                    <p>Indrira nagar Sodepur, North 24 Parganas. Kol-700110</p>
                   </div>
                 </li>
                 <li className="media">
                   <div className="pull-left"> <span className="icon fa-stack fa-sm"> <i className="fa fa-mobile fa-stack-1x fa-inverse"></i> </span> </div>
                   <div className="media-body"  style={{marginLeft:"15%"}}>
-                    <p> + (888) 123-4567 / + (888) 456-7890</p>
+                    <p> + (91)033-3591-8727 / + (91)7980964516 </p>
                   </div>
                 </li>
                 <li className="media">
                   <div className="pull-left"> <span className="icon fa-stack fa-sm"> <i className="fa fa-envelope fa-stack-1x fa-inverse"></i> </span> </div>
-                  <div className="media-body"  style={{marginLeft:"15%"}}> <span><a href="#">marazzo@themesground.com</a></span> </div>
+                  <div className="media-body"  style={{marginLeft:"15%"}}> <span><a href="#">support@myudbhab.in</a></span> </div>
                 </li>
               </ul>
             </div>
@@ -51,8 +51,7 @@ const Footer = () => {
                 <li className="first"><a href="#" title="Contact us">My Account</a></li>
                 <li><a href="#" title="About us">Order History</a></li>
                 <li><a href="#" title="faq">FAQ</a></li>
-                <li><a href="#" title="Popular Searches">Specials</a></li>
-                <li className="last"><a href="#" title="Where is my order?">Help Center</a></li>
+             
               </ul>
             </div>
            
@@ -70,8 +69,7 @@ const Footer = () => {
                 <li className="first"><a title="Your Account" href="#">About us</a></li>
                 <li><a title="Information" href="#">Customer Service</a></li>
                 <li><a title="Addresses" href="#">Company</a></li>
-                <li><a title="Addresses" href="#">Investor Relations</a></li>
-                <li className="last"><a title="Orders History" href="#">Advanced Search</a></li>
+                
               </ul>
             </div>
            
@@ -86,10 +84,10 @@ const Footer = () => {
             
             <div className="module-body">
               <ul className='list-unstyled'>
-                <li className="first"><a href="#" title="About us">Shopping Guide</a></li>
+                <li className="first"><a href="#" title="About us">Execlusive product</a></li>
                 <li><a href="#" title="Blog">Blog</a></li>
-                <li><a href="#" title="Company">Company</a></li>
-                <li><a href="#" title="Investor Relations">Investor Relations</a></li>
+                {/* <li><a href="#" title="Company">Company</a></li>
+                <li><a href="#" title="Investor Relations">Investor Relations</a></li> */}
                 <li className=" last"><a href="contact-us.html" title="Suppliers">Contact Us</a></li>
               </ul>
             </div>
@@ -105,22 +103,23 @@ const Footer = () => {
           <ul className="link">
             <li className="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
             <li className="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
-            <li className="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
+            {/* <li className="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
             <li className="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
-            <li className="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li>
-            <li className="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li>
+            <li className="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li> */}
+            {/* <li className="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li> */}
             <li className="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
+            {/* <li className="youtube pull-left" ><i className="fa fa-instagram"></i></li> */}
           </ul>
         </div>
-        <div className="col-xs-12 col-sm-4 no-padding copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </div>
-        <div className="col-xs-12 col-sm-4 no-padding">
+        <div className="col-xs-12 col-sm-5 no-padding copyright"><a>Copyright © Utbhab 2024.Powered by Synthosphere Technologies Private Limited</a> </div>
+        <div className="col-xs-12 col-sm-3 no-padding">
           <div className="clearfix payment-methods">
             <ul>
               <li><img src={pic4} alt=""/></li>
               <li><img src={pic1} alt=""/></li>
               <li><img src={pic2} alt=""/></li>
-              <li><img src={pic3} alt=""/></li>
-              <li><img src={pic5} alt=""/></li>
+              {/* <li><img src={pic3} alt=""/></li> */}
+              
             </ul>
           </div>
         </div>

@@ -1266,7 +1266,7 @@ header{
   text-transform: capitalize;
   display: inline-block;
   line-height: 56px;
-  background: #f6f6f6;
+  /* background: #f6f6f6; */
   border-radius:999px 0px 0px 999px
 }
 .main-header .top-search-holder .search-area .categories-filter a {
