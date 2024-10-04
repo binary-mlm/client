@@ -151,7 +151,7 @@ const handleSubmit = async (event) => {
             <div className="card formsignup">
               <div className="card-body">
               <form>
-              <div className="bg-primary">
+              <div  className="m-1" style={{backgroundColor:"#157ed2"}}>
                     <h5 className=" text-white ms-3 p-2 text-center">
                     FURNISH YOUR PERSONAL DETAILS
                     </h5>

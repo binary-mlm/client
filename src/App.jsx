@@ -45,7 +45,7 @@ function App() {
       <Route path="/ordernow" element={<Userlayout><Ordernow/></Userlayout>} />
       <Route path="/usersignup" element={<Userlayout><Usersignup/></Userlayout>} />
       <Route path="/productview/:id" element={<Userlayout><Productview/></Userlayout>} />
-      <Route path="/associate" element={<Userlayout><Associate/></Userlayout>} />
+      <Route path="/success_story" element={<Userlayout><Associate/></Userlayout>} />
       {/* <Route path="/manufacturing" element={<Userlayout><Manufacturing/></Userlayout>} /> */}
       <Route path="/News" element={<Userlayout><News/></Userlayout>} />
       <Route path="/product" element={<Userlayout><Product/></Userlayout>} />

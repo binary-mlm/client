@@ -47,7 +47,7 @@ const Navbar = () => {
           <a className="nav-link" href="/education">Education</a>
         </li>
         <li className="nav-item item_nav">
-          <a className="nav-link" href="/associate">Industy & success story</a>
+          <a className="nav-link" href="/success_story">Industy & success story</a>
         </li>
         <li className="nav-item item_nav">
           <a className="nav-link" href="/News">News</a>
@@ -65,14 +65,15 @@ const Navbar = () => {
         {/* <li className="nav-item item_nav">
           <a className="nav-link" href="/logistic">Logistic Partner</a>
         </li> */}
-        <li className="nav-item item_nav">
-          <a className="nav-link" href="/signup">Join us</a>
-        </li>
+       
         <li className="nav-item item_nav">
           <a className="nav-link" href="/">Download</a>
         </li>
         <li className="nav-item item_nav">
           <a className="nav-link" href="/contactus">Contact us</a>
+        </li>
+        <li className="nav-item item_nav">
+          <a className="nav-link" href="/signup">Join us</a>
         </li>
         <li className="nav-item item_nav">
           <a className="nav-link" href="/login">Login</a>

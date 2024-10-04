@@ -25,5 +25,5 @@ color: white;
   color: #000;
   }
   .subitem:hover{
-    color: #2049ea;
+    color: #2049ea !important
   }

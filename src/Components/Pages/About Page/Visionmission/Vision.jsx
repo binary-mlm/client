@@ -28,22 +28,19 @@ const Vision = () => {
   </div>
 </div>
 <div className='col-lg-8 visiontitle'>
-<div>Our vision is to offer a wide range of world-class products to our esteemed customers at an affordable price and offer a legitimate entrepreneurship opportunity to awaken the giant within them and help them explore life to the fullest.
+<div>The wealthiness industry encompasses a wide range of sectors focused on personal finance, investment, and wealth management. This industry includes financial advisory services, investment firms, asset management, and fintech companies that provide tools and resources for individuals looking to grow and manage their wealth. 
 
-Utbhab believes in the ideology that one needs to compete with one's own self rather than with others. Let’s remember that the world we are living in is extravagantly abundant but on a long-term basis it rewards only those who follow the laws of the nature with a honest vision and ethical action. The road to success is always under construction. It has no short-cuts.
-
-At Utbhab, we follow every statutory compliance, offer value-for-money products and services to our patrons to become India’s credible informed consumer-driven organization. We are built with strong values and hence we offer a legitimate platform for you to explore your inner potential and excel. By getting associated with Utbhab, you are sure to embark on a definite path of personal empowerment towards designing a better life for you and your near and dear ones.</div>
+In recent years, the industry has evolved significantly due to technological advancements and a shift toward digital platforms, making financial services more accessible. Robo-advisors, online trading platforms, and personal finance apps have democratized investment opportunities, allowing people from all backgrounds to participate in wealth-building strategies.
+</div>
 </div>
   
 </div>
 <div className='row mt-4'>
 <div className='col-lg-8 '>
   <div className='visiontitle'>
-  Our vision is to offer a wide range of world-class products to our esteemed customers at an affordable price and offer a legitimate entrepreneurship opportunity to awaken the giant within them and help them explore life to the fullest.
+  the wealthiness industry emphasizes education, offering resources that empower individuals to make informed financial decisions. Financial literacy programs and investment seminars are increasingly popular, helping people navigate complex financial landscapes.
 
-Utbhab believes in the ideology that one needs to compete with one's own self rather than with others. Let’s remember that the world we are living in is extravagantly abundant but on a long-term basis it rewards only those who follow the laws of the nature with a honest vision and ethical action. The road to success is always under construction. It has no short-cuts.
-
-At Utbhab, we follow every statutory compliance, offer value-for-money products and services to our patrons to become India’s credible informed consumer-driven organization. We are built with strong values and hence we offer a legitimate platform for you to explore your inner potential and excel. By getting associated with Utbhab, you are sure to embark on a definite path of personal empowerment towards designing a better life for you and your near and dear ones.
+As global wealth continues to grow, especially among emerging markets, the demand for innovative wealth management solutions is expected to rise. This presents significant opportunities for companies to cater to a diverse clientele, ensuring they can achieve their financial goals and secure their futures. Overall, the wealthiness industry plays a crucial role in fostering financial independence and economic growth
   </div>
 </div>
 <div className='col-lg-4'>

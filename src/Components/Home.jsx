@@ -9,7 +9,7 @@ import Productfeature from "./Featureproduct/Productfeature"
 import Wide2 from "./Wideproduct/Wide2"
 // import Specialdeal from "./Specialdeal/Specialdeal"
 
-import Itemtestimonial from "./Testimonial/Itemtestimonial"
+// import Itemtestimonial from "./Testimonial/Itemtestimonial"
 
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
      <Productfeature/>
 
      <Wide2/>
-     <Itemtestimonial/>
+     {/* <Itemtestimonial/> */}
      </div>
      </div>
      </div>

@@ -3,6 +3,7 @@ import pic from '../../../assets/images/signup.png'
 import axios from 'axios';
 
 import { useNavigate } from 'react-router-dom';
+import "./signup.css"
 
 
 const Signup = () => {
@@ -82,7 +83,7 @@ const Signup = () => {
                           <label className="mb-1 mt-3" htmlFor="exampleInputEmail1" style={{fontSize:"15px"}}>Sponsor sponsorId</label>
                           <div className='d-flex'>
                           <input type="text" className="form-control w-75" id="id" name='id'  placeholder="Entersponsorid" onChange={e => setSponsorid(e.target.value)} />
-                          <button className='btn btn-primary ms-4' onClick={handleverify}>Verify</button>
+                          <button className='verifybutton ms-4 w-25' onClick={handleverify}>Verify</button>
                           </div>
                         </div>
                         <div className="form-group mb-4">

@@ -1,5 +1,6 @@
 .text_style{
     color: #0c5460;
+    font-size: 16px;
 }
 .alert{
     margin-bottom: 2rem;
@@ -7,8 +8,8 @@
     border-radius: 0;
 }
 .alert_info{    
-color: #0c5460;
-background-color: #d1ecf1;
+color: #0c5460 !important;
+background-color: #d1ecf1 !important;
 border-color: #bee5eb;
 font-size: 20px;
 font-weight: 500;

@@ -27,7 +27,7 @@ const Footer = () => {
                 <li className="media">
                   <div className="pull-left"> <span className="icon fa-stack fa-sm"> <i className="fa fa-mobile fa-stack-1x fa-inverse"></i> </span> </div>
                   <div className="media-body"  style={{marginLeft:"15%"}}>
-                    <p> + (91)033-3591-8727 / + (91)7980964516 </p>
+                    <p> + (91)033-3591-8727</p><p>  +(91)7980964516 </p>
                   </div>
                 </li>
                 <li className="media">
