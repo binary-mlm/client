@@ -1,9 +1,16 @@
 .verifybutton{
-    background-color: rgb(9, 152, 196);
+    background-color: #095444;
     padding: 8px;
     color: white;
     border: none;
     border-radius: 5px;
 
     
+}
+.signupbutton{
+    background-color: #095444;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

@@ -77,12 +77,12 @@ const Category = () => {
                 </li>
           
               
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-diamond"></i>Grosary</a>
+              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-diamond"></i>Home Care</a>
                 
               </li>
             
               
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-heartbeat"></i>Health Care</a>
+              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-heartbeat"></i>Grosary</a>
                 </li>
              
               

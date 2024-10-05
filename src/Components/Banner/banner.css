@@ -54,7 +54,7 @@
     height: 60px;
     color: #ffffff;
     border: none;
-    border-left: 3px solid #157ed2;
+    /* border-left: 3px solid #157ed2; */
     border-radius: 0;
     padding: 0 30px;
     font-size: 16px;
@@ -63,13 +63,13 @@
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     text-transform: capitalize;
-    background-color: #157ed2;
+    /* background-color: #157ed2; */
   }
   
   .delicious-btn.active, .delicious-btn:hover, .delicious-btn:focus {
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
-    background-color: #157ed2;
-    border-color: #157ed2;
+    /* background-color: #157ed2;
+    border-color: #157ed2; */
   }

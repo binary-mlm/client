@@ -28,7 +28,7 @@ const Homefanchise = () => {
         {renderPage()}
         {/* <Franchisedashboard/> */}
         
-          <Footer/>
+         
          
         </div>
       

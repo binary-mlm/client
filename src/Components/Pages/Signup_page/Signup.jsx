@@ -80,7 +80,7 @@ const Signup = () => {
                         </div>
                         <div className="form-group mb-4">
 
-                          <label className="mb-1 mt-3" htmlFor="exampleInputEmail1" style={{fontSize:"15px"}}>Sponsor sponsorId</label>
+                          <label className="mb-1 mt-3" htmlFor="exampleInputEmail1" style={{fontSize:"15px"}}>SponsorID</label>
                           <div className='d-flex'>
                           <input type="text" className="form-control w-75" id="id" name='id'  placeholder="Entersponsorid" onChange={e => setSponsorid(e.target.value)} />
                           <button className='verifybutton ms-4 w-25' onClick={handleverify}>Verify</button>
@@ -93,14 +93,14 @@ const Signup = () => {
                         </div>
                         
                         <div className="form-group  mb-4">
-                          <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor city</label>
-                          <input type="text" className="form-control" name='city' readOnly placeholder="Enter City" value={city}  />
+                          <label className="mb-1" htmlFor="exampleInputEmail1">Sponsor state</label>
+                          <input type="text" className="form-control" name='city' readOnly placeholder="Enter state" value={city}  />
                           </div>
                         
                         
 
                         <div className="pt-1 mb-4 text-center">
-                          <button className="btn-primary  w-50" type="submit"  onClick={handleSubmit}>Signup</button>
+                          <button className="signupbutton w-50" type="submit"  onClick={handleSubmit}>Signup</button>
                         </div>
                         <div className="row">
                         <div className='col-md-6'>

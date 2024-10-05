@@ -1,12 +1,12 @@
 import React from 'react'
-import Info from './Info'
+// import Info from './Info'
 import  Banner  from './Banner/Banner'
 import Category from './Category'
 // import Specialoffer from './Specialoffer/Specialoffer'
 import Newproduct from "./NewProduct/Newproduct"
 import Wideproduct from './Wideproduct/Wideproduct'
 import Productfeature from "./Featureproduct/Productfeature"
-import Wide2 from "./Wideproduct/Wide2"
+ import Wide2 from "./Wideproduct/Wide2"
 // import Specialdeal from "./Specialdeal/Specialdeal"
 
 // import Itemtestimonial from "./Testimonial/Itemtestimonial"
@@ -36,7 +36,7 @@ const Home = () => {
      </div>
      </div>
    
-    <Info/>
+    {/* <Info/> */}
     
       
     </>

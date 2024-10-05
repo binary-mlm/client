@@ -7,11 +7,14 @@ import user from "../../../assets/images/user.png";
 const Genealogy = () => {
   const [activeNodes, setActiveNodes] = useState({});
   const [treeData, setTreeData] = useState(null);
+  // const[lefttreedata , setlefttreedata] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const[sponsorid , setsponsorid] = useState('');
   const [currentNodeId, setCurrentNodeId] = useState(sessionStorage.getItem("userid"));
   const navigate = useNavigate(); // Hook to handle navigation
   const userid = sessionStorage.getItem("userid");
+  
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
 
   const MAX_LEVEL = 4; // Maximum levels to display
@@ -20,6 +23,30 @@ const Genealogy = () => {
   const handleExtremeTop = async () => {
     try {
       const response = await axios.get(`${ROOT_URL}/api/auth/getSponsorChildrens/${userid}`);
+      setTreeData(response.data);
+      setLoading(false);
+    } catch (err) {
+      setError("Failed to fetch tree data");
+      setLoading(false);
+    }
+  };
+  const handleExtremeleft =async() => {
+    try {
+      const sponsorId = sessionStorage.getItem("sponosorid");
+      console.log(sponsorId);
+      const response = await axios.post(`${ROOT_URL}/api/auth/extremeLeft`,{sponsorId});
+      setTreeData(response.data);
+      setLoading(false);
+    } catch (err) {
+      setError("Failed to fetch tree data");
+      setLoading(false);
+    }
+  };
+  const handleExtremeright =async() => {
+    try {
+      const sponsorId = sessionStorage.getItem("sponosorid");
+      console.log(sponsorId);
+      const response = await axios.post(`${ROOT_URL}/api/auth/extremeRight`,{sponsorId});
       setTreeData(response.data);
       setLoading(false);
     } catch (err) {
@@ -185,11 +212,31 @@ const Genealogy = () => {
 
   return (
     <>
+    <div>
+    <div className="input-group mb-3 mt-2" style={{maxWidth:"500px"}}>
+  <input type="text" className="form-control p-3" placeholder="Search with Sponsor ID..." aria-label="Search" aria-describedby="search-button" onChange={e => setsponsorid(e.target.value)}/>
+  <button className="btn btn-primary" type="button" style={{backgroundColor:"rgb(151, 30, 151)"}} id="search-button">
+    <i className="fa fa-search text-white"></i>
+  </button>
+</div>
+    </div>
       <div className="flex flex-column">
-        <div className="text-center">
-          <button className="btn btn-primary mt-5" onClick={handleExtremeTop}>
-            Extreme Top
+      <div className="row">
+        <div className="col-lg-4 text-center">
+          <button className="extremeleft mt-5 w-50" onClick={handleExtremeleft}>
+            Extreme left
           </button>
+        </div>
+        <div className="col-lg-4 text-center">
+        <button className="extremeleft mt-5 w-50" onClick={handleExtremeTop}>
+            Extreme top
+          </button>
+        </div>
+        <div className="col-lg-4 text-center">
+        <button className="extremeleft mt-5 w-50" onClick={handleExtremeright}>
+            Extreme right
+          </button>
+        </div>
         </div>
 
         <div>

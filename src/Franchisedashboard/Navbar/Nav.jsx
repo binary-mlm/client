@@ -1,7 +1,7 @@
 import React from 'react'
 import "../../../public/Franchise/css/style.css";
 import logo from "/Franchise/images/logo-mini.svg"
-import logo1 from "/Franchise/images/logo.svg"
+import logo1 from "/Franchise/images/logo.png"
 import user from "/Franchise/images/faces/face1.jpg"
 const Nav = () => {
   const username = sessionStorage.getItem("username")
@@ -22,7 +22,7 @@ const Nav = () => {
           <div className="input-group-prepend bg-transparent">
             <i className="input-group-text border-0 mdi mdi-magnify"></i>
           </div>
-          <input type="text" className="form-control bg-transparent border-0" placeholder="Search projects"/>
+          {/* <input type="text" className="form-control bg-transparent border-0" placeholder="Search projects"/> */}
         </div>
       </form>
     </div>

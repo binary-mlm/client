@@ -1,5 +1,5 @@
-import React from 'react'
-import award from "../../../../assets/images/banners/award.jpg"
+import React,{useState, useEffect} from 'react'
+import award from "../../../../assets/images/banners/award.png"
 const Award = () => {
   const [photos, setPhotos] = useState([]);
   useEffect(() => {

@@ -17,12 +17,12 @@ const UserNavbar = () => {
 
         {/* Username Section */}
         <div className="name">
-        <span className=' h3 text-center fw-bold'>Welcome To User  Dashboard</span>
+        <span className=' h3 text-center fw-bold text-white'>Welcome To User  Dashboard</span>
         </div>
 
         {/* Logout Button */}
         <div className="logout">
-        <Link to="/"><button className='btn btn-success'>Logout</button></Link>
+        <Link to="/"><button className='logout btn btn-success'>Logout</button></Link>
         </div>
       </div>
     </header>

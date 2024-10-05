@@ -79,7 +79,7 @@ const Login = () => {
               <h3 className='text-center'>Franchise Login Portal</h3>
                 <MDBCardBody className='p-5'>
                 
-                  <label>Email</label>
+                  <label>Sponsor ID</label>
                   <MDBInput wrapperClass='mb-4' id='form3' type='email'  onChange={e => setemail(e.target.value)} />
                   <label>Password</label>
                   <MDBInput wrapperClass='mb-4' id='form4' type='password'  onChange={e => setPassword(e.target.value)} />

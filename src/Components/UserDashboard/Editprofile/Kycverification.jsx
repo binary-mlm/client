@@ -128,7 +128,7 @@ Otherwise you kyc will not be accept by us</h6>
 <div className="imagePreview" id="pan_front_image_show">
     
 </div>
-<label className=" btn bg-primary upload w-100">Upload your PAN Card (Front Side)
+<label className=" btn bg-primary upload w-100">Upload your Addhar Card (Front Side)
 <input type="file" className="uploadFile img" src={user}  style={{width: "0px",height:"0px",overflow: "hidden"}} id="pan_front_image"/>
 </label>
 
@@ -137,12 +137,21 @@ Otherwise you kyc will not be accept by us</h6>
 <div className="imagePreview" id="pan_front_image_show">
     
 </div>
-<label className=" btn bg-primary upload w-100">Upload your PAN Card (Front Side)
+<label className=" btn bg-primary upload w-100">Upload your Addhar Card (Back Side)
 <input type="file" className="uploadFile img" src={user}  style={{width: "0px",height:"0px",overflow: "hidden"}} id="pan_front_image"/>
 </label>
 
 </div>
 <div className="col-md-2 imgUp">
+<div className="imagePreview" id="pan_front_image_show">
+    
+</div>
+<label className=" btn bg-primary upload w-100">Upload Bank Card (Passbook/Cancel Cheque)
+<input type="file" className="uploadFile img" src={user}  style={{width: "0px",height:"0px",overflow: "hidden"}} id="pan_front_image"/>
+</label>
+
+</div>
+{/* <div className="col-md-2 imgUp">
 <div className="imagePreview" id="pan_front_image_show">
     
 </div>
@@ -150,16 +159,7 @@ Otherwise you kyc will not be accept by us</h6>
 <input type="file" className="uploadFile img" src={user}  style={{width: "0px",height:"0px",overflow: "hidden"}} id="pan_front_image"/>
 </label>
 
-</div>
-<div className="col-md-2 imgUp">
-<div className="imagePreview" id="pan_front_image_show">
-    
-</div>
-<label className=" btn bg-primary upload w-100">Upload PAN Card (Front Side)
-<input type="file" className="uploadFile img" src={user}  style={{width: "0px",height:"0px",overflow: "hidden"}} id="pan_front_image"/>
-</label>
-
-</div>
+</div> */}
 
 </div>
 

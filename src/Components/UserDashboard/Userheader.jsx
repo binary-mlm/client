@@ -45,12 +45,30 @@ const Sidebar = () => {
               Reports
             </Link>
           </li>
-          <li className="nav-item mb-3">
+          {/* <li className="nav-item mb-3">
             <Link to="/userdasboard/genealogy" className="nav-link d-flex align-items-center sideitem">
               <img src={lead} width={20} height={25} className="me-2" alt="Genealogy" />
               Genealogy
             </Link>
-          </li>
+          </li> */}
+          <li className="nav-item mb-3 dropdown">
+  <Link 
+    to="/userdasboard/genealogy" 
+    className="nav-link d-flex align-items-center sideitem dropdown-toggle" 
+    id="genealogyDropdown" 
+    role="button" 
+    data-bs-toggle="dropdown" 
+    aria-expanded="false"
+  >
+    <img src={lead} width={20} height={25} className="me-2" alt="Genealogy" />
+    Genealogy
+  </Link>
+  <ul className="dropdown-menu" aria-labelledby="genealogyDropdown">
+    <li><Link className="dropdown-item" to="/userdasboard/genealogy">Genealogy Tree</Link></li>
+    <li><Link className="dropdown-item" to="/userdasboard/genealogy/ancestors">Direct team</Link></li>
+  </ul>
+</li>
+          
           <li className="nav-item mb-3">
             <Link to="/payout" className="nav-link d-flex align-items-center sideitem">
               <img src={task} width={20} height={24} className="me-2" alt="Payout" />
@@ -75,12 +93,12 @@ const Sidebar = () => {
               Resources
             </Link>
           </li>
-          <li className="nav-item mb-3">
+          {/* <li className="nav-item mb-3">
             <Link to="/about" className="nav-link d-flex align-items-center  sideitem">
               <img src={contact} width={20} height={24} className="me-2" alt="About" />
               About
             </Link>
-          </li>
+          </li> */}
           {/* <li className="nav-item mb-3">
             <Link to="/logout" className="nav-link d-flex align-items-center text-dark sideitem">
               <img src={contact} width={20} height={24} className="me-2" alt="Logout" />

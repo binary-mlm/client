@@ -1,7 +1,7 @@
 import React from 'react'
-import banner from '../../assets/images/banners/education.jpg'
+import banner from '../../assets/images/banners/education.png'
 import trainerview from '../../assets/images/trainer.png'
-import education from '../../assets/images/education.jpg'
+// import education from '../../assets/images/education.jpg'
 import './education.css'
 const Education = () => {
   
@@ -64,7 +64,7 @@ const Education = () => {
             </div> */}
             </div>
               <div className='mb-2 mx-5'>
-              <img src={education} width={800}/>
+              {/* <img src={education} width={800}/> */}
 
               </div>
             </div>

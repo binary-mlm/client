@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import  legal from "../../../../assets/images/banners/leagal.jpg"
+import  legal from "../../../../assets/images/banners/legal.png"
 
 const Legaldocument = () => {
   const [photos, setPhotos] = useState([]);

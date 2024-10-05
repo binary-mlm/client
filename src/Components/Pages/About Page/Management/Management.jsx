@@ -1,5 +1,5 @@
 import React from 'react'
-import manage from "../../../../assets/images/banners/management.jpg"
+import manage from "../../../../assets/images/banners/management.png"
 import "./management.css"
 import kushal from "../../../../assets/images/kushal.jpg";
 import Dipan from "../../../../assets/images/dipan.jpg";
@@ -36,19 +36,17 @@ const Management = () => {
         <div className='team-title'>
           Kushal Saha
         </div>
-        <div className='designation mt-2' >Chairman & Managing Director (CMD)</div><br/>
-        <div className='team-text'>Kushal Saha is a highly self-motivated visionary young entrepreneur who decisively leads Utbhab from the front. His combined rich experience of over 5 years in the real estate, wellness industry and the direct selling industry has enabled him to take astute business decisions which has made Utbhab a powerful value-based business idea and a well-known brand across India.
-         His management prowess including the leadership skills, ability to take risks, make quick business decisions and efficiently implement them have made him a skilful entrepreneur and an adorable face of the company. At Utbhab, he pays special attention to offering quality products, right from its conceptualization, research & development, manufacturing, international standard packaging and affordable pricing and looks-after the over-all operations of Utbhab including business development and training. His high-voltage passionate speeches profoundly inspire each and everyone. He supervises timely and efficient services to Utbhab customers and Independent Business Owners and creates a grand vision for them to lead towards massive success.</div>
+        <div className='designation mt-2' >Managing Director (MD)</div><br/>
+        <div className='team-text'>Kushal Saha is a highly self-motivated visionary young entrepreneur who decisively leads Udbhab from the front as a MD. His combined rich experience of over 5 years in the finance sector, wellness industry has enabled him to take astute business decisions which has made Udbhab a powerful value-based business idea and a well-known brand across India. His management prowess including the leadership skills, ability to take risks, make quick business decisions and efficiently implement them have made him a skilful entrepreneur and an adorable face of the company.
         </div>
-      </div>
+      </div></div>
       <div className='row cardteam mb-2'>
         <div className='col-lg-9'>
         <div className='team-title'>
         Dipan Das
         </div>
         <div className='designation mt-2'>Co-founder & Director</div><br/>
-        <div className='team-text'>Dipan Das is a visionary entrepreneur with over 6 years of experience in real estate, wellness, and direct selling. Leading Utbhab, he combines strategic decision-making and leadership skills to build a powerful value-based brand across India. Known for his focus on quality, from product development to affordable pricing, Dipan oversees all operations, including business growth and training. His inspiring speeches and hands-on leadership motivate the team and Independent Business Owners, guiding them toward success while ensuring excellent customer service and impactful business development.
-        </div>
+        <div className='team-text'>Dipan Das is a co-founder of Udbhab marketing pvt. ltd., recognised for his entrepreneurial spirit and leadership in the industry. With a background in business strategy, trading and marketing for 6 years, Dipan has been pivotal in shaping the company’s vision and operational framework. Dipan is also keen on leveraging technology to enhance the direct selling experience, utilising digital tools to expand reach and streamline operations. His innovative approach and commitment to personal development make him a vital force in driving the company’s growth and success in the competitive direct selling landscape.  </div>
         
         </div>
         <div className='col-lg-3'>
@@ -65,8 +63,7 @@ const Management = () => {
         Sourav Basak
         </div>
         <div className='designation mt-2'>Chief Technology Officer (CTO)</div><br/>
-        <div className='team-text'>Sourav Basak, is a visionary entrepreneur with over 6 years of experience in real estate, wellness, and direct selling. Leading Utbhab, he combines strategic decision-making and leadership skills to create a strong, value-driven brand across India. Focused on quality from product development to competitive pricing, [Name] oversees all operations, including business expansion and training. His inspiring leadership and motivational speeches energize the team and Independent Business Owners, steering them toward success while ensuring excellent customer service and impactful business growth. 
-        </div>
+        <div className='team-text'>Sourav Basak is the tech backbone of Udbhab marketing pvt. ltd., He plays a crucial role in modern technological innovation and digital transformation in previous. With a strong background in software development and IT strategy, Sourav is responsible for overseeing the company’s technology initiatives, ensuring that they align with business goals. He focuses on developing robust digital platforms that enhance the direct selling experience for distributors and customers alike. Sourav is dedicated to leveraging emerging technologies, such as data analytics and automation, to streamline operations and improve efficiency. </div>
         </div>
       </div>
       </div>

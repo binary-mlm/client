@@ -1,5 +1,5 @@
 import React from 'react'
-import Topmenu from './Topmenu';
+// import Topmenu from './Topmenu';
 import "../../assets/css/main.css";
 import "../../assets/css/blue.css";
 import Mainheader from "../Header/Mainheader";
@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <>
         <header className="header-style-1">
-           <Topmenu/> 
+           {/* <Topmenu/>  */}
            <Mainheader/>
            <Navbar/>
         </header>

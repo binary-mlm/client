@@ -1,9 +1,10 @@
 import React from 'react';
 import pic1 from "../../assets/images/payments/1.png";
-import pic2 from "../../assets/images/payments/2.png";
+import pic2 from "../../assets/images/payments/2.jpg";
 import pic3 from "../../assets/images/payments/3.png";
 import pic4 from "../../assets/images/payments/4.png";
-import pic5 from "../../assets/images/payments/5.png";
+import pic5 from "../../assets/images/payments/5.jpg";
+import pic6 from "../../assets/images/payments/googleplay.png"
 
 const Footer = () => {
   return (
@@ -43,7 +44,7 @@ const Footer = () => {
           
           <div className="col-xs-12 col-sm-6 col-md-3">
             <div className="module-heading">
-              <h4 className="module-title">Customer Service</h4>
+              <h4 className="module-title text-white">Customer Service</h4>
             </div>
              
             <div className="module-body">
@@ -60,7 +61,7 @@ const Footer = () => {
           
           <div className="col-xs-12 col-sm-6 col-md-3">
             <div className="module-heading">
-              <h4 className="module-title">Corporation</h4>
+              <h4 className="module-title text-white">Corporation</h4>
             </div>
            
             
@@ -78,7 +79,7 @@ const Footer = () => {
           
           <div className="col-xs-12 col-sm-6 col-md-3">
             <div className="module-heading">
-              <h4 className="module-title">Why Choose Us</h4>
+              <h4 className="module-title text-white">Why Choose Us</h4>
             </div>
            
             
@@ -100,24 +101,34 @@ const Footer = () => {
       <div className="container">
       <div className='row'>
         <div className="col-xs-12 col-sm-4 no-padding social">
-          <ul className="link">
-            <li className="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
-            <li className="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
+          <ul className="link d-flex">
+      
+           
+          
             {/* <li className="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
             <li className="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
             <li className="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li> */}
-            {/* <li className="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li> */}
-            <li className="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
+             {/* <li className="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li> */}
+           
+            <li><i className="fa fa-youtube mt-1 me-2" style={{fontSize:"32px", color:"red"}}></i></li>
+            <li><i className="fa fa-twitter mt-1 me-2" style={{fontSize:"32px", color:"white"}}></i></li>
+            <li><i className="fa fa-facebook mt-1 me-2 " style={{fontSize:"32px", color:"aqua"}}></i></li>
+             <li><i className="fa fa-instagram mt-1 " style={{fontSize:"32px", color:"pink"}}></i></li>
             {/* <li className="youtube pull-left" ><i className="fa fa-instagram"></i></li> */}
           </ul>
         </div>
-        <div className="col-xs-12 col-sm-5 no-padding copyright"><a>Copyright © Utbhab 2024.Powered by Synthosphere Technologies Private Limited</a> </div>
-        <div className="col-xs-12 col-sm-3 no-padding">
+        <div className="col-xs-12 col-sm-4 no-padding copyright"><a>Copyright © Udbhab Marketing Pvt Ltd 2024</a> </div>
+        <div className="col-xs-12 col-sm-4 no-padding">
           <div className="clearfix payment-methods">
-            <ul>
+            <ul className='d-flex justify-content-end'>
               <li><img src={pic4} alt=""/></li>
-              <li><img src={pic1} alt=""/></li>
-              <li><img src={pic2} alt=""/></li>
+              <li><img src={pic6} width={70} height={36} alt=""/></li>
+              {/* <li><img src={pic1} alt=""/></li> */}
+              <li><img src={pic5} width={60} alt=""/></li>
+              <li><img src={pic2} width={100}  height={35} alt=""/></li>
+             
+              {/* <li><img src={pic5} style={{width:"30%px"}} alt=""/></li> */}
+
               {/* <li><img src={pic3} alt=""/></li> */}
               
             </ul>

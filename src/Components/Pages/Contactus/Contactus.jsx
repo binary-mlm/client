@@ -6,9 +6,9 @@ const Contactus = () => {
 	<div className="container">
     <div className="contact-page">
 		<div className="row">
-        <div className="col-md-12 contact-map">
+        {/* <div className="col-md-12 contact-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.943231030585!2d88.39068467476064!3d22.693157128542072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65cb2733ae66dbb9%3A0x2fce9f618eb489f9!2sSynthosphere%20Technologies!5e0!3m2!1sen!2sin!4v1724493113989!5m2!1sen!2sin" width="600" height="450" style={{border:"0"}}  referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
+				</div> */}
   <div className="col-md-8 contact">
 	<div className="col-md-12 contact-title">
     <div className="container my-5">
@@ -57,15 +57,15 @@ const Contactus = () => {
 	</div>
 	<div className="clearfix address">
 		<span className="contact-i"><i class="fa fa-map-marker"></i></span>
-		<span className="contact-span">ThemesGround, 789 Main rd, Anytown, CA 12345 USA</span>
+		<span className="contact-span">Indrira nagar Sodepur, North 24 Parganas. Kol-700110</span>
 	</div>
 	<div className="clearfix phone-no">
 		<span className="contact-i"><i class="fa fa-mobile"></i></span>
-		<span className="contact-span">+(888) 123-4567</span>
+		<span className="contact-span">+(91)7980964516</span>
 	</div>
 	<div className="clearfix email">
 		<span className="contact-i"><i className="fa fa-envelope"></i></span>
-		<span className="contact-span"><a  className="text-decoration-none" href="/">marazoo@themesground.com</a></span>
+		<span className="contact-span"><a  className="text-decoration-none" href="/">support@myudbhab.in</a></span>
 	</div>
   <div>
   {/* <div className='container mt-4 text-center'>

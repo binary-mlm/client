@@ -19,7 +19,7 @@ const  Banner = () => {
             <div className="caption animated fadeIn ms-5">
               <h6 className="animated fadeInLeft text-muted">Top Brands</h6>
               <h2 className="animated fadeInRight fw-bold">Women Collections</h2>
-              <a className="animated fadeInUp  delicious-btn mt-3" href="#">Shop now</a>
+              <a className="animated fadeInUp  delicious-btn mt-3" style={{backgroundColor:"#13a686"}} href="#">Shop now</a>
             </div>
           </div>
         </div>

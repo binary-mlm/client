@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../../assets/images/aboutbanner.jpg";
+import banner from "../../../assets/images/aboutbanner.png";
 import "./about.css";
 import pic from "../../../assets/images/about.jpg";
 import Chooseus from "./Chooseus";

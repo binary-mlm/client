@@ -63,7 +63,7 @@ const Login = () => {
                 <div className="row g-0">
                   <div className="col-md-6 col-lg-5 d-md-block image">
                     <img src={pic}
-                      alt="loginform" className="img-fluid" />
+                      alt="loginform" className="img-fluid" style={{width:"80%"}} />
                   </div>
                   <div className="col-md-6 col-lg-7 d-flex" id="loginform">
                     <div className="card-body p-lg-5 text-black">
@@ -86,7 +86,7 @@ const Login = () => {
                         </div>
 
                         <div className="pt-1 mb-4 text-center">
-                          <button className="btn-primary btn-lg w-50" onClick={handleSubmit} type="submit">Login</button>
+                          <button className="btn-primary btn-lg w-50" style={{backgroundColor:"#095444"}} onClick={handleSubmit} type="submit">Login</button>
                         </div>
                         <div className="row">
                         <div className='col-md-6'>

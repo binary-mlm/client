@@ -51,7 +51,7 @@ const Sidebar = ({ setCurrentPage }) => {
       </a>
      
     </li>
-    <li className="nav-item">
+    {/* <li className="nav-item">
       <a className="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
         <span className="menu-title">Charts</span>
         <i className="mdi mdi-chart-bar menu-icon"></i>
@@ -63,8 +63,8 @@ const Sidebar = ({ setCurrentPage }) => {
           </li>
         </ul>
       </div>
-    </li>
-    <li className="nav-item">
+    </li> */}
+    {/* <li className="nav-item">
       <a className="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
         <span className="menu-title">Tables</span>
         <i className="mdi mdi-table-large menu-icon"></i>
@@ -76,8 +76,8 @@ const Sidebar = ({ setCurrentPage }) => {
           </li>
         </ul>
       </div>
-    </li>
-    <li className="nav-item">
+    </li> */}
+    {/* <li className="nav-item">
       <a className="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
         <span className="menu-title">User Pages</span>
         <i className="menu-arrow"></i>
@@ -102,13 +102,13 @@ const Sidebar = ({ setCurrentPage }) => {
           </li>
         </ul>
       </div>
-    </li>
-    <li className="nav-item">
+    </li> */}
+    {/* <li className="nav-item">
       <a className="nav-link" href="../docs/documentation.html" target="_blank">
         <span className="menu-title">Documentation</span>
         <i className="mdi mdi-file-document-box menu-icon"></i>
       </a>
-    </li>
+    </li> */}
   </ul>
 </nav>
     </>

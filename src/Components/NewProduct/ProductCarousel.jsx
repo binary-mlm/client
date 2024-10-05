@@ -8,7 +8,7 @@ const ProductCarousel = ({ products }) => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 5, // Number of cards to show at once
+        slidesToShow: 3, // Number of cards to show at once
         slidesToScroll: 1,
         responsive: [
           {
@@ -36,7 +36,7 @@ const ProductCarousel = ({ products }) => {
                         <div className="product-image">
                           <div className="image"> 
                           
-                             <img src={products.imageURL} className='img-fluid' style={{width:"100%", height:"100%"}}  alt=""/> 
+                             <img src={products.imageURL} className='img-fluid' style={{width:"100%", height:"90%"}}  alt=""/> 
                               {/* <img src={product.hoverimage} alt="" class="hover-image"/> */}
                           
                           </div>   

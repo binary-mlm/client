@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import logo from "../../assets/images/nextop1.png"
+ import logo from "../../assets/images/udbhab.png"
 import "../../assets/css/main.css";
 import "../../assets/css/blue.css";
 import "../../assets/css/animate.min.css";
@@ -10,22 +10,21 @@ import "./mainheader.css"
 const Mainheader = () => {
   return (
   <>
-    <div className="main-header">
+    <div className="main-header mt-1">
     <div className="container">
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-3 logo-holder"> 
-         <div className="logo mt-3"> <a href="home.html" className='text-white'>
-         UDBHAB
-         {/* <img src={logo} width={190} alt="logo"/>  */}
+         <div className="logo"> <a href="home.html">
+         <img src={logo} alt="logo" style={{width:"50%"}}/> 
          </a> 
          </div>
          </div>
         
-        <div className="col-lg-7 col-md-6 col-sm-8 col-xs-12 top-search-holder"> 
+        <div className="col-lg-4 col-md-4 col-sm-8 col-xs-12 top-search-holder"> 
          <div className="search-area">
             
               <div className="control-group">
-              <ul className="categories-filter animate-dropdown">
+              {/* <ul className="categories-filter animate-dropdown">
                   <li clclassNameass="dropdown"> <a class="dropdown-toggle text-decoration-none"  data-bs-toggle="dropdown" href="/">Categories <b class="caret"></b></a>
                     <ul className="dropdown-menu" role="menu" >
                       <li className="menu-header">Computer</li>
@@ -35,11 +34,10 @@ const Mainheader = () => {
                       <li role="presentation"><a className='text-decoration-none' role="menuitem" tabIndex="-1" href="/">- Watches</a></li>
                     </ul>
                   </li>
-                </ul>
+                </ul> */}
                
+                <input className="search-field" placeholder="Search here..." /><i className="fa fa-search" style={{marginLeft:"20%"}} href="#" ></i> 
                 
-                <input className="search-field" placeholder="Search here..." />
-                <a className="search-button" href="#" ></a> 
                 </div>
             
           </div>

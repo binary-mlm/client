@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
    <>
    
-  <nav className="navbar navbar-expand-lg navbarmenu">
+  <nav className="navbar navbar-expand-lg navbarmenu mt-2">
   <div className="container-fluid">
    
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,7 +79,7 @@ const Navbar = () => {
           <a className="nav-link" href="/login">Login</a>
         </li>
          <li className="nav-item item_nav">
-          <a className="nav-link" href="/franchise/login">Franchise login</a>
+          <a className="nav-link" href="/franchise/login">PUP login</a>
         </li>
         {/* <li className="nav-item dropdown item">
           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

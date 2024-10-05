@@ -30,17 +30,29 @@ function Welcomeuser() {
         </div> */}
         <div className='col-lg-12'>
         <div className='container mt-4'>
-        <h5 className='fw-bold'> Hello Mr. AVIJIT CHAKRABORTY</h5>
-            <p style={{fontSize:"14px"}}>
-Thank you for being a part of SHPL. By doing so, you have taken one of the most important decisions of your life that has the potential to transform your life. I take this occasion to heartily congratulate you and extend a warm welcome to this ever-growing SHPL family.
-            </p>
-            <p style={{fontSize:"14px"}}>Since 20 May 2018, we have grown from strength to strength and today, we are one of the fastest growing direct selling companies of India, building a vigorous consumer network pan India. We offer over 300 world-class products and services with excellent packing, affordable pricing and value-for-money benefits. No wonder, SHPL products have become a household name and we are happy to have you representing them. We wish you all the very best.</p>
-       <p style={{fontSize:"14px"}}>SHPL offers a legitimate and ethical entrepreneurship opportunity where you can build a serious career with commitment, focus and hard work. Our compensation plan generously pays lucrative sales commission without too many conditions and I invite you to give your 100% so that you can achieve both time and financial freedom.</p>
-        <p style={{fontSize:"14px"}}>Before you start actively building your SHPL business, use our products, feel their benefits and equip yourself with sufficient knowledge of all SHPL products. Once you do so, study SHPL business plan, familiarize yourself with our web site and study the IBO Back Office well. Adequate preparation is the hallmark of a true champion. In case you need any assistance, do not hesitate to contact our Support Team, who will be glad to assist you with a smile. Kindly mention your SHPL User ID in all your future communication with us.</p>
-       
-       <p style={{fontSize:"14px"}}>Once again, I welcome you to this vibrant SHPL consumer network and congratulate you for choosing to build an exciting career with us. We look forward to work with you closely.</p>
-        <p style={{fontSize:"14px"}}>I wish you all the very best. May all your dreams come true.</p>
-        <p style={{fontSize:"14px"}}><strong style={{fontSize:"14px"}}>Gopal Kundu<br/>CMD, SHPL</strong></p>
+        {/* <h5 className='fw-bold'> Hello Mr. AVIJIT CHAKRABORTY</h5> */}
+        <p>Hello Mr. AVIJIT CHAKRABORTY,</p>
+        <p>
+        
+
+Thank you for being a part of Udbhab Marketing Private Limited. By doing so, you have taken one of the most important decisions of your life that has the potential to transform your future. I take this occasion to heartily congratulate you and extend a warm welcome to this ever-growing Udbhab Marketing family.
+
+Since 4th October, 2024, we have been committed to building a strong and vibrant network of consumers across India. We offer over 300 world-class products and services with excellent packaging, affordable pricing, and value-for-money benefits. No wonder, Udbhab Marketing products are on their way to becoming a household name, and we are excited to have you representing them. We wish you all the very best in this journey.
+
+Udbhab Marketing provides a legitimate and ethical entrepreneurship opportunity where you can build a successful career through commitment, focus, and hard work. Our compensation plan is designed to reward you generously with lucrative sales commissions, and I invite you to give your 100% to achieve both time and financial freedom.
+
+Before you start actively building your Udbhab Marketing business, I encourage you to use our products, experience their benefits, and equip yourself with sufficient knowledge of all the offerings. Once you're familiar with them, study the Udbhab Marketing business plan, explore our website, and understand the IBO Back Office well. Adequate preparation is the hallmark of a true champion. In case you need any assistance, feel free to contact our Support Team, who will be more than happy to assist you. Kindly mention your **Udbhab Marketing User ID** in all future communication with us.
+
+Once again, welcome to the Udbhab Marketing family! Congratulations on choosing to build an exciting career with us. We look forward to working closely with you.
+
+I wish you all the very best. May all your dreams come true.
+
+
+        </p>
+        <p>Warm regards,  <br/>
+        Udbhab Marketing Private Limited</p>
+            
+    {/* <p style={{fontSize:"14px"}}><strong style={{fontSize:"14px"}}>Gopal Kundu<br/>CMD, SHPL</strong></p> */}
         </div>
        </div>
         
