@@ -20,10 +20,9 @@ const Productview = () => {
       .catch((err) => console.log(err));
     }
   }, [id]);
-  const buyhandler=()=>{
-    // alert('Product added to cart')
-    navigate("/ordernow")
-  }
+  // const buyhandler=()=>{
+  //   navigate("/ordernow")
+  // }
   // const ProductteamInfo = [
   //   {
   //     Product_pic: [pic1],
@@ -80,9 +79,9 @@ const Productview = () => {
          </tr>
          </tbody>
          </table>
-         <div>
+         {/* <div>
           <button type="submit" className='btn btn-primary w-25' onClick={buyhandler}><i class="fa fa-shopping-cart me-2" ></i>BUY NOW</button>
-         </div>
+         </div> */}
           </div>
 
           </div>

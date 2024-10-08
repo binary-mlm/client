@@ -20,9 +20,24 @@ const Genealogy = () => {
   const MAX_LEVEL = 4; // Maximum levels to display
 
   // Fetch tree data for a given nodeId
+  //search for sponsorid
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    try {
+        // Make API request to search for the sponsor
+        console.log(sponsorid);
+        const response = await axios.get(`${ROOT_URL}/api/user/searchUserInGenealogyTree/${sponsorid}`);
+       setTreeData(response.data);
+       console.log(response);
+    } catch (err) {
+      
+        console.log(err);
+    }
+};
+  //end
   const handleExtremeTop = async () => {
     try {
-      const response = await axios.get(`${ROOT_URL}/api/auth/getSponsorChildrens/${userid}`);
+      const response = await axios.get(`${ROOT_URL}/api/user/getSponsorChildrens/${userid}`);
       setTreeData(response.data);
       setLoading(false);
     } catch (err) {
@@ -34,7 +49,7 @@ const Genealogy = () => {
     try {
       const sponsorId = sessionStorage.getItem("sponosorid");
       console.log(sponsorId);
-      const response = await axios.post(`${ROOT_URL}/api/auth/extremeLeft`,{sponsorId});
+      const response = await axios.post(`${ROOT_URL}/api/user/extremeLeft`,{sponsorId});
       setTreeData(response.data);
       setLoading(false);
     } catch (err) {
@@ -46,7 +61,7 @@ const Genealogy = () => {
     try {
       const sponsorId = sessionStorage.getItem("sponosorid");
       console.log(sponsorId);
-      const response = await axios.post(`${ROOT_URL}/api/auth/extremeRight`,{sponsorId});
+      const response = await axios.post(`${ROOT_URL}/api/user/extremeRight`,{sponsorId});
       setTreeData(response.data);
       setLoading(false);
     } catch (err) {
@@ -59,7 +74,7 @@ const Genealogy = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`${ROOT_URL}/api/auth/getSponsorChildrens/${nodeId}`);
+      const response = await axios.get(`${ROOT_URL}/api/user/getSponsorChildrens/${nodeId}`);
       setTreeData(response.data);
       setLoading(false);
     } catch (err) {
@@ -213,12 +228,15 @@ const Genealogy = () => {
   return (
     <>
     <div>
+    <form onSubmit={handleSearch}>
     <div className="input-group mb-3 mt-2" style={{maxWidth:"500px"}}>
   <input type="text" className="form-control p-3" placeholder="Search with Sponsor ID..." aria-label="Search" aria-describedby="search-button" onChange={e => setsponsorid(e.target.value)}/>
-  <button className="btn btn-primary" type="button" style={{backgroundColor:"rgb(151, 30, 151)"}} id="search-button">
+  <button className="btn btn-primary" type="submit" style={{backgroundColor:"rgb(151, 30, 151)"}} id="search-button" value={sponsorid}
+                        onChange={(e) => setsponsorid(e.target.value)}>
     <i className="fa fa-search text-white"></i>
   </button>
 </div>
+</form>
     </div>
       <div className="flex flex-column">
       <div className="row">

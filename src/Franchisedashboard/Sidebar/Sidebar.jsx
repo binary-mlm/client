@@ -49,7 +49,12 @@ const Sidebar = ({ setCurrentPage }) => {
         <span className="menu-title">Inventory</span>
         <i className="mdi mdi-format-list-bulleted menu-icon"></i>
       </a>
-     
+    </li>
+    <li className="nav-item" onClick={() => setCurrentPage('invoicelist')}>
+      <a className="nav-link">
+        <span className="menu-title">Invoicelist</span>
+        <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+      </a>
     </li>
     {/* <li className="nav-item">
       <a className="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">

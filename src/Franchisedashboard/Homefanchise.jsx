@@ -1,9 +1,10 @@
 import React ,{useState}from 'react'
 import Nav from './Navbar/Nav'
 import Sidebar from "./Sidebar/Sidebar"
-import Footer from './Footer/Footer'
+// import Footer from './Footer/Footer'
 import Franchisedashboard from "./dashboardfanchise/Franchisedashboard";
 import Inventory from './Inventory/Inventory';
+import Invoicelist from "./Inventory/Invoicelist";
 
 const Homefanchise = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -12,7 +13,9 @@ const Homefanchise = () => {
       case 'dashboard':
         return <Franchisedashboard />;
       case 'inventory':
-        return <Inventory />; // Render other components based on sidebar menu clicks
+        return <Inventory />;
+        case 'invoicelist':
+        return <Invoicelist />; // Render other components based on sidebar menu clicks
       default:
         return <Franchisedashboard />;
     }

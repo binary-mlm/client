@@ -65,7 +65,7 @@ const Sidebar = () => {
   </Link>
   <ul className="dropdown-menu" aria-labelledby="genealogyDropdown">
     <li><Link className="dropdown-item" to="/userdasboard/genealogy">Genealogy Tree</Link></li>
-    <li><Link className="dropdown-item" to="/userdasboard/genealogy/ancestors">Direct team</Link></li>
+    <li><Link className="dropdown-item" to="/userdasboard/direct_team">Direct team</Link></li>
   </ul>
 </li>
           

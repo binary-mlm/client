@@ -30,6 +30,7 @@ import Legaldocument from "./Components/Pages/About Page/Legaldocu/Legaldocument
 import Award from "./Components/Pages/About Page/Award&reward/Award";
 import Franchiselogin from "./Franchisedashboard/Login/Login";
 import Homefranchise from "./Franchisedashboard/Homefanchise";
+import DirectTeam from './Components/UserDashboard/Genealogy/DirectTeam';
 function App() {
   return (
     <>
@@ -60,6 +61,7 @@ function App() {
       <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
       <Route path="/userdasboard/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />
       <Route path="/userdasboard/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
+      <Route path="/userdasboard/direct_team" element={<Dashboardlayout><DirectTeam/></Dashboardlayout>} />
       <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
       <Route path="/signupleft/:parentSponsorId" element={<Userlayout><Signupleft/></Userlayout>}/>

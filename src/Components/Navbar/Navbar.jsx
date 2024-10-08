@@ -60,6 +60,7 @@ const Navbar = () => {
             <li className='subitem'><a className="dropdown-item" href="/">Facebook</a></li>
             <li className='subitem'><a className="dropdown-item " href="/">Instagram</a></li>
             <li className='subitem'><a className="dropdown-item " href="/">Youtube</a></li>
+            <li className='subitem'><a className="dropdown-item " href="/">Twitter</a></li>
           </ul>
         </li>
         {/* <li className="nav-item item_nav">

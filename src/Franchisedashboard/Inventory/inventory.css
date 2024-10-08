@@ -1,0 +1,15 @@
+.addtocart{
+    background-color: #10856c;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+.handlesubmitbutton{
+    background-color: #10856c;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+}

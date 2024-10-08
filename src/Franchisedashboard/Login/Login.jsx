@@ -35,6 +35,7 @@ const Login = () => {
           console.log(res);
           const {userId : userId} = res.data;
           const {name : name} = res.data;
+          const {franchiseid :franchiseid} = res.data;
           // swal("Yeah", "Login Successful!!", "success");
           Swal.fire({
             title: 'Success!',
@@ -43,6 +44,7 @@ const Login = () => {
           });
           sessionStorage.setItem('userid', userId);
           sessionStorage.setItem('username', name);
+          sessionStorage.setItem('franchiseid', franchiseid);
              navigate('/franchise/dashboard');
           // navigate('/course');
 
@@ -76,7 +78,7 @@ const Login = () => {
               <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
 
               <MDBCard className='p-5 bg-glass '>
-              <h3 className='text-center'>Franchise Login Portal</h3>
+              <h3 className='text-center'>PUP Login Portal</h3>
                 <MDBCardBody className='p-5'>
                 
                   <label>Sponsor ID</label>

@@ -8,8 +8,8 @@ const ProductCarousel = ({ products }) => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3, // Number of cards to show at once
-        slidesToScroll: 1,
+        slidesToShow: 4, // Number of cards to show at once
+        slidesToScroll: 2,
         responsive: [
           {
             breakpoint: 1024,
@@ -46,20 +46,20 @@ const ProductCarousel = ({ products }) => {
                           <h3 className="name text-center" ><a href="/" className='text-decoration-none '>{products.name}</a></h3>
                           <div className="rating rateit-small"></div>
                           <div className="description"></div>
-                          <div className="product-price text-center"> <span className="price">{products.price}</span> <span className="price-before-discount">$ 800</span> </div>
+                          <div className="product-price text-center"> <span className="price">₹{products.price}</span> </div>
                         </div>
                        
-                        <div className="cart clearfix animate-effect">
+                        {/* <div className="cart clearfix animate-effect">
                           <div className="action">
                             <ul className="list-unstyled">
                               <li className=" btn-group">
                                 <button className="btn btn-primary" data-toggle="dropdown" type="button"> Quick view </button>
                                
                               </li>
-                              {/* <li className="lnk wishlist"> <a className="add-to-cart" href="/" title="Wishlist"> <i className="icon fa fa-heart"></i> </a> </li> */}
+                            
                             </ul>
                           </div>   
-                        </div>  
+                        </div>   */}
                       </div>
                       </a>
               </>

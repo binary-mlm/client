@@ -82,7 +82,7 @@ const Homepage = () => {
       <span>Pending</span></div>
       <div className='card_item text-center ms-5'><span className='fw-bold'>DIRECT TEAM</span><br/>
      <span> L - 0  |  R - 0</span></div>
-      <div className='card_item text-center ms-5'><span className='fw-bold'>ACCUMULATE BV(FULL)</span><br/>
+      <div className='card_item text-center ms-5'><span className='fw-bold'>TOTAL ACCUMULATE BV</span><br/>
       L - 0  |  R - 0</div>
       </div>
       <div className='d-flex mt-2'>
@@ -90,7 +90,7 @@ const Homepage = () => {
       <span>0</span></div>
       <div className='card_item text-center ms-5'><span className='fw-bold'>PERSONAL BV</span><br/>
       0</div>
-      <div className='card_item text-center ms-5'><span className='fw-bold'>PERSONAL BV(FULL)</span><br/>
+      <div className='card_item text-center ms-5'><span className='fw-bold'>TOTAL PERSONAL BV</span><br/>
       L - 0  |  R - 0</div>
       </div>
       <div className='d-flex mt-2'>
@@ -98,20 +98,20 @@ const Homepage = () => {
       Qualified</div>
       <div className='card_item text-center ms-5 fw-bold'><span className='fw-bold'>TEAM BUSINESS VOL(TBV)</span><br/>
       L - 0  |  R - 0</div>
-      {/* <div className='card_item text-center ms-5 fw-bold'><span className='fw-bold'>MY GROUP RBV</span><br/>
-      L - 55,383  |  R - 12,396</div> */}
+      <div className='card_item text-center ms-5 fw-bold'><span className='fw-bold'>WEEKLY EARNING(₹)</span><br/>
+      12,396</div>
       </div>
       <div className='d-flex mt-2'>
       <div className='card_item text-center'><span className='fw-bold'>WEEKLY CAPPING</span><br/>
       125,000</div>
       <div className='card_item text-center ms-5'><span className='fw-bold'>MY TOTAL BV (FBV + RBV)</span><br/>L - 0  |  R - 0
       </div>
-      <div className='card_item text-center ms-5'><span className='fw-bold'>MONTHLY EARNING</span><br/>
-      L - 55,383  |  R - 12,396</div>
+      <div className='card_item text-center ms-5'><span className='fw-bold'>MONTHLY EARNING(₹)</span><br/>
+       12,396</div>
       </div>
       <div className='d-flex mt-2'>
       <div className='card_item text-center'><span className='fw-bold'>RANK ACHIEVEMENT STATUS</span><br/>
-      125,000</div>
+      ACHIEVED</div>
       <div className='card_item text-center ms-5'><span className='fw-bold'>ACHIEVEMENT STATUS</span><br/>Not Qualified
       </div>
       <div className='card_item text-center ms-5'><span className='fw-bold'>TOTAL EARNING (₹)</span><br/>

@@ -9,10 +9,10 @@
 
   
   #carousel .carousel-item {
-    height: 90vh;
-    width: 100%;
+    
+    
     min-height: 350px;
-    background: no-repeat center center scroll;
+    background: no-repeat scroll;
     background-size: cover;
   }
   
