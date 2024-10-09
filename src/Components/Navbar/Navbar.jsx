@@ -52,7 +52,7 @@ const Navbar = () => {
         <li className="nav-item item_nav">
           <a className="nav-link" href="/News">News</a>
         </li>
-        <li className="nav-item dropdown item_nav ms-4">
+        {/* <li className="nav-item dropdown item_nav ms-4">
           <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Social media
           </a>
@@ -62,7 +62,7 @@ const Navbar = () => {
             <li className='subitem'><a className="dropdown-item " href="/">Youtube</a></li>
             <li className='subitem'><a className="dropdown-item " href="/">Twitter</a></li>
           </ul>
-        </li>
+        </li> */}
         {/* <li className="nav-item item_nav">
           <a className="nav-link" href="/logistic">Logistic Partner</a>
         </li> */}

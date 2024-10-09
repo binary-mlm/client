@@ -1,76 +1,80 @@
 import React,{ useState, useEffect} from 'react';
-// import pic1 from "../../assets/images/products/alovera.jpg";
+import pic1 from "../../assets/images/products/aloverasoap.jpg";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Productview = () => {
-  const { id } = useParams();
-  const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-  const [productdetails, setproductdetail] = useState(null);
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!productdetails) {
-    axios
-      .get(ROOT_URL + `/api/user/getProductById/${id}`)
-      .then((productdetail) => {
-        console.log(productdetail.data.product);
-        setproductdetail(productdetail.data.product);
-        console.log(productdetails); 
-      })
-      .catch((err) => console.log(err));
-    }
-  }, [id]);
+  // const { id } = useParams();
+  // const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+  // const [productdetails, setproductdetail] = useState(null);
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   if (!productdetails) {
+  //   axios
+  //     .get(ROOT_URL + `/api/user/getProductById/${id}`)
+  //     .then((productdetail) => {
+  //       console.log(productdetail.data.product);
+  //       setproductdetail(productdetail.data.product);
+  //       console.log(productdetails); 
+  //     })
+  //     .catch((err) => console.log(err));
+  //   }
+  // }, [id]);
   // const buyhandler=()=>{
   //   navigate("/ordernow")
   // }
-  // const ProductteamInfo = [
-  //   {
-  //     Product_pic: [pic1],
-  //     product_name: "Neem Aloevera Shampoo",
-  //     product_mrp: 990,
-  //     Product_Category: "Personalcare",
-  //     Sub_Category:"Haircare",
-  //     Pack_Size: "200ml",
-  //     Product_description: "The aloevera and neem condition the hair, strengthen the roots and make the hair silky. It also helps the hair grow faster. Aloe & Neem Keep Dandruff Away. It helps your hair to be smooth, shiny and less frizzy.",
-  //     Ingredients:"Neem & aloevera extract.",
-  //     Product_Benefits:"Nourishes hair root and scalp andimproves blood circulation to hair follicles & stimulates growth of hair.",
-  //     How_to_Use:"Apply to wet hair, work up a rich lather, rinse throughly, repeat if necessary.",
-  //     Disclaimer:"Make sure to read the label before using. This product is not intended to diagnose, treat or cure any disease. Don't exceed the recommended amount. Keep it out of children's reach. Store in a cool, dry spot away from sunlight. Keep away from heat, light, and moisture. To be used above the age of 12 years."
-  //   }
+  const ProductteamInfo = [
+    {
+      Product_pic: [pic1],
+      product_name: "Neem Aloevera Shampoo",
+      product_mrp: 500,
+      Product_Category: "Personalcare",
+      Sub_Category:"Haircare",
+      Pack_Size: "200ml",
+      Product_description: "The aloevera and neem condition the hair, strengthen the roots and make the hair silky. It also helps the hair grow faster. Aloe & Neem Keep Dandruff Away. It helps your hair to be smooth, shiny and less frizzy.",
+      Ingredients:"Neem & aloevera extract.",
+      Product_Benefits:"Nourishes hair root and scalp andimproves blood circulation to hair follicles & stimulates growth of hair.",
+      How_to_Use:"Apply to wet hair, work up a rich lather, rinse throughly, repeat if necessary.",
+      Disclaimer:"Make sure to read the label before using. This product is not intended to diagnose, treat or cure any disease. Don't exceed the recommended amount. Keep it out of children's reach. Store in a cool, dry spot away from sunlight. Keep away from heat, light, and moisture. To be used above the age of 12 years."
+    },
+    
 
-  // ]
+  ]
   const renderproduct=(productdetails)=>{
     return(
         <>
         <div className='row'>
           <div className='col-4'>
-            <img className='img-fluid' src= {productdetails.imageURL} alt='noimage'/>
+            <img className='img-fluid' src= {productdetails.Product_pic} alt='noimage'/>
           </div>
           <div className='col-8'>
           <div className='container'>
           <div>
-            <span className='h1 fw-bold'>{productdetails.name}</span>
+            <span className='h1 fw-bold'>{productdetails.product_name}</span>
           </div>
           <div className='mt-4'>
-            <span className='h4'>MRP: <i className='fa fa-inr'></i> <span className='h4'>{productdetails.price}</span></span>
+            <span className='h4'>MRP: <i className='fa fa-inr'></i> <span className='h4'>{productdetails.product_mrp}</span></span>
           </div>
          <table className='table mt-4 h5'>
          <tbody>
          <tr>
           <th className='h6 fw-bold' width='30%'>Product Stock</th>
           <td width='5%'>:</td>
-          <td>{productdetails.stock}</td>
+          {/* <td>{productdetails.stock}</td> */}
+          <td>100</td>
          </tr>
          <tr>
           <th className='h6 fw-bold' width='30%'>BV points</th>
           <td width='5%'>:</td>
-          <td>{productdetails.bvPoints}</td>
+          <td>20</td>
+          {/* <td>{productdetails.bvPoints}</td> */}
          </tr>
          
          <tr>
           <th className='h6 fw-bold' width='30%'>Category</th>
           <td width='5%'>:</td>
-          <td className=''>{productdetails.category[0]}</td>
+          <td>{productdetails.Product_Category}</td>
+          {/* <td className=''>{productdetails.category[0]}</td> */}
          </tr>
          <tr>
           <th className='h6 fw-bold' width='30%'>Product Availability</th>
@@ -160,14 +164,14 @@ const Productview = () => {
   <>
     <div className='my-4'>
         <div className='container my-4'>
-        {
+        {/* {
           productdetails? (
             renderproduct(productdetails)
           ) : (
             <div className='text-center'>Loading...</div>
           )
-        }
-        {/* {productdetails.map(renderproduct)} */}
+        } */}
+        {ProductteamInfo.map(renderproduct)}
         </div>
         
     </div>

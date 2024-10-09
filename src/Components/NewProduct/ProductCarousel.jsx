@@ -7,9 +7,9 @@ const ProductCarousel = ({ products }) => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 4, // Number of cards to show at once
-        slidesToScroll: 2,
+        speed: 200,
+        slidesToShow: 3, // Number of cards to show at once
+        slidesToScroll: 3,
         responsive: [
           {
             breakpoint: 1024,
@@ -31,12 +31,13 @@ const ProductCarousel = ({ products }) => {
           <Slider {...settings}>
             {products.map((products) => (
                 <>
-                <a href={`/productview/${products._id}`}>
+                <a href='/productview'>
+                {/* <a href={`/productview/${products._id}`}> */}
                 <div className="product p-3">
                         <div className="product-image">
                           <div className="image"> 
                           
-                             <img src={products.imageURL} className='img-fluid' style={{width:"100%", height:"90%"}}  alt=""/> 
+                             <img src={products.image} className='img-fluid' style={{width:"100%", height:"90%"}}  alt=""/> 
                               {/* <img src={product.hoverimage} alt="" class="hover-image"/> */}
                           
                           </div>   

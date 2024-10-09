@@ -120,11 +120,11 @@ const Homepage = () => {
      
       {userdata ? (<>
         <div className='d-flex'>
-        <div className=' mt-4'>
+        <div className=' mt-5'>
         <span className='leftrefferal'>My Left Refferal Link</span>
        
         </div>
-        <div className=' referrallink mt-4  ms-2 fw-bold'>
+        <div className=' referrallink mt-5  ms-2 fw-bold'>
         {userdata.leftRefferalLink} <i className='fa fa-copy' onClick={handleCopyLinkleft}></i>
         </div>
         </div>

@@ -22,7 +22,7 @@ const UserNavbar = () => {
 
         {/* Logout Button */}
         <div className="logout">
-        <Link to="/"><button className='logout btn btn-success'>Logout</button></Link>
+        <Link to="/"><button className='logout btn btn-success w-25 p-2'>Logout</button></Link>
         </div>
       </div>
     </header>
