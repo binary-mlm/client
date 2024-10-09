@@ -2,7 +2,7 @@ import React from 'react'
 
 const Invoicelist = () => {
   return (
-    <div>Invoicelist</div>
+    <div className='mt-5 ms-2'>Invoicelist</div>
   )
 }
 

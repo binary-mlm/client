@@ -16,12 +16,12 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-  const [email, setemail] = useState();
+  const [franchiseId, setfranchiseId] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (email === "" || password === "") {
+    if (franchiseId === "" || password === "") {
       Swal.fire({
         title: 'Opps!',
         text: 'Please fill out all required fields!!!',
@@ -30,12 +30,12 @@ const Login = () => {
     }
    
     else {
-      axios.post(ROOT_URL+'/api/franchise/login', { email, password })
+      axios.post(ROOT_URL+'/api/franchise/login', { franchiseId, password })
         .then(res => {
           console.log(res);
           const {userId : userId} = res.data;
           const {name : name} = res.data;
-          const {franchiseid :franchiseid} = res.data;
+          const {franchiseId :franchiseId} = res.data;
           // swal("Yeah", "Login Successful!!", "success");
           Swal.fire({
             title: 'Success!',
@@ -44,7 +44,7 @@ const Login = () => {
           });
           sessionStorage.setItem('userid', userId);
           sessionStorage.setItem('username', name);
-          sessionStorage.setItem('franchiseid', franchiseid);
+          sessionStorage.setItem('franchiseid', franchiseId);
              navigate('/franchise/dashboard');
           // navigate('/course');
 
@@ -81,8 +81,8 @@ const Login = () => {
               <h3 className='text-center'>PUP Login Portal</h3>
                 <MDBCardBody className='p-5'>
                 
-                  <label>Sponsor ID</label>
-                  <MDBInput wrapperClass='mb-4' id='form3' type='email'  onChange={e => setemail(e.target.value)} />
+                  <label>PUP ID</label>
+                  <MDBInput wrapperClass='mb-4' id='form3' type='email'  onChange={e => setfranchiseId(e.target.value)} />
                   <label>Password</label>
                   <MDBInput wrapperClass='mb-4' id='form4' type='password'  onChange={e => setPassword(e.target.value)} />
                   <button className='w-25 mb-4 signinbutton' onClick={handleSubmit} size='md'>Sign In</button>

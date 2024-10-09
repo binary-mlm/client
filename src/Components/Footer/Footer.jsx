@@ -1,10 +1,10 @@
 import React from 'react';
 import pic1 from "../../assets/images/payments/1.png";
-import pic2 from "../../assets/images/payments/2.jpg";
-import pic3 from "../../assets/images/payments/3.png";
+import pic2 from "../../assets/images/phonepe.png";
+import pic3 from "../../assets/images/bhim.png";
 import pic4 from "../../assets/images/payments/4.png";
-import pic5 from "../../assets/images/payments/5.jpg";
-import pic6 from "../../assets/images/payments/googleplay.png"
+import pic5 from "../../assets/images/rupay.png";
+import pic6 from "../../assets/images/googlepay.png"
 
 const Footer = () => {
   return (
@@ -122,14 +122,13 @@ const Footer = () => {
           <div className="clearfix payment-methods">
             <ul className='d-flex justify-content-end'>
               <li><img src={pic4} alt=""/></li>
-              <li><img src={pic6} width={70} height={36} alt=""/></li>
-              {/* <li><img src={pic1} alt=""/></li> */}
-              <li><img src={pic5} width={60} alt=""/></li>
-              <li><img src={pic2} width={100}  height={35} alt=""/></li>
-             
+              <li><img src={pic6} width={40}  alt=""/></li>
+              
+              <li><img src={pic2}   alt=""/></li>
+             <li><img src={pic3} width={40} alt=''/></li>
               {/* <li><img src={pic5} style={{width:"30%px"}} alt=""/></li> */}
 
-              {/* <li><img src={pic3} alt=""/></li> */}
+              <li><img src={pic5} alt=""/></li>
               
             </ul>
           </div>

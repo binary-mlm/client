@@ -1,6 +1,6 @@
 import React from 'react'
 import pic1 from "../../assets/images/banners/home-banner.jpg";
-import pic2 from "../../assets/images/banners/home-banner4.jpg";
+import pic2 from "../../assets/images/banners/home-banner48.jpg";
 
 const Wide2 = () => {
   return (
@@ -10,14 +10,14 @@ const Wide2 = () => {
         <div className="wide-banner1 cnt-strip">
           <div className="image"> <img className="img-responsive w-100" src={pic1} alt=""/> </div>
           <div className="strip strip-text">
-            <div className="strip-inner">
+            {/* <div className="strip-inner">
               <h2 className="text-right">Amazing Sunglasses<br/>
                 <span className="shopping-needs">Get 40% off on selected items</span></h2>
-            </div>
+            </div> */}
           </div>
-          <div className="new-label">
+          {/* <div className="new-label">
             <div className="text">NEW</div>
-          </div>
+          </div> */}
         
         </div>
         

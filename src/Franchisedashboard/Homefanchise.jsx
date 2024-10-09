@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar/Sidebar"
 // import Footer from './Footer/Footer'
 import Franchisedashboard from "./dashboardfanchise/Franchisedashboard";
 import Inventory from './Inventory/Inventory';
-import Invoicelist from "./Inventory/Invoicelist";
+import Invoicelist from "./Inventory/Invoice";
 
 const Homefanchise = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');

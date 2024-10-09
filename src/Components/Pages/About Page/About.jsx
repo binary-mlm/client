@@ -29,7 +29,7 @@ const About = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="about_company ">
-                <p className="mt-4 text_style ">
+                <p className="mt-4 text_style" style={{textAlign:"justify"}}>
                 Udbhab Marketing Private Limited is a dynamic direct selling company committed to empowering individuals through
                  innovative products and opportunities. With a focus on quality and customer satisfaction, we provide a diverse range of items that enhance daily living. Our unique business model allows entrepreneurs to thrive, offering flexible earning potential and personal growth. Join us in transforming lives and building a successful future together, one sale at a time. Experience the Udbhab difference today!
                 </p>

@@ -3,7 +3,7 @@ import axios from "axios";
 import "./inventory.css";
 import "./app.min.css";
 import swal from 'sweetalert'
-import Invoice from "./Invoice";
+// import Invoice from "./Invoice";
 
 const Inventory = () => {
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
@@ -18,7 +18,7 @@ const Inventory = () => {
   const incrementQuantity = (productId) => {
     setCart((prevItems) =>
       prevItems.map((item) =>
-        item.productId === productId
+        item._id === productId && item.quantity < item.stock // Ensure not exceeding stock
           ? { ...item, quantity: item.quantity + 1 }
           : item
       )
@@ -28,7 +28,7 @@ const Inventory = () => {
   const decrementQuantity = (productId) => {
     setCart((prevItems) =>
       prevItems.map((item) =>
-        item.productId === productId && item.quantity > 1
+        item._id === productId && item.quantity > 1 // Ensure at least 1 item
           ? { ...item, quantity: item.quantity - 1 }
           : item
       )
@@ -40,7 +40,7 @@ const Inventory = () => {
     const value = parseInt(e.target.value, 10);
     setCart((prevItems) =>
       prevItems.map((item) =>
-        item.productId === productId
+        item._id === productId
           ? { ...item, quantity: isNaN(value) || value < 1 ? 1 : value }
           : item
       )
@@ -52,42 +52,58 @@ const Inventory = () => {
     if (!productdata.length) {
       axios
         .get(ROOT_URL + `/api/franchise/${franchiseid}/inventory`)
-        .then((productdata) => setproduct(productdata.data))
+        .then((productdata) =>{ setproduct(productdata.data);
+          console.log(productdata);
+    })
         .catch((err) => console.log(err));
     }
   }, [productdata]);
 
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    setCart((prevCart) => {
+      // Check if the product is already in the cart
+      const isProductInCart = prevCart.find((item) => item._id === product._id);
+  
+      // If product is already in the cart, don't add it again
+      if (isProductInCart) {
+        return prevCart;
+      }
+  
+      // Add the product to the cart with an initial quantity of 1
+      return [...prevCart, { ...product, quantity: 1 }];
+    });
   };
+  
   const renderCartItems = () => {
     return cart.map((item) => (
-      <div key={item.productId} className="ms-4 mb-3">
+      <div key={item._id} className="ms-4 mb-3">
         <div className="card">
-          <div className="h6 mb-1 mt-4 ms-4">{item.productId}</div>
+          <div className="h6 mb-1 mt-4 ms-2">Product name: {item.name}</div>
           <div className="small mb-2">
-            <h6 className="ms-4 fw-bold">Price: {item.price}</h6>
+            <h6 className="ms-2 fw-bold">Price: {item.price}</h6>
+            <span className=" fw-bold text-center ms-2">Select Quantity</span>
             <div className="input-group w-auto justify-content-center align-items-center">
               <button
                 type="button"
                 className="button-minus border rounded-circle icon-shape icon-sm mx-1"
-                onClick={() => decrementQuantity(item.productId)}
+                onClick={() => decrementQuantity(item._id)}
               >
                 -
               </button>
               <input
                 type="number"
                 step="1"
-                max="10"
-                value={item.quantity}
+               
+                max={item.stock} // Ensure it doesn't go beyond stock
+              value={item.quantity || 1 }
                 name="quantity"
                 className="quantity-field border-0 text-center w-25"
-                onChange={(e) => handleQuantityChange(e, item.productId)}
+                onChange={(e) => handleQuantityChange(e, item._id)}
               />
               <button
                 type="button"
                 className="button-plus border rounded-circle icon-shape icon-sm"
-                onClick={() => incrementQuantity(item.productId)}
+                onClick={() => incrementQuantity(item._id)}
               >
                 +
               </button>
@@ -102,25 +118,32 @@ const Inventory = () => {
     return (
       <div className="col" key={productdata._id}>
         <div className="card h-100 d-flex flex-column">
+        <img
+            className="card-img-top cardimage "
+            src={productdata.imageURL}
+            alt="Sample photo"
+          />
           <div className="card-body flex-grow-1">
             <div className="row">
-              <div className="col-12">
-                <span className="">Productid: {productdata.productId}</span>
+              <div className="col-12 text-start">
+              {/* <span className="fw-bold">Name: </span>  */}
+               <span className="fw-bold" style={{fontSize:"19px"}}>{productdata.name}</span>
               </div>
             </div>
             <div className="row mt-2">
               <div className="col-12">
-                <span className="">
+               
                   {" "}
-                  <span className="">Quantity:</span>
-                  {productdata.quantity}
+                  <span className="fw-bold">Quantity :</span> 
+                  
+                  <span className="ms-3">{productdata.stock}
                 </span>
               </div>
             </div>
             <div className="row mt-2">
               <div className="col-12">
                 <span className="">
-                  <span className="">Price: </span>
+                  <span className="fw-bold">Price: </span>
                   {productdata.price}{" "}
                 </span>
               </div>
@@ -130,13 +153,13 @@ const Inventory = () => {
               <div className="col-12">
                 <span className="">
                   {" "}
-                  <span className="">Bv points:</span>
+                  <span className="fw-bold">Bv points:</span>
                   {productdata.bvPoints}{" "}
                 </span>
               </div>
             </div>
           </div>
-          <div className="">
+          
             <div className="col-12 text-center">
               <a>
                 <button
@@ -148,7 +171,7 @@ const Inventory = () => {
               </a>
             </div>
           </div>
-        </div>
+        
       </div>
     );
   };
@@ -160,15 +183,15 @@ const Inventory = () => {
     try {
       // alert("Submit");
      
-      const franchiseId = sessionStorage.getItem("userid");
+      const franchiseId = sessionStorage.getItem("franchiseid");
 
       if (!userSponsorId || !franchiseId) {
         swal("opps","User Sponsor ID or Franchise ID is missing","error");
         return;
       }
 
-      const products = cart.map(({ productId, quantity }) => ({
-        productId,
+      const products = cart.map(({ _id, quantity }) => ({
+        productId: _id,
         quantity,
       }));
       console.log({
@@ -271,7 +294,7 @@ const Inventory = () => {
                 </div>
                 <div className="pos-content">
                   <div className="pos-content-container h-100">
-                    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
                       {productdata.map(redercoursecard)}
                     </div>
                   </div>
@@ -348,14 +371,7 @@ const Inventory = () => {
           </div>
         </div>
       </div>
-        {/* Invoice Modal */}
-        <Invoice
-        isOpen={isInvoiceModalOpen}
-        onClose={() => setIsInvoiceModalOpen(false)}
-        cart={cart}
-        userSponsorId={userSponsorId}
-        totalPrice={totalprice}
-      />
+       
     </>
   );
 };
