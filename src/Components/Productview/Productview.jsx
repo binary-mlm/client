@@ -37,8 +37,6 @@ const Productview = () => {
       How_to_Use:"Apply to wet hair, work up a rich lather, rinse throughly, repeat if necessary.",
       Disclaimer:"Make sure to read the label before using. This product is not intended to diagnose, treat or cure any disease. Don't exceed the recommended amount. Keep it out of children's reach. Store in a cool, dry spot away from sunlight. Keep away from heat, light, and moisture. To be used above the age of 12 years."
     },
-    
-
   ]
   const renderproduct=(productdetails)=>{
     return(

@@ -31,6 +31,14 @@ import Award from "./Components/Pages/About Page/Award&reward/Award";
 import Franchiselogin from "./Franchisedashboard/Login/Login";
 import Homefranchise from "./Franchisedashboard/Homefanchise";
 import DirectTeam from './Components/UserDashboard/Genealogy/DirectTeam';
+// products
+import Tulsiview from "./Components/Productview/Tulsiview";
+import Booster from "./Components/Productview/Booster";
+import Shampooview from "./Components/Productview/Shampooview";
+import Herbaltea from "./Components/Productview/Herbaltea";
+import Facewash from "./Components/Productview/Facewash";
+import Soapprenium from './Components/Productview/Soapprenium';
+import Applesoap from './Components/Productview/Applesoap';
 function App() {
   return (
     <>
@@ -67,7 +75,14 @@ function App() {
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
       <Route path="/signupleft/:parentSponsorId" element={<Userlayout><Signupleft/></Userlayout>}/>
       <Route path="/signupright/:parentSponsorId" element={<Userlayout><Signupright/></Userlayout>}/>
-
+      {/* for productview */}
+      <Route path="/tulsiview" element={<Userlayout><Tulsiview/></Userlayout>} />
+      <Route path="/booster" element={<Userlayout><Booster/></Userlayout>} />
+      <Route path="/shampooview" element={<Userlayout><Shampooview/></Userlayout>} />
+      <Route path="/herbaltea" element={<Userlayout><Herbaltea/></Userlayout>} />
+      <Route path="/Facewash" element={<Userlayout><Facewash/></Userlayout>} />
+      <Route path="/soapprenium" element={<Userlayout><Soapprenium/></Userlayout>} />
+      <Route path="/applesoap" element={<Userlayout><Applesoap/></Userlayout>} />
       </Routes>
     </Router>
     </>

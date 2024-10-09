@@ -31,7 +31,7 @@ const ProductCarousel = ({ products }) => {
           <Slider {...settings}>
             {products.map((products) => (
                 <>
-                <a href='/productview'>
+                <a href={products.link}>
                 {/* <a href={`/productview/${products._id}`}> */}
                 <div className="product p-3">
                         <div className="product-image">
