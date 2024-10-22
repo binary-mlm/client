@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import pic from "../../../assets/images/login.png"
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
@@ -14,6 +14,14 @@ const Login = () => {
   const navigate = useNavigate();
   const [sponsorId, setsponsorId] = useState();
   const [password, setPassword] = useState();
+
+  useEffect(() => {
+    // Fetch the ID from sessionStorage on component mount
+    const storedId = sessionStorage.getItem('mysponosorid');
+    if (storedId) {
+      setsponsorId(storedId); // Set the ID if found
+    }
+  }, []);
   
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -39,7 +47,9 @@ const Login = () => {
           });
           sessionStorage.setItem('userid', userId);
           sessionStorage.setItem('username', username);
+          
             navigate('/userdashboard');
+            
           // navigate('/course');
 
         })
@@ -77,8 +87,8 @@ const Login = () => {
                         {/* <h5 className="fw-normal mb-3 pb-3">Sign into your account</h5> */}
 
                         <div className="form-group  mb-4">
-                          <label className="mb-1" htmlFor="exampleInputEmail1">sponsorId</label>
-                          <input type="text" className="form-control " name='sponsorId' placeholder="Enter Your sponsor ID" onChange={e => setsponsorId(e.target.value)}  />
+                          <label className="mb-1" htmlFor="exampleInputEmail1">Your sponsorId</label>
+                          <input type="text" className="form-control " name='sponsorId'  value={sponsorId} placeholder="Enter Your sponsor ID" onChange={e => setsponsorId(e.target.value)}  />
                           </div>
                         <div className="form-group mb-4">
                           <label className="mb-1" htmlFor="exampleInputEmail2">Password</label>

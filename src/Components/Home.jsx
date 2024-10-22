@@ -18,7 +18,7 @@ const Home = () => {
     <div className="body-content outer-top-vs" id="top-banner-and-menu">
   <div className="container">
     <div className="row"> 
-     <div className="col-xs-12 col-sm-12 col-md-3 sidebar"> 
+     <div className="col-xs-12 col-sm-12 col-md-3 sidebar" style={{backgroundColor:"transparent"}}> 
      <Category/>
     
    

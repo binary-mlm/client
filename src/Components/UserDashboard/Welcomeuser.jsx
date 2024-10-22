@@ -1,22 +1,39 @@
-import React from 'react'
-import pic from "../../assets/images/welcome.jpg"
+import React,{useEffect, useState} from 'react'
+// import pic from "../../assets/images/welcome.jpg"
 // import pic2 from "../../assets/images/welcome1.jpg"
 import {useReactToPrint} from 'react-to-print'
 import { useRef } from 'react'
+import axios from 'axios'
 import "./Css/welcome.css";
 import pic2 from "../../assets/images/udbhab.png"
 
 function Welcomeuser() {
+    const [name , setName] = useState([]);
+    const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+    const userId = sessionStorage.getItem("userid");
+    useEffect(() => {
+      UserData();
+    }, []);
+    const UserData = async () => {
+      try {
+        const response = await axios.get(ROOT_URL + `/api/auth/findUser/${userId}`)
+        console.log(response.data);
+        setName(response.data.name);
+        // setsponsorId(response.data.mySponsorId);
+      } catch (err) {
+        console.log(err);
+      }
+    };
     const invoicepdf = useRef();
-    const generatePDF= useReactToPrint({
-        content: ()=>invoicepdf.current,
-        documentTitle:"Invoice",
-        // onAfterPrint:()=>alert("pdf succesfully saved")
-      });
+    const generatePDF = useReactToPrint({
+        content: () => invoicepdf.current,
+        documentTitle: "Invoice",
+    });
   return (
 <>
+
     <div  className='invoice mt-5'>
-    <button onClick={Welcomeuser}>Print</button>
+    <i className="fa fa-print" style={{fontSize:"20px"}} onClick={generatePDF}> </i>
     <div  className='container'>
     <div className='row'>
         <div className='col-lg-12'>
@@ -33,7 +50,7 @@ function Welcomeuser() {
         {/* <h5 className='fw-bold'> Hello Mr. AVIJIT CHAKRABORTY</h5> */}
         <div className='row'>
         <div className='col-lg-6'>
-        <p>Hello Mr. AVIJIT CHAKRABORTY</p>
+        <p>Hello {name}</p>
         </div>
         <div className='col-lg-6 text-end'><img src={pic2} width={110} style={{marginTop:"-20px"}} /></div>
         </div>
@@ -73,9 +90,9 @@ I wish you all the very best. May all your dreams come true.
 </div>
     
     
-    <div className='text-center'>
+    {/* <div className='text-center'>
     <button className='btn btn-primary btn-lg my-4' onClick={generatePDF}><i className="fa fa-print"> </i> Print</button>
-    </div>
+    </div> */}
 </>
   )
 }

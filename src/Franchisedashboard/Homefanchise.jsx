@@ -28,6 +28,7 @@ const Homefanchise = () => {
         <div className="container-fluid page-body-wrapper">
         <Sidebar setCurrentPage={setCurrentPage}/>
         <div className="main-panel mt-5">
+        <h2 className='mt-5 text-center'>Franchise Dashboard</h2>
         {renderPage()}
         {/* <Franchisedashboard/> */}
         

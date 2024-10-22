@@ -111,10 +111,8 @@ const Usersignup = () => {
 
 
 const handleSubmit = async (event) => {
-  alert("sumit")
+  // alert("sumit")
   event.preventDefault();
- 
-
       await axios.post(ROOT_URL+'/api/auth/register', { sponsorId, registrationType,  gender, 
         name, 
         dob,
@@ -128,16 +126,15 @@ const handleSubmit = async (event) => {
         gstNumber,
         password })
           .then(res => {
-              console.log(res);
+              console.log(res.data.user.mySponsorId);
+              sessionStorage.setItem('mysponosorid', res.data.user.mySponsorId);
               swal("Thank You!", "Registration sucessfully completed!", "success");
-              navigate('/');
+              navigate('/login');
 
           })
           .catch(err => {
               console.log(err);
               swal("Error!", err.response.data.message || 'Error registering user', "error");
-             
-
           })
   
 
@@ -427,7 +424,7 @@ const handleSubmit = async (event) => {
 
               </div>
               <div className='text-center'>
-              <button className='btn btn-primary w-25 mb-4' onClick={handleSubmit}>Submit</button>
+              <button className='signupbutton w-25 mb-4' onClick={handleSubmit}>Submit</button>
               </div>
               
               </div>
