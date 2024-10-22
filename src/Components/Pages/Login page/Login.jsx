@@ -38,7 +38,8 @@ const Login = () => {
         .then(res => {
           console.log(res);
           const {userId : userId} = res.data;
-          const {username : username} = res.data;
+          const {name : name} = res.data;
+          const {mySponsorId : mySponsorId} = res.data;
           // swal("Yeah", "Login Successful!!", "success");
           Swal.fire({
             title: 'Success!',
@@ -46,7 +47,8 @@ const Login = () => {
             icon: 'success',  // or 'error', 'warning', 'info', 'question'
           });
           sessionStorage.setItem('userid', userId);
-          sessionStorage.setItem('username', username);
+          sessionStorage.setItem('username', name);
+          sessionStorage.setItem('mySponsorId', mySponsorId);
           
             navigate('/userdashboard');
             

@@ -10,7 +10,7 @@ const Homepage = () => {
   const [referralrightLink, setReferralrightLink] = useState([]);
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const userId = sessionStorage.getItem("userid");
-  const sponsorId = sessionStorage.getItem("mysponsorId");
+  const sponsorId = sessionStorage.getItem("mySponsorId");
   // useEffect(() => {
   //   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   //   const userId = sessionStorage.getItem("userid");

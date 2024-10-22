@@ -26,7 +26,9 @@ const UserNavbar = () => {
   };
   const handlelogout = () => {
    
-    sessionStorage.removeItem("mysponsorId");
+    sessionStorage.removeItem("userid");
+    sessionStorage.removeItem("username");
+    sessionStorage.removeItem("mySponsorId");
     window.location.href = "/";
   }
 

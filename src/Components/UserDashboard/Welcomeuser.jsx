@@ -12,6 +12,7 @@ function Welcomeuser() {
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const userId = sessionStorage.getItem("userid");
     useEffect(() => {
+
       UserData();
     }, []);
     const UserData = async () => {
