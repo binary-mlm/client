@@ -12,7 +12,7 @@ const Editprofile = () => {
             <div className="card">
               <div className="card-body">
                 <div>
-                  <div className="bg-primary">
+                  <div style={{backgroundColor:"#2F4F4F"}}>
                     <h5 className=" text-white ms-3 p-2 ">
                       My personal Details(You Cannot Edit This)
                     </h5>
@@ -26,9 +26,9 @@ const Editprofile = () => {
                       <input
                         type="text"
                         readonly
-                        className="form-control-plaintext  bg-light"
+                        className="form-control-plaintext  bg-light p-2"
                         id="staticEmail"
-                        value="SH2814552"
+                        value="UD2814552"
                       />
                     </div>
                   </div>
@@ -42,7 +42,7 @@ const Editprofile = () => {
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext bg-light"
+                        className="form-control-plaintext bg-light p-2"
                         value="AVIJIT CHAKRABORTY"
                         id="inputPassword"
                       />
@@ -62,7 +62,7 @@ const Editprofile = () => {
             <div className="card">
               <div className="card-body">
                 <div>
-                  <div className="bg-primary">
+                  <div style={{backgroundColor:"#2F4F4F"}}>
                     <h5 className=" text-white ms-3 p-2 ">
                       My personal Details(You Can Edit This)
                     </h5>
@@ -282,7 +282,7 @@ const Editprofile = () => {
 
                   <div className="mb-3 row">
                     <label for="staticEmail" class="col-sm-3 col-form-label">
-                      Choose Your blood Group
+                      Relationship
                     </label>
                     <div className="col-sm-9">
                       <select
@@ -347,7 +347,7 @@ const Editprofile = () => {
                       placeholder="Enter your GST no"
                     />
                   </div>
-                  <div class="mb-4 text-center"><button className="btn btn-primary">Submit</button></div>
+                  <div class="mb-4 text-center"><button className="signupbutton w-25">Submit</button></div>
                 </div>
               </div>
             </div>

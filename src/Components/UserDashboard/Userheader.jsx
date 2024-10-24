@@ -40,10 +40,21 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item mb-3">
-            <Link to="/reports" className="nav-link d-flex align-items-center sideitem">
-              <img src={quote} width={20} height={24} className="me-2" alt="Reports" />
-              Reports
-            </Link>
+          <Link 
+    to="/userdasboard/genealogy" 
+    className="nav-link d-flex align-items-center sideitem dropdown-toggle" 
+    id="reportDropdown" 
+    role="button" 
+    data-bs-toggle="dropdown" 
+    aria-expanded="false"
+  >
+    <img src={quote} width={20} height={25} className="me-2" alt="Genealogy" />
+      Reports
+  </Link>
+            <ul className="dropdown-menu" aria-labelledby="reportDropdown">
+    <li><Link className="dropdown-item" to="/userdasboard/myoders">My orders</Link></li>
+    {/* <li><Link className="dropdown-item" to="/userdasboard/direct_team">Direct team</Link></li> */}
+  </ul>
           </li>
           {/* <li className="nav-item mb-3">
             <Link to="/userdasboard/genealogy" className="nav-link d-flex align-items-center sideitem">
@@ -52,8 +63,7 @@ const Sidebar = () => {
             </Link>
           </li> */}
           <li className="nav-item mb-3 dropdown">
-  <Link 
-    to="/userdasboard/genealogy" 
+  <Link  
     className="nav-link d-flex align-items-center sideitem dropdown-toggle" 
     id="genealogyDropdown" 
     role="button" 
@@ -82,9 +92,9 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item mb-3">
-            <Link to="/logistics" className="nav-link d-flex align-items-center sideitem">
+            <Link to="/userdasboard/poppartners" className="nav-link d-flex align-items-center sideitem">
               <img src={contact} width={20} height={24} className="me-2" alt="Logistics" />
-              Logistic Partners
+              PUP Partners
             </Link>
           </li>
           <li className="nav-item mb-3">

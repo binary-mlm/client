@@ -9,7 +9,6 @@ const Homepage = () => {
   const [referralleftLink, setReferralleftLink] = useState([]);
   const [referralrightLink, setReferralrightLink] = useState([]);
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-  const userId = sessionStorage.getItem("userid");
   const sponsorId = sessionStorage.getItem("mySponsorId");
   // useEffect(() => {
   //   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
@@ -41,6 +40,7 @@ const Homepage = () => {
           setUserdata(res.data);
           setReferralleftLink(res.data.leftRefferalLink);
           setReferralrightLink(res.data.rightRefferalLink);
+          sessionStorage.setItem("usermobilenumber", res.data.mobileNumber);
           // after successfully logged in, redirect to dashboard page
           dashboardData();
         })
@@ -52,6 +52,7 @@ const Homepage = () => {
   const dashboardData = async () => {
     try {
       const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { sponsorId });
+      console.log(response.data);
       setData(response.data);
     } catch (err) {
       console.log(err);
@@ -113,12 +114,12 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">DIRECT BV(DBV)</span>
                 <br />
-                <span> L - 0 | R - 0</span>
+                <span> L - {data.totalDirectBV.leftDirectBV} | R - {data.totalDirectBV.rightDirectBV}</span>
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">TOTAL TEAM</span>
                 <br />
-                <span> L - 0 | R - 0</span>
+                <span> L - {data.leftTreeUsersCount} | R - {data.rightTreeUsersCount}</span>
               </div>
             </div>
             <div className="d-flex mt-2">
@@ -134,7 +135,7 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">TOTAL ACCUMULATE BV</span>
-                <br />L - 0 | R - 0
+                <br />L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}
               </div>
             </div>
             <div className="d-flex mt-2">
@@ -160,7 +161,8 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">TEAM BUSINESS VOL(TBV)</span>
-                <br />L - {data.leftTreeUsersCount} | R - {data.rightTreeUsersCount}
+                <br/>0
+                {/* <br />L - {data.leftTreeUsersCount} | R - {data.rightTreeUsersCount} */}
               </div>
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">WEEKLY EARNING(₹)</span>
@@ -175,8 +177,8 @@ const Homepage = () => {
                 125,000
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold">MY TOTAL BV (FBV + RBV)</span>
-                <br />L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}
+                <span className="fw-bold">MY TOTAL BV (LBV + RBV)</span>
+                {/* <br />L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV} */}
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">MONTHLY EARNING(₹)</span>

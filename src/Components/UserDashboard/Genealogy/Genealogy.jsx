@@ -47,7 +47,7 @@ const Genealogy = () => {
   };
   const handleExtremeleft =async() => {
     try {
-      const sponsorId = sessionStorage.getItem("sponosorid");
+      const sponsorId = sessionStorage.getItem("mySponsorId");
       console.log(sponsorId);
       const response = await axios.post(`${ROOT_URL}/api/user/extremeLeft`,{sponsorId});
       setTreeData(response.data);
@@ -59,7 +59,7 @@ const Genealogy = () => {
   };
   const handleExtremeright =async() => {
     try {
-      const sponsorId = sessionStorage.getItem("sponosorid");
+      const sponsorId = sessionStorage.getItem("mySponsorId");
       console.log(sponsorId);
       const response = await axios.post(`${ROOT_URL}/api/user/extremeRight`,{sponsorId});
       setTreeData(response.data);
@@ -231,7 +231,7 @@ const Genealogy = () => {
     <form onSubmit={handleSearch}>
     <div className="input-group mb-3 mt-2" style={{maxWidth:"500px"}}>
   <input type="text" className="form-control p-3" placeholder="Search with Sponsor ID..." aria-label="Search" aria-describedby="search-button" onChange={e => setsponsorid(e.target.value)}/>
-  <button className="btn btn-primary" type="submit" style={{backgroundColor:"rgb(151, 30, 151)"}} id="search-button" value={sponsorid}
+  <button className="btn btn-primary" type="submit" style={{backgroundColor:"#2F4F4F"}} id="search-button" value={sponsorid}
                         onChange={(e) => setsponsorid(e.target.value)}>
     <i className="fa fa-search text-white"></i>
   </button>
@@ -240,7 +240,7 @@ const Genealogy = () => {
     </div>
       <div className="flex flex-column">
       <div className="row">
-        <div className="col-lg-4 text-center">
+        <div className="col-lg-4 text-center" >
           <button className="extremeleft mt-5 w-50" onClick={handleExtremeleft}>
             Extreme left
           </button>

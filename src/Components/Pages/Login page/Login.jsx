@@ -75,7 +75,7 @@ const Login = () => {
                 <div className="row g-0">
                   <div className="col-md-6 col-lg-5 d-md-block image">
                     <img src={pic}
-                      alt="loginform" className="img-fluid" style={{width:"80%"}} />
+                      alt="loginform" className="img-fluid ms-5" style={{width:"80%"}} />
                   </div>
                   <div className="col-md-6 col-lg-7 d-flex" id="loginform">
                     <div className="card-body p-lg-5 text-black">

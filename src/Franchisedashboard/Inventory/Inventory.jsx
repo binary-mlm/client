@@ -18,7 +18,7 @@ const Inventory = () => {
   const incrementQuantity = (productId) => {
     setCart((prevItems) =>
       prevItems.map((item) =>
-        item._id === productId && item.quantity < item.stock // Ensure not exceeding stock
+        item.productId === productId && item.quantity < item.stock // Ensure not exceeding stock
           ? { ...item, quantity: item.quantity + 1 }
           : item
       )
@@ -28,7 +28,7 @@ const Inventory = () => {
   const decrementQuantity = (productId) => {
     setCart((prevItems) =>
       prevItems.map((item) =>
-        item._id === productId && item.quantity > 1 // Ensure at least 1 item
+        item.productId === productId && item.quantity > 1 // Ensure at least 1 item
           ? { ...item, quantity: item.quantity - 1 }
           : item
       )
@@ -40,7 +40,7 @@ const Inventory = () => {
     const value = parseInt(e.target.value, 10);
     setCart((prevItems) =>
       prevItems.map((item) =>
-        item._id === productId
+        item.productId === productId
           ? { ...item, quantity: isNaN(value) || value < 1 ? 1 : value }
           : item
       )
@@ -62,7 +62,7 @@ const Inventory = () => {
   const addToCart = (product) => {
     setCart((prevCart) => {
       // Check if the product is already in the cart
-      const isProductInCart = prevCart.find((item) => item._id === product._id);
+      const isProductInCart = prevCart.find((item) => item.productId === product.productId);
   
       // If product is already in the cart, don't add it again
       if (isProductInCart) {
@@ -76,9 +76,9 @@ const Inventory = () => {
   
   const renderCartItems = () => {
     return cart.map((item) => (
-      <div key={item._id} className="ms-4 mb-3">
+      <div key={item.productId} className="ms-4 mb-3">
         <div className="card">
-          <div className="h6 mb-1 mt-4 ms-2">Product name: {item.name}</div>
+          <div className="h6 mb-1 mt-4 ms-2">Product name: {item.productName}</div>
           <div className="small mb-2">
             <h6 className="ms-2 fw-bold">Price: {item.price}</h6>
             <span className=" fw-bold text-center ms-2">Select Quantity</span>
@@ -86,7 +86,7 @@ const Inventory = () => {
               <button
                 type="button"
                 className="button-minus border rounded-circle icon-shape icon-sm mx-1"
-                onClick={() => decrementQuantity(item._id)}
+                onClick={() => decrementQuantity(item.productId)}
               >
                 -
               </button>
@@ -98,12 +98,12 @@ const Inventory = () => {
               value={item.quantity || 1 }
                 name="quantity"
                 className="quantity-field border-0 text-center w-25"
-                onChange={(e) => handleQuantityChange(e, item._id)}
+                onChange={(e) => handleQuantityChange(e, item.productId)}
               />
               <button
                 type="button"
                 className="button-plus border rounded-circle icon-shape icon-sm"
-                onClick={() => incrementQuantity(item._id)}
+                onClick={() => incrementQuantity(item.productId)}
               >
                 +
               </button>
@@ -113,21 +113,21 @@ const Inventory = () => {
       </div>
     ));
   };
-
-  const redercoursecard = (productdata) => {
+//product
+  const renderproductcard = (productdata) => {
     return (
-      <div className="col" key={productdata._id}>
+      <div className="col" key={productdata.productId}>
         <div className="card h-100 d-flex flex-column">
         <img
             className="card-img-top cardimage "
-            src={productdata.imageURL}
+            src={productdata.productImage}
             alt="Sample photo"
           />
           <div className="card-body flex-grow-1">
             <div className="row">
               <div className="col-12 text-start">
               {/* <span className="fw-bold">Name: </span>  */}
-               <span className="fw-bold" style={{fontSize:"19px"}}>{productdata.name}</span>
+               <span className="fw-bold" style={{fontSize:"19px"}}>{productdata.productName}</span>
               </div>
             </div>
             <div className="row mt-2">
@@ -136,7 +136,7 @@ const Inventory = () => {
                   {" "}
                   <span className="fw-bold">Quantity :</span> 
                   
-                  <span className="ms-3">{productdata.stock}
+                  <span className="ms-1">{productdata.stock}
                 </span>
               </div>
             </div>
@@ -153,7 +153,7 @@ const Inventory = () => {
               <div className="col-12">
                 <span className="">
                   {" "}
-                  <span className="fw-bold">Bv points:</span>
+                  <span className="fw-bold">Bv points: </span>
                   {productdata.bvPoints}{" "}
                 </span>
               </div>
@@ -190,8 +190,8 @@ const Inventory = () => {
         return;
       }
 
-      const products = cart.map(({ _id, quantity }) => ({
-        productId: _id,
+      const products = cart.map(({ productId, quantity }) => ({
+        productId: productId,
         quantity,
       }));
       console.log({
@@ -208,13 +208,14 @@ const Inventory = () => {
       if (response.status === 200) {
         //  alert(`Order submitted successfully! Total Bill: ${response.data.totalPrice}`);
         //  alert(response.data.message);
-         swal("Order submitted successfully!", response.data.message,"success");
+         swal(`Order submitted successfully! Total Bill: ${response.data.totalPrice}`, response.data.message,"success");
           // Open the invoice modal
-        setIsInvoiceModalOpen(true);
+        // setIsInvoiceModalOpen(true);
         //  window.location.reload();
-        //  settotalprice(response.data.totalPrice)
+         settotalprice(response.data.totalPrice)
         // You can also clear the cart after successful order submission
         setCart([]);
+        // window.location.reload();
       } else {
         alert(`Error: ${response.data.message}`);
       }
@@ -295,7 +296,7 @@ const Inventory = () => {
                 <div className="pos-content">
                   <div className="pos-content-container h-100">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
-                      {productdata.map(redercoursecard)}
+                      {productdata.map(renderproductcard)}
                     </div>
                   </div>
                 </div>
@@ -339,19 +340,19 @@ const Inventory = () => {
                    {renderCartItems()}
                       </div>
                                           <div className="pos-sidebar-footer">
-                        <div className="d-flex align-items-center mb-2">
+                        {/* <div className="d-flex align-items-center mb-2">
                           <div>Subtotal</div>
                           <div className="flex-1 text-end h6 mb-0">$30.98</div>
-                        </div>
-                        <div className="d-flex align-items-center">
+                        </div> */}
+                        {/* <div className="d-flex align-items-center">
                           <div>Taxes (6%)</div>
                           <div className="flex-1 text-end h6 mb-0">$2.12</div>
-                        </div>
-                        <hr className="opacity-1 my-10px" />
-                        <div className="d-flex align-items-center mb-2">
-                          <div>Total</div>
+                        </div> */}
+                        {/* <hr className="opacity-1 my-10px" /> */}
+                        {/* <div className="d-flex align-items-center mb-2">
+                          <div>Total:</div>
                           <div className="flex-1 text-end h4 mb-0">{totalprice}</div>
-                        </div>
+                        </div> */}
                         <div className="mt-3 d-flex justify-content-center">
                           
                              <button

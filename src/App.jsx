@@ -31,6 +31,8 @@ import Award from "./Components/Pages/About Page/Award&reward/Award";
 import Franchiselogin from "./Franchisedashboard/Login/Login";
 import Homefranchise from "./Franchisedashboard/Homefanchise";
 import DirectTeam from './Components/UserDashboard/Genealogy/DirectTeam';
+import Myorders from "./Components/UserDashboard/Reports/Myorders"
+import Poppartners from "./Components/UserDashboard/POP partners/Poppartners"
 // products
 import Tulsiview from "./Components/Productview/Tulsiview";
 import Booster from "./Components/Productview/Booster";
@@ -67,10 +69,13 @@ function App() {
       <Route path="/education" element={<Userlayout><Education/></Userlayout>} />
       <Route path="/vision" element={<Userlayout><Vision/></Userlayout>} />
       <Route path="/logistic" element={<Userlayout><Logistic/></Userlayout>} />
+      {/* user dashboard */}
       <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
       <Route path="/userdasboard/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />
       <Route path="/userdasboard/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
       <Route path="/userdasboard/direct_team" element={<Dashboardlayout><DirectTeam/></Dashboardlayout>} />
+      <Route path="/userdasboard/myoders" element={<Dashboardlayout><Myorders/></Dashboardlayout>} />
+      <Route path="/userdasboard/poppartners" element={<Dashboardlayout><Poppartners/></Dashboardlayout>} />
       <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
       <Route path="/signupleft/:parentSponsorId" element={<Userlayout><Signupleft/></Userlayout>}/>

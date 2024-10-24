@@ -263,13 +263,13 @@ const handleSubmit = async (event) => {
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label for="staticEmail" class="col-sm-3 col-form-label ">
                       Name
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         id="staticEmail"
                         onChange={e => setname(e.target.value)}
                       />
@@ -301,7 +301,7 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="tel"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         onChange={e => setmobileNumber(e.target.value)}
                         
                       />
@@ -314,7 +314,7 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="tel"
-                        className="form-control-plaintext bg-light textinput"
+                        className="form-control-plaintext bg-light textinput ps-2"
                         onChange={e => setwhatsappNumber(e.target.value)}
                         
                         
@@ -328,7 +328,7 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="email"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         onChange={e => setemail(e.target.value)}
                         
                       />
@@ -378,7 +378,7 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         onChange={e => setpincode(e.target.value)}
                         
                         
@@ -401,7 +401,7 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         onChange={e => setgstNumber(e.target.value)}
                         
                       />
@@ -414,7 +414,7 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         onChange={e => setpassword(e.target.value)}
                         
                       />

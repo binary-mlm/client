@@ -18,6 +18,9 @@ const Dashboardlayout = ({children}) => {
       <main>{children}</main>
       </div>
     </div>
+    <div className='p-2 text-center bg-secondary' >
+    Copyright © 2024 Udbhab Marketing Pvt Ltd. All rights reserved.
+    </div>
     </div> 
     </div>
     </>

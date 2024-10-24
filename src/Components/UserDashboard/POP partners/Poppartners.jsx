@@ -1,17 +1,16 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 
-
-const DirectTeam = () => {
-    const sponsorId = sessionStorage.getItem("mySponsorId");
-    const [referrals, setReferrals] = useState([]); // State to hold API data
+const Poppartners = () => {
+    const [allfanchise, setAllfanchise] = useState([]); // State to hold API data
     const [loading, setLoading] = useState(true);   // State for loading status
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   useEffect(() => {
     // Fetch referral data from the API
-    axios.post(`${ROOT_URL}/api/user/getDirectReferrals`, { sponsorId }) // replace with actual sponsorId
+    axios.get(`${ROOT_URL}/api/user/getAllFranchies`) // replace with actual sponsorId
       .then(response => {
-        setReferrals(response.data); // Set the referral data
+        console.log(response.data);  // For debugging purposes, log the received data to see its structure
+        setAllfanchise(response.data); // Set the referral data
         setLoading(false); // Data loading complete
       })
       .catch(error => {
@@ -26,24 +25,25 @@ const DirectTeam = () => {
   return (
    <>
     <div className=' container mt-4'>
-    <h3 className='fw-bold text-center'>Direct Team</h3>
+    <h3 className='fw-bold text-center'>All PUP Partners</h3>
     <table className="table table-success table-striped">
   <thead>
     <tr>
      
-      <th scope="col">Sponsor id</th>
+      
+      <th scope="col">PUP_id</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">MobileNumber</th>
     </tr>
   </thead>
   <tbody>
-  {referrals.map((referral) => (
-            <tr  key={referral._id}>
-            <td className='p-2'>{referral.mySponsorId}</td>
-              <td>{referral.name}</td>
-              <td>{referral.email}</td>
-              <td>{referral.mobileNumber}</td>
+  {allfanchise.map((franchise) => (
+            <tr  key={franchise._id}>
+            <td className='p-2'>{franchise.franchiseId}</td>
+              <td>{franchise.franchiseName}</td>
+              <td>{franchise.email}</td>
+              <td>{franchise.contactInfo}</td>
             </tr>
           ))}
     </tbody>
@@ -53,4 +53,4 @@ const DirectTeam = () => {
   )
 }
 
-export default DirectTeam
+export default Poppartners

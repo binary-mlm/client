@@ -29,12 +29,14 @@ const UserNavbar = () => {
     sessionStorage.removeItem("userid");
     sessionStorage.removeItem("username");
     sessionStorage.removeItem("mySponsorId");
+    sessionStorage.removeItem("usermobilenumber");
+    sessionStorage.removeItem("mysponosorid");
     window.location.href = "/";
   }
 
   return (
     <>
- <header className="header" style={{backgroundColor:"#710977",padding:"3%"}}>
+ <header className="header" style={{backgroundColor:"#095444",padding:"3%"}}>
       <div className="header-content">
         {/* Logo Section */}
         <div className="logo">
@@ -50,7 +52,7 @@ const UserNavbar = () => {
 
         {/* Logout Button */}
         <div className="logout">
-        <button className='logout btn btn-success w-25 p-3' onClick={handlelogout}>Logout</button>
+        <button className='logout-btn ' style={{backgroundColor:"#FFFFFF"}} onClick={handlelogout}>Logout</button>
         </div>
       </div>
     </header>

@@ -39,9 +39,9 @@
   }
   
   .logout-btn {
-    background-color: #ff4d4d;
+    /* background-color: #ff4d4d; */
     border: none;
-    color: white;
+    color: black;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -49,6 +49,7 @@
   }
   
   .logout-btn:hover {
-    background-color: #ff1a1a;
+    color: black;
+    /* background-color: #ff1a1a; */
   }
   
