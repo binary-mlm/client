@@ -11,7 +11,7 @@ const Inventory = () => {
   const [productdata, setproduct] = useState([]);
   const [cart, setCart] = useState([]);
   const [userSponsorId , setuserSponsorId] = useState("");
- const [totalprice , settotalprice] = useState("");
+//  const [totalprice , settotalprice] = useState("");
  const [isInvoiceModalOpen, setIsInvoiceModalOpen] = useState(false);
 
   // Increment the quantity
@@ -208,14 +208,14 @@ const Inventory = () => {
       if (response.status === 200) {
         //  alert(`Order submitted successfully! Total Bill: ${response.data.totalPrice}`);
         //  alert(response.data.message);
-         swal(`Order submitted successfully! Total Bill: ${response.data.totalPrice}`, response.data.message,"success");
-          // Open the invoice modal
-        // setIsInvoiceModalOpen(true);
-        //  window.location.reload();
-         settotalprice(response.data.totalPrice)
+         swal(`Order submitted successfully! Total Bill: ${response.data.totalPrice}`, response.data.message,"success").then(() => {
+          window.location.reload(); // Reload the page after success alert
+        });
+    ;
+       
+        
         // You can also clear the cart after successful order submission
         setCart([]);
-        // window.location.reload();
       } else {
         alert(`Error: ${response.data.message}`);
       }

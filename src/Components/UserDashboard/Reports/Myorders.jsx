@@ -7,7 +7,7 @@ const Myorders = () => {
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   useEffect(() => {
     // Fetch referral data from the API
-    axios.get(`${ROOT_URL}/api/user/getAllFranchies`) // replace with actual sponsorId
+    axios.get(`${ROOT_URL}/api/user/myOrders`) // replace with actual sponsorId
       .then(response => {
         setmyorders(response.data); // Set the referral data
         setLoading(false); // Data loading complete
@@ -29,6 +29,7 @@ const Myorders = () => {
   <thead>
     <tr>
     <th scope="col">Order date</th>
+    <th scope="col">Product id</th>
       <th scope="col">BV</th>
       <th scope="col">Amount</th>
       <th scope="col">Delivery Mode</th>

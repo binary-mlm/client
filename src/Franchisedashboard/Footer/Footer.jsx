@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "../../../public/Franchise/css/style.css";
+import "./Franchise/css/style.css";
 const Footer = () => {
   return (
     <>

@@ -107,6 +107,7 @@
 /* === Import template variables === */
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
+
 @-moz-keyframes flash {
   0% {
     opacity: 1;
@@ -25072,7 +25073,7 @@ dl li {
 }
 @media (max-width: 991px) {
   .navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right) {
-    display: none;
+    
   }
 }
 @media (max-width: 991px) {

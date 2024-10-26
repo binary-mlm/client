@@ -1,47 +1,54 @@
-import React ,{useState}from 'react'
-import Nav from './Navbar/Nav'
-import Sidebar from "./Sidebar/Sidebar"
-// import Footer from './Footer/Footer'
+import React, { useState } from 'react';
+import Nav from './Navbar/Nav';
+import Sidebar from "./Sidebar/Sidebar";
 import Franchisedashboard from "./dashboardfanchise/Franchisedashboard";
 import Inventory from './Inventory/Inventory';
 import Invoicelist from "./Inventory/Invoice";
 
 const Homefanchise = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
   const renderPage = () => {
     switch (currentPage) {
       case 'dashboard':
         return <Franchisedashboard />;
       case 'inventory':
         return <Inventory />;
-        case 'invoicelist':
-        return <Invoicelist />; // Render other components based on sidebar menu clicks
+      case 'invoicelist':
+        return <Invoicelist />;
       default:
         return <Franchisedashboard />;
     }
   };
+
   return (
     <>
       <div className="container-scroller">
-            <Nav/>
-        </div>
-        <div className="container-fluid page-body-wrapper">
-        <Sidebar setCurrentPage={setCurrentPage}/>
-        <div className="main-panel mt-5">
-        <h2 className='mt-5 text-center'>Franchise Dashboard</h2>
-        {renderPage()}
-        {/* <Franchisedashboard/> */}
-        
-         
-         
-        </div>
-      
+        <Nav />
       </div>
-       
-
+      <div className="container-fluid page-body-wrapper">
+        {/* Mobile Toggle Button */}
+        <button 
+          className="mobile-toggle" 
+          onClick={() => setSidebarOpen(!isSidebarOpen)}
+        >
+          ☰
+        </button>
         
+        <Sidebar 
+          setCurrentPage={setCurrentPage} 
+          isOpen={isSidebarOpen} 
+          toggleSidebar={() => setSidebarOpen(!isSidebarOpen)} 
+        />
+        
+        <div className="main-panel">
+          <h2 className="text-center">Franchise Dashboard</h2>
+          {renderPage()}
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Homefanchise
+export default Homefanchise;
