@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Nav from './Navbar/Nav';
 import Sidebar from "./Sidebar/Sidebar";
 import Franchisedashboard from "./dashboardfanchise/Franchisedashboard";
 import Inventory from './Inventory/Inventory';
-import Invoicelist from "./Inventory/Invoice";
+import Invoicelist from "./Inventory/Invoicelist";
 
 const Homefanchise = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const path = location.pathname.replace('/franchise/', '');
+    setCurrentPage(path || 'dashboard');
+  }, [location]);
 
   const renderPage = () => {
     switch (currentPage) {

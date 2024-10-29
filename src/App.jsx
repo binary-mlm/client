@@ -30,9 +30,11 @@ import Legaldocument from "./Components/Pages/About Page/Legaldocu/Legaldocument
 import Award from "./Components/Pages/About Page/Award&reward/Award";
 import Franchiselogin from "./Franchisedashboard/Login/Login";
 import Homefranchise from "./Franchisedashboard/Homefanchise";
+import Invoice from "./Franchisedashboard/Inventory/Invoice";
 import DirectTeam from './Components/UserDashboard/Genealogy/DirectTeam';
 import Myorders from "./Components/UserDashboard/Reports/Myorders"
 import Poppartners from "./Components/UserDashboard/POP partners/Poppartners"
+
 // products
 import Tulsiview from "./Components/Productview/Tulsiview";
 import Booster from "./Components/Productview/Booster";
@@ -41,6 +43,7 @@ import Herbaltea from "./Components/Productview/Herbaltea";
 import Facewash from "./Components/Productview/Facewash";
 import Soapprenium from './Components/Productview/Soapprenium';
 import Applesoap from './Components/Productview/Applesoap';
+
 function App() {
   return (
     <>
@@ -48,6 +51,9 @@ function App() {
       <Routes>
       <Route path="/franchise/login" element={<Franchiselogin/>} />
       <Route path="/franchise/dashboard" element={<Homefranchise/>} />
+      <Route path="/franchise/invoice" element={<Invoice/>} />
+      <Route path="/franchise/inventory" element={<Homefranchise/>} />
+      <Route path="/franchise/invoicelist" element={<Homefranchise/>} />
       <Route path="/" element={<Userlayout><Home/></Userlayout>} />
       <Route path="/about" element={<Userlayout><About/></Userlayout>} />
       <Route path="/contactus" element={<Userlayout><Contactus/></Userlayout>} />

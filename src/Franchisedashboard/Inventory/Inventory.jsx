@@ -12,7 +12,6 @@ const Inventory = () => {
   const [cart, setCart] = useState([]);
   const [userSponsorId , setuserSponsorId] = useState("");
 //  const [totalprice , settotalprice] = useState("");
- const [isInvoiceModalOpen, setIsInvoiceModalOpen] = useState(false);
 
   // Increment the quantity
   const incrementQuantity = (productId) => {
@@ -307,7 +306,7 @@ const Inventory = () => {
                 >
                   <div className="h-100 d-flex flex-column ">
                     
-                    <input type="text"  className="form-control p-3 mb-2"
+                    <input type="text"  className="form-control p-4 mb-2 w-100"
                           placeholder="Enter user Sponsor ID..." onChange={e => setuserSponsorId(e.target.value)} />
                       {/* <div
                         className="input-group mb-3"
