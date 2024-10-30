@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import Franchisedashboard from "./dashboardfanchise/Franchisedashboard";
 import Inventory from './Inventory/Inventory';
 import Invoicelist from "./Inventory/Invoicelist";
+import "./Sidebar/sidebar.css"
 
 const Homefanchise = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -36,22 +37,25 @@ const Homefanchise = () => {
         <Nav />
       </div>
       <div className="container-fluid page-body-wrapper">
+      <div>
+      
+      </div>
         {/* Mobile Toggle Button */}
+       
         <button 
           className="mobile-toggle" 
           onClick={() => setSidebarOpen(!isSidebarOpen)}
         >
           ☰
         </button>
-        
         <Sidebar 
           setCurrentPage={setCurrentPage} 
           isOpen={isSidebarOpen} 
           toggleSidebar={() => setSidebarOpen(!isSidebarOpen)} 
         />
         
-        <div className="main-panel">
-          <h2 className="text-center">Franchise Dashboard</h2>
+        <div className="main-panel mt-5">
+         
           {renderPage()}
         </div>
       </div>

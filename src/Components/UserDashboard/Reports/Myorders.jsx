@@ -2,25 +2,25 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 
 const Myorders = () => {
-    const [myorders, setmyorders] = useState([]); // State to hold API data
-    const [loading, setLoading] = useState(true);   // State for loading status
+    // const [myorders, setmyorders] = useState([]); // State to hold API data
+    // const [loading, setLoading] = useState(true);   // State for loading status
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-  useEffect(() => {
-    // Fetch referral data from the API
-    axios.get(`${ROOT_URL}/api/user/myOrders`) // replace with actual sponsorId
-      .then(response => {
-        setmyorders(response.data); // Set the referral data
-        setLoading(false); // Data loading complete
-      })
-      .catch(error => {
-        console.log(error);
-        // setError('Failed to fetch referral data');
-        setLoading(false);
-      });
-  }, []);
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  // useEffect(() => {
+    
+  //   axios.get(`${ROOT_URL}/api/user/myOrders`) // replace with actual sponsorId
+  //     .then(response => {
+  //       setmyorders(response.data); // Set the referral data
+  //       setLoading(false); // Data loading complete
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //       // setError('Failed to fetch referral data');
+  //       setLoading(false);
+  //     });
+  // }, []);
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
   return (
    <>
     <div className=' container mt-4'>
@@ -37,14 +37,16 @@ const Myorders = () => {
     </tr>
   </thead>
   <tbody>
-  {myorders.map((orders) => (
-            <tr  key={orders._id}>
-            <td className='p-2'>{orders.mySponsorId}</td>
-              <td>{orders.name}</td>
-              <td>{orders.email}</td>
-              <td>{orders.mobileNumber}</td>
+ 
+            <tr>
+            <td className='p-2'></td>
+              <td></td>
+              <td>hii</td>
+              <td></td>
+              <td></td> 
+              <td><a href='/userdasboard/invoice'> <i className='fa fa-download'></i>Download</a> </td>
             </tr>
-          ))}
+         
     </tbody>
     </table>
     </div>

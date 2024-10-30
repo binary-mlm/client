@@ -6,7 +6,7 @@ const Franchisedashboard = () => {
       <div className="content-wrapper">
             <div className="page-header">
               <h3 className="page-title">
-                <span className="page-title-icon bg-gradient-primary text-white me-2">
+                <span className="page-title-icon bg-gradient-primary text-white me-2 mt-5">
                   <i className="fa fa-home"></i>
                 </span> Dashboard
               </h3>

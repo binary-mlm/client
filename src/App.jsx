@@ -43,6 +43,7 @@ import Herbaltea from "./Components/Productview/Herbaltea";
 import Facewash from "./Components/Productview/Facewash";
 import Soapprenium from './Components/Productview/Soapprenium';
 import Applesoap from './Components/Productview/Applesoap';
+import Invoice_user from './Components/UserDashboard/Reports/Invoice_user';
 
 function App() {
   return (
@@ -81,6 +82,7 @@ function App() {
       <Route path="/userdasboard/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
       <Route path="/userdasboard/direct_team" element={<Dashboardlayout><DirectTeam/></Dashboardlayout>} />
       <Route path="/userdasboard/myoders" element={<Dashboardlayout><Myorders/></Dashboardlayout>} />
+      <Route path="/userdasboard/invoice" element={<Dashboardlayout><Invoice_user/></Dashboardlayout>} />
       <Route path="/userdasboard/poppartners" element={<Dashboardlayout><Poppartners/></Dashboardlayout>} />
       <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>

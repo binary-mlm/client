@@ -304,31 +304,11 @@ const Inventory = () => {
                   id="pos-sidebar"
                   style={{ top: "10%" }}
                 >
-                  <div className="h-100 d-flex flex-column ">
+                  <div className="h-100 d-flex flex-column w-100 ">
                     
                     <input type="text"  className="form-control p-4 mb-2 w-100"
                           placeholder="Enter user Sponsor ID..." onChange={e => setuserSponsorId(e.target.value)} />
-                      {/* <div
-                        className="input-group mb-3"
-                        style={{ maxWidth: "500px" }}
-                      >
-                        <input
-                          type="text"
-                          className="form-control p-3"
-                          placeholder="Search with user Sponsor ID..."
-                          aria-label="Search"
-                          aria-describedby="search-button"
-                        />
-                        <button
-                          className="btn btn-primary"
-                          type="submit"
-                          style={{ backgroundColor: "rgb(151, 30, 151)" }}
-                          id="search-button"
-                          
-                        >
-                          <i className="fa fa-search text-white"></i>
-                        </button>
-                      </div> */}
+                     
                     
                     <div
                       className="pos-sidebar-body tab-content"

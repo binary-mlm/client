@@ -15,11 +15,16 @@
   @media (max-width: 768px) {
     .mobile-toggle {
       display: block;
-      margin-top: -188px;
+      margin-top: -147%;
+      display: inline-block;
+      width: 40px; /* Adjust the width as needed */
+     
     }
-    
-    .sidebar {
+    #sidebar{
       position: fixed;
+    }
+    .sidebar {
+     
       left: -250px;
       top: 0;
       height: 100%;

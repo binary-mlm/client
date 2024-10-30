@@ -2,17 +2,10 @@ import React, { useRef } from "react";
 
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import logo from "../../assets/images/udbhab.png";
-import { useLocation } from "react-router-dom";
-const Invoice = () => {
-  const location = useLocation();
-  const { franchiseId, order } = location.state;
-
-  const total_Amount = order.products.reduce(
-    (total, product) => total + product.totalAmount,
-    0
-  );
-  const invoicepdf = useRef();
+import logo from "../../../assets/images/udbhab.png";
+// import { useLocation } from "react-router-dom";
+const Invoice_user = () => {
+    const invoicepdf = useRef();
 
   const downloadPDF = () => {
     const input = invoicepdf.current;
@@ -43,7 +36,6 @@ const Invoice = () => {
       alert("PDF successfully saved");
     });
   };
-
   return (
     <>
       <div className="invoice">
@@ -78,30 +70,7 @@ const Invoice = () => {
                           </p>
                           
                     </div>
-                      {/* <div className="col-sm-6 invoice-title text-start mt-3">
-                        <div>
-                          <span className="h4">
-                            Udbhab Marketing Private Limited
-                          </span>
-                        </div>
-                        <div className="mt-2">
-                          <p className="mb-1">
-                            Indrira Nagar Sodepur, North 24 Parganas,
-                            Kolkata-700110
-                          </p>
-                          <p className="mb-1">
-                            <i className="uil uil-envelope-alt me-1"></i>Email:
-                            support@myudbhab.in
-                          </p>
-                          <p>
-                            <i className="uil uil-phone me-1"></i>
-                            +(91)7980964516
-                          </p>
-                        </div>
-                      </div>
-                      <div className="col-sm-6 text-end mt-2">
-                        <img className="img-fuild" src={logo} width={140} />
-                      </div> */}
+                  
                     </div>
                     <hr />
                     <div className="row">
@@ -121,7 +90,7 @@ const Invoice = () => {
                       <div className="col-sm-6 d-flex justify-content-end">
                         <div>
                           <h5 className="font-size-16 mb-1 ms-1">To:</h5>
-                          <h5 className="font-size-15 mb-2">{franchiseId}</h5>
+                          <h5 className="font-size-15 mb-2"></h5>
                           <p className="mb-1">Sonmarg, Kashmir</p>
                           {/* <p className="mb-1">Email: Subham@gmail.com</p>
                           <p>Ph no: 7878522452</p> */}
@@ -143,19 +112,19 @@ const Invoice = () => {
                             </tr>
                           </thead>
                           <tbody>
-                            {order.products.map((product) => (
-                              <tr key={product._id}>
-                                <td className="text-start">{product.name}</td>
+                            
+                              <tr >
+                                <td className="text-start"></td>
                                 <td className="text-center">
-                                  {product.quantity}
+                                  
                                 </td>
-                                <td>{product.price}</td>
-                                <td>{product.totalAmount}</td>
+                                <td></td>
+                                <td></td>
                               </tr>
-                            ))}
+                           
                             <tr>
                        <th colSpan="3" className="text-end">Total Amount :</th>
-                       <td className="text-start">{total_Amount}/-</td>
+                       <td className="text-start">/-</td>
                      </tr>
                           </tbody>
                         </table>
@@ -171,5 +140,7 @@ const Invoice = () => {
     </>
   );
 };
+  
 
-export default Invoice;
+
+export default Invoice_user

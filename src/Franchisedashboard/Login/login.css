@@ -1,3 +1,6 @@
+
+
+
 .background-radial-gradient {
     background-color: hsl(218, 41%, 15%);
     background-image: radial-gradient(650px circle at 0% 0%,
@@ -34,17 +37,16 @@
   }
   
   .bg-glass {
-    background-color: hsla(0, 0%, 100%, 0.9) !important;
-    backdrop-filter: saturate(200%) blur(25px);
+   
     
-    width: 50%;
-    margin-left: 23%;
+    width: 80%;
+    margin-left: 10%;
       
   }
   .signinbutton{
-    background-color: #ad1fff;
+    background-color: #0eb4bb;
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
   }
