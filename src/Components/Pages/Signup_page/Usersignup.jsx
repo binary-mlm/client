@@ -394,6 +394,7 @@ const handleSubmit = async (event) => {
                       onChange={e => setaddress(e.target.value)}> </textarea>
                     </div>
                   </div>
+                  {registrationType === 'Business Entity' && (
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
                       GST Number
@@ -407,6 +408,7 @@ const handleSubmit = async (event) => {
                       />
                     </div>
                   </div>
+                  )}
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
                       Password
@@ -415,21 +417,17 @@ const handleSubmit = async (event) => {
                       <input
                         type="text"
                         className="form-control-plaintext  bg-light textinput ps-2"
-                        onChange={e => setpassword(e.target.value)}
-                        
+                        onChange={e => setpassword(e.target.value)} 
                       />
                     </div>
                   </div>
                   </form>
-
               </div>
               <div className='text-center'>
               <button className='signupbutton w-25 mb-4' onClick={handleSubmit}>Submit</button>
               </div>
-              
               </div>
               </div>
-
         </div>
         </div>
         </div>
