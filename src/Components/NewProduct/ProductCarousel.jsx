@@ -9,18 +9,20 @@ const ProductCarousel = ({ products }) => {
         infinite: true,
         speed: 200,
         slidesToShow: 3, // Number of cards to show at once
-        slidesToScroll: 3,
+        slidesToScroll: 2,
         responsive: [
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 3,
             },
           },
           {
             breakpoint: 600,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 2,
+        slidesToScroll: 2
+
             },
           },
         ],

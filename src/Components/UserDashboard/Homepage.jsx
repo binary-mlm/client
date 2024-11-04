@@ -10,24 +10,7 @@ const Homepage = () => {
   const [referralrightLink, setReferralrightLink] = useState([]);
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const sponsorId = sessionStorage.getItem("mySponsorId");
-  // useEffect(() => {
-  //   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-  //   const userId = sessionStorage.getItem("userid");
-  //   //  console.log(token);
-  //  if(!userdata.length){
-  //   axios
-  //     .get(ROOT_URL + `/api/auth/findUser/${userId}`)
-  //     .then((res) => {
-  //       console.log(res);
-  //       setUserdata(res.data)
-  //       setReferralleftLink(res.data.leftRefferalLink)
-  //       setReferralrightLink(res.data.rightRefferalLink)
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  //   }
-  // }, []);
+
   const logIn = () => {
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const userId = sessionStorage.getItem("userid");
@@ -177,7 +160,7 @@ const Homepage = () => {
                 125,000
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold">MY TOTAL BV (LBV + RBV)</span>
+                <span className=" h6 fw-bold">MY TOTAL BV (LBV + RBV)</span>
                 {/* <br />L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV} */}
               </div>
               <div className="card_item text-center ms-5">
@@ -192,7 +175,7 @@ const Homepage = () => {
                 <br />
                 ACHIEVED
               </div>
-              <div className="card_item text-center ms-5">
+              <div className="card_item text-center ms-5 pe-4">
                 <span className="fw-bold">ACHIEVEMENT STATUS</span>
                 <br />
                 Not Qualified
@@ -207,9 +190,9 @@ const Homepage = () => {
         )}
         {userdata ? (
           <>
-            <div className="d-flex">
+            <div className=" onlyrefferal d-flex">
               <div className=" mt-5">
-                <span className="leftrefferal">My Left Refferal Link</span>
+                <span className="leftrefferal text-center">My Left Refferal Link</span>
               </div>
               <div className=" referrallink mt-5  ms-2 fw-bold">
                 {userdata.leftRefferalLink}{" "}

@@ -1,55 +1,87 @@
 /* Basic styling for the header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  height: 60px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo styling */
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* Username styling */
+.username {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Logout button styling */
+.logout {
+  flex: 1;
+  text-align: right;
+}
+
+.logout-btn {
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      height: auto;
+      padding: 15px;
   }
-  
+
   .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+      flex-direction: column;
+      align-items: center;
   }
-  
-  /* Logo styling */
-  .logo {
-    flex: 1;
-  }
-  
+
   .logo-img {
-    height: 50px;
-    width: auto;
+      height: 40px; /* Smaller logo for mobile */
   }
-  
-  /* Username styling */
+
   .username {
-   
-    font-size: 16px;
+      font-size: 14px;
+      margin: 5px 0;
   }
-  
-  /* Logout button styling */
+
   .logout {
-    flex: 1;
-    text-align: right;
+      text-align: center;
+      margin-top: 10px;
   }
-  
+
   .logout-btn {
-    /* background-color: #ff4d4d; */
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+      padding: 8px 16px;
+      font-size: 14px;
   }
-  
-  .logout-btn:hover {
-    color: black;
-    /* background-color: #ff1a1a; */
-  }
-  
+}

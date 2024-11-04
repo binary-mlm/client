@@ -27,8 +27,8 @@ font-size: 15px;
     width: 25%;
     font-size: 15px;
 }
-.referral{
-    /* background-color: green; */
+
+.referral {
     background-color: green;
     color: white;
     padding: 10px;
@@ -37,6 +37,8 @@ font-size: 15px;
     width: 50%;
     
 }
+
+
 .referrallink{
     font-size: 18px;
     border-radius: 10px;
@@ -57,4 +59,23 @@ font-size: 15px;
     color: white;
     padding: 10px;
     border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .referral {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px;
+    }
+    .referrallink,
+    .leftrefferal,
+    .rightrefferal {
+        font-size: 12px;
+        margin-top: 8px;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        padding-left: 1%;
+    }
+     
+    
 }

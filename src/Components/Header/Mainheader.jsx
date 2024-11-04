@@ -36,7 +36,7 @@ const Mainheader = () => {
                   </li>
                 </ul> */}
                
-                <input className="search-field" placeholder="Search here..." /><i className="fa fa-search" style={{marginLeft:"20%"}} href="#" ></i> 
+                <input className="search-field" placeholder="Search here..."  />
                 
                 </div>
             
