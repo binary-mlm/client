@@ -53,12 +53,12 @@ const UserNavbar = () => {
 
           {/* Username Section */}
           <div className="name">
-            <span className="h4 text-center fw-bold text-white">
+            <span className="h4 text-center fw-bold text-white welcome">
               Welcome To User Dashboard
             </span>
             <br />
-            <span className="h5 text-center fw-bold text-white  ms-4">
-              {" "}
+            <span className="h5 text-center fw-bold text-white  ms-4 idsponsor">
+             
               My Sponosor ID: {sponosorid}
             </span>
           </div>

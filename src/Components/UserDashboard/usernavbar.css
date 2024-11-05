@@ -67,11 +67,18 @@
   }
 
   .logo-img {
-      height: 40px; /* Smaller logo for mobile */
+      height: 50px; /* Smaller logo for mobile */
+  }
+  .logo{
+    margin: 0 27%;
+    
+  }
+  .welcome{
+    display: none;
   }
 
   .username {
-      font-size: 14px;
+      font-size: 17px;
       margin: 5px 0;
   }
 
@@ -84,4 +91,5 @@
       padding: 8px 16px;
       font-size: 14px;
   }
+  
 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import pic1 from "../../assets/images/payments/1.png";
+// import pic1 from "../../assets/images/payments/1.png";
 import pic2 from "../../assets/images/phonepe.png";
 import pic3 from "../../assets/images/bhim.png";
 import pic4 from "../../assets/images/payments/4.png";
 import pic5 from "../../assets/images/rupay.png";
 import pic6 from "../../assets/images/googlepay.png"
-
+import "./footer.css"
 const Footer = () => {
   return (
     <footer id="footer" className="footer color-bg">
@@ -98,44 +98,41 @@ const Footer = () => {
       </div>
     </div>
     <div className="copyright-bar">
-      <div className="container">
-      <div className='row'>
-        <div className="col-xs-12 col-sm-4 no-padding social">
-          <ul className="link d-flex">
+  <div className="container">
+    <div className="row">
       
-           
-          
-            {/* <li className="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
-            <li className="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
-            <li className="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li> */}
-             {/* <li className="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li> */}
-           
-            <li><i className="fa fa-youtube mt-1 me-2" style={{fontSize:"32px", color:"red"}}></i></li>
-            <li><i className="fa fa-twitter mt-1 me-2" style={{fontSize:"32px", color:"white"}}></i></li>
-            <li><i className="fa fa-facebook mt-1 me-2 " style={{fontSize:"32px", color:"aqua"}}></i></li>
-             <li><i className="fa fa-instagram mt-1 " style={{fontSize:"32px", color:"pink"}}></i></li>
-            {/* <li className="youtube pull-left" ><i className="fa fa-instagram"></i></li> */}
+      {/* Payment Methods - First on mobile */}
+      <div className="col-xs-12 col-sm-4 no-padding order-xs-1 order-sm-3">
+        <div className="clearfix payment-methods">
+          <ul className="d-flex justify-content-end">
+            <li className='methods'><img src={pic4} alt="payment"/></li>
+            <li className='methods'><img src={pic6} width={40} alt="payment"/></li>
+            <li className='methods'><img src={pic2} alt="payment"/></li>
+            <li className='methods'><img src={pic3} width={40} alt="payment"/></li>
+            <li className='methods'><img src={pic5} alt="payment"/></li>
           </ul>
         </div>
-        <div className="col-xs-12 col-sm-4 no-padding copyright"><a>Copyright © Udbhab Marketing Pvt Ltd 2024</a> </div>
-        <div className="col-xs-12 col-sm-4 no-padding">
-          <div className="clearfix payment-methods">
-            <ul className='d-flex justify-content-end'>
-              <li><img src={pic4} alt=""/></li>
-              <li><img src={pic6} width={40}  alt=""/></li>
-              
-              <li><img src={pic2}   alt=""/></li>
-             <li><img src={pic3} width={40} alt=''/></li>
-              {/* <li><img src={pic5} style={{width:"30%px"}} alt=""/></li> */}
-
-              <li><img src={pic5} alt=""/></li>
-              
-            </ul>
-          </div>
-        </div>
-        </div>
       </div>
+
+      {/* Social Icons - Second on mobile */}
+      <div className="col-xs-12 col-sm-4 no-padding social order-xs-2 order-sm-1">
+        <ul className="link d-flex">
+          <li><i className="fa fa-youtube mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "red" }}></i></li>
+          <li><i className="fa fa-twitter mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "white" }}></i></li>
+          <li><i className="fa fa-facebook mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "aqua" }}></i></li>
+          <li><i className="fa fa-instagram mt-1 icon_social" style={{ fontSize: "32px", color: "pink" }}></i></li>
+        </ul>
+      </div>
+
+      {/* Copyright Text - Third on mobile */}
+      <div className="col-xs-12 col-sm-4 no-padding  order-xs-3 order-sm-2 mt-5">
+        <a className='copyright' >Copyright © Udbhab Marketing Pvt Ltd 2024</a>
+      </div>
+
     </div>
+  </div>
+</div>
+
   </footer>
   )
 }

@@ -10,3 +10,12 @@
   font-weight: 500;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.social_icon{
+  font-size: 32px;
+}
+@media (max-width: 768px) {
+  .social_icon{
+    display: none;
+  }
+
+}

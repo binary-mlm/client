@@ -160,7 +160,7 @@ const Homepage = () => {
                 125,000
               </div>
               <div className="card_item text-center ms-5">
-                <span className=" h6 fw-bold">MY TOTAL BV (LBV + RBV)</span>
+                <span className=" fw-bold">MY TOTAL BV (LBV + RBV)</span>
                 {/* <br />L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV} */}
               </div>
               <div className="card_item text-center ms-5">

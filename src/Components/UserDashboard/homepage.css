@@ -76,6 +76,9 @@ font-size: 15px;
         text-align: center;
         padding-left: 1%;
     }
+    .card_item{
+        font-size: 10px;
+    }
      
     
 }

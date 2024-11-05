@@ -6021,7 +6021,7 @@ margin-bottom:15px;
     margin-right: 6px;
 }
 .copyright-bar .payment-methods ul li img {
-    width: 51px;
+    /* width: 51px; */
 }
 .single-product .product-info .price-container .price-box .price {
     font-size: 25px;
@@ -6841,7 +6841,7 @@ td.cart-product-sub-total span {
    }
   .copyright-bar .payment-methods ul li img{width:40px;}   
   .copyright-bar .payment-methods ul li {
-    margin-right: 6px;
+    margin-right: 20px;
 }
 .copyright-bar .copyright {
     text-align: center;
@@ -7195,7 +7195,8 @@ owl-main .item .caption .excerpt, #owl-main .item .caption .small {
     margin-top:11px;
 }
 .copyright-bar .payment-methods ul li {
-    margin-right: 1px;
+ justify-content: center;
+ font-size: 15px;
 }
 .social a {
     color: #fff;
