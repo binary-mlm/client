@@ -27,6 +27,9 @@
       height: 100%;
       transform: translateX(-100%); /* Hidden by default on mobile */
       z-index: 1000;
+      max-height: 100vh; /* Limit sidebar to full viewport height */
+      overflow-y: auto; /* Enable vertical scrolling */
+      -webkit-overflow-scrolling: touch;
     }
   
     /* Sidebar button for mobile */
@@ -40,11 +43,13 @@
       z-index: 1001;
       cursor: pointer;
     }
+   
   
     /* Adjust sidebar when open */
     .sidebar.open {
       transform: translateX(0);
     }
+    
   }
   
   /* Adjust link styles */
@@ -53,6 +58,7 @@
   }
   
   @media (max-width: 768px) {
+   
     .sideitem {
       font-size: 14px;
     }

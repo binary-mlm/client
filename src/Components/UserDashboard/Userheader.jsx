@@ -51,6 +51,21 @@ const Sidebar = () => {
               Welcome
             </Link>
           </li>
+          <li className="nav-item mb-3 ">
+            <Link
+              to="/userdasboard/idcard"
+              className="nav-link d-flex align-items-center sideitem"
+            >
+              <img
+                src={quote}
+                width={20}
+                height={25}
+                className="me-2"
+                alt="Id Card"
+              />
+              ID Card
+            </Link>
+          </li>
           <li className="nav-item mb-3">
             <Link
               to="/userdasboard/editprofile"

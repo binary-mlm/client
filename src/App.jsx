@@ -16,6 +16,7 @@ import Welcomeuser from './Components/UserDashboard/Welcomeuser';
 import Genealogy from './Components/UserDashboard/Genealogy/Genealogy';
 import Associate from './Components/Associate/Associate';
 import Editprofile from './Components/UserDashboard/Editprofile/Editprofile';
+import Idcard from "./Components/UserDashboard/Idcard";
 
 import News from './Components/News/News';
 import Kycverification from './Components/UserDashboard/Editprofile/Kycverification';
@@ -79,6 +80,7 @@ function App() {
       {/* user dashboard */}
       <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
       <Route path="/userdasboard/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />
+      <Route path="/userdasboard/idcard" element={<Dashboardlayout><Idcard/></Dashboardlayout>} />
       <Route path="/userdasboard/genealogy" element={<Dashboardlayout><Genealogy/></Dashboardlayout>} />
       <Route path="/userdasboard/direct_team" element={<Dashboardlayout><DirectTeam/></Dashboardlayout>} />
       <Route path="/userdasboard/myoders" element={<Dashboardlayout><Myorders/></Dashboardlayout>} />
