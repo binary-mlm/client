@@ -32,8 +32,14 @@ const Signup = () => {
             })
   }
   const handleSubmit = async (event) => {
+    if(name === "" || sponsorId === ""){
+      event.preventDefault();
+      swal("Opps!", "Please fill out all required fields!", "error");
+    }
+    else {
     sessionStorage.setItem('sponosorid', sponsorId);
     navigate('/usersignup');
+    }
     // alert("sumit")
     // event.preventDefault();
     // if (name === "" || sponsorId === ""  || city === "") {
