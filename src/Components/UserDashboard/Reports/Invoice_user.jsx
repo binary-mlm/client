@@ -3,8 +3,15 @@ import React, { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import logo from "../../../assets/images/udbhab.png";
+import { useLocation } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 const Invoice_user = () => {
+  const location = useLocation();
+  const { sponsorId, order } = location.state;
+  const total_Amount = order.products.reduce(
+    (total, product) => total + product.totalAmount,
+    0
+  );
     const invoicepdf = useRef();
 
   const downloadPDF = () => {
@@ -90,8 +97,8 @@ const Invoice_user = () => {
                       <div className="col-sm-6 d-flex justify-content-end">
                         <div>
                           <h5 className="font-size-16 mb-1 ms-1">To:</h5>
-                          <h5 className="font-size-15 mb-2"></h5>
-                          <p className="mb-1">Sonmarg, Kashmir</p>
+                          <h5 className="font-size-15 mb-2">{sponsorId}</h5>
+                         
                           {/* <p className="mb-1">Email: Subham@gmail.com</p>
                           <p>Ph no: 7878522452</p> */}
                         </div>
@@ -113,18 +120,20 @@ const Invoice_user = () => {
                           </thead>
                           <tbody>
                             
-                              <tr >
-                                <td className="text-start"></td>
+                          {order.products.map((product) => (
+                              <tr key={product._id}>
+                                <td className="text-start">{product.name}</td>
                                 <td className="text-center">
-                                  
+                                  {product.quantity}
                                 </td>
-                                <td></td>
-                                <td></td>
+                                <td>{product.price}</td>
+                                <td>{product.totalAmount}</td>
                               </tr>
+                            ))}
                            
                             <tr>
                        <th colSpan="3" className="text-end">Total Amount :</th>
-                       <td className="text-start">/-</td>
+                       <td className="text-start">{total_Amount}/-</td>
                      </tr>
                           </tbody>
                         </table>

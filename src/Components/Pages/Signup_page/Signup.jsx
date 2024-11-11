@@ -40,6 +40,7 @@ const Signup = () => {
     sessionStorage.setItem('sponosorid', sponsorId);
     navigate('/usersignup');
     }
+    
     // alert("sumit")
     // event.preventDefault();
     // if (name === "" || sponsorId === ""  || city === "") {
