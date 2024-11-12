@@ -21,20 +21,55 @@
 .username-container {
     position: absolute;
     top: 57%; 
-    margin-left: 8%;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 24px;
+    margin-left: 10%;/* Adjust this value to move the text to the desired vertical position */
+    font-size: 15px;
     color: #000; /* Text color (choose based on background) */
-    background-color: rgba(255, 255, 255, 0.8); /* Optional background for contrast */
+     /* Optional background for contrast */
     padding: 10px 20px; /* Optional padding for readability */
-    border-radius: 8px; /* Optional rounded corners */
+    
   }
   .userid-container {
     position: absolute;
-    top: 62%; 
-    margin-left: 8%;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 24px;
+    margin-top: 10px;
+    top: 60%; 
+    margin-left: 10%;/* Adjust this value to move the text to the desired vertical position */
+    font-size: 15px;
     color: #000; /* Text color (choose based on background) */
-    background-color: rgba(255, 255, 255, 0.8); /* Optional background for contrast */
+     /* Optional background for contrast */
+    /* Optional rounded corners */
+  }
+  .userdateofbirth-container {
+    position: absolute;
+    top: 18%; 
+    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
+    font-size: 15px;
+    color: #000; /* Text color (choose based on background) */
+     /* Optional background for contrast */
     padding: 10px 20px; /* Optional padding for readability */
-    border-radius: 8px; /* Optional rounded corners */
+    
+  }
+  .useraddress-container{
+    position: absolute;
+    top: 24%; 
+    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
+    font-size: 15px;
+    color: #000; /* Text color (choose based on background) */
+    padding: 10px 20px;
+    
+  }
+  .useremercency-container{
+    position: absolute;
+    top: 30%; 
+    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
+    font-size: 15px;
+    color: #000; /* Text color (choose based on background) */
+    padding: 10px 20px; 
+  }
+  .office-container{
+     position: absolute;
+    top: 60%; 
+    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
+    font-size: 15px;
+    color: #000; /* Text color (choose based on background) */
+    padding: 10px 20px; 
   }

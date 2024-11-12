@@ -19,6 +19,9 @@ const Idcard = () => {
       pdf.save("Myidcard.pdf"); // You can customize the name of the file
     });
   };
+  const username = sessionStorage.getItem("username");
+  const sponsorId = sessionStorage.getItem("mySponsorId");
+  const contactNumber = sessionStorage.getItem("usermobilenumber");
   return (
     <div>
       <div className="d-flex justify-content-end">
@@ -38,13 +41,15 @@ const Idcard = () => {
       <div className="col-lg-4 offset-lg-2 col-sm-12">
       <div className="background">
       <div className="username-container">
-        <h5>Srijani Banerjee</h5>
+      <div className="d-flex">
+      <div>Name: </div>
+        <div className="ms-1">{username}</div>
+        </div>
       </div>
       <div className="userid-container">
       <div className="d-flex mt-2">
-      <div className=" h5 fw-bold">User ID:</div>
-      <div className=" h5 fw-bold">UD123456</div>
-
+      <div className="">User ID:</div>
+      <div className="ms-1"> {sponsorId}</div>
       </div>
       </div>
      
@@ -54,6 +59,37 @@ const Idcard = () => {
       </div>
       <div className="col-lg-4">
       <div className="background_back">
+      <div className="userdateofbirth-container">
+      <div className="d-flex">
+        <div>Date of Birth:</div>
+        <div className="ms-1">{sponsorId}</div>
+      </div>
+      </div>
+      <div className="useraddress-container">
+      <div className="d-flex">
+      <div>Contact Number:</div>
+      <div className="ms-1">{contactNumber}
+      </div>
+      </div>
+      </div>
+      <div className="useremercency-container">
+      <div className="d-flex">
+      <div>Emercency Number:</div>
+      <div className="ms-1">{contactNumber}
+      </div>
+      </div>
+      </div>
+      <div className="office-container">
+      
+      <div>Udbhab Marketing Pvt Ltd.</div>
+      <div>Indrira nagar Sodepur,</div>
+      <div> North 24 Parganas</div>
+      <div>Kolkata-700110</div>
+
+      <div>
+      
+      </div>
+      </div>
       
             
             </div>

@@ -35,6 +35,7 @@ import Invoice from "./Franchisedashboard/Inventory/Invoice";
 import DirectTeam from './Components/UserDashboard/Genealogy/DirectTeam';
 import Myorders from "./Components/UserDashboard/Reports/Myorders"
 import Poppartners from "./Components/UserDashboard/POP partners/Poppartners"
+import Payoutweekly from "./Components/UserDashboard/Payout/Payoutweekly";
 
 // products
 import Tulsiview from "./Components/Productview/Tulsiview";
@@ -45,6 +46,7 @@ import Facewash from "./Components/Productview/Facewash";
 import Soapprenium from './Components/Productview/Soapprenium';
 import Applesoap from './Components/Productview/Applesoap';
 import Invoice_user from './Components/UserDashboard/Reports/Invoice_user';
+import Payoutmonthly from './Components/UserDashboard/Payout/Payoutmonthly';
 
 function App() {
   return (
@@ -87,7 +89,9 @@ function App() {
       <Route path="/userdasboard/invoice" element={<Dashboardlayout><Invoice_user/></Dashboardlayout>} />
       <Route path="/userdasboard/poppartners" element={<Dashboardlayout><Poppartners/></Dashboardlayout>} />
       <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
+      <Route path="/userdasboard/payoutweekly" element={<Dashboardlayout><Payoutweekly/></Dashboardlayout>} />
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
+      <Route path="/userdasboard/payoutmonthly" element={<Dashboardlayout><Payoutmonthly/></Dashboardlayout>}/>
       <Route path="/signupleft/:parentSponsorId" element={<Userlayout><Signupleft/></Userlayout>}/>
       <Route path="/signupright/:parentSponsorId" element={<Userlayout><Signupright/></Userlayout>}/>
       {/* for productview */}

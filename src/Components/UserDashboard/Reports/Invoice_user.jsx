@@ -1,13 +1,17 @@
 import React, { useRef } from "react";
-
+import "./invoice.css";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import logo from "../../../assets/images/udbhab.png";
+import logo from "../../../assets/images/udbhab_icon.png";
 import { useLocation } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 const Invoice_user = () => {
   const location = useLocation();
   const { sponsorId, order } = location.state;
+
+  const username = sessionStorage.getItem("username");
+  const user_phone = sessionStorage.getItem("usermobilenumber");
+
   const total_Amount = order.products.reduce(
     (total, product) => total + product.totalAmount,
     0
@@ -22,7 +26,7 @@ const Invoice_user = () => {
       scale: 2, // Higher scale for better quality
     }).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a4");
+      const pdf = new jsPDF("p", "mm", "letter");
 
       // Calculate width and height based on the A4 page size
       const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -40,112 +44,116 @@ const Invoice_user = () => {
       // Add image to PDF with calculated dimensions
       pdf.addImage(imgData, "PNG", 0, 0, finalWidth, finalHeight);
       pdf.save("invoice.pdf");
-      alert("PDF successfully saved");
+      // alert("PDF successfully saved");
     });
   };
   return (
     <>
-      <div className="invoice">
-        <div className="container">
-          <div className="invoice-action text-end mt-2">
+     <div className="container" >
+    <div className="invoice-action text-end mt-2">
             <button className="btn btn-success p-3 mt-5" onClick={downloadPDF}>
               <i className="fa fa-download"> </i> Download invoice
             </button>
           </div>
-          <div className="row mt-2">
-            <div className="col-lg-12">
-              <div ref={invoicepdf}>
-                <div
-                  className="card w-100 mb-4 text-center"
-                  style={{ backgroundColor: "white", color: "black" }}
-                >
-                  <div className="card-body">
-                    <div className="row">
-                    <div className="col-sm-12 text-center">
-                    <img className="img-fuild" src={logo} width={140} />
-                    <p className="mb-1">
-                            Indrira Nagar Sodepur, North 24 Parganas,
-                            Kolkata-700110
-                          </p>
-                          <p className="mb-1">
-                            <i className="uil uil-envelope-alt me-1"></i>Email:
-                            support@myudbhab.in
-                          </p>
-                          <p>
-                            <i className="uil uil-phone me-1"></i>
-                            +(91)7980964516
-                          </p>
-                          
-                    </div>
-                  
-                    </div>
-                    <hr />
-                    <div className="row">
-                      <div className="col-sm-6 text-start">
-                        <div>
-                          <h5 className="font-size-16 mb-1">From:</h5>
-                          <h5 className="font-size-15 mb-2">
-                            Srijani Banerjee
-                          </h5>
-                          <p className="mb-1">Howrah, West Bengal</p>
-                          <p className="mb-1">
-                            Email: srijani.banerjee2000@gmail.com
-                          </p>
-                          <p>Ph no: 8584062451</p>
-                        </div>
-                      </div>
-                      <div className="col-sm-6 d-flex justify-content-end">
-                        <div>
-                          <h5 className="font-size-16 mb-1 ms-1">To:</h5>
-                          <h5 className="font-size-15 mb-2">{sponsorId}</h5>
-                         
-                          {/* <p className="mb-1">Email: Subham@gmail.com</p>
-                          <p>Ph no: 7878522452</p> */}
-                        </div>
-                      </div>
-                    </div>
+          <div ref={invoicepdf} className="mt-2">
+       <div className="col-lg-12" >
+      <div className="row" style={{border:'1px solid black'}}>
+        <div className="receipt-main col-xs-10 col-sm-10 col-md-12">
+          
+          {/* Header */}
+          <div className="row" >
+          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div className="receipt-start">
+                  <img
+                    className="img-responsive"
+                    alt="udbhab"
+                    src={logo}
+                    style={{ width: '30%' }}
+                  />
+                </div>
+              </div>
+              <div className="col-xs-6 col-sm-6 col-md-6 text-end ">
+                <div className="receipt-right">
+                  <h5>Udbhab Marketing Pvt Ltd</h5>
+                  <p>123456789 <i className="fa fa-phone" /></p>
+                  <p>company@gmail.com <i className="fa fa-envelope-o" /></p>
+                  <p>India <i className="fa fa-location-arrow" /></p>
+                </div>
+              </div>
 
-                    <div className="py-2">
-                      <h5 className="font-size-15 text-start">Order Summary</h5>
-
-                      <div className="table-responsive">
-                        <table className="table align-middle table-striped  mb-0 table-group-divider">
-                          <thead>
-                            <tr>
-                              <th className="text-start">Product Name</th>
-                              <th>Quantity</th>
-                              <th>Price</th>
-                              <th>Total Amount</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            
-                          {order.products.map((product) => (
+          </div>
+          
+          {/* Customer Details */}
+          <div className="row mt-4">
+              <div className="col-xs-8 col-sm-8 col-md-8 text-left">
+                <div className="receipt-right">
+                  <p>Name: {username}</p>
+                  <p>Sponsor ID : {sponsorId}</p>
+                  <p>Mobile : {user_phone}</p>
+                  {/* <p><b>Email :</b> {username}@gmail.com</p>
+                  <p><b>Address :</b> New York, USA</p> */}
+                </div>
+              </div>
+              <div className="col-xs-4 col-sm-4 col-md-4">
+                <div className="receipt-left">
+                
+                  <h3>Order No : {order.orderDetails.orderNumber}</h3>
+                </div>
+              </div>
+          </div>
+          
+          {/* Invoice Table */}
+          <div className="mt-2">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                <th className="text-center">Product Name</th>
+                              <th className="text-center">Quantity</th>
+                              <th className="text-center">Price</th>
+                              <th className="text-center">Total Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+              {order.products.map((product) => (
                               <tr key={product._id}>
-                                <td className="text-start">{product.name}</td>
+                                <td className="text-center">{product.name}</td>
                                 <td className="text-center">
                                   {product.quantity}
                                 </td>
-                                <td>{product.price}</td>
-                                <td>{product.totalAmount}</td>
+                                <td className="text-center">{product.price}</td>
+                                <td className="text-center">{product.totalAmount}</td>
                               </tr>
                             ))}
-                           
                             <tr>
-                       <th colSpan="3" className="text-end">Total Amount :</th>
-                       <td className="text-start">{total_Amount}/-</td>
-                     </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
+                            <td  colSpan="3" className="text-end"><h5><strong>Total: </strong></h5></td>
+                            <td className="text-left text-danger "><h5><strong><i className="fa fa-inr"></i>{total_Amount}/-</strong></h5></td>
+                        </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          {/* Footer */}
+          <div className="row mt-2">
+              <div className="col-xs-8 col-sm-8 col-md-8 text-left">
+                <div className="receipt-right">
+                  <h6><b>Date :{new Date(order.orderDetails.orderDate).toLocaleDateString()}</b></h6>
+                  
                 </div>
               </div>
+              <div className="col-xs-4 col-sm-4 col-md-4 text-end">
+              <h6 style={{ color: 'rgb(140, 140, 140)' }}>Thanks for shopping!</h6>
+                {/* <div className="receipt-left">
+                  <h1>Stamp</h1>
+                </div> */}
+              
             </div>
           </div>
+          
         </div>
       </div>
+    </div>
+    </div>
+    </div>
     </>
   );
 };
