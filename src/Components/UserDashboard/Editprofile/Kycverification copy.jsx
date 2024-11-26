@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import swal from "sweetalert";
-import "./kyc.css";
+import React, { useState } from "react";
+// import user from '../../../assets/images/trainer.png';
+import './kyc.css';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
+
+
 const Kycverification = () => {
   const mySponsorId = sessionStorage.getItem('mySponsorId');
-  const myname = sessionStorage.getItem('username');
-
   const name = sessionStorage.getItem('username');
   const mobileNumber = sessionStorage.getItem('usermobilenumber');
   const [bankName , setbankname] = useState('');
@@ -21,8 +21,9 @@ const Kycverification = () => {
   const [aadharCardBack, setaadharCardBack] = useState(null);
   const [bankCard, setbankCard] = useState(null);
   const navigate = useNavigate()
-  const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-  const [kycStatus, setKycStatus] = useState("loading");
+
+
+  // Handle file input and set preview
   const handleImageChange = (event, setPreview) => {
     const file = event.target.files[0];
     if (file) {
@@ -30,7 +31,7 @@ const Kycverification = () => {
       setPreview(file); // Set the preview URL for the specific image
     }
   };
-  
+
   const handlekycsubmit = async (event)=>{
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     event.preventDefault();
@@ -63,32 +64,9 @@ const Kycverification = () => {
         })
   }
 
-  // Fetch KYC Status from Backend
-  useEffect(() => {
-    const fetchKycStatus = async () => {
-      try {
-        const response = await axios.get(`${ROOT_URL}/api/user/kyc-status/${mySponsorId}`)
-        setKycStatus(response.data.kycStatus);
-      } catch (error) {
-        console.error("Error fetching KYC status:", error);
-        swal("Error!", "Failed to fetch KYC status. Please try again later.", "error");
-      }
-    };
-
-    fetchKycStatus();
-  }, [ROOT_URL, mySponsorId]);
-
-  const handleResubmitClick = () => {
-    setKycStatus("not_submitted");
-  };
-
   return (
-    <div className="container my-3">
-      {kycStatus === "loading" && <p>Loading KYC status...</p>}
-
-      {kycStatus === "not_submitted" && (
-        <>
-        <div className="container my-3">
+    <>
+      <div className="container my-3">
         <div className="row">
           <div className="col-lg-8">
             <div className="row">
@@ -244,45 +222,7 @@ const Kycverification = () => {
           </div>
         </div>
       </div>
-        </>
-      )}
-
-      {kycStatus !== "not_submitted" && kycStatus !== "loading" && (
-        <div>
-          <h3>KYC Status</h3>
-          <table className="table table-light table-striped">
-            <thead>
-              <tr>
-              <th>Name</th>
-              <th>Mobile number</th>
-                <th>KYC Status</th>
-                {kycStatus === "rejected" && (
-                <th>Actions</th>
-                )}
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-              <td>{myname}</td>
-              <td>{mobileNumber}</td>
-                <td>
-                  {kycStatus === "pending" && "Pending"}
-                  {kycStatus === "verified" && "Verified"}
-                  {kycStatus === "rejected" && "Rejected"}
-                </td>
-                <td>
-                  {kycStatus === "rejected" && (
-                    <button className="btn btn-warning" onClick={handleResubmitClick}>
-                      Resubmit KYC
-                    </button>
-                  )}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      )}
-    </div>
+    </>
   );
 };
 

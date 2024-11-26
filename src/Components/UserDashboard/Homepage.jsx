@@ -109,7 +109,7 @@ const Homepage = () => {
               <div className="card_item text-center ">
                 <span className="fw-bold">KYC STATUS</span>
                 <br />
-                <span>Pending</span>
+                <span>{data.kycStatus}</span>
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">DIRECT TEAM</span>
@@ -129,11 +129,11 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">PERSONAL BV</span>
-                <br />0
+                <br />{data.myTotalBV}
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">TOTAL PERSONAL BV</span>
-                <br />L - {data.totalDirectBV.leftDirectBV} | R - {data.totalDirectBV.rightDirectBV}
+                <br /> {data.totalDirectBV.total}
               </div>
             </div>
             <div className="d-flex mt-2">

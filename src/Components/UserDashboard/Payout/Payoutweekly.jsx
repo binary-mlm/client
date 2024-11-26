@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Payoutweekly = () => {
     const [allweeklypayout, setAllweeklypayout] = useState([]); // State to hold API data
@@ -35,6 +36,8 @@ const Payoutweekly = () => {
       <th className='text-center' scope="col">Week</th>
       <th className='text-center' scope="col">MatchBV</th>
       <th className='text-center' scope="col">Payout Amount</th>
+      <th className='text-center' scope="col">Payout Status</th>
+      <th className='text-center' scope="col">View Invoice</th>
       
     </tr>
   </thead>
@@ -46,7 +49,12 @@ const Payoutweekly = () => {
             <td className='text-center'>{payout.week}</td>
               <td className='text-center'>{payout.matchedBV}</td>
               <td className='text-center'>{payout.payoutAmount}</td>
-              
+              <td className='text-center'>{payout.paymentStatus}</td>
+              {(payout.paymentStatus === "Paid") 
+  ? <td className='text-center'><Link to="/userdasboard/payoutinvoice"><i className="fa fa-download"></i></Link></td>
+  : <td className='text-center'>No invoice</td>
+}
+              {/* <td className='text-center'><Link to="/userdasboard/payoutinvoice"><i className="fa fa-download"></i></Link></td> */}
             </tr>
           ))}
           </>

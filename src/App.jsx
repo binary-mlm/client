@@ -47,6 +47,7 @@ import Soapprenium from './Components/Productview/Soapprenium';
 import Applesoap from './Components/Productview/Applesoap';
 import Invoice_user from './Components/UserDashboard/Reports/Invoice_user';
 import Payoutmonthly from './Components/UserDashboard/Payout/Payoutmonthly';
+import Payoutinvoice from './Components/UserDashboard/Payout/Payoutinvoice';
 
 function App() {
   return (
@@ -94,6 +95,7 @@ function App() {
       <Route path="/userdasboard/payoutmonthly" element={<Dashboardlayout><Payoutmonthly/></Dashboardlayout>}/>
       <Route path="/signupleft/:parentSponsorId" element={<Userlayout><Signupleft/></Userlayout>}/>
       <Route path="/signupright/:parentSponsorId" element={<Userlayout><Signupright/></Userlayout>}/>
+      <Route path="/userdasboard/payoutinvoice" element={<Dashboardlayout><Payoutinvoice/></Dashboardlayout>}/>
       {/* for productview */}
       <Route path="/tulsiview" element={<Userlayout><Tulsiview/></Userlayout>} />
       <Route path="/booster" element={<Userlayout><Booster/></Userlayout>} />
@@ -102,6 +104,7 @@ function App() {
       <Route path="/Facewash" element={<Userlayout><Facewash/></Userlayout>} />
       <Route path="/soapprenium" element={<Userlayout><Soapprenium/></Userlayout>} />
       <Route path="/applesoap" element={<Userlayout><Applesoap/></Userlayout>} />
+      <Route path='*' element={<div className='text-center h1 mt-5'>page not found</div>}/>
       </Routes>
     </Router>
     </>
