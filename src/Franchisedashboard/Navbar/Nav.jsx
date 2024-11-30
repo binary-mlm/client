@@ -2,7 +2,7 @@ import React from 'react'
 import "../../../public/Franchise/css/style.css";
 
 import logo1 from "/Franchise/images/logo.png"
-import user from "/Franchise/images/faces/face1.jpg"
+import user from "/Franchise/images/faces/user.jpg"
 const Nav = () => {
   const username = sessionStorage.getItem("username")
   return (
@@ -29,7 +29,7 @@ const Nav = () => {
             <span className="availability-status online"></span>
           </div>
           <div className="nav-profile-text">
-            <p className="mb-1 text-black">{username}</p>
+            <p className="mb-1 text-black mt-1">{username}</p>
           </div>
 
         </a>

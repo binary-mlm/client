@@ -32,6 +32,7 @@ import Award from "./Components/Pages/About Page/Award&reward/Award";
 import Franchiselogin from "./Franchisedashboard/Login/Login";
 import Homefranchise from "./Franchisedashboard/Homefanchise";
 import Invoice from "./Franchisedashboard/Inventory/Invoice";
+import Userorderinvoice from "./Franchisedashboard/Inventory/Userorderinvoice"
 import DirectTeam from './Components/UserDashboard/Genealogy/DirectTeam';
 import Myorders from "./Components/UserDashboard/Reports/Myorders"
 import Poppartners from "./Components/UserDashboard/POP partners/Poppartners"
@@ -59,6 +60,8 @@ function App() {
       <Route path="/franchise/invoice" element={<Invoice/>} />
       <Route path="/franchise/inventory" element={<Homefranchise/>} />
       <Route path="/franchise/invoicelist" element={<Homefranchise/>} />
+      <Route path='/franchise/userorderlist' element={<Homefranchise/>}/>
+      <Route path='/franchise/userorderinvoice' element={<Userorderinvoice/>}/>
       <Route path="/" element={<Userlayout><Home/></Userlayout>} />
       <Route path="/about" element={<Userlayout><About/></Userlayout>} />
       <Route path="/contactus" element={<Userlayout><Contactus/></Userlayout>} />

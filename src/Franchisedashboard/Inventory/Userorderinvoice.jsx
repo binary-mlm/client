@@ -4,16 +4,18 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import logo from "../../assets/images/udbhab.png";
 import { useLocation } from "react-router-dom";
-const Invoice = () => {
-  const location = useLocation();
+
+const Userorderinvoice = () => {
+    const location = useLocation();
   const { franchiseId, order } = location.state;
-  
+
+  const franchiseName = sessionStorage.getItem('username');
+
   const total_Amount = order.products.reduce(
     (total, product) => total + product.totalAmount,
     0
   );
   const invoicepdf = useRef();
-
   const downloadPDF = () => {
     const input = invoicepdf.current;
 
@@ -43,10 +45,8 @@ const Invoice = () => {
       alert("PDF successfully saved");
     });
   };
-
   return (
-    <>
-      <div className="invoice">
+    <div className="invoice">
         <div className="container">
           <div className="invoice-action text-end mt-2">
             <button className="btn btn-success p-3 mt-5" onClick={downloadPDF}>
@@ -109,9 +109,9 @@ const Invoice = () => {
                         <div>
                           <h5 className="font-size-16 mb-1">From:</h5>
                           <h5 className="font-size-15 mb-2">
-                            Srijani Banerjee
+                          {franchiseName}
                           </h5>
-                          <p className="mb-1"></p>
+                          <p className="mb-1 fw-bold">ID: {franchiseId}</p>
                           <p className="mb-1">
                             Email: srijani.banerjee2000@gmail.com
                           </p>
@@ -168,8 +168,7 @@ const Invoice = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
+  )
+}
 
-export default Invoice;
+export default Userorderinvoice

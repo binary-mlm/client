@@ -1,12 +1,47 @@
-import React from "react";
+import React ,{useRef} from "react";
 import logo from "../../../assets/images/udbhab_icon.png";
 import "./Payoutinvoice.css";
-
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 const Payoutinvoice = () => {
+  const invoicepdf = useRef();
+
+  const downloadPDF = () => {
+    const input = invoicepdf.current;
+
+    html2canvas(input, {
+      useCORS: true, // Enables cross-origin images
+      scale: 2, // Higher scale for better quality
+    }).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "letter");
+
+      // Calculate width and height based on the A4 page size
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+
+      // Calculate image aspect ratio to match the full-page dimensions
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+
+      // Calculate final dimensions
+      const finalWidth = imgWidth * ratio;
+      const finalHeight = imgHeight * ratio;
+
+      // Add image to PDF with calculated dimensions
+      pdf.addImage(imgData, "PNG", 0, 0, finalWidth, finalHeight);
+      pdf.save("invoice.pdf");
+      // alert("PDF successfully saved");
+    });
+  };
   return (
     <>
+   
        <div className="voucher-container">
-      <header className="voucher-header">
+       <div ref={invoicepdf}>
+       <div className="container">
+      <header className="voucher-header mt-2">
       <div className="row">
         <div className="col-lg-4">
             <img src={logo} style={{width:"150px"}}/>
@@ -72,19 +107,44 @@ const Payoutinvoice = () => {
           </thead>
           <tbody>
             <tr>
-              <td>Self Performance Bonus</td>
+              <td>Direct sales Bonus</td>
               <td>Y</td>
               <td>142.00</td>
               <td>58414.20</td>
             </tr>
             <tr>
-              <td>Team Bonus</td>
+              <td>Team  sales Bonus</td>
               <td>Y</td>
               <td>-</td>
               <td>2080.00</td>
             </tr>
             <tr>
-              <td>Team Building Bonus</td>
+              <td>Mentoring Bonus</td>
+              <td>Y</td>
+              <td>-</td>
+              <td>48420.00</td>
+            </tr>
+            <tr>
+              <td>Car achievement Bonus</td>
+              <td>Y</td>
+              <td>-</td>
+              <td>48420.00</td>
+            </tr>
+            <tr>
+              <td>House achievement Bonus</td>
+              <td>Y</td>
+              <td>-</td>
+              <td>48420.00</td>
+            </tr>
+            
+            <tr>
+              <td>International tour achievement Bonus</td>
+              <td>Y</td>
+              <td>-</td>
+              <td>48420.00</td>
+            </tr>
+            <tr>
+              <td>Life time royalty</td>
               <td>Y</td>
               <td>-</td>
               <td>48420.00</td>
@@ -120,6 +180,12 @@ const Payoutinvoice = () => {
         </p>
       </footer>
     </div>
+    </div>
+    </div>
+    <div className="d-flex justify-content-center">
+    <button className="btn bg-success text-white  mt-1 mb-2 text-center" onClick={downloadPDF}>
+              <i className="fa fa-download"> </i> Download invoice</button>
+            </div>
 
     </>
   );

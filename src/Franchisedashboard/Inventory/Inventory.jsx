@@ -76,12 +76,12 @@ const Inventory = () => {
   const renderCartItems = () => {
     return cart.map((item) => (
       <div key={item.productId} className="ms-4 mb-3">
-        <div className="card">
-          <div className="h6 mb-1 mt-4 ms-2">Product name: {item.productName}</div>
+        <div className="card ">
+          <div className="h6 mb-1 mt-4 ms-2">{item.productName}</div>
           <div className="small mb-2">
-            <h6 className="ms-2 fw-bold">Price: {item.price}</h6>
+            <h6 className="ms-2 fw-bold">{item.price}</h6>
             <span className=" fw-bold text-center ms-2">Select Quantity</span>
-            <div className="input-group w-auto justify-content-center align-items-center">
+            <div className="input-group w-auto justify-content-center align-items-center mt-1">
               <button
                 type="button"
                 className="button-minus border rounded-circle icon-shape icon-sm mx-1"

@@ -2,44 +2,43 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert'
 import { useNavigate } from 'react-router-dom';
-
-const Invoicelist = () => {
-  const franchiseId = sessionStorage.getItem('franchiseid');
-  const [inventory, setInventory] = useState([]);
-  const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL
-  const navigate = useNavigate();
-  useEffect(() => {
-    const fetchFranchises = async () => {
-      if (franchiseId) {
-        try {
-          const response = await axios.post(ROOT_URL+`/api/admin/getFranchiseOrders`,{franchiseId}); // Adjust this endpoint to match your API
-          if (response.data.length === 0) {
-              swal('Opps!', 'No inventory found for this franchise!', 'error')
+const Useroderlist = () => {
+    const franchiseId = sessionStorage.getItem('franchiseid');
+    const [orderhistory, setorderhistory] = useState([]);
+    const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+    const navigate = useNavigate();
+    useEffect(() => {
+        const fetchorderhistory = async () => {
+          if (franchiseId) {
+            try {
+              const response = await axios.post(ROOT_URL+`/api/franchise/createdOrders`,{franchiseId}); // Adjust this endpoint to match your API
+              if (response.data.length === 0) {
+                  swal('Opps!', 'No inventory found for this franchise!', 'error')
+              } else {
+                setorderhistory(response.data.franchiseOrders);
+                console.log(response.data.franchiseOrders)
+               
+              }
+            } catch (error) {
+              console.error('Error fetching:', error);
+            }
           } else {
-            setInventory(response.data.orders);
-            console.log(response.data.orders)
-           
+            setorderhistory([]);
           }
-        } catch (error) {
-          console.error('Error fetching inventory:', error);
-        }
-      } else {
-        setInventory([]);
-      }
-    };
+        };
+    
+        fetchorderhistory();
+      }, []);
 
-    fetchFranchises();
-  }, []);
-
-  const handleInvoice = (order) => {
-    navigate('/franchise/invoice', { state: { franchiseId, order } });
-  };
-
+      const handleInvoice = (order) => {
+        navigate('/franchise/userorderinvoice', { state: { franchiseId, order } });
+      };
   return (
-   <>
-   <div className='mt-5'>
-   <div className='h3 text-center'>Order List(from Admin)</div>
-     {inventory.length > 0 && (
+    <>
+    
+    <div className='mt-5'>
+   <div className='h3 text-center'>User Order History</div>
+     {orderhistory.length > 0 && (
       <div className='table-responsive'>
         <table className='table table-striped'>
           <thead  style={{backgroundColor:"#095444" }}>
@@ -53,7 +52,7 @@ const Invoicelist = () => {
             </tr>
           </thead>
           <tbody>
-            {inventory.map((order) => (
+            {orderhistory.map((order) => (
               <tr key={order._id}>
                
                 <td className='text-center'>{order.orderDetails.orderNumber}</td>
@@ -67,8 +66,9 @@ const Invoicelist = () => {
         </div>
       )}
       </div>
-   </>
+    </>
+    
   )
 }
 
-export default Invoicelist
+export default Useroderlist

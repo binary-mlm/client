@@ -47,7 +47,8 @@ const Myorders = () => {
                     <th className='text-center' scope="col">Order No</th>
                     <th className='text-center' scope="col">Total Amount</th>
                     <th className='text-center' scope="col">BV Points</th>
-                    <th className='text-center' scope="col">Order Date</th>
+                    <th className='text-center' scope="col">Order Date(MM/DD/YYYY)</th>
+                    <th className='text-center' scope="col">Delivery Mode</th>
                     <th className='text-center' scope="col">Download Invoice</th>
                 </tr>
             </thead>
@@ -58,6 +59,7 @@ const Myorders = () => {
                         <td className='text-center'>{order.orderDetails.totalAmount}/-</td>
                         <td className='text-center'>{order.orderDetails.totalBVPoints}</td>
                         <td className='text-center'>{new Date(order.orderDetails.orderDate).toLocaleDateString()}</td>
+                        <td className='text-center'>{order.deliveryMode}</td>
                         <td className='text-center'><span><i className="fa fa-download"  onClick={() => handleInvoice(order)}  style={{ fontSize: "20px" }} ></i> </span></td>
                     </tr>
                 ))}

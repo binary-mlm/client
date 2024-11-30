@@ -24,7 +24,10 @@ const Sidebar = ({ setCurrentPage, isOpen, toggleSidebar }) => {
           <a className="nav-link">Inventory</a>
         </li>
         <li className="nav-item" onClick={() => handleNavItemClick('invoicelist')}>
-          <a className="nav-link">Order List</a>
+          <a className="nav-link">My Order List</a>
+        </li>
+        <li className="nav-item" onClick={() => handleNavItemClick('userorderlist')}>
+          <a className="nav-link"> User Order History</a>
         </li>
       </ul>
     </nav>

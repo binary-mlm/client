@@ -4,6 +4,9 @@ import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
 
 const Editprofile = () => {
+  const mySponsorId = sessionStorage.getItem('mySponsorId');
+  const myname = sessionStorage.getItem('username');
+  const mobileNumber = sessionStorage.getItem('usermobilenumber');
   return (
     <div className="container my-3">
       <div className="row">
@@ -28,7 +31,7 @@ const Editprofile = () => {
                         readonly
                         className="form-control-plaintext  bg-light p-2"
                         id="staticEmail"
-                        value="UD2814552"
+                        value={mySponsorId}
                       />
                     </div>
                   </div>
@@ -43,7 +46,7 @@ const Editprofile = () => {
                       <input
                         type="text"
                         className="form-control-plaintext bg-light p-2"
-                        value="AVIJIT CHAKRABORTY"
+                        value={myname}
                         id="inputPassword"
                       />
                     </div>
@@ -78,7 +81,7 @@ const Editprofile = () => {
                         readonly
                         className="form-control-plaintext bg-light"
                         id="staticEmail"
-                        value="AVIJIT CHAKRABORTY"
+                        value={myname}
                       />
                     </div>
                   </div>

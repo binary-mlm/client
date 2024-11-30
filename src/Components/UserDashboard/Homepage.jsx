@@ -10,7 +10,8 @@ const Homepage = () => {
   const [referralrightLink, setReferralrightLink] = useState([]);
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const sponsorId = sessionStorage.getItem("mySponsorId");
-
+  const [copied, setCopied] = useState(false);
+  const [copiedright , setCopiedright] = useState(false);
   const logIn = () => {
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const userId = sessionStorage.getItem("userid");
@@ -51,6 +52,8 @@ const Homepage = () => {
       navigator.clipboard
         .writeText(referralleftLink)
         .then(() => {
+          setCopied(true); // Set copied to true
+          setTimeout(() => setCopied(false), 4000);
           // alert('Referral link and code copied to clipboard!');
         })
         .catch((error) => {
@@ -65,6 +68,8 @@ const Homepage = () => {
       navigator.clipboard
         .writeText(referralrightLink)
         .then(() => {
+          setCopiedright(true); // Set copied to true
+          setTimeout(() => setCopiedright(false), 4000);
           // alert('Referral link and code copied to clipboard!');
         })
         .catch((error) => {
@@ -92,7 +97,7 @@ const Homepage = () => {
               <div className="card_item text-center">
                 <span className="fw-bold">ACTIVE DATE</span>
                 <br />
-                <span>21 Apr 2022</span>
+                <span>{data.activeDate}</span>
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">DIRECT BV(DBV)</span>
@@ -196,7 +201,10 @@ const Homepage = () => {
               </div>
               <div className=" referrallink mt-5  ms-2 fw-bold">
                 {userdata.leftRefferalLink}{" "}
-                <i className="fa fa-copy" onClick={handleCopyLinkleft}></i>
+                {
+                    copied ? <span className="ms-2 text-success">Copied!</span> : <i className="fa fa-copy ms-2" onClick={handleCopyLinkleft}></i>
+                  }
+               
               </div>
             </div>
             <div className="d-flex">
@@ -205,7 +213,8 @@ const Homepage = () => {
               </div>
               <div className=" referrallink mt-4 fw-bold ms-2">
                 {userdata.rightRefferalLink}{" "}
-                <i className="fa fa-copy" onClick={handleCopyLinkright}></i>
+                {copiedright ? <span className="ms-2 text-success">Copied! </span> : <i className="fa fa-copy ms-2" onClick={handleCopyLinkright}></i>}
+                
               </div>
             </div>
           </>
