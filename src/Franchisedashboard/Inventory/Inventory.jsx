@@ -77,11 +77,21 @@ const Inventory = () => {
     return cart.map((item) => (
       <div key={item.productId} className="ms-4 mb-3">
         <div className="card ">
-          <div className="h6 mb-1 mt-4 ms-2">{item.productName}</div>
-          <div className="small mb-2">
-            <h6 className="ms-2 fw-bold">{item.price}</h6>
-            <span className=" fw-bold text-center ms-2">Select Quantity</span>
-            <div className="input-group w-auto justify-content-center align-items-center mt-1">
+        <div className="row">
+        <div className="col-md-4 col-sm-12">
+          <img className="img-fluid" src={item.productImage}
+            style={{ width: '150px', height: '100px', objectFit: 'cover' }}
+          />
+        </div>
+        <div className="col-md-8 col-sm-12  mb-1 mt-4 ">
+        <div className="h5">{item.productName}</div>
+        <span className=" h6 ms-1 fw-bold mt-2">Price: {item.price}</span></div>
+        
+        </div>
+         
+          <div className="mb-1">
+            <div className="text-center ">Select Quantity</div>
+            <div className="input-group w-auto justify-content-center align-items-center mt-1 mb-1">
               <button
                 type="button"
                 className="button-minus border rounded-circle icon-shape icon-sm mx-1"
@@ -92,7 +102,7 @@ const Inventory = () => {
               <input
                 type="number"
                 step="1"
-               
+                readOnly
                 max={item.stock} // Ensure it doesn't go beyond stock
               value={item.quantity || 1 }
                 name="quantity"
@@ -126,7 +136,7 @@ const Inventory = () => {
             <div className="row">
               <div className="col-12 text-start">
               {/* <span className="fw-bold">Name: </span>  */}
-               <span className="fw-bold" style={{fontSize:"19px"}}>{productdata.productName}</span>
+               <span className="fw-bold" style={{fontSize:"18px"}}>{productdata.productName}</span>
               </div>
             </div>
             <div className="row mt-2">
