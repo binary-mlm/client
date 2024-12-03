@@ -9,8 +9,9 @@ const Payoutmonthly = () => {
         // Fetch referral data from the API
         axios.get(`${ROOT_URL}/api/payouts/monthly/${userid}`) // replace with actual sponsorId
           .then(response => {
-            console.log(response.data.weeklyEarnings);  // For debugging purposes, log the received data to see its structure
-            setAllmonthlypayout(response.data.weeklyEarnings); // Set the referral data
+            // console.log(response.data.monthlyEarnings);  // For debugging purposes, log the received data to see its structure
+            setAllmonthlypayout(response.data.monthlyEarnings);
+           
             setLoading(false); // Data loading complete
           })
           .catch(error => {
@@ -22,6 +23,10 @@ const Payoutmonthly = () => {
       if (loading) {
         return <p>Loading...</p>;
       }
+      const formatMonth = (dateString) => {
+        // Extract only the date part (YYYY-MM-DD)
+        return dateString.split('T')[0];
+      };
   return (
     <>
         <div className=' container mt-4'>
@@ -31,8 +36,7 @@ const Payoutmonthly = () => {
     <tr>
      
       
-      <th className='text-center' scope="col">Week</th>
-      <th className='text-center' scope="col">MatchBV</th>
+      <th className='text-center' scope="col">Month</th>
       <th className='text-center' scope="col">Payout Amount</th>
       
     </tr>
@@ -42,8 +46,7 @@ const Payoutmonthly = () => {
   <>
   {allmonthlypayout.map((payout) => (
             <tr  key={payout._id}>
-            <td className='text-center'>{payout.week}</td>
-              <td className='text-center'>{payout.matchedBV}</td>
+            <td className="text-center">{formatMonth(payout.month)}</td>
               <td className='text-center'>{payout.payoutAmount}</td>
               
             </tr>

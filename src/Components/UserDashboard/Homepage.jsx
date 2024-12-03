@@ -204,7 +204,6 @@ const Homepage = () => {
                 {
                     copied ? <span className="ms-2 text-success">Copied!</span> : <i className="fa fa-copy ms-2" onClick={handleCopyLinkleft}></i>
                   }
-               
               </div>
             </div>
             <div className="d-flex">
@@ -213,8 +212,9 @@ const Homepage = () => {
               </div>
               <div className=" referrallink mt-4 fw-bold ms-2">
                 {userdata.rightRefferalLink}{" "}
-                {copiedright ? <span className="ms-2 text-success">Copied! </span> : <i className="fa fa-copy ms-2" onClick={handleCopyLinkright}></i>}
-                
+                {
+                  copiedright ? <span className="ms-2 text-success">Copied! </span> : <i className="fa fa-copy ms-2" onClick={handleCopyLinkright}></i>
+                }
               </div>
             </div>
           </>

@@ -5,6 +5,10 @@
     border: none;
     border-radius: 5px;
 }
+
+.addtocart:hover{
+  background-color: #134b44;
+}
 .handlesubmitbutton{
     background-color: #10856c;
     color: white;
@@ -13,6 +17,9 @@
     font-size: 15px;
     border-radius: 5px;
 }
+.handlesubmitbutton:hover{
+  background-color: #134b44;
+}
 /* Inventory component mobile responsiveness */
 
 /* Ensure cards and cart items are more compact on mobile */
@@ -20,14 +27,11 @@
     .pos-content-container .row-cols-md-2 .row-cols-lg-2 {
       grid-template-columns: 1fr;
     }
-  
     .card {
       width: 100%;
       margin: 0 auto;
     }
-  
     /* Adjust sidebar to overlay as a drawer on smaller screens */
-    
     .pos .pos-sidebar {
       margin-right: 90%;
       height: 100%;
@@ -69,4 +73,5 @@
         right: 0
     }
   }
+  
   

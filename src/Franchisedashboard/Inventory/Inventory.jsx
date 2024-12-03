@@ -163,8 +163,7 @@ const Inventory = () => {
               <a>
                 <button
                   className="addtocart mb-3"
-                  onClick={() => addToCart(productdata)}
-                >
+                  onClick={() => addToCart(productdata)}>
                   Add to cart
                 </button>
               </a>
