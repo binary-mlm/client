@@ -51,20 +51,17 @@ const Idcard = () => {
       <div className="">User ID:</div>
       <div className="ms-1"> {sponsorId}</div>
       </div>
-      </div>
-     
-      
-            
+      </div>    
             </div>
       </div>
       <div className="col-lg-4">
       <div className="background_back">
-      <div className="userdateofbirth-container">
+      {/* <div className="userdateofbirth-container">
       <div className="d-flex">
         <div>Date of Birth:</div>
         <div className="ms-1">{sponsorId}</div>
       </div>
-      </div>
+      </div> */}
       <div className="useraddress-container">
       <div className="d-flex">
       <div>Contact Number:</div>
@@ -80,30 +77,21 @@ const Idcard = () => {
       </div>
       </div>
       <div className="office-container">
-      
+
       <div>Udbhab Marketing Pvt Ltd.</div>
       <div>Indrira nagar Sodepur,</div>
       <div> North 24 Parganas</div>
       <div>Kolkata-700110</div>
-
       <div>
-      
       </div>
-      </div>
-      
-            
+      </div>     
             </div>
-    
             </div>
 
       </div>
       </div>
-      
-
 
       </div>
-    
-
       </div>
        
       </div>

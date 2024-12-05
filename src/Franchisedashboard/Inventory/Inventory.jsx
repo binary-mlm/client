@@ -79,7 +79,7 @@ const Inventory = () => {
         <div className="card ">
         <div className="row">
         <div className="col-md-4 col-sm-12">
-          <img className="img-fluid" src={item.productImage}
+          <img className="img-fluid mt-2 ms-2" src={item.productImage}
             style={{ width: '150px', height: '100px', objectFit: 'cover' }}
           />
         </div>

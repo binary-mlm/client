@@ -21,7 +21,7 @@
 .username-container {
     position: absolute;
     top: 57%; 
-    margin-left: 10%;/* Adjust this value to move the text to the desired vertical position */
+    margin-left: 7%;/* Adjust this value to move the text to the desired vertical position */
     font-size: 15px;
     color: #000; /* Text color (choose based on background) */
      /* Optional background for contrast */
@@ -32,7 +32,7 @@
     position: absolute;
     margin-top: 10px;
     top: 60%; 
-    margin-left: 10%;/* Adjust this value to move the text to the desired vertical position */
+    margin-left: 9%;/* Adjust this value to move the text to the desired vertical position */
     font-size: 15px;
     color: #000; /* Text color (choose based on background) */
      /* Optional background for contrast */

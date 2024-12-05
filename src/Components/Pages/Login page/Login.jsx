@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 // import swal from 'sweetalert';
 import Swal from 'sweetalert2';
+import '@lottiefiles/lottie-player';
 
 
 import "./login.css"
@@ -42,10 +43,25 @@ const Login = () => {
           const {mySponsorId : mySponsorId} = res.data;
           // swal("Yeah", "Login Successful!!", "success");
           Swal.fire({
-            title: 'Success!',
-            text: 'Login Successful!!',
-            icon: 'success',  // or 'error', 'warning', 'info', 'question'
-          });
+            html: `
+            <lottie-player
+              src="https://assets3.lottiefiles.com/packages/lf20_myejiggj.json"
+              background="transparent"
+              speed="1"
+              style="width: 150px; height: 150px; margin: 0 auto;"
+              autoplay>
+            </lottie-player>
+            <p style="font-size: 1.2rem; margin-top: 20px;">You have successfully logged in!</p>
+          `,
+            
+            
+            
+            confirmButtonText: "Go to Dashboard",
+            confirmButtonColor: "#6c63ff",
+            iconColor: "#4caf50",
+            background: "#f9f9f9",
+          });  // or 'error', 'warning', 'info', 'question'
+        
           sessionStorage.setItem('userid', userId);
           sessionStorage.setItem('username', name);
           sessionStorage.setItem('mySponsorId', mySponsorId);
