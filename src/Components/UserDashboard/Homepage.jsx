@@ -128,7 +128,7 @@ const Homepage = () => {
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold"> PERSONAL FBV</span>
+                <span className="fw-bold">CAR ACHIEVEMENT BONUS</span>
                 <br />
                 <span>0</span>
               </div>
@@ -143,9 +143,9 @@ const Homepage = () => {
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">QUALIFICATION</span>
+                <span className="fw-bold">HOUSE ACHIEVEMENT BONUS</span>
                 <br />
-                Qualified
+                0
               </div>
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">TEAM BUSINESS VOL(TBV)</span>
@@ -160,7 +160,7 @@ const Homepage = () => {
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">WEEKLY CAPPING</span>
+                <span className="fw-bold">MONITORING BONUS</span>
                 <br />
                 125,000
               </div>
@@ -176,14 +176,14 @@ const Homepage = () => {
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">RANK ACHIEVEMENT STATUS</span>
+                <span className="fw-bold">RANK ACHIEVEMENT BONUS</span>
                 <br />
-                ACHIEVED
+                0
               </div>
               <div className="card_item text-center ms-5 pe-4">
-                <span className="fw-bold">ACHIEVEMENT STATUS</span>
+                <span className="fw-bold">LIFETIME ROYALTY  BONUS</span>
                 <br />
-                Not Qualified
+                0
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">TOTAL EARNING (₹)</span>
