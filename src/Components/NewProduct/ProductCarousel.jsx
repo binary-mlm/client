@@ -33,13 +33,13 @@ const ProductCarousel = ({ products }) => {
           <Slider {...settings}>
             {products.map((products) => (
                 <>
-                <a href={products.link}>
-                {/* <a href={`/productview/${products._id}`}> */}
+                
+                <a href={`/productview/${products._id}`}>
                 <div className="product p-3">
                         <div className="product-image">
                           <div className="image"> 
                           
-                             <img src={products.image} className='img-fluid' style={{width:"100%", height:"90%"}}  alt=""/> 
+                             <img src={products.imageURL} className='img-fluid' style={{width:"100%", height:"90%"}}  alt=""/> 
                               {/* <img src={product.hoverimage} alt="" class="hover-image"/> */}
                           
                           </div>   
@@ -49,7 +49,7 @@ const ProductCarousel = ({ products }) => {
                           <h3 className="name text-center" ><a href="/" className='text-decoration-none '>{products.name}</a></h3>
                           <div className="rating rateit-small"></div>
                           <div className="description"></div>
-                          <div className="product-price text-center"> <span className="price">₹{products.price}</span> </div>
+                          <div className="product-price text-center"> <span className="price h4">₹{products.price}</span> </div>
                         </div>
                        
                         {/* <div className="cart clearfix animate-effect">

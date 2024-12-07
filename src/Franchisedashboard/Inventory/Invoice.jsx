@@ -8,6 +8,7 @@ const Invoice = () => {
   const location = useLocation();
   const { franchiseId, order } = location.state;
   
+  
   const total_Amount = order.products.reduce(
     (total, product) => total + product.totalAmount,
     0
@@ -40,7 +41,7 @@ const Invoice = () => {
       // Add image to PDF with calculated dimensions
       pdf.addImage(imgData, "PNG", 0, 0, finalWidth, finalHeight);
       pdf.save("invoice.pdf");
-      alert("PDF successfully saved");
+      // alert("PDF successfully saved");
     });
   };
 
@@ -121,8 +122,8 @@ const Invoice = () => {
                       <div className="col-sm-6 d-flex justify-content-end">
                         <div>
                           <h5 className="font-size-16 mb-1 ms-1">To:</h5>
-                          <h5 className="font-size-15 mb-2">{franchiseId}</h5>
-                          <p className="mb-1">Sonmarg, Kashmir</p>
+                          <span className="font-size-20 mb-2">ID: {franchiseId}</span>
+                          
                           {/* <p className="mb-1">Email: Subham@gmail.com</p>
                           <p>Ph no: 7878522452</p> */}
                         </div>
@@ -154,8 +155,8 @@ const Invoice = () => {
                               </tr>
                             ))}
                             <tr>
-                       <th colSpan="3" className="text-end">Total Amount :</th>
-                       <td className="text-start">{total_Amount}/-</td>
+                       <th colSpan="3" className="text-end"></th>
+                       <td className="text-center fw-bold">Total Amount :{total_Amount}/-</td>
                      </tr>
                           </tbody>
                         </table>
