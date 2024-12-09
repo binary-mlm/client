@@ -17,6 +17,7 @@ const Invoice_user = () => {
     0
   );
   const invoicepdf = useRef();
+  const today = new Date().toLocaleDateString();
 
   const downloadPDF = () => {
     const input = invoicepdf.current;
@@ -104,7 +105,13 @@ const Invoice_user = () => {
                         Order No : {order.orderDetails.orderNumber}
                       </span>
                       <br />
-                      <span className="ms-5 h5" style={{ fontSize: "18px" }}>
+                      <span className="ms-5" style={{ fontSize: "16px" }}>
+                        Order date : {new Date(
+                            order.orderDetails.orderDate
+                          ).toLocaleDateString()}
+                      </span>
+                      <br/>
+                      <span className="ms-5 " style={{ fontSize: "16px" }}>
                         Delivery mood: {order.deliveryMode}
                       </span>
                     </div>
@@ -156,9 +163,7 @@ const Invoice_user = () => {
                       <h6>
                         <b>
                           Date :
-                          {new Date(
-                            order.orderDetails.orderDate
-                          ).toLocaleDateString()}
+                          {today}
                         </b>
                       </h6>
                     </div>

@@ -26,6 +26,7 @@ const Poppartners = () => {
    <>
     <div className=' container mt-4'>
     <h3 className='fw-bold text-center'>All PUP Partners</h3>
+    <div className='table-responsive'>
     <table className="table table-success table-striped">
   <thead>
     <tr>
@@ -48,6 +49,7 @@ const Poppartners = () => {
           ))}
     </tbody>
     </table>
+    </div>
     </div>
    </>
   )

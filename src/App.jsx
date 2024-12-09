@@ -17,6 +17,7 @@ import Genealogy from './Components/UserDashboard/Genealogy/Genealogy';
 import Associate from './Components/Associate/Associate';
 import Editprofile from './Components/UserDashboard/Editprofile/Editprofile';
 import Idcard from "./Components/UserDashboard/Idcard";
+import Rankachive from "./Components/UserDashboard/Rankachive";
 
 import News from './Components/News/News';
 import Kycverification from './Components/UserDashboard/Editprofile/Kycverification';
@@ -92,6 +93,7 @@ function App() {
       <Route path="/userdasboard/myoders" element={<Dashboardlayout><Myorders/></Dashboardlayout>} />
       <Route path="/userdasboard/invoice" element={<Dashboardlayout><Invoice_user/></Dashboardlayout>} />
       <Route path="/userdasboard/poppartners" element={<Dashboardlayout><Poppartners/></Dashboardlayout>} />
+      <Route path="/userdashboard/rank-achievers" element={<Dashboardlayout><Rankachive/></Dashboardlayout>} />
       <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
       <Route path="/userdasboard/payoutweekly" element={<Dashboardlayout><Payoutweekly/></Dashboardlayout>} />
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>

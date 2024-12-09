@@ -26,13 +26,11 @@ const Payoutweekly = () => {
       }
   return (
     <>
-        <div className=' container mt-4'>
+        <div className=' container mt-4 table-responsive'>
     <h3 className='fw-bold text-center'>All weekly Payout</h3>
     <table className="table table-success table-striped">
   <thead>
     <tr>
-     
-      
       <th className='text-center' scope="col">Week</th>
       <th className='text-center' scope="col">MatchBV</th>
       <th className='text-center' scope="col">Payout Amount</th>

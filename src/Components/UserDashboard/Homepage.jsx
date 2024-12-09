@@ -38,6 +38,8 @@ const Homepage = () => {
       const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { sponsorId });
       console.log(response.data);
       setData(response.data);
+       
+     
     } catch (err) {
       console.log(err);
       setError("Data not found");
@@ -162,12 +164,17 @@ const Homepage = () => {
               <div className="card_item text-center">
                 <span className="fw-bold">MONITORING BONUS</span>
                 <br />
-                125,000
+                0
               </div>
               <div className="card_item text-center ms-5">
-                <span className=" fw-bold">MY TOTAL BV (LBV + RBV)</span>
-                {/* <br />L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV} */}
+                <span className="fw-bold"> MY TOTAL BV (LBV + RBV)</span>
+                <br />
+                {data.totalBVPointsEarned.leftBV + data.totalBVPointsEarned.rightBV}
               </div>
+              {/* <div className="card_item text-center ms-5">
+                <span className=" fw-bold">MY TOTAL BV (LBV + RBV)</span>
+                <br />{mytotallbv}
+              </div> */}
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">MONTHLY EARNING(₹)</span>
                 <br />

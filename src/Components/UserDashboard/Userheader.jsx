@@ -195,7 +195,7 @@ const Sidebar = () => {
           
           <li className="nav-item mb-3">
             <Link
-              to="/rank-achievers"
+              to="/userdashboard/rank-achievers"
               className="nav-link d-flex align-items-center sideitem"
             >
               <img
@@ -223,7 +223,7 @@ const Sidebar = () => {
               PUP Partners
             </Link>
           </li>
-          <li className="nav-item mb-3">
+          {/* <li className="nav-item mb-3">
             <Link
               to="/resources"
               className="nav-link d-flex align-items-center  sideitem"
@@ -237,7 +237,7 @@ const Sidebar = () => {
               />
               Resources
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

@@ -29,7 +29,7 @@ const Payoutmonthly = () => {
       };
   return (
     <>
-        <div className=' container mt-4'>
+        <div className=' container mt-4 table-responsive'>
     <h3 className='fw-bold text-center'>All Monthly Payout</h3>
     <table className="table table-success table-striped">
   <thead>
