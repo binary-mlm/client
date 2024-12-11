@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../../public/Franchise/css/style.css";
+
 
 import logo1 from "/Franchise/images/logo.png"
 import user from "/Franchise/images/faces/user.jpg"

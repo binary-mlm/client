@@ -34,8 +34,6 @@ const Payoutmonthly = () => {
     <table className="table table-success table-striped">
   <thead>
     <tr>
-     
-      
       <th className='text-center' scope="col">Month</th>
       <th className='text-center' scope="col">Payout Amount</th>
       
@@ -48,7 +46,6 @@ const Payoutmonthly = () => {
             <tr  key={payout._id}>
             <td className="text-center">{formatMonth(payout.month)}</td>
               <td className='text-center'>{payout.payoutAmount}</td>
-              
             </tr>
           ))}
           </>
@@ -64,5 +61,4 @@ const Payoutmonthly = () => {
 
   )
 }
-
 export default Payoutmonthly

@@ -63,10 +63,10 @@ function Welcomeuser() {
                                                 <div className='col-lg-12'>
                                                     <div className='container mt-4'>
                                                         <div className='row'>
-                                                            <div className='col-lg-6'>
+                                                            <div className='col-lg-6 col-sm-12 name'>
                                                                 <p>Hello {name}</p>
                                                             </div>
-                                                            <div className='col-lg-6 text-end'>
+                                                            <div className='col-lg-6 col-sm-12  udbhablogo'>
                                                                 <img src={pic2} width={130} style={{ marginTop: "-20px" }} alt="Udbhab Logo" />
                                                             </div>
                                                         </div>

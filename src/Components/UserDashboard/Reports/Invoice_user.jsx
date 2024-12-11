@@ -18,7 +18,6 @@ const Invoice_user = () => {
   );
   const invoicepdf = useRef();
   const today = new Date().toLocaleDateString();
-
   const downloadPDF = () => {
     const input = invoicepdf.current;
 

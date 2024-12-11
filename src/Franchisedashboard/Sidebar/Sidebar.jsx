@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "../../../public/Franchise/css/style.css";
+
 import "./sidebar.css";
 
 const Sidebar = ({ setCurrentPage, isOpen, toggleSidebar }) => {

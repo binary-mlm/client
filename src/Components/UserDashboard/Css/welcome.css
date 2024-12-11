@@ -33,3 +33,11 @@
         display: none;
       }
     }
+    .udbhablogo{
+      text-align: right !important;
+    }
+    @media (max-width: 768px) {
+      .udbhablogo{
+        text-align: center !important;
+      }
+    }
