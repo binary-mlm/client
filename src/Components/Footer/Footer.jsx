@@ -33,7 +33,7 @@ const Footer = () => {
                 </li>
                 <li className="media">
                   <div className="pull-left"> <span className="icon fa-stack fa-sm"> <i className="fa fa-envelope fa-stack-1x fa-inverse"></i> </span> </div>
-                  <div className="media-body"  style={{marginLeft:"15%"}}> <span><a href="#">support@myudbhab.in</a></span> </div>
+                  <div className="media-body"  style={{marginLeft:"15%"}}> <span><a href="#" style={{marginTop:"-6px"}}>support@myudbhab.in</a></span> </div>
                 </li>
               </ul>
             </div>
@@ -49,9 +49,9 @@ const Footer = () => {
              
             <div className="module-body">
               <ul className='list-unstyled'>
-                <li className="first"><a href="#" title="Contact us">My Account</a></li>
-                <li><a href="#" title="About us">Order History</a></li>
-                <li><a href="#" title="faq">FAQ</a></li>
+                <li className="first"><a href="/login" title="Contact us">My Account</a></li>
+                <li><a href="/login" title="About us">Order History</a></li>
+                <li><a href="/login" title="faq">FAQ</a></li>
              
               </ul>
             </div>
@@ -67,9 +67,9 @@ const Footer = () => {
             
             <div className="module-body">
               <ul className='list-unstyled'>
-                <li className="first"><a title="Your Account" href="#">About us</a></li>
-                <li><a title="Information" href="#">Customer Service</a></li>
-                <li><a title="Addresses" href="#">Company</a></li>
+                <li className="first"><a title="Your Account" href="/about">About us</a></li>
+                <li><a title="Information" href="/contactus">Customer Service</a></li>
+                <li><a title="Addresses" href="/managment">Company</a></li>
                 
               </ul>
             </div>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <li><a href="#" title="Blog">Blog</a></li>
                 {/* <li><a href="#" title="Company">Company</a></li>
                 <li><a href="#" title="Investor Relations">Investor Relations</a></li> */}
-                <li className=" last"><a href="contact-us.html" title="Suppliers">Contact Us</a></li>
+                <li className="last"><a href="/contactus" title="Suppliers">Contact Us</a></li>
               </ul>
             </div>
            

@@ -399,6 +399,7 @@ const handleSubmit = async (event) => {
                       onChange={e => setaddress(e.target.value)}> </textarea>
                     </div>
                   </div>
+                  {registrationType === 'Business Entity' && (
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
                       GST Number
@@ -412,6 +413,7 @@ const handleSubmit = async (event) => {
                       />
                     </div>
                   </div>
+                  )}
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
                       Password
