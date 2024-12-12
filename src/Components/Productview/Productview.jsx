@@ -55,18 +55,18 @@ const Productview = () => {
           </div>
          <table className='table mt-4 h5'>
          <tbody>
-         <tr>
+         {/* <tr>
           <th className='h6 fw-bold' width='30%'>Product Stock</th>
           <td width='5%'>:</td>
           <td>{productdetails.stock}</td>
-          {/* <td>100</td> */}
-         </tr>
-         <tr>
+          <td>100</td>
+         </tr> */}
+         {/* <tr>
           <th className='h6 fw-bold' width='30%'>BV points</th>
           <td width='5%'>:</td>
-          {/* <td>20</td> */}
+          <td>20</td>
           <td>{productdetails.bvPoints}</td>
-         </tr>
+         </tr> */}
          
          <tr>
           <th className='h6 fw-bold' width='30%'>Category</th>
