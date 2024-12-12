@@ -43,7 +43,7 @@ const ProductCarousel = ({ products }) => {
                               {/* <img src={product.hoverimage} alt="" class="hover-image"/> */}
                           
                           </div>   
-                          <div className="tag new"><span>new</span></div>
+                          <div className="tag new" style={{backgroundColor: "yellow"}}><span  className="fw-bold" style={{color:"#095444"}}>new</span></div>
                         </div>
                        <div className="product-info mt-3">
                           <h3 className="name text-center" ><a href="/" className='text-decoration-none '>{products.name}</a></h3>

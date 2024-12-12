@@ -1,5 +1,6 @@
 #carousel .carousel-item.boat {
     background-image: url("../../assets/images/sliders/01.jpg");
+    background-size: cover;
   }
   
   /* #carousel .carousel-item.sea {
@@ -11,7 +12,7 @@
   #carousel .carousel-item {
     
     
-    min-height: 350px;
+    min-height: 310px;
     background: no-repeat scroll;
     background-size: cover;
   }
