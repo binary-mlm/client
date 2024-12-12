@@ -27,3 +27,10 @@ color: white;
   .subitem:hover{
     color: #2049ea !important
   }
+  .navbar-nav .nav-item {
+    margin-right: 20px; /* Adjust this value to increase or decrease the space */
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    margin-right: 0; /* This will remove the margin from the last item */
+  }

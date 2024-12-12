@@ -18,6 +18,16 @@
   .sidebar.open {
     transform: translateX(0); /* Open sidebar */
   }
+  .sidebar-toggle-btn {
+    position: fixed; /* Make the button fixed */
+    top: 15px; /* Distance from the top */
+    left: 15px; /* Distance from the left */
+    background: none;
+    border: none;
+    font-size: 24px;
+    z-index: 1001;
+    cursor: pointer;
+}
   
   @media (max-width: 768px) {
     .sidebar {
@@ -33,7 +43,7 @@
     }
   
     /* Sidebar button for mobile */
-    .sidebar-toggle-btn {
+    /* .sidebar-toggle-btn {
       position: fixed;
       top: 15px;
       left: 15px;
@@ -42,7 +52,12 @@
       font-size: 24px;
       z-index: 1001;
       cursor: pointer;
-    }
+    } */
+    .sidebar-toggle-btn {
+      position: fixed; /* Keeps the button fixed even on small screens */
+      top: 10px; /* Adjust for mobile header */
+      left: 10px;
+  }
    
   
     /* Adjust sidebar when open */
