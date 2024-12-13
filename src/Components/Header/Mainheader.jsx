@@ -15,7 +15,7 @@ const Mainheader = () => {
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-3 logo-holder"> 
          <div className="logo1 "> 
-         <img src={logo} alt="logo" style={{width:"80%"}}/> 
+         <img className='logoimg' src={logo} alt="logo" style={{width:"60%"}}/> 
           
          </div>
          </div>

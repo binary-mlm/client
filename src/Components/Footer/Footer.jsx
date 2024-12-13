@@ -22,13 +22,13 @@ const Footer = () => {
                 <li className="media">
                   <div className="pull-left"> <span className="icon fa-stack fa-sm"> <i className="fa fa-map-marker fa-stack-1x fa-inverse"></i> </span> </div>
                   <div className="media-body" style={{marginLeft:"15%"}}>
-                    <p>Indrira nagar Sodepur, North 24 Parganas. Kol-700110</p>
+                    <p>Reg. office: Indrira nagar Sodepur, North 24 Parganas. Kol-700110</p>
                   </div>
                 </li>
                 <li className="media">
                   <div className="pull-left"> <span className="icon fa-stack fa-sm"> <i className="fa fa-map-marker fa-stack-1x fa-inverse"></i> </span> </div>
                   <div className="media-body" style={{marginLeft:"15%"}}>
-                    <p>Corporate office address: Shakshi Appartment, Ground floor 6 no Road, HB Town, Sodepur, Kol-700110</p>
+                    <p>Corporate office: Shakshi Appartment, Ground floor 6 no Road, HB Town, Sodepur, Kol-700110</p>
                   </div>
                 </li>
                 <li className="media">

@@ -5,9 +5,7 @@
     }
  
 }
-.logo1{
-  width: 70%;
-}
+
 /* .logo{
   font-size: 28px;
   font-weight: 500;
@@ -20,9 +18,11 @@
   .social_icon{
     display: none;
   }
-
-  .logo1{
-    justify-content: center;
-    width: 50%;
+  .logoimg{
+    width: 50% !important
   }
+
+ 
+    
+  
 }
