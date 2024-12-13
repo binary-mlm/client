@@ -6,10 +6,13 @@
  
 }
 .logo{
+  width: 70%;
+}
+/* .logo{
   font-size: 28px;
   font-weight: 500;
   font-family: Georgia, 'Times New Roman', Times, serif;
-}
+} */
 .social_icon{
   font-size: 32px;
 }
@@ -18,4 +21,8 @@
     display: none;
   }
 
+}
+.logo{
+  justify-content: center;
+  width: 50%;
 }
