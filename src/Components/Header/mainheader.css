@@ -21,8 +21,8 @@
     display: none;
   }
 
-}
-.logo1{
-  justify-content: center;
-  width: 50%;
+  .logo1{
+    justify-content: center;
+    width: 50%;
+  }
 }
