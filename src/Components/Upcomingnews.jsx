@@ -1,14 +1,13 @@
 import React from 'react'
-import add from "../assets/images/advertise.png"
+import add1 from "../assets/images/add2.png"
 const Upcomingnews = () => {
   return (
     <>
         <div className="side-menu animate-dropdown outer-bottom-xs">
-          <div className="head">Upcoming Events</div>
-          <div className='p-2'>Testing</div>
-          
+          <div className="head">Upcoming News/Events</div>
+          <div className='p-2'><img src={add1} style={{width:"97%"}}/></div>
         </div>
-        <img src={add} width={300}/>
+       
     </>
   )
 }

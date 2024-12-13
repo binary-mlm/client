@@ -8,6 +8,7 @@ import Newproduct from "./NewProduct/Newproduct"
 import Wideproduct from './Wideproduct/Wideproduct'
  import Productfeature from "./Featureproduct/Productfeature"
  import Wide2 from "./Wideproduct/Wide2"
+ import add1 from "../assets/images/add4.png"
 
 // import Specialdeal from "./Specialdeal/Specialdeal"
 
@@ -23,6 +24,7 @@ const Home = () => {
      <div className="col-xs-12 col-sm-12 col-md-3 sidebar" style={{backgroundColor:"transparent"}}> 
      <Category/>
      <Upcomingnews/>
+     <img src={add1} width={300}/>
 
 
     
