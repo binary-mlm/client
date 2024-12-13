@@ -7,6 +7,9 @@
 
     
 }
+.verifybutton:hover{
+    background-color: #477070;
+}
 .signupbutton{
     background-color: #095444;
     padding: 8px;

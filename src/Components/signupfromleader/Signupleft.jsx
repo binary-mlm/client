@@ -23,6 +23,9 @@ const Signupleft = () => {
     const [token, setToken] = useState(null);
     const [state, setSelectedState] = useState('');
     const { parentSponsorId } = useParams();
+    const [mobilenoerror, setmobileerror] = useState(false)
+    const [wpmobileerror, setwpmobileerror] = useState(false)
+    const [emailerror, setemailerror] = useState(false)
     const API_TOKEN = 'C2dy7lLSGxWm63T6Oem2N9jeUlaE5Y9M59MInjwjc-FksoqRsWk0pa-iKk1LzSfEFy0';
      const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const handleDropdownChange_city = (event) => {
@@ -107,13 +110,45 @@ const Signupleft = () => {
         getCities();
     }
 }, [state, token]);
+function mobileHandler(e) {
+  let item = e.target.value;
+  if (item.length != 10) {
+      setmobileerror(true)
+  } else {
+      setmobileerror(false)
+  }
+}
+function wp_mobileHandler(e) {
+  let item = e.target.value;
+  if (item.length != 10) {
+    setwpmobileerror(true)
+  } else {
+    setwpmobileerror(false)
+  }
+}
+function isValidEmail(email) {
+  return /\S+@\S+\.\S+/.test(email);
+}
+function emailHandler(e) {
+  let item = e.target.value;
+  if (!isValidEmail(item)) {
+      setemailerror(true);
+  } else {
+      setemailerror(false);
+  }
+}
+
 
 const sponsorId = parentSponsorId;
 console.log(sponsorId);
 const handleSubmit = async (event) => {
-  alert("sumit")
+  // alert("sumit")
   event.preventDefault();
- 
+  if (registrationType === "" || gender === "" || pincode === "" || name === "" || address === "" || district === "" || state === ""|| dob === "" || mobileNumber === "" || whatsappNumber === "" || email === "") {
+    swal("Opps!", "Please fill out all required fields!", "error");
+
+}
+else{
 
       await axios.post(ROOT_URL+'/api/auth/registerLeft', { sponsorId, registrationType,  gender, 
         name, 
@@ -130,7 +165,7 @@ const handleSubmit = async (event) => {
           .then(res => {
               console.log(res);
               swal("Thank You!", "Registration sucessfully completed!", "success");
-              navigate('/');
+              navigate('/login');
 
           })
           .catch(err => {
@@ -139,7 +174,7 @@ const handleSubmit = async (event) => {
              
 
           })
-  
+        }
 
 }
   return (
@@ -164,7 +199,7 @@ const handleSubmit = async (event) => {
                       <input
                         type="text"
                         readonly
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         id="staticEmail"
                         value={parentSponsorId}
                         
@@ -176,7 +211,7 @@ const handleSubmit = async (event) => {
                       htmlFor="inputPassword"
                       className="col-sm-3 col-form-label"
                     >
-                      Resgistration Type
+                      Resgistration Type<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                   <div className="col-sm-9 mt-2">
                       <div className="form-check form-check-inline">
@@ -215,7 +250,7 @@ const handleSubmit = async (event) => {
                       
                       className="col-sm-3 col-form-label"
                     >
-                      Gender
+                      Gender<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                   <div className="col-sm-9 mt-2">
                       <div className="form-check form-check-inline">
@@ -233,8 +268,8 @@ const handleSubmit = async (event) => {
                         
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
-                      <label class="form-check-label" htmlFor="inlineRadio2">
+                      <div className="form-check form-check-inline">
+                      <label className="form-check-label" htmlFor="inlineRadio2">
                           Female
                         <input
                           className="form-check-input"
@@ -248,11 +283,11 @@ const handleSubmit = async (event) => {
                         
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
-                      <label class="form-check-label" for="inlineRadio1">
+                      <div className="form-check form-check-inline">
+                      <label className="form-check-label" for="inlineRadio1">
                           Others
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="radio"
                           name="inlineRadioOptions"
                           id="inlineRadio1"
@@ -267,13 +302,14 @@ const handleSubmit = async (event) => {
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
-                      Name
+                    <label for="staticEmail" className="col-sm-3 col-form-label">
+                      Name<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        placeholder='Enter your name'
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         id="staticEmail"
                         onChange={e => setname(e.target.value)}
                       />
@@ -284,10 +320,10 @@ const handleSubmit = async (event) => {
                       for="inputPassword"
                       className="col-sm-3 col-form-label"
                     >
-                      Date of Birth
+                      Date of Birth<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <input
-                      className="form-control"
+                      className="form-control ps-2"
                       type="date"
                       id="txtdob"
                       name="txtdob"
@@ -299,43 +335,49 @@ const handleSubmit = async (event) => {
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
-                      Mobile no
+                    <label for="staticEmail" className="col-sm-3 col-form-label">
+                      Mobile no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="tel"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
+                        placeholder='Enter your mobile number'
+                        onKeyUp={mobileHandler}
                         onChange={e => setmobileNumber(e.target.value)}
                         
                       />
+                      {mobilenoerror ? <span className='link-danger'>phone no invalid</span> : ""}
                     </div>
                   </div>
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
-                      Whatsapp no
+                    <label for="staticEmail" className="col-sm-3 col-form-label">
+                      Whatsapp no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="tel"
-                        className="form-control-plaintext bg-light textinput"
-                        onChange={e => setwhatsappNumber(e.target.value)}
-                        
-                        
+                        placeholder='Enter your whatsapp number'
+                        className="form-control-plaintext bg-light textinput ps-2"
+                        onKeyUp={wp_mobileHandler}
+                        onChange={e => setwhatsappNumber(e.target.value)} 
                       />
+                       {wpmobileerror ? <span className='link-danger'>phone no invalid</span> : ""}
                     </div>
                   </div>
                   <div className="mb-3 row">
-                    <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
-                      Email
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
+                      Email<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="email"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
+                        placeholder='Enter your email'
+                        onKeyUp={emailHandler}
                         onChange={e => setemail(e.target.value)}
-                        
                       />
+                      {emailerror ? <span className='link-danger'>Email invalid</span> : ""}
                     </div>
                   </div>
                  
@@ -343,7 +385,7 @@ const handleSubmit = async (event) => {
                   
                   <div className="mb-3 d-flex">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
-                      Select State
+                      Select State<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <select aria-label=" example" className='form-select' onChange={handleDropdownChange_state}>
                                 <option value="" label='Enter your State'></option>
@@ -360,7 +402,7 @@ const handleSubmit = async (event) => {
                   </div>
                   <div className="mb-3 d-flex">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label ">
-                      Select City
+                      Select City<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleDropdownChange_city}>
                                 <option value="Choose city" label=' Enter your city'></option>
@@ -377,12 +419,13 @@ const handleSubmit = async (event) => {
                   </div>
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
-                      Pincode
+                      Pincode<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        placeholder='Enter your pincode'
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         onChange={e => setpincode(e.target.value)}
                         
                         
@@ -391,7 +434,7 @@ const handleSubmit = async (event) => {
                   </div>
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
-                      Address
+                      Address<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                     <textarea name="address" placeholder="Your Address" rows="10" cols="50" required=""
@@ -400,13 +443,13 @@ const handleSubmit = async (event) => {
                   </div>
                   {registrationType === 'Business Entity' && (
                   <div className="mb-3 row">
-                    <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
-                      GST Number
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
+                      GST Number<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         onChange={e => setgstNumber(e.target.value)}
                         
                       />
@@ -414,13 +457,14 @@ const handleSubmit = async (event) => {
                   </div>
                 )}
                   <div className="mb-3 row">
-                    <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
-                      Password
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
+                      Password<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        placeholder='Enter your password'
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         onChange={e => setpassword(e.target.value)}
                         
                       />
@@ -430,7 +474,7 @@ const handleSubmit = async (event) => {
 
               </div>
               <div className='text-center'>
-              <button className='btn btn-primary w-25 mb-4' onClick={handleSubmit}>Submit</button>
+              <button className='w-25 mb-4 verifybutton' onClick={handleSubmit}>Submit</button>
               </div>
               
               </div>

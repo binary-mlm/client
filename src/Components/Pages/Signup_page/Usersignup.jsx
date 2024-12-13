@@ -113,6 +113,11 @@ const Usersignup = () => {
 const handleSubmit = async (event) => {
   // alert("sumit")
   event.preventDefault();
+  if (registrationType === "" || gender === "" || pincode === "" || name === "" || address === "" || district === "" || state === ""|| dob === "" || mobileNumber === "" || whatsappNumber === "" || email === "") {
+    swal("Opps!", "Please fill out all required fields!", "error");
+
+}
+else{
       await axios.post(ROOT_URL+'/api/auth/register', { sponsorId, registrationType,  gender, 
         name, 
         dob,
@@ -136,6 +141,7 @@ const handleSubmit = async (event) => {
               console.log(err);
               swal("Error!", err.response.data.message || 'Error registering user', "error");
           })
+        }
   
 
 }
