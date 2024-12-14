@@ -13,35 +13,46 @@ const Franchisedashboard = () => {
              
             </div>
             <div className="row">
-              <div className="col-md-4 stretch-card grid-margin">
+              <div className="col-md-3 stretch-card grid-margin">
                 <div className="card bg-gradient-danger card-img-holder text-white">
                   <div className="card-body">
                     {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
-                    <h4 className="font-weight-normal mb-3">Weekly Sales <i className="mdi mdi-chart-line mdi-24px float-end"></i>
+                    <h4 className="font-weight-normal mb-3">Monthly Sales <i className="mdi mdi-chart-line mdi-24px float-end"></i>
                     </h4>
-                    <h2 className="mb-5">$ 15,0000</h2>
+                    <h2 className="mb-5">₹15,0000</h2>
                     <h6 className="card-text">Increased by 60%</h6>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 stretch-card grid-margin">
+              <div className="col-md-3 stretch-card grid-margin">
                 <div className="card bg-gradient-info card-img-holder text-white">
                   <div className="card-body">
                     
-                    <h4 className="font-weight-normal mb-3">Weekly Orders <i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>
+                    <h4 className="font-weight-normal mb-3">Total sales<i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>
                     </h4>
-                    <h2 className="mb-5">45,6334</h2>
+                    <h2 className="mb-5">₹45,6334</h2>
                     <h6 className="card-text">Decreased by 10%</h6>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 stretch-card grid-margin">
+              <div className="col-md-3 stretch-card grid-margin">
                 <div className="card bg-gradient-success card-img-holder text-white">
                   <div className="card-body">
                     {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
-                    <h4 className="font-weight-normal mb-3">Visitors Online <i className="mdi mdi-diamond mdi-24px float-end"></i>
+                    <h4 className="font-weight-normal mb-3">Monthly order<i className="mdi mdi-diamond mdi-24px float-end"></i>
                     </h4>
                     <h2 className="mb-5">95,5741</h2>
+                    <h6 className="card-text">Increased by 5%</h6>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 stretch-card grid-margin">
+                <div className="card bg-gradient-success card-img-holder text-white">
+                  <div className="card-body">
+                    {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
+                    <h4 className="font-weight-normal mb-3">Available stock<i className="mdi mdi-diamond mdi-24px float-end"></i>
+                    </h4>
+                    <h2 className="mb-5">₹95,5741</h2>
                     <h6 className="card-text">Increased by 5%</h6>
                   </div>
                 </div>

@@ -152,7 +152,7 @@ const Inventory = () => {
             <div className="row mt-2">
               <div className="col-12">
                 <span className="">
-                  <span className="fw-bold">Price: </span>
+                  <span className="fw-bold">DP: </span>
                   {productdata.price}{" "}
                 </span>
               </div>

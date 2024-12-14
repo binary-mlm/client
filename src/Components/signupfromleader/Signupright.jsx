@@ -165,7 +165,7 @@ const handleSubmit = async (event) => {
                       <input
                         type="text"
                         readonly
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         id="staticEmail"
                         value={parentSponsorId}
                         
@@ -274,7 +274,7 @@ const handleSubmit = async (event) => {
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         id="staticEmail"
                         onChange={e => setname(e.target.value)}
                       />

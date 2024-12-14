@@ -21,13 +21,13 @@ const Sidebar = ({ setCurrentPage, isOpen, toggleSidebar }) => {
           <a className="nav-link">Dashboard</a>
         </li>
         <li className="nav-item" onClick={() => handleNavItemClick('inventory')}>
-          <a className="nav-link">Inventory</a>
+          <a className="nav-link">Billing inventory</a>
         </li>
         <li className="nav-item" onClick={() => handleNavItemClick('invoicelist')}>
-          <a className="nav-link">My Order List</a>
+          <a className="nav-link">Inventory stock</a>
         </li>
         <li className="nav-item" onClick={() => handleNavItemClick('userorderlist')}>
-          <a className="nav-link"> User Order History</a>
+          <a className="nav-link">Customer invoice</a>
         </li>
       </ul>
     </nav>
