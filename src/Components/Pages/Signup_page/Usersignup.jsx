@@ -167,7 +167,7 @@ else{
                       <input
                         type="text"
                         readonly
-                        className="form-control-plaintext  bg-light textinput"
+                        className="form-control-plaintext  bg-light textinput "
                         id="staticEmail" 
                        value={sponsorId}
                       />

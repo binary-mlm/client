@@ -8,7 +8,7 @@
     
 }
 .verifybutton:hover{
-    background-color: #477070;
+    background-color: #169d80;
 }
 .signupbutton{
     background-color: #095444;
@@ -16,4 +16,7 @@
     color: white;
     border: none;
     border-radius: 5px;
+}
+.signupbutton:hover{
+    background-color: #169d80;
 }
