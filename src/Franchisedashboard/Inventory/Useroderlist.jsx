@@ -37,7 +37,7 @@ const Useroderlist = () => {
     <>
     
     <div className='mt-5'>
-   <div className='h3 text-center'>User Order History</div>
+   <div className='h3 text-center'>Customer invoice history</div>
      {orderhistory.length > 0 && (
       <div className='table-responsive'>
         <table className='table table-striped'>
