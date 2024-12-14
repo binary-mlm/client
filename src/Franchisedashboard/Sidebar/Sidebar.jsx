@@ -17,17 +17,17 @@ const Sidebar = ({ setCurrentPage, isOpen, toggleSidebar }) => {
       <button className="close-btn" onClick={toggleSidebar}>×</button>
       <ul className="nav mt-5">
         <span className="font-weight-bold mb-2 h4 ms-3">Franchise Dashboard</span>
-        <li className="nav-item" onClick={() => handleNavItemClick('dashboard')}>
-          <a className="nav-link">Dashboard</a>
+        <li className="nav-item itemnav" onClick={() => handleNavItemClick('dashboard')}>
+          <a className="nav-link fw-bold" style={{color:"#064336" , fontSize:"17px"}}>Dashboard</a>
         </li>
-        <li className="nav-item" onClick={() => handleNavItemClick('inventory')}>
-          <a className="nav-link">Billing inventory</a>
+        <li className="nav-item itemnav" onClick={() => handleNavItemClick('inventory')}>
+          <a className="nav-link fw-bold" style={{color:"#064336" , fontSize:"17px"}}>Billing inventory</a>
         </li>
-        <li className="nav-item" onClick={() => handleNavItemClick('invoicelist')}>
-          <a className="nav-link">Inventory stock</a>
+        <li className="nav-item itemnav" onClick={() => handleNavItemClick('invoicelist')}>
+          <a className="nav-link fw-bold" style={{color:"#064336" , fontSize:"17px"}}>Inventory stock</a>
         </li>
-        <li className="nav-item" onClick={() => handleNavItemClick('userorderlist')}>
-          <a className="nav-link">Customer invoice</a>
+        <li className="nav-item itemnav" onClick={() => handleNavItemClick('userorderlist')}>
+          <a className="nav-link fw-bold" style={{color:"#064336", fontSize:"17px"}}>Customer invoice</a>
         </li>
       </ul>
     </nav>

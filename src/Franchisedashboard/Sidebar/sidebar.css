@@ -11,6 +11,14 @@
     cursor: pointer;
     z-index: 1000;
   }
+  .item_nav{
+    color: #064336;
+    font-weight: 500;
+  }
+  .itemnav:hover{
+    background-color: #5fa999 !important;
+    
+  }
   
   @media (max-width: 768px) {
     .mobile-toggle {

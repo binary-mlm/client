@@ -108,6 +108,10 @@
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
 
+.nav-link :hover{
+  background-color: #064336;
+}
+
 @-moz-keyframes flash {
   0% {
     opacity: 1;
@@ -25513,7 +25517,7 @@ dl li {
   align-items: center;
   white-space: nowrap;
   padding: 1.125rem 0 1.125rem 0;
-  color: #3e4b5b;
+  color: #064336;
   -webkit-transition-duration: 0.45s;
   -moz-transition-duration: 0.45s;
   -o-transition-duration: 0.45s;

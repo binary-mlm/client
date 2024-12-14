@@ -49,7 +49,7 @@ const ProductCarousel = ({ products }) => {
                           <h3 className="name text-center" ><a href="/" className='text-decoration-none '>{products.name}</a></h3>
                           <div className="rating rateit-small"></div>
                           <div className="description"></div>
-                          <div className="product-price text-center"> <span className="price h4">₹{products.price}</span> </div>
+                          <div className="product-price text-center"> <span className="price h4">₹{products.mrp_price}</span> </div>
                         </div>
                        
                         {/* <div className="cart clearfix animate-effect">

@@ -57,7 +57,7 @@ const Contactus = () => {
 	</div>
 	<div className="clearfix address">
 		<span className="contact-i"><i class="fa fa-map-marker"></i></span>
-		<span className="contact-span">Indrira nagar Sodepur, North 24 Parganas. Kol-700110</span>
+		<span className="contact-span">Indira nagar Sodepur, North 24 Parganas. Kol-700110</span>
 	</div>
 	<div className="clearfix phone-no">
 		<span className="contact-i"><i class="fa fa-mobile"></i></span>
