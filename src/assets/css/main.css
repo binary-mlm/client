@@ -35,10 +35,12 @@ Text Domain:  Marazzo
   color: #2dbf10;
  
   font-weight: 700;
-  
- 
-
 } 
+.blink2{ 
+  animation: blink2-animation 1s infinite; 
+ 
+  font-weight: 700;
+}
 @keyframes blink-animation { 
   0% { 
     opacity: 1; 
@@ -49,6 +51,28 @@ Text Domain:  Marazzo
   100% { 
     opacity: 1; 
   } 
+}
+@keyframes blink2-animation { 
+  0% { 
+    opacity: 1; 
+  } 
+  50% { 
+    opacity: 0; 
+  } 
+  100% { 
+    opacity: 1; 
+  } 
+}
+.inline-badge {
+  display: inline-block;
+  
+  white-space: nowrap; /* Prevent wrapping */
+}
+@media screen and (max-width: 1536px) {
+  .inline-badge {
+    font-size: 0.7rem;
+    
+  }
 }
 .inline {
   display: inline-block;

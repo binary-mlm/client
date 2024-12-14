@@ -35,18 +35,7 @@ const Category = () => {
                         </ul>
                       </div>
                     
-                      <div className="col-sm-12 col-md-3">
-                        <ul className="links list-unstyled">
-                          <li><a href="#">Toys &amp; Games</a></li>
-                          <li><a href="#">Jeans</a></li>
-                          <li><a href="#">Shirts</a></li>
-                          <li><a href="#">Shoes</a></li>
-                          <li><a href="#">School Bags</a></li>
-                          <li><a href="#">Lunch Box</a></li>
-                          <li><a href="#">Footwear</a></li>
-                          <li><a href="#">Wipes</a></li>
-                        </ul>
-                      </div>
+                      
                  
                       <div className="col-sm-12 col-md-3">
                         <ul className="links list-unstyled">
@@ -68,7 +57,7 @@ const Category = () => {
                
               
               <li className=" menu-item p-3"> <a href="#" className=" text-decoration-none"><i className="icon fa fa-heart" aria-hidden="true"></i>Beauty Care</a>
-              <span className="blink" >Coming soon!</span>
+              <span className="blink inline-badge" >Coming soon!</span>
            
               </li>
              
@@ -79,12 +68,12 @@ const Category = () => {
           
               
               <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-home"></i>Home Care</a>
-              <span className="blink" >Coming soon!</span>
+              <span className="blink inline-badge" >Coming soon!</span>
               </li>
             
               
               <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-shopping-cart"></i>Grosary</a>
-              <span className="blink" >Coming soon!</span>
+              <span className="blink inline-badge" >Coming soon!</span>
                 </li>
              
               

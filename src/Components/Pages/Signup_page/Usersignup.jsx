@@ -113,7 +113,7 @@ const Usersignup = () => {
 const handleSubmit = async (event) => {
   // alert("sumit")
   event.preventDefault();
-  if (registrationType === "" || gender === "" || pincode === "" || name === "" || address === "" || district === "" || state === ""|| dob === "" || mobileNumber === "" || whatsappNumber === "" || email === "") {
+  if (registrationType === "" || gender === "" || pincode === "" || name === "" || address === "" || district === "" || state === ""|| dob === "" || mobileNumber === "" || whatsappNumber === "" || email === "" || gstNumber === "") {
     swal("Opps!", "Please fill out all required fields!", "error");
 
 }
@@ -167,7 +167,7 @@ else{
                       <input
                         type="text"
                         readonly
-                        className="form-control-plaintext  bg-light textinput "
+                        className="form-control-plaintext  bg-light textinput ps-2"
                         id="staticEmail" 
                        value={sponsorId}
                       />
@@ -178,7 +178,7 @@ else{
                       htmlFor="inputPassword"
                       className="col-sm-3 col-form-label"
                     >
-                      Resgistration Type
+                      Resgistration Type<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                   <div className="col-sm-9 mt-2">
                       <div className="form-check form-check-inline">
@@ -217,7 +217,7 @@ else{
                       
                       className="col-sm-3 col-form-label"
                     >
-                      Gender
+                      Gender<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                   <div className="col-sm-9 mt-2">
                       <div className="form-check form-check-inline">
@@ -270,7 +270,7 @@ else{
                   
                   <div className="mb-3 row">
                     <label for="staticEmail" class="col-sm-3 col-form-label ">
-                      Name
+                      Name<sup><i className="fa fa-asterisk text-danger asterisk"></i></sup>
                     </label>
                     <div className="col-sm-9">
                       <input
@@ -286,7 +286,7 @@ else{
                       for="inputPassword"
                       className="col-sm-3 col-form-label"
                     >
-                      Date of Birth
+                      Date of Birth<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <input
                       className="form-control"
@@ -302,7 +302,7 @@ else{
                   
                   <div className="mb-3 row">
                     <label for="staticEmail" class="col-sm-3 col-form-label">
-                      Mobile no
+                      Mobile no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
@@ -315,7 +315,7 @@ else{
                   </div>
                   <div className="mb-3 row">
                     <label for="staticEmail" class="col-sm-3 col-form-label">
-                      Whatsapp no
+                      Whatsapp no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
@@ -329,7 +329,7 @@ else{
                   </div>
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
-                      Email
+                      Email<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
@@ -345,7 +345,7 @@ else{
                   
                   <div className="mb-3 d-flex">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
-                      Select State
+                      Select State<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <select aria-label=" example" className='form-select' onChange={handleDropdownChange_state}>
                                 <option value="" label='Enter your State'></option>
@@ -362,7 +362,7 @@ else{
                   </div>
                   <div className="mb-3 d-flex">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label ">
-                      Select City
+                      Select City<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleDropdownChange_city}>
                                 <option value="Choose city" label=' Enter your city'></option>
@@ -379,7 +379,7 @@ else{
                   </div>
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
-                      Pincode
+                      Pincode<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
@@ -393,7 +393,7 @@ else{
                   </div>
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
-                      Address
+                      Address<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                     <textarea name="address" placeholder="Your Address" rows="10" cols="50" required=""
@@ -403,7 +403,7 @@ else{
                   {registrationType === 'Business Entity' && (
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
-                      GST Number
+                      GST Number<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
@@ -417,7 +417,7 @@ else{
                   )}
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
-                      Password
+                      Password<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input

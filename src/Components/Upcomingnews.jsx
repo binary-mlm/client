@@ -7,7 +7,7 @@ const Upcomingnews = () => {
         <div className="side-menu animate-dropdown outer-bottom-xs">
           <div className="head">Upcoming News/Events</div>
           <div className='d-flex flex-column'>
-          <div className='text-center'><img  className="img-fluid" src={breaking} style={{width:"80%"}}/></div>
+          <div className='text-center'><img  className="img-fluid blink2" src={breaking} style={{width:"80%"}}/></div>
         <div>
           <img src={add1} style={{width:"97%"}}/>
           </div>
