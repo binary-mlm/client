@@ -53,7 +53,7 @@ const Sidebar = () => {
           </li>
           <li className="nav-item mb-3 ">
             <Link
-              to="/usersignup"
+              to="/userdasboard/registration"
               className="nav-link d-flex align-items-center sideitem"
             >
               <img

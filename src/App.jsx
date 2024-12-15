@@ -38,6 +38,7 @@ import DirectTeam from './Components/UserDashboard/Genealogy/DirectTeam';
 import Myorders from "./Components/UserDashboard/Reports/Myorders"
 import Poppartners from "./Components/UserDashboard/POP partners/Poppartners"
 import Payoutweekly from "./Components/UserDashboard/Payout/Payoutweekly";
+import Registration from "./Components/signupfromleader/Registration";
 
 // products
 import Tulsiview from "./Components/Productview/Tulsiview";
@@ -97,6 +98,7 @@ function App() {
       <Route path="/userdasboard/editprofile" element={<Dashboardlayout><Editprofile/></Dashboardlayout>} />
       <Route path="/userdasboard/payoutweekly" element={<Dashboardlayout><Payoutweekly/></Dashboardlayout>} />
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
+      <Route path="/userdasboard/registration" element={<Dashboardlayout><Registration/></Dashboardlayout>}/>
       <Route path="/userdasboard/payoutmonthly" element={<Dashboardlayout><Payoutmonthly/></Dashboardlayout>}/>
       <Route path="/signupleft/:parentSponsorId" element={<Userlayout><Signupleft/></Userlayout>}/>
       <Route path="/signupright/:parentSponsorId" element={<Userlayout><Signupright/></Userlayout>}/>
