@@ -167,7 +167,7 @@ const handleSubmit = async (event) => {
         
         console.log('Left API Response:', response.data);
         swal("Thank You!", "Registration sucessfully completed!", "success");
-        navigate('//userdashboard')
+        navigate('/userdashboard')
     } else if (binaryposition === 'right') {
         // API call for right position
         const response = await axios.post(ROOT_URL+'/api/auth/registerRight', { sponsorId, registrationType,  gender, 
