@@ -161,7 +161,7 @@ else{
                   </div>
               <div className="mb-3 row">
                     <label for="staticEmail" class="col-sm-3 col-form-label">
-                      Udbhab User ID
+                      User ID
                     </label>
                     <div className="col-sm-9">
                       <input
