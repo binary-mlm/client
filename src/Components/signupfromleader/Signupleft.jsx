@@ -193,7 +193,7 @@ else{
                   </div>
               <div className="mb-3 row">
                     <label for="staticEmail" class="col-sm-3 col-form-label">
-                      SHPL User ID
+                      Sponsor ID
                     </label>
                     <div className="col-sm-9">
                       <input
