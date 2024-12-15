@@ -81,7 +81,7 @@ const Sidebar = () => {
               ID Card
             </Link>
           </li>
-          <li className="nav-item mb-3">
+{/*           <li className="nav-item mb-3">
             <Link
               to="/userdasboard/editprofile"
               className="nav-link d-flex align-items-center sideitem"
@@ -95,7 +95,7 @@ const Sidebar = () => {
               />
               Edit Profile
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item mb-3">
             <Link
               to="/userdasboard/kycverification"
