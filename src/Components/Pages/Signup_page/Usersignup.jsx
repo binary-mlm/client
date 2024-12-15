@@ -212,39 +212,6 @@ else{
                       </div>
                     </div>
                   </div>
-                 <div className="mb-3 row">
-                    <label
-                      htmlFor="inputPassword"
-                      className="col-sm-3 col-form-label"
-                    >
-                      Position<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
-                    </label>
-                  <div className="col-sm-9 mt-2">
-                      <div className="form-check form-check-inline">
-                      <label className="form-check-label" for="inlineRadio5">
-                          Left
-                        <input
-                          className="form-check-input"
-                          type="radio"
-                          name="left"
-                          value="left"
-                        />
-                        
-                        </label>
-                      </div>
-                      <div className="form-check form-check-inline">
-                      <label className="form-check-label" htmlFor="inlineRadio4">
-                      Right
-                        <input
-                          className="form-check-input"
-                          type="radio"
-                          name="right"
-                          value="right"
-                        />
-                        </label>
-                      </div>
-                    </div>
-                  </div>
                   <div class="mb-3 row">
                     <label
                       
