@@ -1,8 +1,8 @@
 import React ,{useState, useEffect} from 'react'
 import "../Pages/Signup_page/usersignup.css"
-import { useParams } from "react-router-dom";
 import axios from 'axios'
 import swal from 'sweetalert';
+import { useNavigate } from 'react-router-dom'
 const Registration = () => {
     
   const [registrationType, setregistrationType] = useState('')
@@ -29,6 +29,7 @@ const Registration = () => {
     const [emailerror, setemailerror] = useState(false)
     const API_TOKEN = 'C2dy7lLSGxWm63T6Oem2N9jeUlaE5Y9M59MInjwjc-FksoqRsWk0pa-iKk1LzSfEFy0';
      const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+       const navigate = useNavigate();
     const handleDropdownChange_city = (event) => {
         setSelectedcities(event.target.value);
     };
@@ -146,11 +147,54 @@ function emailHandler(e) {
 const sponsorId = sessionStorage.getItem("mySponsorId")
 console.log(sponsorId);
 const handleSubmit = async (event) => {
-   alert("sumit")
+  //  alert("sumit")
   event.preventDefault();
+  try {
+    if (binaryposition === 'left') {
+        // API call for left position
+        const response = await axios.post(ROOT_URL+'/api/auth/registerLeft', { sponsorId, registrationType,  gender, 
+          name, 
+          dob,
+          mobileNumber,
+          whatsappNumber, 
+          email,
+          state,
+          district,
+          pincode,
+          address,
+          gstNumber,
+          password })
+        
+        console.log('Left API Response:', response.data);
+        swal("Thank You!", "Registration sucessfully completed!", "success");
+        navigate('//userdashboard')
+    } else if (binaryposition === 'right') {
+        // API call for right position
+        const response = await axios.post(ROOT_URL+'/api/auth/registerRight', { sponsorId, registrationType,  gender, 
+          name, 
+          dob,
+          mobileNumber,
+          whatsappNumber, 
+          email,
+          state,
+          district,
+          pincode,
+          address,
+          gstNumber,
+          password
+        });
+        console.log('Right API Response:', response.data);
+        swal("Thank You!", "Registration sucessfully completed!", "success");
+        navigate('/userdashboard')
+    }
+} catch (error) {
+    console.error('Error in binary position API:', error);
+    swal('Error', 'Failed to call the API. Please try again.', 'error');
+}
+};
   
 
-}
+
   return (
    <>
     <div className="container my-3 ">

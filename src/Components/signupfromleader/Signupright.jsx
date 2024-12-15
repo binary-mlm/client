@@ -1,6 +1,6 @@
 import React ,{useState, useEffect} from 'react'
 import "../Pages/Signup_page/usersignup.css"
-import { useParams } from "react-router-dom";
+import { useParams , useNavigate } from "react-router-dom";
 import axios from 'axios'
 import swal from 'sweetalert';
 
@@ -41,7 +41,7 @@ const Signupright = () => {
       setgender(event.target.value);
     };
    
-   
+    const navigate = useNavigate();
     useEffect(() => {
         const getAuthToken = async () => {
             try {

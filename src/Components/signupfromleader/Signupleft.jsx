@@ -1,6 +1,6 @@
 import React ,{useState, useEffect} from 'react'
 import "../Pages/Signup_page/usersignup.css"
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate} from "react-router-dom";
 import axios from 'axios'
 import swal from 'sweetalert';
 const Signupleft = () => {
@@ -28,6 +28,8 @@ const Signupleft = () => {
     const [emailerror, setemailerror] = useState(false)
     const API_TOKEN = 'C2dy7lLSGxWm63T6Oem2N9jeUlaE5Y9M59MInjwjc-FksoqRsWk0pa-iKk1LzSfEFy0';
      const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+      const navigate = useNavigate();
+
     const handleDropdownChange_city = (event) => {
         setSelectedcities(event.target.value);
     };
