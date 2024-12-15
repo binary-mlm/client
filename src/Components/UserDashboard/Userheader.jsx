@@ -63,7 +63,7 @@ const Sidebar = () => {
                 className="me-2"
                 alt="Welcome"
               />
-              Welcome
+              Registration
             </Link>
           </li>
           <li className="nav-item mb-3 ">
