@@ -58,7 +58,7 @@ const Useroderlist = () => {
                 <td className='text-center'>{order.orderDetails.orderNumber}</td>
                 <td className='text-center'>{order.orderDetails.totalAmount}/-</td>
                 <td className='text-center'>{new Date(order.orderDetails.orderDate).toLocaleDateString()}</td>
-                <td className='text-center'>{order.userDetails.user.name}</td>
+                <td className='text-center'>{order.userDetails.userName}</td>
                 <td className='text-center'><span><i className="fa fa-eye"  onClick={() => handleInvoice(order)}  style={{ fontSize: "20px" }} ></i> </span></td>
               </tr>
             ))}
