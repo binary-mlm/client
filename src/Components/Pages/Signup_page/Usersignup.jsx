@@ -217,7 +217,7 @@ else{
                       htmlFor="inputPassword"
                       className="col-sm-3 col-form-label"
                     >
-                      Binary Position<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
+                      Position<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                   <div className="col-sm-9 mt-2">
                       <div className="form-check form-check-inline">
@@ -226,6 +226,8 @@ else{
                         <input
                           className="form-check-input"
                           type="radio"
+                          name="left"
+                          value="left"
                         />
                         
                         </label>
@@ -236,6 +238,8 @@ else{
                         <input
                           className="form-check-input"
                           type="radio"
+                          name="right"
+                          value="right"
                         />
                         </label>
                       </div>
