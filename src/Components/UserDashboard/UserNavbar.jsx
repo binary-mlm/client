@@ -59,7 +59,7 @@ const UserNavbar = () => {
             <br />
             <span className="h5 text-center fw-bold text-white  ms-4 idsponsor">
              
-              My Sponosor ID: {sponosorid}
+              My ID: {sponosorid}
             </span>
           </div>
 
