@@ -268,7 +268,7 @@ const handleSubmit = async (event) => {
                       htmlFor="inputPassword"
                       className="col-sm-3 col-form-label"
                     >
-                      Binary position<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
+                      Position<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                   <div className="col-sm-9 mt-2">
                       <div className="form-check form-check-inline">
