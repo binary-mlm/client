@@ -315,7 +315,7 @@ else{
                   </div>
                   <div className="mb-3 row">
                     <label for="staticEmail" class="col-sm-3 col-form-label">
-                      Whatsapp no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
+                      Whatsapp no
                     </label>
                     <div className="col-sm-9">
                       <input
