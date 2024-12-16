@@ -58,7 +58,7 @@ const Franchisedashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-md-7 grid-margin stretch-card">
                 <div className="card">
                   <div className="card-body">
@@ -81,7 +81,7 @@ const Franchisedashboard = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             
           </div>
    </>
