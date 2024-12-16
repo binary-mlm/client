@@ -303,9 +303,19 @@ const Inventory = () => {
                 </div>
                 <div className="pos-content">
                   <div className="pos-content-container h-100">
-                    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+                  {productdata.length > 0 ? (
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+        {productdata.map(renderproductcard)}
+      </div>
+    ) : (
+      <div className="text-center mt-5">
+        <h4>No items in inventory</h4>
+        
+      </div>
+    )}
+                    {/* <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
                       {productdata.map(renderproductcard)}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div

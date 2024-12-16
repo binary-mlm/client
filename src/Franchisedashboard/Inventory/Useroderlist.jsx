@@ -38,34 +38,46 @@ const Useroderlist = () => {
     
     <div className='mt-5'>
    <div className='h3 text-center'>Customer invoice history</div>
-     {orderhistory.length > 0 && (
-      <div className='table-responsive'>
-        <table className='table table-striped'>
-          <thead  style={{backgroundColor:"#095444" }}>
-            <tr>
-              {/* <th>Product ID</th> */}
-              <th className='text-center text-white'>Order Number</th>
-              <th className='text-center text-white '>Total Amount</th>
-              <th className='text-center text-white'>Order date </th>
-              <th className='text-center text-white'>User Name</th>
-              <th className='text-center text-white'>Invoice</th>
-            </tr>
-          </thead>
-          <tbody>
-            {orderhistory.map((order) => (
-              <tr key={order._id}>
-               
-                <td className='text-center'>{order.orderDetails.orderNumber}</td>
-                <td className='text-center'>{order.orderDetails.totalAmount}/-</td>
-                <td className='text-center'>{new Date(order.orderDetails.orderDate).toLocaleDateString()}</td>
-                <td className='text-center'>{order.userDetails.userName}</td>
-                <td className='text-center'><span><i className="fa fa-eye"  onClick={() => handleInvoice(order)}  style={{ fontSize: "20px" }} ></i> </span></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        </div>
-      )}
+   {orderhistory.length > 0 ? (
+          <div className="table-responsive">
+            <table className="table table-striped">
+              <thead style={{ backgroundColor: '#095444' }}>
+                <tr>
+                  <th className="text-center text-white">Order Number</th>
+                  <th className="text-center text-white">Total Amount</th>
+                  <th className="text-center text-white">Order Date</th>
+                  <th className="text-center text-white">User Name</th>
+                  <th className="text-center text-white">Invoice</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orderhistory.map((order) => (
+                  <tr key={order._id}>
+                    <td className="text-center">{order.orderDetails.orderNumber}</td>
+                    <td className="text-center">{order.orderDetails.totalAmount}/-</td>
+                    <td className="text-center">
+                      {new Date(order.orderDetails.orderDate).toLocaleDateString()}
+                    </td>
+                    <td className="text-center">{order.userDetails.userName}</td>
+                    <td className="text-center">
+                      <span>
+                        <i
+                          className="fa fa-eye"
+                          onClick={() => handleInvoice(order)}
+                          style={{ fontSize: '20px', cursor: 'pointer' }}
+                        ></i>
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className="text-center mt-5">
+            <h4>No orders found</h4>
+          </div>
+        )}
       </div>
     </>
     

@@ -90,7 +90,7 @@ const Homepage = () => {
             <div className="d-flex mt-5">
               <div className="business text-center">MY BUSINESS CENTER</div>
               <div className="businessmonth text-center ms-5  ">
-                MONTHLY BUSINESS
+                WEEKLY BUSINESS
               </div>
               <div className="business text-center ms-5">TOTAL BUSINESS</div>
               <div></div>
@@ -119,12 +119,12 @@ const Homepage = () => {
                 <span>{data.kycStatus}</span>
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold">DIRECT TEAM</span>
+                <span className="fw-bold">WEEKLY TEAM BUSINESS</span>
                 <br />
                 <span> L - {data.totalDirectTeam.leftDirectTeam} | R - {data.totalDirectTeam.rightDirectTeam}</span>
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold">TOTAL ACCUMULATE BV</span>
+                <span className="fw-bold">ACCUMULATE BV</span>
                 <br />L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}
               </div>
             </div>
@@ -135,11 +135,11 @@ const Homepage = () => {
                 <span>0</span>
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold">PERSONAL BV</span>
+                <span className="fw-bold">DIRECT SALES BONUS</span>
                 <br />{data.myTotalBV}
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold">TOTAL PERSONAL BV</span>
+                <span className="fw-bold"> ACCUMULATED PERSONAL BV</span>
                 <br /> {data.totalDirectBV.total}
               </div>
             </div>
@@ -150,7 +150,7 @@ const Homepage = () => {
                 0
               </div>
               <div className="card_item text-center ms-5 fw-bold">
-                <span className="fw-bold">TEAM BUSINESS VOL(TBV)</span>
+                <span className="fw-bold">TEAM SALES BONUS</span>
                 <br/>0
                 {/* <br />L - {data.leftTreeUsersCount} | R - {data.rightTreeUsersCount} */}
               </div>
@@ -167,7 +167,7 @@ const Homepage = () => {
                 0
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold"> MY TOTAL BV (LBV + RBV)</span>
+                <span className="fw-bold"> MY TEAM BV (LBV + RBV)</span>
                 <br />
                 {data.totalBVPointsEarned.leftBV + data.totalBVPointsEarned.rightBV}
               </div>
