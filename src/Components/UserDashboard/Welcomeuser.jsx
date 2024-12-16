@@ -71,27 +71,34 @@ function Welcomeuser() {
                       <div className="row">
                         <div className="col-lg-12">
                           <div className="container mt-4">
-                            <div className="row">
-                              <div className="col-lg-6 col-sm-12 name">
-                                <p>Hello {name}</p>
-                              </div>
-                              <div className="col-lg-6 col-sm-12  udbhablogo">
-                                <img
+                          <div className="row">
+                          <div className="col-lg-12 text-center">
+                          <img
                                   src={pic2}
                                   width={130}
                                   style={{ marginTop: "-20px" }}
                                   alt="Udbhab Logo"
                                 />
+
+                          </div>
+
+                          </div>
+                            <div className="row">
+                              <div className="col-lg-6 col-sm-12 name">
+                                <p>Hello {name}</p>
+                              </div>
+                              <div className="col-lg-6 col-sm-12 udbhablogo">
+                                
                               </div>
                             </div>
-                            <p>
+                            <p style={{textAlign:"justify"}}>
                             Thank you for being a part of Udbhab Marketing Private Limited. By doing so, you have taken one of the most important decisions of your life that has the potential to transform your future. I take this occasion to heartily congratulate you and extend a warm welcome to this ever-growing Udbhab Marketing family. 
                              Udbhab Marketing provides a legitimate and ethical entrepreneurship opportunity where you can build a successful career through commitment, focus, and hard work. Our compensation plan is designed to reward you generously with lucrative sales commissions, and I invite you to give your 100% to achieve both time and financial freedom.  In case you need any assistance, feel free to contact our Support Team, who will be more than happy to assist you.
                               Kindly mention your User ID - <span className="ms-1">{sponsorId}</span> in all future communication with us. Once again, welcome to the Udbhab Marketing family! Congratulations on choosing to build an exciting career with us. We look forward to working closely with you. I wish you all the very best. May all your dreams come true.
                             </p>
                            
                             <p>
-                              Warm regards, <br />
+                              With regards, <br />
                               Udbhab Marketing Private Limited
                             </p>
                           </div>

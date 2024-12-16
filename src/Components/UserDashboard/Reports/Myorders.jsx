@@ -48,7 +48,7 @@ const Myorders = () => {
                     <th className='text-center' scope="col">Total Amount</th>
                     <th className='text-center' scope="col">BV Points</th>
                     <th className='text-center' scope="col">Order Date(MM/DD/YYYY)</th>
-                    <th className='text-center' scope="col">Delivery Mode</th>
+                    <th className='text-center' scope="col">Pickup mode</th>
                     <th className='text-center' scope="col">Download Invoice</th>
                 </tr>
             </thead>

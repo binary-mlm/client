@@ -139,7 +139,8 @@ const Genealogy = () => {
           <a href="#" onClick={(e) => handleNodeClick(e, node._id)}>
             <div className="member-view-box">
               <div className="member-image">
-                <img src={user} alt="Member" />
+              {node.isActive === true ?  <img src={user} alt="Member" style={{backgroundColor:"green"}} />
+              : <img src={user} alt="Member" style={{backgroundColor:"red"}} />}
               </div>
               <div className="member-footer">
                 <div className="name">
@@ -204,7 +205,9 @@ const Genealogy = () => {
         <a href="#" onClick={(e) => handleNodeClick(e, node._id)}>
           <div className="member-view-box">
             <div className="member-image">
-              <img src={user} alt="Member" />
+            {node.isActive === true ?  <img src={user} alt="Member" style={{backgroundColor:"green"}} />
+            : <img src={user} alt="Member" style={{backgroundColor:"red"}} />}
+              {/* <img src={user} alt="Member" /> */}
             </div>
             <div className="member-footer">
               <div className="name">

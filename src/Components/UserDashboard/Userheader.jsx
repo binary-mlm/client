@@ -51,7 +51,7 @@ const Sidebar = () => {
               Welcome
             </Link>
           </li>
-          <li className="nav-item mb-3 ">
+          <li className="nav-item mb-3">
             <Link
               to="/userdasboard/registration"
               className="nav-link d-flex align-items-center sideitem"
