@@ -157,9 +157,9 @@ const Userorderinvoice = () => {
                         <thead>
                           <tr>
                             <th className="text-start">Product Name</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Total Amount</th>
+                            <th className="text-center">Quantity</th>
+                            <th className="text-center">Price</th>
+                            <th className="text-center">Total Amount</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -169,16 +169,24 @@ const Userorderinvoice = () => {
                               <td className="text-center">
                                 {product.quantity}
                               </td>
-                              <td>{product.price}</td>
-                              <td>{product.totalAmount}</td>
+                              <td className="text-center">{product.price}</td>
+                              <td className="text-center">{product.totalAmount}</td>
                             </tr>
                           ))}
                           <tr>
-                            <th colSpan="3" className="text-end">
-                              Total Amount :
-                            </th>
-                            <td className="text-start">{total_Amount}/-</td>
-                          </tr>
+                        <td colSpan="3" className="text-end">
+                          <h5>
+                            
+                          </h5>
+                        </td>
+                        <td className="text-center">
+                          <h5>
+                            
+                          <strong> Total:  <i className="fa fa-inr"></i>{total_Amount}/-
+                            </strong>
+                          </h5>
+                        </td>
+                      </tr>
                         </tbody>
                       </table>
                     </div>

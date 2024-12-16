@@ -57,7 +57,7 @@ const UserNavbar = () => {
               Welcome To User Dashboard
             </span>
             <br />
-            <span className="h5 text-center fw-bold text-white  ms-4 idsponsor">
+            <span className="h5 text-center fw-bold text-white ms-5   idsponsor">
              
               My ID: {sponosorid}
             </span>

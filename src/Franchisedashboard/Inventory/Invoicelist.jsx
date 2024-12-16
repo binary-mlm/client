@@ -17,8 +17,7 @@ const Invoicelist = () => {
               swal('Opps!', 'No inventory found for this franchise!', 'error')
           } else {
             setInventory(response.data.orders);
-            console.log(response.data.orders)
-           
+            console.log(response.data.orders);
           }
         } catch (error) {
           console.error('Error fetching inventory:', error);
