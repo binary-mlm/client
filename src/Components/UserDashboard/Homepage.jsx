@@ -83,26 +83,26 @@ const Homepage = () => {
   };
   return (
     <>
-      <div className="ms-4 mb-5">
+      <div className="ms-4 mb-5 me-2">
         <div></div>
         {data && (
           <>
             <div className="d-flex mt-5">
-              <div className="business text-center">MY BUSINESS CENTER</div>
-              <div className="businessmonth text-center ms-5  ">
+              <div className="business text-center fontstyle">MY BUSINESS CENTER</div>
+              <div className="businessmonth text-center ms-5 fontstyle ">
                 WEEKLY BUSINESS
               </div>
-              <div className="business text-center ms-5">TOTAL BUSINESS</div>
+              <div className="business text-center ms-5 fontstyle">TOTAL BUSINESS</div>
               <div></div>
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">ACTIVE STATUS</span>
+                <span className="fw-bold fontstyle">ACTIVE STATUS</span>
                 <br />
                 <span>{data.activeDate}</span>
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold">DIRECT BV(DBV)</span>
+                <span className="fw-bold fontstyle">DIRECT BV(DBV)</span>
                 <br />
                 <span> L - {data.totalDirectBV.leftDirectBV} | R - {data.totalDirectBV.rightDirectBV}</span>
               </div>
