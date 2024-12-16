@@ -97,7 +97,7 @@ const Homepage = () => {
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">ACTIVE DATE</span>
+                <span className="fw-bold">ACTIVE STATUS</span>
                 <br />
                 <span>{data.activeDate}</span>
               </div>
