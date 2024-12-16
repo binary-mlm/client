@@ -16,7 +16,7 @@ const Sidebar = ({ setCurrentPage, isOpen, toggleSidebar }) => {
     <nav className={`sidebar ${isOpen ? 'open' : ''}`} id="sidebar">
       <button className="close-btn" onClick={toggleSidebar}>×</button>
       <ul className="nav mt-5">
-        <span className="font-weight-bold mb-2 h4 ms-3">PUP Dashboard</span>
+        <span className="font-weight-bold mb-2 h4 ms-4">PUP Dashboard</span>
         <li className="nav-item itemnav" onClick={() => handleNavItemClick('dashboard')}>
           <a className="nav-link fw-bold" style={{color:"#064336" , fontSize:"17px"}}>Dashboard</a>
         </li>

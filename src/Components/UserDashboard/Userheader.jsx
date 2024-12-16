@@ -57,7 +57,7 @@ const Sidebar = () => {
               className="nav-link d-flex align-items-center sideitem"
             >
               <img
-                src={lead}
+                src={task}
                 width={20}
                 height={25}
                 className="me-2"

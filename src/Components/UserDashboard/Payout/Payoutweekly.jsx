@@ -58,7 +58,7 @@ const Payoutweekly = () => {
           </>
           ) : (
             <tr>
-              <td colSpan="3" className="text-center">No Weekly Payout found</td>
+              <td colSpan="5" className="text-center">No Weekly Payout found</td>
             </tr>
           )}
   </tbody>
