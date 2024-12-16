@@ -52,6 +52,9 @@
 .logout-btn:hover {
   color: black;
 }
+.idsponsor{
+  font-size: 18px;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -70,7 +73,7 @@
       height: 50px; /* Smaller logo for mobile */
   }
   .logo{
-    margin: 0 27%;
+    margin: 0 10%;
     
   }
   .welcome{
@@ -80,6 +83,9 @@
   .username {
       font-size: 17px;
       margin: 5px 0;
+  }
+  .idsponsor{
+    font-size: 15px;
   }
 
   .logout {
