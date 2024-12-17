@@ -31,18 +31,20 @@ const DirectTeam = () => {
   <thead>
     <tr>
      
-      <th scope="col">Sponsor id</th>
+    <th scope="col">SL/NO</th>
       <th scope="col">Name</th>
-      <th scope="col">Email</th>
+      <th scope="col">User ID</th>
+      
       <th scope="col">MobileNumber</th>
     </tr>
   </thead>
   <tbody>
-  {referrals.map((referral) => (
+  {referrals.map((referral , index) => (
             <tr  key={referral._id}>
-            <td className='p-2'>{referral.mySponsorId}</td>
-              <td>{referral.name}</td>
-              <td>{referral.email}</td>
+            <td>{index + 1}</td>
+            <td>{referral.name}</td>
+              <td className='p-2'>{referral.mySponsorId}</td>
+              
               <td>{referral.mobileNumber}</td>
             </tr>
           ))}

@@ -32,18 +32,20 @@ const Poppartners = () => {
     <tr>
      
       
-      <th scope="col">PUP_id</th>
+      {/* <th scope="col">PUP_id</th> */}
       <th scope="col">Name</th>
-      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">State</th>
       <th scope="col">MobileNumber</th>
     </tr>
   </thead>
   <tbody>
   {allfanchise.map((franchise) => (
             <tr  key={franchise._id}>
-            <td className='p-2'>{franchise.franchiseId}</td>
+            {/* <td className='p-2'>{franchise.franchiseId}</td> */}
               <td>{franchise.franchiseName}</td>
-              <td>{franchise.email}</td>
+              <td>{franchise.address ? <><span>{franchise.address }</span></> : <><span>No Address</span></>}</td>
+              <td>{franchise.state ? <><span>{franchise.state }</span></> : <><span>No state</span></>}</td>
               <td>{franchise.contactInfo}</td>
             </tr>
           ))}
