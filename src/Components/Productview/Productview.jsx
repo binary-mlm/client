@@ -51,7 +51,7 @@ const Productview = () => {
             <span className='h1 fw-bold'>{productdetails.name}</span>
           </div>
           <div className='mt-4'>
-            <span className='h4'>MRP: <i className='fa fa-inr'></i> <span className='h4'>{productdetails.price}</span></span>
+            <span className='h4'>MRP: <i className='fa fa-inr'></i> <span className='h4'>{productdetails.mrp_price}</span></span>
           </div>
          <table className='table mt-4 h5'>
          <tbody>
