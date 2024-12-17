@@ -72,7 +72,7 @@ const Category = () => {
               </li>
             
               
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-shopping-cart"></i>Grosary</a>
+              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-shopping-cart"></i>Grocery</a>
               <span className="blink inline-badge" >Coming soon!</span>
                 </li>
              

@@ -294,7 +294,7 @@ const Inventory = () => {
                             href="#"
                             data-filter="desserts"
                           >
-                            <i className="fa fa-fw fa-ice-cream" /> Grosary
+                            <i className="fa fa-fw fa-ice-cream" /> Grocery
                           </a>
                         </li>
                       </ul>
