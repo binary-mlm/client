@@ -25593,7 +25593,8 @@ dl li {
   color: #b66dff;
 }
 .sidebar .nav .nav-item:hover {
-  background: #fcfcfc;
+  background: rgb(147, 197, 186);
+  color: white;
 }
 .sidebar .nav .nav-item.nav-profile .nav-link {
   height: auto;

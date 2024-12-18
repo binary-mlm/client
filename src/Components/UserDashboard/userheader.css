@@ -6,10 +6,20 @@
     color: black;
     
 }
+.nav-link:hover{
+   color: rgb(9, 84, 68);
+}
+   .sidebar .nav .nav-item:hover {
+    color: rgb(147, 197, 186);
+    
+}
 .sideitem a:hover{
-    color: #ff7878;
+    
     text-decoration: underline;
    
+}
+.nav-link{
+ background-color: red;
 }
 
 /* Base styles for sidebar */
