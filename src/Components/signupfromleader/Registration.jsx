@@ -210,13 +210,13 @@ const handleSubmit = async (event) => {
                     </h5>
                   </div>
               <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Sponsor ID
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        readonly
+                        readOnly
                         className="form-control-plaintext  bg-light textinput ps-2"
                         id="staticEmail"
                         value={sponsorId}
@@ -272,7 +272,7 @@ const handleSubmit = async (event) => {
                     </label>
                   <div className="col-sm-9 mt-2">
                       <div className="form-check form-check-inline">
-                      <label className="form-check-label" for="inlineRadio5">
+                      <label className="form-check-label" htmlFor="inlineRadio5">
                           Left
                         <input
                           className="form-check-input"
@@ -303,7 +303,7 @@ const handleSubmit = async (event) => {
                       </div>
                     </div>
                   </div>
-                  <div class="mb-3 row">
+                  <div className="mb-3 row">
                     <label
                       
                       className="col-sm-3 col-form-label"
@@ -342,7 +342,7 @@ const handleSubmit = async (event) => {
                         </label>
                       </div>
                       <div className="form-check form-check-inline">
-                      <label className="form-check-label" for="inlineRadio1">
+                      <label className="form-check-label" htmlFor="inlineRadio1">
                           Others
                         <input
                           className="form-check-input"
@@ -360,7 +360,7 @@ const handleSubmit = async (event) => {
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" className="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Name<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
@@ -375,7 +375,7 @@ const handleSubmit = async (event) => {
                   </div>
                   <div className="mb-3 d-flex">
                     <label
-                      for="inputPassword"
+                      htmlFor="inputPassword"
                       className="col-sm-3 col-form-label"
                     >
                       Date of Birth<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
@@ -393,7 +393,7 @@ const handleSubmit = async (event) => {
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" className="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Mobile no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
@@ -409,7 +409,7 @@ const handleSubmit = async (event) => {
                     </div>
                   </div>
                   <div className="mb-3 row">
-                    <label for="staticEmail" className="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Whatsapp no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">

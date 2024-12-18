@@ -1,6 +1,21 @@
-import React from 'react'
+import React,{useState , useEffect} from 'react'
+import axios from 'axios';
 
 const Franchisedashboard = () => {
+  const [pupdashboarddata , setdashboarddata] = useState('')
+  const franchiseId = sessionStorage.getItem('franchiseid');
+
+  useEffect(() => {
+    if(franchiseId){
+        axios.get(`http://localhost:3000/api/franchise/${franchiseId}/dashboardData`)
+       .then(res => {
+         setdashboarddata(res.data);
+         console.log(res.data);
+       })
+       .catch(err => console.log(err))
+    }
+  }, [franchiseId]);
+
   return (
    <>
       <div className="content-wrapper">
@@ -19,8 +34,8 @@ const Franchisedashboard = () => {
                     {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
                     <h4 className="font-weight-normal mb-3">Monthly Sales <i className="mdi mdi-chart-line mdi-24px float-end"></i>
                     </h4>
-                    <h2 className="mb-5">₹15,0000</h2>
-                    <h6 className="card-text">Increased by 60%</h6>
+                    <h2 className="mb-5">₹{pupdashboarddata.totalMonthlySales}</h2>
+                  
                   </div>
                 </div>
               </div>
@@ -30,8 +45,8 @@ const Franchisedashboard = () => {
                     
                     <h4 className="font-weight-normal mb-3">Total sales<i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>
                     </h4>
-                    <h2 className="mb-5">₹45,6334</h2>
-                    <h6 className="card-text">Decreased by 10%</h6>
+                    <h2 className="mb-5">₹{pupdashboarddata.totalSalesAmount}</h2>
+                   
                   </div>
                 </div>
               </div>
@@ -42,7 +57,7 @@ const Franchisedashboard = () => {
                     <h4 className="font-weight-normal mb-3">Monthly order<i className="mdi mdi-diamond mdi-24px float-end"></i>
                     </h4>
                     <h2 className="mb-5">95,5741</h2>
-                    <h6 className="card-text">Increased by 5%</h6>
+                   
                   </div>
                 </div>
               </div>
@@ -52,8 +67,8 @@ const Franchisedashboard = () => {
                     {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
                     <h4 className="font-weight-normal mb-3">Available stock<i className="mdi mdi-diamond mdi-24px float-end"></i>
                     </h4>
-                    <h2 className="mb-5">₹95,5741</h2>
-                    <h6 className="card-text">Increased by 5%</h6>
+                    <h2 className="mb-5">₹{pupdashboarddata.availableStocksValue}</h2>
+                    
                   </div>
                 </div>
               </div>
