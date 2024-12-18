@@ -4,10 +4,11 @@ import axios from 'axios';
 const Franchisedashboard = () => {
   const [pupdashboarddata , setdashboarddata] = useState('')
   const franchiseId = sessionStorage.getItem('franchiseid');
+  const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
 
   useEffect(() => {
     if(franchiseId){
-        axios.get(`http://localhost:3000/api/franchise/${franchiseId}/dashboardData`)
+        axios.get(ROOT_URL +`/api/franchise/${franchiseId}/dashboardData`)
        .then(res => {
          setdashboarddata(res.data);
          console.log(res.data);
