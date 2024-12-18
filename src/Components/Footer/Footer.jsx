@@ -126,7 +126,7 @@ const Footer = () => {
           <li><i className="fa fa-youtube mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "red" }}></i></li>
           <li><i className="fa fa-twitter mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "white" }}></i></li>
           <li><a href='https://www.facebook.com/profile.php?id=61566887730981&mibextid=ZbWKwL'><i className="fa fa-facebook mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "aqua" }}></i></a></li>
-          <li><a href=''><i className="fa fa-instagram mt-1 icon_social" style={{ fontSize: "32px", color: "pink" }}></i></a></li>
+          <li><a href='https://www.instagram.com/udbhabmarketing'><i className="fa fa-instagram mt-1 icon_social" style={{ fontSize: "32px", color: "pink" }}></i></a></li>
         </ul>
       </div>
 

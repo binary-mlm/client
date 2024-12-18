@@ -46,8 +46,8 @@ const Mainheader = () => {
           <div className='d-flex justify-content-end'>
           <i className="fa fa-youtube mt-3 social_icon" style={{ color:"red"}}></i>
             <i className="fa fa-twitter mt-3 ms-4 social_icon" style={{ color:" #1da1f2"}}></i>
-            <i className="fa fa-facebook mt-3 ms-4 social_icon" style={{color:"#405DE6"}}></i>
-             <i className="fa fa-instagram mt-3 ms-4 social_icon" style={{color:"#833AB4"}}></i>
+            <a href='https://www.facebook.com/profile.php?id=61566887730981&mibextid=ZbWKwL'><i className="fa fa-facebook mt-3 ms-4 social_icon" style={{color:"#405DE6"}}></i></a>
+            <a href='https://www.instagram.com/udbhabmarketing'> <i className="fa fa-instagram mt-3 ms-4 social_icon" style={{color:"#833AB4"}}></i></a>
              </div>
           </div>
         
