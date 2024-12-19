@@ -199,7 +199,7 @@ const handleSubmit = async (event) => {
    <>
     <div className="container my-3 ">
       <div className="row">
-        <div className="col-lg-8">
+        <div className="col-lg-8 col-sm-12">
         <div className="row">
             <div className="card formsignup" style={{left:"25%"}}>
               <div className="card-body">
@@ -495,7 +495,7 @@ const handleSubmit = async (event) => {
                       Address<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
-                    <textarea name="address" placeholder="Your Address" rows="10" cols="50" required=""
+                    <textarea name="address" placeholder="Your Address" rows="5" cols="50"
                       onChange={e => setaddress(e.target.value)}> </textarea>
                     </div>
                   </div>

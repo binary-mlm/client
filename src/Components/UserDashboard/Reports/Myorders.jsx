@@ -41,6 +41,7 @@ const Myorders = () => {
     <h3 className='fw-bold text-center'>My Orders</h3>
     
     {myorders && myorders.length > 0 ? (
+      <div className='table-responsive'>
         <table className="table table-success table-striped">
             <thead>
                 <tr>
@@ -65,6 +66,7 @@ const Myorders = () => {
                 ))}
             </tbody>
         </table>
+        </div>
     ) : (
         <p className='text-center mt-4'>No orders found.</p>
     )}

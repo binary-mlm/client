@@ -11,6 +11,15 @@
     font-weight: 400;
     
 }
+.formsignup{
+    left: 25%;
+}
 .asterisk{
     font-size: 8px;
+}
+
+@media (max-width: 768px) {
+    .formsignup{
+        left: 0% !important
+    }
 }

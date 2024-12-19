@@ -25,8 +25,9 @@ const DirectTeam = () => {
   }
   return (
    <>
-    <div className=' container mt-4'>
+    <div className='container mt-4'>
     <h3 className='fw-bold text-center'>Direct Team</h3>
+    <div className='table-responsive'>
     <table className="table table-success table-striped">
   <thead>
     <tr>
@@ -50,6 +51,7 @@ const DirectTeam = () => {
           ))}
     </tbody>
     </table>
+    </div>
     </div>
    </>
   )

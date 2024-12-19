@@ -203,22 +203,22 @@ const Homepage = () => {
         {userdata ? (
           <>
             <div className=" onlyrefferal d-flex">
-              <div className=" mt-5">
+              {/* <div className=" mt-5">
                 <span className="leftrefferal text-center">My Left Refferal Link</span>
-              </div>
+              </div> */}
               <div className=" referrallink mt-5  ms-2 fw-bold">
-                {userdata.leftRefferalLink}{" "}
+              <span className="leftrefferal text-center">My Left Refferal Link</span> {userdata.leftRefferalLink}{" "}
                 {
                     copied ? <span className="ms-2 text-success">Copied!</span> : <i className="fa fa-copy ms-2" onClick={handleCopyLinkleft}></i>
                   }
               </div>
             </div>
-            <div className="d-flex">
-              <div className=" mt-4">
+            <div className="row">
+              {/* <div className="col-lg-3 col-sm-12 mt-4">
                 <span className="rightrefferal">My Right Refferal Link</span>
-              </div>
-              <div className=" referrallink mt-4 fw-bold ms-2">
-                {userdata.rightRefferalLink}{" "}
+              </div> */}
+              <div className="col-lg-8 col-sm-12 referrallink mt-4 fw-bold ms-2">
+              <span className="rightrefferal">My Right Refferal Link</span> {userdata.rightRefferalLink}{" "}
                 {
                   copiedright ? <span className="ms-2 text-success">Copied! </span> : <i className="fa fa-copy ms-2" onClick={handleCopyLinkright}></i>
                 }

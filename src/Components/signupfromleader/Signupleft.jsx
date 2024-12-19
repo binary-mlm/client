@@ -185,7 +185,7 @@ else{
       <div className="row">
         <div className="col-lg-8">
         <div className="row">
-            <div className="card formsignup" style={{left:"25%"}}>
+            <div className="card formsignup" >
               <div className="card-body">
               <form>
               <div className="bg-primary">
