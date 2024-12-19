@@ -136,7 +136,7 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">DIRECT SALES BONUS</span>
-                <br />₹{data.myTotalBV}
+                <br />₹{data.directSalesBonus}
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold"> ACCUMULATED PERSONAL BV</span>
