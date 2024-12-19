@@ -121,7 +121,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">WEEKLY TEAM BUSINESS</span>
                 <br />
-                <span> L - {data.totalDirectTeam.leftDirectTeam} | R - {data.totalDirectTeam.rightDirectTeam}</span>
+                <span> L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}</span>
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">ACCUMULATE BV</span>
