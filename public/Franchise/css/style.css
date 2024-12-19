@@ -25582,9 +25582,9 @@ dl li {
 .sidebar .nav .nav-item .nav-link[aria-expanded=true] .menu-arrow:before {
   content: "\f0140";
 }
-.sidebar .nav .nav-item.active {
+/* .sidebar .nav .nav-item.active {
   background: #ffffff;
-}
+} */
 .sidebar .nav .nav-item.active > .nav-link .menu-title {
   color: #b66dff;
   font-family: "ubuntu-medium", sans-serif;
@@ -25594,7 +25594,7 @@ dl li {
 }
 .sidebar .nav .nav-item:hover {
   background: rgb(147, 197, 186);
-  color: white;
+ 
 }
 .sidebar .nav .nav-item.nav-profile .nav-link {
   height: auto;
@@ -25690,7 +25690,6 @@ dl li {
 .sidebar .nav.sub-menu .nav-item:hover {
   background: transparent;
 }
-
 .sidebar-dark .sidebar {
   background: #18151e;
 }

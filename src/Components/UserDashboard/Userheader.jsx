@@ -1,5 +1,5 @@
 import React ,{useState} from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import home from "../../assets/images/Home.png";
 import lead from "../../assets/images/lead.png";
 import contact from "../../assets/images/contact.png";
@@ -9,8 +9,10 @@ import "./userheader.css";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false); // Sidebar toggle state
-  
-
+  const [activeItem, setActiveItem] = useState("");
+  const handleItemClick = (itemName) => {
+    setActiveItem(itemName); // Update active item
+  };
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
@@ -18,29 +20,36 @@ const Sidebar = () => {
     <div className="d-flex">
       {/* Toggle Button for Mobile */}
       <button
-        className="sidebar-toggle-btn d-md-none" style={{color:"#cce7d3"}}
+        className="sidebar-toggle-btn d-md-none" 
+        style={{ color: isOpen ? "black" : "#cce7d3" }}
         onClick={toggleSidebar}
       >
-        ☰
+       {isOpen ? "✖" : "☰"} 
       </button>
 
       {/* Sidebar container */}
-      <div className={`sidebar bg-light p-3 ${isOpen ? "open" : ""}`} id="sidebar">
-        <ul className="nav flex-column">
-          <li className="nav-item mb-3">
-            <Link
+      <div className={`sidebar p-3 ${isOpen ? "open" : ""}`} id="sidebar">
+        <ul className="nav flex-column mt-2">
+          <li className=" sideitem mb-3 p-1">
+            <NavLink
               to="/userdashboard"
-              className="nav-link d-flex align-items-center sideitem"
+              className={`nav-link d-flex align-items-center sideitem ${
+                activeItem === "home" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("home")}
             >
               <img src={home} width={20} height={25} className="me-2" alt="Home" />
               Home
-            </Link>
+            </NavLink>
           </li>
        
-          <li className="nav-item mb-3 ">
-            <Link
+          <li className="sideitem mb-3 p-1 ">
+            <NavLink
               to="/userdasboard/welcomeuser"
-              className="nav-link d-flex align-items-center sideitem"
+              className={`nav-link d-flex align-items-center sideitem ${
+                activeItem === "welcome" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("welcome")}
             >
               <img
                 src={lead}
@@ -50,27 +59,33 @@ const Sidebar = () => {
                 alt="Welcome"
               />
               Welcome
-            </Link>
+            </NavLink>
           </li>
-          <li className="nav-item mb-3">
-            <Link
+          <li className="sideitem mb-3 p-1">
+            <NavLink
               to="/userdasboard/registration"
-              className="nav-link d-flex align-items-center sideitem"
+              className={`nav-link d-flex align-items-center sideitem ${
+                activeItem === "registration" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("registration")}
             >
               <img
                 src={task}
                 width={20}
                 height={25}
                 className="me-2"
-                alt="Welcome"
+                alt="registration"
               />
               Registration
-            </Link>
+            </NavLink>
           </li>
-          <li className="nav-item mb-3 ">
-            <Link
+          <li className="sideitem mb-3 p-1 ">
+            <NavLink
               to="/userdasboard/idcard"
-              className="nav-link d-flex align-items-center sideitem"
+              className={`nav-link d-flex align-items-center sideitem ${
+                activeItem === "idcard" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("idcard")}
             >
               <img
                 src={quote}
@@ -80,7 +95,7 @@ const Sidebar = () => {
                 alt="Id Card"
               />
               ID Card
-            </Link>
+            </NavLink>
           </li>
 {/*           <li className="nav-item mb-3">
             <Link
@@ -97,25 +112,32 @@ const Sidebar = () => {
               Edit Profile
             </Link>
           </li> */}
-          <li className="nav-item mb-3">
-            <Link
+          <li className="sideitem mb-3 p-1">
+            <NavLink
               to="/userdasboard/kycverification"
-              className="nav-link d-flex align-items-center sideitem"
+              className={`nav-link d-flex align-items-center sideitem ${
+                activeItem === "kycverification" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("kycverification")}
             >
               <img
                 src={contact}
                 width={20}
                 height={24}
                 className="me-2"
-                alt="Edit Profile"
+                alt="kycverification"
               />
               KYC verification
-            </Link>
+            </NavLink>
           </li>
-          <li className="nav-item mb-3">
-            <Link
+          <li className="sideitem mb-3">
+            <NavLink
               to="/userdasboard/genealogy"
-              className="nav-link d-flex align-items-center sideitem dropdown-toggle"
+              
+              className={`nav-link d-flex align-items-center sideitem dropdown-toggle ${
+                activeItem === "Reports" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("Reports")}
               id="reportDropdown"
               role="button"
               data-bs-toggle="dropdown"
@@ -126,15 +148,15 @@ const Sidebar = () => {
                 width={20}
                 height={25}
                 className="me-2"
-                alt="Genealogy"
+                alt="reports"
               />
               Reports
-            </Link>
+            </NavLink>
             <ul className="dropdown-menu" aria-labelledby="reportDropdown">
-              <li>
-                <Link className="dropdown-item" to="/userdasboard/myoders">
+              <li >
+                <NavLink className="dropdown-item" to="/userdasboard/myoders">
                   My orders
-                </Link>
+                </NavLink>
               </li>
               {/* <li><Link className="dropdown-item" to="/userdasboard/direct_team">Direct team</Link></li> */}
             </ul>
@@ -145,9 +167,13 @@ const Sidebar = () => {
               Genealogy
             </Link>
           </li> */}
-          <li className="nav-item mb-3 dropdown">
-            <Link
-              className="nav-link d-flex align-items-center sideitem dropdown-toggle"
+          <li className="sideitem mb-3 dropdown">
+            <NavLink
+              
+              className={`nav-link d-flex align-items-center sideitem dropdown-toggle ${
+                activeItem === "Genealogy" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("Genealogy")}
               id="genealogyDropdown"
               role="button"
               data-bs-toggle="dropdown"
@@ -161,25 +187,29 @@ const Sidebar = () => {
                 alt="Genealogy"
               />
               Genealogy
-            </Link>
+            </NavLink>
             <ul className="dropdown-menu" aria-labelledby="genealogyDropdown">
               <li>
-                <Link className="dropdown-item" to="/userdasboard/genealogy">
+                <NavLink className="dropdown-item" to="/userdasboard/genealogy">
                   Genealogy Tree
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link className="dropdown-item" to="/userdasboard/direct_team">
+                <NavLink className="dropdown-item" to="/userdasboard/direct_team">
                   Direct team
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </li>
 
 
-          <li className="nav-item mb-3 dropdown">
-            <Link
-              className="nav-link d-flex align-items-center sideitem dropdown-toggle"
+          <li className="sideitem mb-3 dropdown">
+            <NavLink
+              
+              className={`nav-link d-flex align-items-center sideitem dropdown-toggle ${
+                activeItem === "payout" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("payout")}
               id="genealogyDropdown"
               role="button"
               data-bs-toggle="dropdown"
@@ -190,29 +220,32 @@ const Sidebar = () => {
                 width={20}
                 height={25}
                 className="me-2"
-                alt="Genealogy"
+                alt="payout"
               />
             Payout
-            </Link>
+            </NavLink>
             <ul className="dropdown-menu" aria-labelledby="genealogyDropdown">
               <li>
-                <Link className="dropdown-item" to="/userdasboard/payoutweekly">
+                <NavLink className="dropdown-item" to="/userdasboard/payoutweekly">
                   Weekly Payout
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link className="dropdown-item" to="/userdasboard/payoutmonthly">
+                <NavLink className="dropdown-item" to="/userdasboard/payoutmonthly">
                   Monthly Payout
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </li>
          
           
-          <li className="nav-item mb-3">
-            <Link
+          <li className="sideitem  mb-3">
+            <NavLink
               to="/userdashboard/rank-achievers"
-              className="nav-link d-flex align-items-center sideitem"
+              className={`nav-link d-flex align-items-center sideitem ${
+                activeItem === "Rank Achievers" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("Rank Achievers")}
             >
               <img
                 src={contact}
@@ -222,12 +255,15 @@ const Sidebar = () => {
                 alt="Rank Achievers"
               />
               Rank Achievers
-            </Link>
+            </NavLink>
           </li>
-          <li className="nav-item mb-3">
-            <Link
+          <li className="sideitem mb-3">
+            <NavLink
               to="/userdasboard/poppartners"
-              className="nav-link d-flex align-items-center sideitem"
+              className={`nav-link d-flex align-items-center sideitem ${
+                activeItem === "PUP Partners" ? "active-item" : ""
+              }`}
+              onClick={() => handleItemClick("PUP Partners")}
             >
               <img
                 src={contact}
@@ -237,7 +273,7 @@ const Sidebar = () => {
                 alt="Logistics"
               />
               PUP Partners
-            </Link>
+            </NavLink>
           </li>
           {/* <li className="nav-item mb-3">
             <Link
