@@ -17,19 +17,12 @@
     padding: 10px;
 }
 .nav-link:hover{
-   color: rgb(9, 84, 68);
-
-    
+   color: rgb(9, 84, 68);  
 }
-.sideitem a:hover{
-    
+.sideitem a:hover{   
     text-decoration: none;
-    background-color:#0c4b0c78;
-
-   
+    background-color:#0c4b0c78;  
 }
-
-
 /* Base styles for sidebar */
 .sidebar {
     width: 250px;

@@ -1,6 +1,9 @@
 /* Toggle button styling for mobile */
 .mobile-toggle {
     display: none;
+    position: fixed; /* Keeps the button fixed even on small screens */
+      top: 150px; /* Adjust for mobile header */
+      left: 10px;
     /* position: fixed;
     top: 15px;
     left: 15px; */
@@ -23,11 +26,16 @@
   @media (max-width: 768px) {
     .mobile-toggle {
       display: block;
-      margin-top: -147%;
+      /* margin-top: -147%; */
       display: inline-block;
       width: 40px; /* Adjust the width as needed */
      
     }
+    .sidebar-toggle-btn {
+      position: fixed; /* Keeps the button fixed even on small screens */
+      top: 10px; /* Adjust for mobile header */
+      left: 10px;
+  }
     #sidebar{
       position: fixed;
     }

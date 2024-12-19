@@ -25036,13 +25036,14 @@ dl li {
   display: none;
 }
 .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini img {
-  width: 100px;
-  height: 80px;
+  width: 80px;
+  height: 51px;
   /* width: calc(120px - 50px);
   max-width: 100%;
   height: 20px;
   margin: auto; */
 }
+
 .navbar .navbar-menu-wrapper {
   transition: width 0.25s ease;
   -webkit-transition: width 0.25s ease;

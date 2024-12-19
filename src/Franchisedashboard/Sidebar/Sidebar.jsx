@@ -13,8 +13,10 @@ const Sidebar = ({ setCurrentPage, isOpen, toggleSidebar }) => {
   };
 
   return (
+    <>
+    
     <nav className={`sidebar ${isOpen ? 'open' : ''}`} id="sidebar">
-      <button className="close-btn" onClick={toggleSidebar}>×</button>
+      
       <ul className="nav mt-5">
         <span className="font-weight-bold mb-2 h4 ms-4">PUP Dashboard</span>
         <li className="nav-item itemnav" onClick={() => handleNavItemClick('dashboard')}>
@@ -31,6 +33,7 @@ const Sidebar = ({ setCurrentPage, isOpen, toggleSidebar }) => {
         </li>
       </ul>
     </nav>
+    </>
   );
 };
 
