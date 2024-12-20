@@ -114,7 +114,7 @@ const Signupright = () => {
 const sponsorId = parentSponsorId;
 console.log(sponsorId);
 const handleSubmit = async (event) => {
-  alert("sumit")
+  // alert("sumit")
   event.preventDefault();
  
 

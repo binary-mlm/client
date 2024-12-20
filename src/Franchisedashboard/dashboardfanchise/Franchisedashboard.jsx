@@ -57,7 +57,7 @@ const Franchisedashboard = () => {
                     {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
                     <h4 className="font-weight-normal mb-3">Monthly order<i className="mdi mdi-diamond mdi-24px float-end"></i>
                     </h4>
-                    <h2 className="mb-5">0</h2>
+                    <h2 className="mb-5">{pupdashboarddata.totalOrdersInMonth}</h2>
                    
                   </div>
                 </div>

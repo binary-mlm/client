@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import home from "../../assets/images/Home.png";
 import lead from "../../assets/images/lead.png";
@@ -10,21 +10,23 @@ import "./userheader.css";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false); // Sidebar toggle state
   const [activeItem, setActiveItem] = useState("");
+  
   const handleItemClick = (itemName) => {
     setActiveItem(itemName); // Update active item
   };
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <div className="d-flex">
       {/* Toggle Button for Mobile */}
       <button
-        className="sidebar-toggle-btn d-md-none" 
+        className="sidebar-toggle-btn d-md-none"
         style={{ color: isOpen ? "black" : "#cce7d3" }}
         onClick={toggleSidebar}
       >
-       {isOpen ? "✖" : "☰"} 
+        {isOpen ? "✖" : "☰"}
       </button>
 
       {/* Sidebar container */}
@@ -38,11 +40,17 @@ const Sidebar = () => {
               }`}
               onClick={() => handleItemClick("home")}
             >
-              <img src={home} width={20} height={25} className="me-2" alt="Home" />
+              <img
+                src={home}
+                width={20}
+                height={25}
+                className="me-2"
+                alt="Home"
+              />
               Home
             </NavLink>
           </li>
-       
+
           <li className="sideitem mb-3 p-1 ">
             <NavLink
               to="/userdasboard/welcomeuser"
@@ -97,7 +105,7 @@ const Sidebar = () => {
               ID Card
             </NavLink>
           </li>
-{/*           <li className="nav-item mb-3">
+          {/*           <li className="nav-item mb-3">
             <Link
               to="/userdasboard/editprofile"
               className="nav-link d-flex align-items-center sideitem"
@@ -131,9 +139,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li className="sideitem mb-3">
-            <NavLink
-              to="/userdasboard/genealogy"
-              
+            <div
               className={`nav-link d-flex align-items-center sideitem dropdown-toggle ${
                 activeItem === "Reports" ? "active-item" : ""
               }`}
@@ -151,10 +157,16 @@ const Sidebar = () => {
                 alt="reports"
               />
               Reports
-            </NavLink>
+            </div>
             <ul className="dropdown-menu" aria-labelledby="reportDropdown">
-              <li >
-                <NavLink className="dropdown-item" to="/userdasboard/myoders">
+              <li>
+                <NavLink
+                  className={`dropdown-item ${
+                    activeItem === "My Orders" ? "active-item" : ""
+                  }`}
+                  to="/userdasboard/myoders"
+                  onClick={() => handleItemClick("My Orders")}
+                >
                   My orders
                 </NavLink>
               </li>
@@ -168,8 +180,7 @@ const Sidebar = () => {
             </Link>
           </li> */}
           <li className="sideitem mb-3 dropdown">
-            <NavLink
-              
+            <div
               className={`nav-link d-flex align-items-center sideitem dropdown-toggle ${
                 activeItem === "Genealogy" ? "active-item" : ""
               }`}
@@ -187,25 +198,35 @@ const Sidebar = () => {
                 alt="Genealogy"
               />
               Genealogy
-            </NavLink>
+            </div>
             <ul className="dropdown-menu" aria-labelledby="genealogyDropdown">
               <li>
-                <NavLink className="dropdown-item" to="/userdasboard/genealogy">
+                <NavLink
+                  className={`dropdown-item ${
+                    activeItem === "Genealogy Tree" ? "active-item" : ""
+                  }`}
+                  to="/userdasboard/genealogy"
+                  onClick={() => handleItemClick("Genealogy Tree")}
+                >
                   Genealogy Tree
                 </NavLink>
               </li>
               <li>
-                <NavLink className="dropdown-item" to="/userdasboard/direct_team">
+                <NavLink
+                  className={`dropdown-item ${
+                    activeItem === "Direct team" ? "active-item" : ""
+                  }`}
+                  to="/userdasboard/direct_team"
+                  onClick={() => handleItemClick("Direct team")}
+                >
                   Direct team
                 </NavLink>
               </li>
             </ul>
           </li>
 
-
           <li className="sideitem mb-3 dropdown">
-            <NavLink
-              
+            <div
               className={`nav-link d-flex align-items-center sideitem dropdown-toggle ${
                 activeItem === "payout" ? "active-item" : ""
               }`}
@@ -222,23 +243,35 @@ const Sidebar = () => {
                 className="me-2"
                 alt="payout"
               />
-            Payout
-            </NavLink>
+              Payout
+            </div>
             <ul className="dropdown-menu" aria-labelledby="genealogyDropdown">
               <li>
-                <NavLink className="dropdown-item" to="/userdasboard/payoutweekly">
+                <NavLink
+                 
+                  className={`dropdown-item ${
+                    activeItem === "Weekly Payout" ? "active-item" : ""
+                  }`}
+                  to="/userdasboard/payoutweekly"
+                  onClick={() => handleItemClick("Weekly Payout")}
+                >
                   Weekly Payout
                 </NavLink>
               </li>
               <li>
-                <NavLink className="dropdown-item" to="/userdasboard/payoutmonthly">
+                <NavLink
+                  className={`dropdown-item ${
+                    activeItem === "Monthly Payout" ? "active-item" : ""
+                  }`}
+                  to="/userdasboard/payoutmonthly"
+                  onClick={() => handleItemClick("Monthly Payout")}
+                >
                   Monthly Payout
                 </NavLink>
               </li>
             </ul>
           </li>
-         
-          
+
           <li className="sideitem  mb-3">
             <NavLink
               to="/userdashboard/rank-achievers"

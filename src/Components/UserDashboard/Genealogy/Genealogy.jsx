@@ -140,7 +140,7 @@ const Genealogy = () => {
             <div className="member-view-box">
               <div className="member-image">
               {node.isActive === true ?  <img src={user} alt="Member" style={{backgroundColor:"green"}} />
-              : <img src={user} alt="Member" style={{backgroundColor:"red"}} />}
+              : <img src={user} alt="Member" style={{backgroundColor:" rgb(188, 27, 27)"}} />}
               </div>
               <div className="member-footer">
                 <div className="name">

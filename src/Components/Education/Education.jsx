@@ -43,7 +43,7 @@ const Education = () => {
             <div className="col-lg-3 text-center my-2">
             <div className="trainer-box">
               <img src={trainerview1}  className="rounded-circle"  width={80} alt='trainer' />
-              <div className="trainer-name fw-bold" style={{fontSize:"18px"}}>Jahangir Sardar</div>
+              <div className="trainer-name fw-bold" style={{fontSize:"18px"}}>Zahangir Sardar</div>
               <div className="trainer-designation" style={{fontSize:"13px"}}>Trainer</div>
             </div>
             </div>
