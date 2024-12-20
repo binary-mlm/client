@@ -121,7 +121,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">WEEKLY TEAM BUSINESS</span>
                 <br />
-                <span> L - {data.totalDirectTeam.leftDirectTeam} | R - {data.totalDirectTeam.rightDirectTeam}</span>
+                <span> L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}</span>
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">ACCUMULATE BV</span>
@@ -136,7 +136,7 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">DIRECT SALES BONUS</span>
-                <br />{data.myTotalBV}
+                <br />₹{data.directSalesBonus}
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold"> ACCUMULATED PERSONAL BV</span>
@@ -147,24 +147,24 @@ const Homepage = () => {
               <div className="card_item text-center">
                 <span className="fw-bold">HOUSE ACHIEVEMENT BONUS</span>
                 <br />
-                0
+                ₹0
               </div>
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">TEAM SALES BONUS</span>
-                <br/>0
+                <br/>₹0
                 {/* <br />L - {data.leftTreeUsersCount} | R - {data.rightTreeUsersCount} */}
               </div>
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">WEEKLY EARNING(₹)</span>
                 <br />
-                {data.weeklyEarning}
+                ₹{data.weeklyEarning}
               </div>
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
                 <span className="fw-bold">MONITORING BONUS</span>
                 <br />
-                0
+                ₹0
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold"> MY TEAM BV (LBV + RBV)</span>
@@ -178,24 +178,24 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">MONTHLY EARNING(₹)</span>
                 <br />
-                {data.monthlyEarning}
+                ₹{data.monthlyEarning}
               </div>
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
                 <span className="fw-bold">RANK ACHIEVEMENT BONUS</span>
                 <br />
-                0
+                ₹0
               </div>
               <div className="card_item text-center ms-5 pe-4">
                 <span className="fw-bold">LIFETIME ROYALTY  BONUS</span>
                 <br />
-                0
+                ₹0
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">TOTAL EARNING (₹)</span>
                 <br />
-                {data.lifetimeEarning}
+                ₹{data.lifetimeEarning}
               </div>
             </div>
           </>
