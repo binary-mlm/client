@@ -92,7 +92,7 @@ const Footer = () => {
             <div className="module-body">
               <ul className='list-unstyled'>
                 <li className="first"><a href="#" title="About us">Execlusive product</a></li>
-                <li><a href="#" title="Blog">Blog</a></li>
+                {/* <li><a href="#" title="Blog">Blog</a></li> */}
                 {/* <li><a href="#" title="Company">Company</a></li>
                 <li><a href="#" title="Investor Relations">Investor Relations</a></li> */}
                 <li className="last"><a href="/contactus" title="Suppliers">Contact Us</a></li>
@@ -123,10 +123,10 @@ const Footer = () => {
       {/* Social Icons - Second on mobile */}
       <div className="col-xs-12 col-sm-4 no-padding social order-xs-2 order-sm-1">
         <ul className="link d-flex">
-          <li><i className="fa fa-youtube mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "red" }}></i></li>
-          <li><i className="fa fa-twitter mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "white" }}></i></li>
-          <li><a href='https://www.facebook.com/profile.php?id=61566887730981&mibextid=ZbWKwL'><i className="fa fa-facebook mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "aqua" }}></i></a></li>
-          <li><a href='https://www.instagram.com/udbhabmarketing'><i className="fa fa-instagram mt-1 icon_social" style={{ fontSize: "32px", color: "pink" }}></i></a></li>
+          <li><a target='_blank' href='https://youtube.com/@udbhab_marketing?si=XTjFU-SXcWmiSYoi'><i className="fa fa-youtube mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "red" }}></i></a></li>
+          {/* <li><i className="fa fa-twitter mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "white" }}></i></li> */}
+          <li><a target='_blank' href='https://www.facebook.com/profile.php?id=61566887730981&mibextid=ZbWKwL'><i className="fa fa-facebook mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "aqua" }}></i></a></li>
+          <li><a target='_blank' href='https://www.instagram.com/udbhabmarketing'><i className="fa fa-instagram mt-1 icon_social" style={{ fontSize: "32px", color: "pink" }}></i></a></li>
         </ul>
       </div>
 

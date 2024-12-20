@@ -40,6 +40,8 @@ const DirectTeam = () => {
     </tr>
   </thead>
   <tbody>
+  {referrals.length > 0 ? (
+    <>
   {referrals.map((referral , index) => (
             <tr  key={referral._id}>
             <td>{index + 1}</td>
@@ -49,6 +51,11 @@ const DirectTeam = () => {
               <td>{referral.mobileNumber}</td>
             </tr>
           ))}
+          </>
+  ): (<tr>
+              <td colSpan="5" className="text-center">No direct team found</td>
+            </tr>
+          )}
     </tbody>
     </table>
     </div>
