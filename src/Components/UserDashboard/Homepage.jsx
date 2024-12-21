@@ -9,7 +9,7 @@ const Homepage = () => {
   const [referralleftLink, setReferralleftLink] = useState([]);
   const [referralrightLink, setReferralrightLink] = useState([]);
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-  const sponsorId = sessionStorage.getItem("mySponsorId");
+  const mySponsorId = sessionStorage.getItem("mySponsorId");
   const [copied, setCopied] = useState(false);
   const [copiedright , setCopiedright] = useState(false);
   const logIn = () => {
@@ -35,7 +35,7 @@ const Homepage = () => {
   };
   const dashboardData = async () => {
     try {
-      const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { sponsorId });
+      const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { mySponsorId });
       console.log(response.data);
       setData(response.data);
        
@@ -125,7 +125,8 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">ACCUMULATE BV</span>
-                <br />L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}
+                <br />{data.totalBVPointsEarned.leftBV + data.totalBVPointsEarned.rightBV}
+               
               </div>
             </div>
             <div className="d-flex mt-2">
@@ -169,7 +170,8 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold"> MY TEAM BV (LBV + RBV)</span>
                 <br />
-                {data.totalBVPointsEarned.leftBV + data.totalBVPointsEarned.rightBV}
+                L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}
+               
               </div>
               {/* <div className="card_item text-center ms-5">
                 <span className=" fw-bold">MY TOTAL BV (LBV + RBV)</span>

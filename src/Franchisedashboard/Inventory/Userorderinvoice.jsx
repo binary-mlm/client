@@ -164,6 +164,7 @@ const Userorderinvoice = () => {
                             <th className="text-start">Product Name</th>
                             <th className="text-center">Quantity</th>
                             <th className="text-center">Price(Incl. GST)</th>
+                            {/* <th className="text-center">BV</th> */}
                             <th className="text-center">Total Amount</th>
                           </tr>
                         </thead>
