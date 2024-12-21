@@ -170,7 +170,7 @@ const Sidebar = () => {
                   My orders
                 </NavLink>
               </li>
-              {/* <li><Link className="dropdown-item" to="/userdasboard/direct_team">Direct team</Link></li> */}
+             
             </ul>
           </li>
           {/* <li className="nav-item mb-3">

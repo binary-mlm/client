@@ -163,7 +163,7 @@ const Userorderinvoice = () => {
                           <tr>
                             <th className="text-start">Product Name</th>
                             <th className="text-center">Quantity</th>
-                            <th className="text-center">Price(Including GST)</th>
+                            <th className="text-center">Price(Incl. GST)</th>
                             <th className="text-center">Total Amount</th>
                           </tr>
                         </thead>
