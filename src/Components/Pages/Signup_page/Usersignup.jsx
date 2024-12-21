@@ -113,7 +113,7 @@ const Usersignup = () => {
 const handleSubmit = async (event) => {
   // alert("sumit")
   event.preventDefault();
-  if (registrationType === "" || gender === "" || pincode === "" || name === "" || address === "" || district === "" || state === ""|| dob === "" || mobileNumber === "" || whatsappNumber === "" || email === "" || gstNumber === "") {
+  if (registrationType === "" || gender === "" || pincode === "" || name === "" || address === "" || district === "" || state === ""|| dob === "" || mobileNumber === "" ||  email === "" ) {
     swal("Opps!", "Please fill out all required fields!", "error");
 
 }
