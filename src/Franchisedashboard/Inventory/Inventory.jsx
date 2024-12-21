@@ -10,8 +10,40 @@ const Inventory = () => {
 
   const [productdata, setproduct] = useState([]);
   const [cart, setCart] = useState([]);
-  const [userSponsorId , setuserSponsorId] = useState("");
+  //  const [userSponsorId , setuserSponsorId] = useState("");
+  const [sponsors, setSponsors] = useState([]);
+  const [userSponsorId, setSearchSponsorId] = useState("");
+  const [selectedSponsorName, setSelectedSponsorName] = useState("");
 //  const [totalprice , settotalprice] = useState("");
+
+//user id search
+useEffect(() => {
+  // Fetch sponsors when the component mounts
+  const fetchSponsors = async () => {
+    try {
+      const response = await axios.get("https://www.api.myudbhab.in/api/franchise/getAllUsers");
+      if (response.status === 200) {
+        setSponsors(response.data);
+      }
+    } catch (error) {
+      console.error("Error fetching sponsors:", error);
+    }
+  };
+
+  fetchSponsors();
+}, []);
+const handleSponsorSelection = (sponsorId) => {
+  // Find the sponsor by ID
+  const selectedSponsor = sponsors.find((sponsor) => sponsor.mySponsorId === sponsorId);
+  if (selectedSponsor) {
+    setSearchSponsorId(sponsorId);
+    
+  }
+};
+
+const filteredSponsors = sponsors.filter((sponsor) =>
+  sponsor.mySponsorId.toLowerCase().includes(userSponsorId.toLowerCase())
+);
 
   // Increment the quantity
   const incrementQuantity = (productId) => {
@@ -328,9 +360,46 @@ const Inventory = () => {
                   style={{ top: "10%" }}
                 >
                   <div className="h-100 d-flex flex-column w-100 ">
+                   {/* Search Sponsor ID */}
+      <input
+        type="text"
+        className="form-control p-4 mb-2 w-100"
+        placeholder="Enter or search Sponsor ID..."
+        value={userSponsorId}
+        onChange={(e) => setSearchSponsorId(e.target.value)}
+      />
+      {userSponsorId && (
+        <div
+          style={{
+            maxHeight: "200px",
+            overflowY: "auto",
+            border: "1px solid #ddd",
+            borderRadius: "4px",
+            backgroundColor: "#fff",
+          }}
+        >
+          {filteredSponsors.map((sponsor) => (
+            <div
+              key={sponsor.mySponsorId}
+              style={{
+                padding: "8px",
+                cursor: "pointer",
+                borderBottom: "1px solid #eee",
+              }}
+              onClick={() => handleSponsorSelection(sponsor.mySponsorId)}
+            >
+              {sponsor.mySponsorId} - {sponsor.name}
+            </div>
+          ))}
+        </div>
+      )}
+
+      
+      
+    
                     
-                    <input type="text"  className="form-control p-4 mb-2 w-100"
-                          placeholder="Enter user Sponsor ID..." onChange={e => setuserSponsorId(e.target.value)} />
+                    {/* <input type="text"  className="form-control p-4 mb-2 w-100"
+                          placeholder="Enter user Sponsor ID..." onChange={e => setuserSponsorId(e.target.value)} /> */}
                     <div
                       className="pos-sidebar-body tab-content"
                       data-scrollbar="true"
