@@ -47,7 +47,7 @@ const Sidebar = () => {
                 className="me-2"
                 alt="Home"
               />
-              Home
+              Dashboard
             </NavLink>
           </li>
 

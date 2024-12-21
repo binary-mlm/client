@@ -36,9 +36,10 @@ const Homefanchise = () => {
 
   return (
     <>
-      <div className="container-scroller">
+      {/* <div className="container-scroller">
         <Nav />
-      </div>
+      </div> */}
+      <Nav />
       <div className="container-fluid page-body-wrapper">
         <div></div>
         {/* Mobile Toggle Button */}
@@ -47,7 +48,7 @@ const Homefanchise = () => {
           className="mobile-toggle"
           onClick={() => setSidebarOpen(!isSidebarOpen)}
         >
-          ☰
+          {isSidebarOpen ? "✖" : "☰"}
         </button>
         <Sidebar
           setCurrentPage={setCurrentPage}

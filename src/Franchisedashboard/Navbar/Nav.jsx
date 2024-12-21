@@ -17,20 +17,15 @@ const Nav = () => {
   const username = sessionStorage.getItem("username")
   return (
     <>
+    
       <nav className="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div className="text-center navbar-brand-wrapper d-flex align-items-center">
     <a className="navbar-brand brand-logo"><img src={logo1} alt="logo" /></a>
     <a className="navbar-brand brand-logo-mini"><img src={logo1} width={200}  alt="logo" /></a>
-
+   
   </div>
- 
   
   <div className="navbar-menu-wrapper d-flex align-items">
- 
-    <button className="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-      <span className="mdi mdi-menu"></span>
-    </button>
-    
     <ul className="navbar-nav navbar-nav-right">
       <li className="nav-item nav-profile dropdown">
         <a className="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">

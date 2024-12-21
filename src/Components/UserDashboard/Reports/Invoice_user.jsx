@@ -124,7 +124,7 @@ const Invoice_user = () => {
                       <tr>
                         <th className="text-center">Product Name</th>
                         <th className="text-center">Quantity</th>
-                        <th className="text-center">Price</th>
+                        <th className="text-center">Price(Incl. GST)</th>
                         <th className="text-center">Total Amount</th>
                       </tr>
                     </thead>

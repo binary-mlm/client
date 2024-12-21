@@ -2,7 +2,7 @@
 .mobile-toggle {
     display: none;
     position: fixed; /* Keeps the button fixed even on small screens */
-      top: 150px; /* Adjust for mobile header */
+      top: 72px; /* Adjust for mobile header */
       left: 10px;
     /* position: fixed;
     top: 15px;
