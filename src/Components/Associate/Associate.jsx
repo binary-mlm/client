@@ -33,7 +33,7 @@ Overall, the direct selling industry continues to grow, providing individuals wi
    
     <div className='row'>
      
-      <div className='col-lg-9'>
+      <div className='col-lg-9 order-lg-1 order-2'>
       <h2 className='text-center mt-4 fw-bold'>Wellness industry
 </h2>
       <p className='wellness' style={{textAlign:"justify"}}>
@@ -41,7 +41,7 @@ The wellness industry is a dynamic and rapidly expanding sector focused on impro
 Fitness programs such as yoga, pilates, and strength training have gained popularity, while nutrition has shifted towards organic, plant-based diets and supplements aimed at optimizing health. The rise of mindfulness practices like meditation and breathwork highlights the growing focus on mental well-being. Personal care products, such as natural skincare, are also part of the wellness trend, with an emphasis on sustainability and eco-conscious living.
 The integration of technology has revolutionized the wellness industry, offering tools like fitness tracking apps, mental health platforms, and personalized wellness plans powered by artificial intelligence. Wellness tourism is another growing trend, with travelers seeking holistic experiences through retreats and spa destinations. As health consciousness rises, the wellness industry is positioned to evolve further, blending traditional practices with cutting-edge innovations to cater to a global audience seeking better health and well-being.</p>
       </div>
-      <div className='col-lg-3 mt-5 mb-2'>
+      <div className='col-lg-3 mt-5 mb-2 order-lg-2 order-1'>
     <img className='mt-4 img-fluid' src={pic} style={{width:"100%"}}/>
       </div>
     </div>

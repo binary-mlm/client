@@ -6,7 +6,7 @@ const News = () => {
    <>
     <img src={news} style={{width:"100%"}}/>
     <div className='container w-75'>
-    News
+    No awards or rewards are currently available. 
 
     </div>
    </>

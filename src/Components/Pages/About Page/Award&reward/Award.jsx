@@ -18,13 +18,13 @@ const Award = () => {
    <>
    <img src={award} style={{width:"100%"}}/>
      <div className="row m-5">
-     
-      {photos.map((photo) => (
+     No awards or rewards are currently available. 
+      {/* {photos.map((photo) => (
         <div  key={photo.id} className="col-lg-3 mb-4">
           <img src={photo.src} alt={photo.alt} style={{width:"82%"}} />
         </div>
         
-      ))}
+      ))} */}
       </div>
     
    </>

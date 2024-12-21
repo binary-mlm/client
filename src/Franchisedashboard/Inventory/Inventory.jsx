@@ -32,18 +32,20 @@ useEffect(() => {
 
   fetchSponsors();
 }, []);
-const handleSponsorSelection = (sponsorId) => {
-  // Find the sponsor by ID
-  const selectedSponsor = sponsors.find((sponsor) => sponsor.mySponsorId === sponsorId);
-  if (selectedSponsor) {
-    setSearchSponsorId(sponsorId);
-    
-  }
-};
 
-const filteredSponsors = sponsors.filter((sponsor) =>
-  sponsor.mySponsorId.toLowerCase().includes(userSponsorId.toLowerCase())
-);
+
+const handleInputChange = (e) => {
+  const inputId = e.target.value;
+  setSearchSponsorId(inputId);
+
+  // Find the user based on the entered ID
+  const matchingSponsor = sponsors.find(
+    (sponsor) => sponsor.mySponsorId.toLowerCase() === inputId.toLowerCase()
+  );
+
+  // Set the corresponding name if a match is found, otherwise clear the name
+  setSelectedSponsorName(matchingSponsor ? matchingSponsor.name : "");
+};
 
   // Increment the quantity
   const incrementQuantity = (productId) => {
@@ -360,37 +362,22 @@ const filteredSponsors = sponsors.filter((sponsor) =>
                   style={{ top: "10%" }}
                 >
                   <div className="h-100 d-flex flex-column w-100 ">
-                   {/* Search Sponsor ID */}
-      <input
+                  <input
         type="text"
         className="form-control p-4 mb-2 w-100"
-        placeholder="Enter or search Sponsor ID..."
+        placeholder="Enter Sponsor ID..."
         value={userSponsorId}
-        onChange={(e) => setSearchSponsorId(e.target.value)}
+        onChange={handleInputChange}
       />
-      {userSponsorId && (
-        <div
-          style={{
-            maxHeight: "200px",
-            overflowY: "auto",
-            border: "1px solid #ddd",
-            borderRadius: "4px",
-            backgroundColor: "#fff",
-          }}
-        >
-          {filteredSponsors.map((sponsor) => (
-            <div
-              key={sponsor.mySponsorId}
-              style={{
-                padding: "8px",
-                cursor: "pointer",
-                borderBottom: "1px solid #eee",
-              }}
-              onClick={() => handleSponsorSelection(sponsor.mySponsorId)}
-            >
-              {sponsor.mySponsorId} - {sponsor.name}
-            </div>
-          ))}
+       {/* Display the name if found */}
+       {selectedSponsorName && (
+        <div className="ms-2 mb-2" style={{ marginTop: "5px", color: "green", fontWeight: "bold" }}>
+          User Name: {selectedSponsorName}
+        </div>
+      )}
+      {userSponsorId && !selectedSponsorName && (
+        <div className="ms-2 mb-2" style={{ marginTop: "10px", color: "red", fontWeight: "bold" }}>
+          No matching Sponsor ID found.
         </div>
       )}
 

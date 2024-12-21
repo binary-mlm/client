@@ -42,7 +42,7 @@ const Management = () => {
         </div>
       </div></div>
       <div className='row cardteam mb-2'>
-        <div className='col-lg-9'>
+        <div className='col-lg-9 order-lg-1 order-2'>
         <div className='team-title'>
         Dipan Das
         </div>
@@ -52,7 +52,7 @@ His commitment to ethical practices and sustainability has set his company apart
 Overall, Dipan Das exemplifies how passion, integrity, and a focus on community can lead to remarkable success in the direct selling space.  </div>
         
         </div>
-        <div className='col-lg-3'>
+        <div className='col-lg-3 order-lg-2 order-1'>
         <img src={Dipan}  className='img-fluid' style={{padding:"4%"}}/>
          </div>
       </div>
