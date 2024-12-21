@@ -9,7 +9,7 @@ const Homepage = () => {
   const [referralleftLink, setReferralleftLink] = useState([]);
   const [referralrightLink, setReferralrightLink] = useState([]);
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-  const mySponsorId = sessionStorage.getItem("mySponsorId");
+  const sponsorId = sessionStorage.getItem("mySponsorId");
   const [copied, setCopied] = useState(false);
   const [copiedright , setCopiedright] = useState(false);
   const logIn = () => {
@@ -35,7 +35,7 @@ const Homepage = () => {
   };
   const dashboardData = async () => {
     try {
-      const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { mySponsorId });
+      const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { sponsorId });
       console.log(response.data);
       setData(response.data);
        
