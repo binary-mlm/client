@@ -37,6 +37,8 @@ const Login = () => {
           const { userId: userId } = res.data;
           const { name: name } = res.data;
           const { franchiseId: franchiseId } = res.data;
+          const { email: email } = res.data;
+          const { contactno: contactno } = res.data;
 
           Swal.fire({
             html: `
@@ -60,6 +62,8 @@ const Login = () => {
           sessionStorage.setItem("userid", userId);
           sessionStorage.setItem("username", name);
           sessionStorage.setItem("franchiseid", franchiseId);
+          sessionStorage.setItem("email", email);
+          sessionStorage.setItem("contactno", contactno);
           navigate("/franchise/dashboard");
         })
         .catch((err) => {

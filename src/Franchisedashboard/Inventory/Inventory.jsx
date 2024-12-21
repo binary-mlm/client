@@ -202,6 +202,10 @@ const Inventory = () => {
         productId: productId,
         quantity,
       }));
+      if (products.length === 0) {
+        swal("Oops!", "Please add at least one product.", "error");
+        return;
+      }
       console.log({
         userSponsorId,
         franchiseId,
@@ -327,8 +331,6 @@ const Inventory = () => {
                     
                     <input type="text"  className="form-control p-4 mb-2 w-100"
                           placeholder="Enter user Sponsor ID..." onChange={e => setuserSponsorId(e.target.value)} />
-                     
-                    
                     <div
                       className="pos-sidebar-body tab-content"
                       data-scrollbar="true"

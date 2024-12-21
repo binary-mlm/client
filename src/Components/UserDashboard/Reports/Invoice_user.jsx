@@ -81,7 +81,7 @@ const Invoice_user = () => {
                         support@myudbhab.in <i className="fa fa-envelope-o" />
                       </p>
                       <p>
-                        India <i className="fa fa-location-arrow" />
+                      Shakshi Appartment, Road no: 6, HB Town, Sodepur, Kol-700110 <i className="fa fa-location-arrow" />
                       </p>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ const Invoice_user = () => {
                   <div className="col-xs-8 col-sm-8 col-md-8 text-left">
                     <div className="receipt-right">
                       <p>Name: {username}</p>
-                      <p>Sponsor ID : {sponsorId}</p>
+                      <p>Udbhab ID : {sponsorId}</p>
                       <p>Mobile : {user_phone}</p>
                       {/* <p><b>Email :</b> {username}@gmail.com</p>
                   <p><b>Address :</b> New York, USA</p> */}
@@ -111,7 +111,7 @@ const Invoice_user = () => {
                       </span>
                       <br/>
                       <span className="ms-5 " style={{ fontSize: "16px" }}>
-                        Delivery mood: {order.deliveryMode}
+                      Pickup mode: {order.deliveryMode}
                       </span>
                     </div>
                   </div>

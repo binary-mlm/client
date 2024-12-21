@@ -10,6 +10,8 @@ const Userorderinvoice = () => {
   const { franchiseId, order } = location.state;
 
   const franchiseName = sessionStorage.getItem("username");
+  const franchiseemail = sessionStorage.getItem("email");
+  const franchisecontactno = sessionStorage.getItem("contactno");
 
   const total_Amount = order.products.reduce(
     (total, product) => total + product.totalAmount,
@@ -65,7 +67,10 @@ const Userorderinvoice = () => {
                     <div className="col-sm-12 text-center">
                       <img className="img-fuild" src={logo} width={140} />
                       <p className="mb-1">
-                        Indrira Nagar Sodepur, North 24 Parganas, Kolkata-700110
+                        Reg office: Indira Nagar Sodepur, North 24 Parganas, Kolkata-700110
+                      </p>
+                      <p className="mb-1">
+                      Corporate office: Shakshi Appartment, Road no: 6, HB Town, Sodepur, Kol-700110
                       </p>
                       <p className="mb-1">
                         <i className="uil uil-envelope-alt me-1"></i>Email:
@@ -109,9 +114,9 @@ const Userorderinvoice = () => {
                         <h5 className="font-size-15 mb-2">{franchiseName}</h5>
                         <p className="mb-1 fw-bold">ID: {franchiseId}</p>
                         <p className="mb-1">
-                          Email: srijani.banerjee2000@gmail.com
+                          Email: {franchiseemail}
                         </p>
-                        <p>Ph no: 8584062451</p>
+                        <p>Ph no: {franchisecontactno}</p>
                       </div>
                     </div>
                     <div className="col-sm-6 d-flex justify-content-end">
@@ -158,7 +163,7 @@ const Userorderinvoice = () => {
                           <tr>
                             <th className="text-start">Product Name</th>
                             <th className="text-center">Quantity</th>
-                            <th className="text-center">Price</th>
+                            <th className="text-center">Price(Including GST)</th>
                             <th className="text-center">Total Amount</th>
                           </tr>
                         </thead>

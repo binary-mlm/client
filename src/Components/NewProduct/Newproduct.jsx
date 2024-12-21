@@ -41,7 +41,7 @@ const Newproduct = () => {
   }, []);
 
   return (
-    <div className='newproduct'>
+    <div className='newproduct' id='newproduct'>
     
       <h4 className='p-3 fw-bold'>New Products</h4>
       

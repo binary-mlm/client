@@ -55,8 +55,8 @@ const Footer = () => {
              
             <div className="module-body">
               <ul className='list-unstyled'>
-                <li className="first"><a href="/login" title="Contact us">My Account</a></li>
-                <li><a href="/login" title="About us">Order History</a></li>
+                <li className="first"><a href="/login" title="My Account">My Account</a></li>
+                <li><a href="/login" title="Order History">Order History</a></li>
                 <li><a href="/login" title="faq">FAQ</a></li>
              
               </ul>
@@ -73,9 +73,9 @@ const Footer = () => {
             
             <div className="module-body">
               <ul className='list-unstyled'>
-                <li className="first"><a title="Your Account" href="/about">About us</a></li>
-                <li><a title="Information" href="/contactus">Customer Service</a></li>
-                <li><a title="Addresses" href="/managment">Company</a></li>
+                <li className="first"><a title="About us" href="/about">About us</a></li>
+                <li><a title="Customer Service" href="/contactus">Customer Service</a></li>
+                <li><a title="Company" href="/managment">Company</a></li>
                 
               </ul>
             </div>
@@ -91,11 +91,11 @@ const Footer = () => {
             
             <div className="module-body">
               <ul className='list-unstyled'>
-                <li className="first"><a href="#" title="About us">Execlusive product</a></li>
+                <li className="first"><a href="/#newproduct" title="Execlusive product">Execlusive product</a></li>
                 {/* <li><a href="#" title="Blog">Blog</a></li> */}
                 {/* <li><a href="#" title="Company">Company</a></li>
                 <li><a href="#" title="Investor Relations">Investor Relations</a></li> */}
-                <li className="last"><a href="/contactus" title="Suppliers">Contact Us</a></li>
+                <li className="last"><a href="/contactus" title="Contact Us">Contact Us</a></li>
               </ul>
             </div>
            

@@ -4,6 +4,16 @@ import React from 'react'
 import logo1 from "/Franchise/images/logo.png"
 import user from "/Franchise/images/faces/user.jpg"
 const Nav = () => {
+  const handleLogout =(e) =>{
+    e.preventDefault();
+    sessionStorage.removeItem('franchiseid');
+    sessionStorage.removeItem('userid');
+    sessionStorage.removeItem('email');
+    sessionStorage.removeItem('contactno');
+    localStorage.removeItem('token');
+    sessionStorage.removeItem('username');
+    window.location.assign("/franchise/login")
+  }
   const username = sessionStorage.getItem("username")
   return (
     <>
@@ -36,7 +46,7 @@ const Nav = () => {
         <div className="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
          
           <div className="dropdown-divider"></div>
-          <a className="dropdown-item" href="/franchise/login">
+          <a className="dropdown-item" onClick={handleLogout} >
             <i className="mdi mdi-logout me-2 text-primary"></i> Signout </a>
         </div>
       </li>

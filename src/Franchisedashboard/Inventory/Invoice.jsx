@@ -7,6 +7,9 @@ import { useLocation } from "react-router-dom";
 const Invoice = () => {
   const location = useLocation();
   const { franchiseId, order } = location.state;
+  const franchise_name = sessionStorage.getItem('username');
+  const franchise_email= sessionStorage.getItem('email');
+  const username= sessionStorage.getItem('username');
   
   
   const total_Amount = order.products.reduce(
@@ -66,9 +69,11 @@ const Invoice = () => {
                     <div className="col-sm-12 text-center">
                     <img className="img-fuild" src={logo} width={140} />
                     <p className="mb-1">
-                            Indrira Nagar Sodepur, North 24 Parganas,
-                            Kolkata-700110
-                          </p>
+                        Reg office: Indira Nagar Sodepur, North 24 Parganas, Kolkata-700110
+                      </p>
+                      <p className="mb-1">
+                      Corporate office: Shakshi Appartment, Road no: 6, HB Town, Sodepur, Kol-700110
+                      </p>
                           <p className="mb-1">
                             <i className="uil uil-envelope-alt me-1"></i>Email:
                             support@myudbhab.in
@@ -110,18 +115,20 @@ const Invoice = () => {
                         <div>
                           <h5 className="font-size-16 mb-1">From:</h5>
                           <h5 className="font-size-15 mb-2">
-                            Srijani Banerjee
+                            Udbhab Marketing Private Limited
                           </h5>
                           <p className="mb-1"></p>
                           <p className="mb-1">
-                            Email: srijani.banerjee2000@gmail.com
+                            Email: admin@myudbhab.in
                           </p>
-                          <p>Ph no: 8584062451</p>
+                          <p>Ph no: 7980964516</p>
                         </div>
                       </div>
                       <div className="col-sm-6 d-flex justify-content-end">
                         <div>
                           <h5 className="font-size-16 mb-1 ms-1">To:</h5>
+                          
+                          <span className="font-size-20 mb-2">{franchise_name}</span><br/>
                           <span className="font-size-20 mb-2">ID: {franchiseId}</span>
                           
                           {/* <p className="mb-1">Email: Subham@gmail.com</p>
@@ -132,14 +139,19 @@ const Invoice = () => {
 
                     <div className="py-2">
                       <h5 className="font-size-15 text-start">Order Summary</h5>
-
+                      <div className="row">
+                    <div className=" col-lg-3 col-md-6 col-sm-12 text-start font-size-13">Order Number: {order.orderDetails.orderNumber}</div>
+                    <span className=" col-lg-9 col-md-6 col-sm-12 text-end font-size-13">Order date:{new Date(
+                          order.orderDetails.orderDate
+                        ).toLocaleDateString()}</span>
+                        </div>
                       <div className="table-responsive">
                         <table className="table align-middle table-striped  mb-0 table-group-divider">
                           <thead>
                             <tr>
                               <th className="text-start">Product Name</th>
                               <th className="text-center">Quantity</th>
-                              <th className="text-center">Price</th>
+                              <th className="text-center">Price(Including GST)</th>
                               <th className="text-center">Total Amount</th>
                             </tr>
                           </thead>
