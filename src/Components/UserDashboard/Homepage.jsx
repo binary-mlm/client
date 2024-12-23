@@ -152,7 +152,7 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">TEAM SALES BONUS</span>
-                <br/>₹0
+                <br/>₹{data.teamSalesBonus}
                 {/* <br />L - {data.leftTreeUsersCount} | R - {data.rightTreeUsersCount} */}
               </div>
               <div className="card_item text-center ms-5 fw-bold">
