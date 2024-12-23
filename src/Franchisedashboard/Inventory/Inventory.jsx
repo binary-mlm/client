@@ -409,7 +409,7 @@ const Inventory = () => {
                           fontWeight: "bold",
                         }}
                       >
-                        No matching Sponsor ID found.
+                        No matching User ID found.
                       </div>
                     )}
 
