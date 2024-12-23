@@ -94,7 +94,7 @@ useEffect(() => {
               </div>
               <ul className=" list-unstyled bg-white mt-2" id='inputresult' style={{borderRadius:"5px"}}>
                 {products.map(product => ( 
-                    <a className="text-dark" href={`/productview/${product._id}`}><li  className="p-2" key={product._id}>{product === "No_product_found" ? 'No product found': product.name}</li></a>
+                    <a className="text-dark searchdata" href={`/productview/${product._id}`}><li  className="p-2 " key={product._id}>{product === "No_product_found" ? 'No product found': product.name}</li></a>
                 ))
                
                 }

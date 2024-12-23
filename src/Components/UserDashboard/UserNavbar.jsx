@@ -52,15 +52,23 @@ const UserNavbar = () => {
           </div>
 
           {/* Username Section */}
-          <div className="name">
-            <span className="h4 text-center fw-bold text-white welcome">
-              Welcome To User Dashboard
-            </span>
-            <br />
-            <span className=" text-center fw-bold text-white ms-4  idsponsor">
+          <div className="d-flex flex-column">
+            <div className="name">
+              <span className="h4 text-center fw-bold text-white welcome">
+                Welcome To User Dashboard
+              </span>
+              {/* <br />
+            <span className="text-center fw-bold text-white  idsponsor">
              
               My ID: {sponosorid}
-            </span>
+            </span> */}
+            </div>
+
+            <div className="name">
+              <span className="text-center fw-bold text-white  idsponsor">
+                My ID: {sponosorid}
+              </span>
+            </div>
           </div>
 
           {/* Logout Button */}
