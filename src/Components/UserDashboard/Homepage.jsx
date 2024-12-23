@@ -192,7 +192,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5 pe-4">
                 <span className="fw-bold">PERSONAL BV</span>
                 <br />
-                ₹{data.totalPersonalBVPoints}
+                {data.totalPersonalBVPoints}
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">TOTAL EARNING (₹)</span>
