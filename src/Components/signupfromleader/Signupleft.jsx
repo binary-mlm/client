@@ -167,7 +167,7 @@ else{
           .then(res => {
               console.log(res);
               swal("Thank You!", "Registration sucessfully completed!", "success");
-              navigate('/login');
+              navigate('/userdasboard/genealogy');
 
           })
           .catch(err => {

@@ -147,8 +147,13 @@ function emailHandler(e) {
 const sponsorId = sessionStorage.getItem("mySponsorId")
 console.log(sponsorId);
 const handleSubmit = async (event) => {
-  //  alert("sumit")
   event.preventDefault();
+  if (registrationType === "" || gender === "" || name === "" || dob === "" || mobileNumber === "" || email === "" || state === "" || district === "" || pincode === "" || address === "" || password === "" ){
+    swal("Opps!", "Please fill out all required fields!", "error");
+  }
+      
+  //  alert("sumit")
+  else{
   try {
     if (binaryposition === 'left') {
         // API call for left position
@@ -190,6 +195,7 @@ const handleSubmit = async (event) => {
 } catch (error) {
     console.error('Error in binary position API:', error);
     swal('Error', 'Failed to call the API. Please try again.', 'error');
+}
 }
 };
   
@@ -410,7 +416,7 @@ const handleSubmit = async (event) => {
                   </div>
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
-                      Whatsapp no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
+                      Whatsapp no
                     </label>
                     <div className="col-sm-9">
                       <input

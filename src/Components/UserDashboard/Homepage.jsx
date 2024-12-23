@@ -125,13 +125,13 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">ACCUMULATE BV</span>
-                <br />{data.totalBVPointsEarned.leftBV + data.totalBVPointsEarned.rightBV}
+                <br />{data.totalBVPointsEarned.leftBV} | {data.totalBVPointsEarned.rightBV}
                
               </div>
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">CAR ACHIEVEMENT BONUS</span>
+                <span className="fw-bold">RANK ACHIEVEMENT BONUS</span>
                 <br />
                 <span>0</span>
               </div>
@@ -140,13 +140,13 @@ const Homepage = () => {
                 <br />₹{data.directSalesBonus}
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold"> ACCUMULATED PERSONAL BV</span>
+                <span className="fw-bold"> MY TOTAL DIRECT TEAM BV</span>
                 <br /> {data.totalDirectBV.total}
               </div>
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">HOUSE ACHIEVEMENT BONUS</span>
+                <span className="fw-bold">CAR ACHIEVEMENT BONUS</span>
                 <br />
                 ₹0
               </div>
@@ -163,14 +163,14 @@ const Homepage = () => {
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">MONITORING BONUS</span>
+                <span className="fw-bold">HOUSE ACHIEVEMENT BONUS</span>
                 <br />
                 ₹0
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold"> MY TEAM BV (LBV + RBV)</span>
                 <br />
-                L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}
+              {data.totalBVPointsEarned.leftBV + data.totalBVPointsEarned.rightBV}
                
               </div>
               {/* <div className="card_item text-center ms-5">
@@ -185,12 +185,12 @@ const Homepage = () => {
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">RANK ACHIEVEMENT BONUS</span>
+                <span className="fw-bold">LIFETIME ROYALTY BONUS</span>
                 <br />
                 ₹0
               </div>
               <div className="card_item text-center ms-5 pe-4">
-                <span className="fw-bold">LIFETIME ROYALTY  BONUS</span>
+                <span className="fw-bold">PERSONAL BV</span>
                 <br />
                 ₹0
               </div>

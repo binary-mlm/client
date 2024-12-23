@@ -100,8 +100,8 @@ function App() {
       <Route path="/userdasboard/kycverification" element={<Dashboardlayout><Kycverification/></Dashboardlayout>}/>
       <Route path="/userdasboard/registration" element={<Dashboardlayout><Registration/></Dashboardlayout>}/>
       <Route path="/userdasboard/payoutmonthly" element={<Dashboardlayout><Payoutmonthly/></Dashboardlayout>}/>
-      <Route path="/signupleft/:parentSponsorId" element={<Userlayout><Signupleft/></Userlayout>}/>
-      <Route path="/signupright/:parentSponsorId" element={<Userlayout><Signupright/></Userlayout>}/>
+      <Route path="/signupleft/:parentSponsorId" element={<Dashboardlayout><Signupleft/></Dashboardlayout>}/>
+      <Route path="/signupright/:parentSponsorId" element={<Dashboardlayout><Signupright/></Dashboardlayout>}/>
       <Route path="/userdasboard/payoutinvoice" element={<Dashboardlayout><Payoutinvoice/></Dashboardlayout>}/>
       {/* for productview */}
       <Route path="/tulsiview" element={<Userlayout><Tulsiview/></Userlayout>} />

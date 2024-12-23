@@ -116,8 +116,12 @@ console.log(sponsorId);
 const handleSubmit = async (event) => {
   // alert("sumit")
   event.preventDefault();
- 
+  if (registrationType === "" || gender === "" || pincode === "" || name === "" || address === "" || district === "" || state === ""|| dob === "" || mobileNumber === ""  || email === "") {
+    swal("Opps!", "Please fill out all required fields!", "error");
 
+}
+ 
+else{
       await axios.post(ROOT_URL+'/api/auth/registerRight', { sponsorId, registrationType,  gender, 
         name, 
         dob,
@@ -133,7 +137,7 @@ const handleSubmit = async (event) => {
           .then(res => {
               console.log(res);
               swal("Thank You!", "Registration sucessfully completed!", "success");
-              navigate('/');
+              navigate('/userdasboard/genealogy');
 
           })
           .catch(err => {
@@ -142,6 +146,7 @@ const handleSubmit = async (event) => {
              
 
           })
+        }
   
 
 }
