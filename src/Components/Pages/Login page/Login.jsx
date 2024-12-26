@@ -105,7 +105,7 @@ const Login = () => {
                         {/* <h5 className="fw-normal mb-3 pb-3">Sign into your account</h5> */}
 
                         <div className="form-group  mb-4">
-                          <label className="mb-1" htmlFor="exampleInputEmail1">Your sponsor ID</label>
+                          <label className="mb-1" htmlFor="exampleInputEmail1">User ID</label>
                           <input type="text" className="form-control " name='sponsorId'  value={sponsorId} placeholder="Enter Your sponsor ID" onChange={e => setsponsorId(e.target.value)}  />
                           </div>
                         <div className="form-group mb-4">

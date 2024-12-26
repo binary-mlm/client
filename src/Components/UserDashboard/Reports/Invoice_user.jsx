@@ -26,7 +26,7 @@ const Invoice_user = () => {
       scale: 2, // Higher scale for better quality
     }).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "letter");
+      const pdf = new jsPDF("p", "mm", "a4");
 
       // Calculate width and height based on the A4 page size
       const pdfWidth = pdf.internal.pageSize.getWidth();
