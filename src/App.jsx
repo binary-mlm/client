@@ -20,6 +20,7 @@ import Idcard from "./Components/UserDashboard/Idcard";
 import Rankachive from "./Components/UserDashboard/Rankachive";
 
 import News from './Components/News/News';
+import Download from './Components/News/Download';
 import Kycverification from './Components/UserDashboard/Editprofile/Kycverification';
 import Usersignup from "./Components/Pages/Signup_page/Usersignup";
 import Ordernow from "./Components/Ordernow/Ordernow";
@@ -76,6 +77,7 @@ function App() {
       <Route path="/success_story" element={<Userlayout><Associate/></Userlayout>} />
       {/* <Route path="/manufacturing" element={<Userlayout><Manufacturing/></Userlayout>} /> */}
       <Route path="/News" element={<Userlayout><News/></Userlayout>} />
+      <Route path="/download" element={<Userlayout><Download/></Userlayout>} />
       <Route path="/product" element={<Userlayout><Product/></Userlayout>} />
       <Route path="/productlist" element={<Userlayout><Productlist/></Userlayout>} />
       <Route path="/managment" element={<Userlayout><Management/></Userlayout>} />

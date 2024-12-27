@@ -84,7 +84,7 @@ useEffect(() => {
 
                   <input
                     className="search-field"
-                    placeholder="Search here..."
+                    placeholder="Search any product here..."
                     value={query}
                     onChange={handleInputfieldChange}
                   />

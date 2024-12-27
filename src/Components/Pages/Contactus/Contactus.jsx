@@ -51,7 +51,7 @@ const Contactus = () => {
 </div>  
         </div>
         
-        <div className="col-md-4 contact-info">
+        <div className="col-md-4 contact-info " style={{backgroundColor: "rgb(225, 234, 227)"}}>
 	<div className="contact-title text-center mt-5">
   <h1 className="mb-3 text-center">Information</h1>
 	</div>
