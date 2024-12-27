@@ -194,7 +194,7 @@ const handleSubmit = async (event) => {
     }
 } catch (error) {
     console.error('Error in binary position API:', error);
-    swal('Error', 'Failed to call the API. Please try again.', 'error');
+    swal('Error', err.response.data.message , 'error');
 }
 }
 };

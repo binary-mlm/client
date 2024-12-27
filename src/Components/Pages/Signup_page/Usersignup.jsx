@@ -22,6 +22,9 @@ const Usersignup = () => {
 
     const [token, setToken] = useState(null);
     const [state, setSelectedState] = useState('');
+     const [mobilenoerror, setmobileerror] = useState(false);
+      const [emailerror, setemailerror] = useState(false)
+       const [wpmobileerror, setwpmobileerror] = useState(false)
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const navigate = useNavigate();
     const sponsorId = sessionStorage.getItem('sponosorid');
@@ -145,6 +148,34 @@ else{
   
 
 }
+function mobileHandler(e) {
+  let item = e.target.value;
+  if (item.length != 10) {
+      setmobileerror(true)
+  } else {
+      setmobileerror(false)
+  }
+}
+function isValidEmail(email) {
+  return /\S+@\S+\.\S+/.test(email);
+}
+function emailHandler(e) {
+  let item = e.target.value;
+  if (!isValidEmail(item)) {
+      setemailerror(true);
+  } else {
+      setemailerror(false);
+  }
+}
+function wp_mobileHandler(e) {
+  let item = e.target.value;
+  if (item.length != 10) {
+    setwpmobileerror(true)
+  } else {
+    setwpmobileerror(false)
+  }
+}
+
   return (
     <>
         <div className="container my-3">
@@ -160,7 +191,7 @@ else{
                     </h5>
                   </div>
               <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label for="staticEmail" className="col-sm-3 col-form-label">
                       User ID
                     </label>
                     <div className="col-sm-9">
@@ -212,7 +243,7 @@ else{
                       </div>
                     </div>
                   </div>
-                  <div class="mb-3 row">
+                  <div className="mb-3 row">
                     <label
                       
                       className="col-sm-3 col-form-label"
@@ -235,8 +266,8 @@ else{
                         
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
-                      <label class="form-check-label" htmlFor="inlineRadio2">
+                      <div className="form-check form-check-inline">
+                      <label className="form-check-label" htmlFor="inlineRadio2">
                           Female
                         <input
                           className="form-check-input"
@@ -250,11 +281,11 @@ else{
                         
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
-                      <label class="form-check-label" for="inlineRadio1">
+                      <div className="form-check form-check-inline">
+                      <label className="form-check-label" htmlFor="inlineRadio1">
                           Others
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="radio"
                           name="inlineRadioOptions"
                           id="inlineRadio1"
@@ -269,7 +300,7 @@ else{
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label ">
+                    <label for="staticEmail" className="col-sm-3 col-form-label ">
                       Name<sup><i className="fa fa-asterisk text-danger asterisk"></i></sup>
                     </label>
                     <div className="col-sm-9">
@@ -301,43 +332,48 @@ else{
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label for="staticEmail" className="col-sm-3 col-form-label">
                       Mobile no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="tel"
                         className="form-control-plaintext  bg-light textinput ps-2"
+                        onKeyUp={mobileHandler}
                         onChange={e => setmobileNumber(e.target.value)}
                         
                       />
+                       {mobilenoerror ? <span className='link-danger'>phone no invalid</span> : ""}
                     </div>
                   </div>
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label for="staticEmail" className="col-sm-3 col-form-label">
                       Whatsapp no
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="tel"
                         className="form-control-plaintext bg-light textinput ps-2"
+                        onKeyUp={wp_mobileHandler}
                         onChange={e => setwhatsappNumber(e.target.value)}
-                        
-                        
                       />
+                      {wpmobileerror ? <span className='link-danger'>phone no invalid</span> : ""}
                     </div>
                   </div>
                   <div className="mb-3 row">
-                    <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Email<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="email"
                         className="form-control-plaintext  bg-light textinput ps-2"
+                        onKeyUp={emailHandler}
                         onChange={e => setemail(e.target.value)}
+                      
                         
                       />
+                        {emailerror ? <span className='link-danger'>Email invalid</span> : ""}
                     </div>
                   </div>
                  
@@ -402,7 +438,7 @@ else{
                   </div>
                   {registrationType === 'Business Entity' && (
                   <div className="mb-3 row">
-                    <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       GST Number<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">

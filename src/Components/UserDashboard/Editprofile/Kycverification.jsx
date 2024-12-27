@@ -23,10 +23,15 @@ const Kycverification = () => {
   const navigate = useNavigate()
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const [kycStatus, setKycStatus] = useState("loading");
+  const MAX_FILE_SIZE_MB = 2; 
   const handleImageChange = (event, setPreview) => {
     const file = event.target.files[0];
     if (file) {
-     
+      const fileSizeInMB = file.size / (1024 * 1024); // Convert size to MB
+      if (fileSizeInMB > MAX_FILE_SIZE_MB) {
+        swal("Error!", `File size should be less than ${MAX_FILE_SIZE_MB}MB. Please select a smaller file.`, "error");
+        return; // Do not set the file if it exceeds the size limit
+      }
       setPreview(file); // Set the preview URL for the specific image
     }
   };
@@ -189,7 +194,7 @@ const Kycverification = () => {
                 <div><label className="upload w-100 p-2">Upload your Aadhar Card (Front Side) image</label></div>
                   <div className="imagePreview">
                     {aadharCardFront ? (
-                      <img src={URL.createObjectURL(aadharCardFront)} alt="Aadhar Front" className="img-thumbnail" />
+                      <img src={URL.createObjectURL(aadharCardFront)} alt="Aadhar Front"     className="img-thumbnail" />
                     ) : (
                       
                      <>
