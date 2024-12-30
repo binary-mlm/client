@@ -20,6 +20,7 @@ const Kycverification = () => {
   const [aadharCardFront, setaadharCardFront] = useState(null);
   const [aadharCardBack, setaadharCardBack] = useState(null);
   const [bankCard, setbankCard] = useState(null);
+  const [profilephoto, setprofilephoto] = useState(null);
   const navigate = useNavigate()
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const [kycStatus, setKycStatus] = useState("loading");
@@ -49,7 +50,7 @@ const Kycverification = () => {
       panCardFront,
       aadharCardFront,
       aadharCardBack,
-      bankCard },{
+      bankCard,profilephoto },{
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -167,14 +168,14 @@ const Kycverification = () => {
                 </div>
               </div>
               <h5 id="note_details" className="mt-3 text-center">NOTE: After submit you have to upload all 4 images below. Otherwise your KYC will not be accepted by us.</h5>
-              <div className="row" style={{ width: "123%" }}>
+              <div className="row">
                 {/* PAN Card Front Preview */}
 
-                <div className="col-md-3 imgUp">
+                <div className="col-md-4 imgUp">
                 <div><label className="upload w-100 p-2">Upload your PAN Card (Front Side) image</label></div>
                   <div className="imagePreview">
                     {panCardFront ? (
-                      <img src={URL.createObjectURL(panCardFront)} alt="Pan Front" className="img-thumbnail" />
+                      <img src={URL.createObjectURL(panCardFront)}   alt="Pan Front" className="img-thumbnail" />
                     ) : (
                       
                      <>
@@ -190,7 +191,7 @@ const Kycverification = () => {
               
 
                 {/* Aadhar Front Preview */}
-                <div className="col-md-3 imgUp">
+                <div className="col-md-4 imgUp">
                 <div><label className="upload w-100 p-2">Upload your Aadhar Card (Front Side) image</label></div>
                   <div className="imagePreview">
                     {aadharCardFront ? (
@@ -209,7 +210,7 @@ const Kycverification = () => {
                 </div>
 
                 {/* Aadhar Back Preview */}
-                <div className="col-md-3 imgUp">
+                <div className="col-md-4 imgUp">
                 <div><label className="upload w-100 p-2">Upload your Aadhar Card (Back) image</label></div>
                   <div className="imagePreview">
                     {aadharCardBack ? (
@@ -226,7 +227,7 @@ const Kycverification = () => {
                 </div>
 
                 {/* Bank Card Preview */}
-                <div className="col-md-3 imgUp">
+                <div className="col-md-4 imgUp mt-5">
                 <div><label className="upload w-100 p-2">Upload Bank Passbook (Passbook/Cancel Cheque)</label></div>
                   <div className="imagePreview">
                     {bankCard ? (
@@ -241,6 +242,24 @@ const Kycverification = () => {
                  
                     <div>
                     <input type="file" className="uploadFile img mt-2" onChange={(e) => handleImageChange(e, setbankCard)} />
+                    </div>
+                </div>
+                {/* profilephoto */}
+                <div className="col-md-4 imgUp mt-5">
+                <div><label className="upload w-100 p-3">Upload profile photo</label></div>
+                  <div className="imagePreview">
+                    {profilephoto ? (
+                      <img  src={URL.createObjectURL(profilephoto)} alt="profile photo" className="img-thumbnail" />
+                    ) : (
+                      
+                     <>
+                      <span>noimage</span>
+                     </>
+                    )}
+                  </div>
+                 
+                    <div>
+                    <input type="file" className="uploadFile img mt-2" onChange={(e) => handleImageChange(e, setprofilephoto)} />
                     </div>
                 </div>
               </div>

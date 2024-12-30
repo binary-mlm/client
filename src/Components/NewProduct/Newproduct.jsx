@@ -42,11 +42,14 @@ const Newproduct = () => {
 
   return (
     <>
-     <div className='row mt-1 '>
-      <h4 className=' col-md-2 col-sm-4  mt-4 fw-bold'>New Products</h4>
-      <div className=' col-md-10 col-sm-8 h6 text-end mt-4  '>
-        <a href='/allproduct' className='fw-bold text-decoration-none text-dark'><span className='text-success'>See all products</span><i className="fa fa-arrow-circle-right" style={{marginLeft:"1%"}}></i></a>
-      </div>
+    <div className="row align-items-center mb-3 mt-3">
+        <h4 className="col-6 fw-bold">New Products</h4>
+        <div className="col-6 text-end">
+          <a href="/allproduct" className="fw-bold text-decoration-none text-dark">
+            <span className="text-success">See all products</span>
+            <i className="fa fa-arrow-circle-right ms-2"></i>
+          </a>
+        </div>
       </div>
     <div className='newproduct' id='newproduct'>
       <ProductCarousel products={products} />
