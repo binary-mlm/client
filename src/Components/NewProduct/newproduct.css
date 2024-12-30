@@ -1,3 +1,6 @@
 .newproduct{
     background-color: white;
 }
+.all_product :hover{
+    color: green;
+}

@@ -1,0 +1,16 @@
+.category .side-menu .head{
+background-color: #095444;
+padding: 7%;
+color: white;
+border-radius: 10px;
+font-size: 18px;
+}
+.category .side-menu .item :hover{
+    cursor: pointer;
+
+}
+
+.category .side-menu .menu-item :hover{
+    cursor: pointer;
+
+}

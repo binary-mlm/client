@@ -42,16 +42,17 @@ import Payoutweekly from "./Components/UserDashboard/Payout/Payoutweekly";
 import Registration from "./Components/signupfromleader/Registration";
 
 // products
-import Tulsiview from "./Components/Productview/Tulsiview";
-import Booster from "./Components/Productview/Booster";
-import Shampooview from "./Components/Productview/Shampooview";
-import Herbaltea from "./Components/Productview/Herbaltea";
-import Facewash from "./Components/Productview/Facewash";
-import Soapprenium from './Components/Productview/Soapprenium';
-import Applesoap from './Components/Productview/Applesoap';
+// import Tulsiview from "./Components/Productview/Tulsiview";
+// import Booster from "./Components/Productview/Booster";
+// import Shampooview from "./Components/Productview/Shampooview";
+// import Herbaltea from "./Components/Productview/Herbaltea";
+// import Facewash from "./Components/Productview/Facewash";
+// import Soapprenium from './Components/Productview/Soapprenium';
+// import Applesoap from './Components/Productview/Applesoap';
 import Invoice_user from './Components/UserDashboard/Reports/Invoice_user';
 import Payoutmonthly from './Components/UserDashboard/Payout/Payoutmonthly';
 import Payoutinvoice from './Components/UserDashboard/Payout/Payoutinvoice';
+import Allproducts from "./Components/Productview/Allproducts";
 
 function App() {
   return (
@@ -73,7 +74,7 @@ function App() {
       <Route path="/ordernow" element={<Userlayout><Ordernow/></Userlayout>} />
       <Route path="/usersignup" element={<Userlayout><Usersignup/></Userlayout>} />
       <Route path="/productview/:id" element={<Userlayout><Productview/></Userlayout>} />
-      <Route path="/productview" element={<Userlayout><Productview/></Userlayout>} />
+      <Route path="/allproduct" element={<Userlayout><Allproducts/></Userlayout>} />
       <Route path="/success_story" element={<Userlayout><Associate/></Userlayout>} />
       {/* <Route path="/manufacturing" element={<Userlayout><Manufacturing/></Userlayout>} /> */}
       <Route path="/News" element={<Userlayout><News/></Userlayout>} />
@@ -106,13 +107,13 @@ function App() {
       <Route path="/signupright/:parentSponsorId" element={<Dashboardlayout><Signupright/></Dashboardlayout>}/>
       <Route path="/userdasboard/payoutinvoice" element={<Dashboardlayout><Payoutinvoice/></Dashboardlayout>}/>
       {/* for productview */}
-      <Route path="/tulsiview" element={<Userlayout><Tulsiview/></Userlayout>} />
+      {/* <Route path="/tulsiview" element={<Userlayout><Tulsiview/></Userlayout>} />
       <Route path="/booster" element={<Userlayout><Booster/></Userlayout>} />
       <Route path="/shampooview" element={<Userlayout><Shampooview/></Userlayout>} />
       <Route path="/herbaltea" element={<Userlayout><Herbaltea/></Userlayout>} />
       <Route path="/Facewash" element={<Userlayout><Facewash/></Userlayout>} />
       <Route path="/soapprenium" element={<Userlayout><Soapprenium/></Userlayout>} />
-      <Route path="/applesoap" element={<Userlayout><Applesoap/></Userlayout>} />
+      <Route path="/applesoap" element={<Userlayout><Applesoap/></Userlayout>} /> */}
       <Route path='*' element={<div className='text-center h1 mt-5'>page not found</div>}/>
       </Routes>
     </Router>

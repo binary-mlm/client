@@ -25,10 +25,6 @@ const Home = () => {
      <Category/>
      <Upcomingnews/>
      <img src={add1} width={300}/>
-
-
-    
-   
      </div>
      <div className="col-xs-12 col-sm-12 col-md-9 homebanner-holder"> 
      <Banner/>

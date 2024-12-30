@@ -1,14 +1,15 @@
 import React from 'react'
 import "../assets/css/main.css";
 
+
 const Category = () => {
   return (
     <>
         <div className="side-menu animate-dropdown outer-bottom-xs">
           <div className="head"><i className="icon fa fa-align-justify fa-fw"></i> Categories</div>
-          <nav className="yamm megamenu-horizontal">
+          <nav className="yamm megamenu-horizontal bg-white">
             <ul className="nav">
-              <li className="item p-3"> <a href="#" className="text-decoration-none"><i className="icon fa fa-hand-o-right" aria-hidden="true"></i>Personal Care</a>
+              <li className="item p-3"> <a href="/allproduct?category=personal care" className="text-decoration-none"><i className="icon fa fa-hand-o-right" aria-hidden="true"></i>Personal Care</a>
                 {/* <ul className="dropdown-menu mega-menu">
                   <li className="yamm-content">
                     <div className="row">
@@ -62,17 +63,17 @@ const Category = () => {
               </li>
              
               
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-heartbeat"></i>Health Care</a>
+              <li className="dropdown menu-item p-3"> <a href="/allproduct?category= Health care" className=" text-decoration-none"><i className="icon fa fa-heartbeat"></i>Health Care</a>
              
                 </li>
           
               
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-home"></i>Home Care</a>
+              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none"><i className="icon fa fa-home"></i>Home Care</a>
               <span className="blink inline-badge" >Coming soon!</span>
               </li>
             
               
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-bs-toggle="dropdown"><i className="icon fa fa-shopping-cart"></i>Grocery</a>
+              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" ><i className="icon fa fa-shopping-cart"></i>Grocery</a>
               <span className="blink inline-badge" >Coming soon!</span>
                 </li>
              

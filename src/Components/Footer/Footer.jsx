@@ -91,7 +91,7 @@ const Footer = () => {
             
             <div className="module-body">
               <ul className='list-unstyled'>
-                <li className="first"><a href="/#newproduct" title="Execlusive product">Execlusive product</a></li>
+                <li className="first"><a href="/allproduct" title="Execlusive product">Execlusive product</a></li>
                 {/* <li><a href="#" title="Blog">Blog</a></li> */}
                 {/* <li><a href="#" title="Company">Company</a></li>
                 <li><a href="#" title="Investor Relations">Investor Relations</a></li> */}
