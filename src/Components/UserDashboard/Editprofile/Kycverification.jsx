@@ -156,13 +156,13 @@ const Kycverification = () => {
                 <div className="row row-xs align-items-center mg-b-20 mb-3">
                   <div className="col-md-6">
                     <input className="form-control mt-2 ms-2" name="your_bankname_mk" placeholder="Enter Your Bank Name" type="text" required onChange={e =>setbankname(e.target.value)} />
-                    <input className="form-control mt-2 ms-2" name="your_accountno_mk" placeholder="Enter Your Bank A/c Number" type="number" required onChange={e =>setaccountNumber(e.target.value)}/>
+                    <input className="form-control mt-2 ms-2" name="your_accountno_mk" placeholder="Enter Your Bank A/c Number" type="text" required onChange={e =>setaccountNumber(e.target.value)}/>
                     <input className="form-control mt-2 ms-2" name="your_pan_no_mk" placeholder="Enter Your PAN" type="text" required onChange={e =>setpanCard(e.target.value)} />
                   </div>
                   <div className="col-md-6">
                     <input className="form-control mt-2" name="your_branchname_mk" placeholder="Enter Your Branch Name" type="text" required onChange={e =>setbranchName(e.target.value)} />
                     <input className="form-control mt-2 me-2" name="your_ifsccode_mk" placeholder="Enter Your IFSC" type="text" required onChange={e =>setifscCode(e.target.value)}/>
-                    <input className="form-control mt-2 me-2" name="your_aadhar_no_mk" placeholder="Enter Your AADHAR" type="number" required onChange={e =>setaadharCard(e.target.value)} />
+                    <input className="form-control mt-2 me-2" name="your_aadhar_no_mk" placeholder="Enter Your AADHAR" type="text" required onChange={e =>setaadharCard(e.target.value)} />
                   </div>
                 </div>
               </div>
