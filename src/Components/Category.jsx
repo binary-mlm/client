@@ -66,14 +66,11 @@ const Category = () => {
               <li className=" menu-item p-3"> <a href="/allproduct?category= Health care" className=" text-decoration-none"><i className="icon fa fa-heartbeat"></i>Health Care</a>
              
                 </li>
-          
-              
+           
               <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none"><i className="icon fa fa-home"></i>Home Care</a>
               <span className="blink inline-badge" >Coming soon!</span>
               </li>
-            
-              
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" ><i className="icon fa fa-shopping-cart"></i>Grocery</a>
+             <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" ><i className="icon fa fa-shopping-cart"></i>Grocery</a>
               <span className="blink inline-badge" >Coming soon!</span>
                 </li>
              
@@ -81,12 +78,7 @@ const Category = () => {
               {/* <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" data-toggle="dropdown"><i className="icon fa fa-paper-plane"></i>Kids and Babies</a> 
                </li> */}
              
-              
-              
-              
-              
-             
-              
+      
             </ul>
          
           </nav>
