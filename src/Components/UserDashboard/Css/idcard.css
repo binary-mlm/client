@@ -1,5 +1,5 @@
 .background{
-    background-image: url('../../../assets/images/1.png');  
+    background-image: url('../../../assets/images/1.jpg');  
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -32,7 +32,7 @@
     position: absolute;
     margin-top: 10px;
     top: 60%; 
-    margin-left: 9%;/* Adjust this value to move the text to the desired vertical position */
+    margin-left: 8%;/* Adjust this value to move the text to the desired vertical position */
     font-size: 15px;
     color: #000; /* Text color (choose based on background) */
      /* Optional background for contrast */
@@ -72,4 +72,16 @@
     font-size: 15px;
     color: #000; /* Text color (choose based on background) */
     padding: 10px 20px; 
+  }
+  .image-container{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+  .image_user{
+   
+    width: 25%;
+    height: 25%;
+    border-radius: 20%;
+   
   }

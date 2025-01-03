@@ -1,11 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef , useState , useEffect} from "react";
 import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import "./Css/idcard.css";
 const Idcard = () => {
   const invoiceRef = useRef();
+  const [userphoto, setUserphoto] = useState(null);
 
+
+ ;
   const downloadPDF = () => {
     const input = invoiceRef.current;
 
@@ -19,9 +22,24 @@ const Idcard = () => {
       pdf.save("Myidcard.pdf"); // You can customize the name of the file
     });
   };
+  const ROOT_URL= import.meta.env.VITE_LOCALHOST_URL;
   const username = sessionStorage.getItem("username");
-  const sponsorId = sessionStorage.getItem("mySponsorId");
+  const mySponsorId = sessionStorage.getItem("mySponsorId");
   const contactNumber = sessionStorage.getItem("usermobilenumber");
+
+  useEffect(() => {
+    if(mySponsorId){
+      axios.post(ROOT_URL + `/api/user/profilephoto`,{ mySponsorId })
+      .then((res) => {
+         console.log(res);
+        setUserphoto(res.data.profilephoto);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+
+  })
   return (
     <div>
       <div className="d-flex justify-content-end">
@@ -40,6 +58,21 @@ const Idcard = () => {
       <div className="row">
       <div className="col-lg-4 offset-lg-2 col-sm-12">
       <div className="background">
+      <div className="image-container">
+      {
+        userphoto? (
+          <img src={userphoto}  className="image_user" style={{ width: "18%" }} />
+        ) : (
+          <img
+            src=""
+           
+            alt="No image"
+            style={{ width: "25%%" }}
+          />
+        )  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image
+      }
+        
+      </div>
       <div className="username-container">
       <div className="d-flex">
       <div>Name: </div>
@@ -49,7 +82,7 @@ const Idcard = () => {
       <div className="userid-container">
       <div className="d-flex mt-2">
       <div className="">User ID:</div>
-      <div className="ms-1"> {sponsorId}</div>
+      <div className="ms-1"> {mySponsorId}</div>
       </div>
       </div>    
             </div>
@@ -79,9 +112,10 @@ const Idcard = () => {
       <div className="office-container">
 
       <div>Udbhab Marketing Pvt Ltd.</div>
-      <div>Indrira nagar Sodepur,</div>
-      <div> North 24 Parganas</div>
-      <div>Kolkata-700110</div>
+      <div>Shakshi Appartment, Ground floor</div>
+      <div>Road no: 6, HB Town,Sodepur, </div>
+      <div>North 24 Parganas, Kolkata-700110</div>
+      <div>Contact No:+(91)7980964516</div>
       <div>
       </div>
       </div>     
