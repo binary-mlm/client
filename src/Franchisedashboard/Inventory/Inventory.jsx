@@ -121,18 +121,18 @@ const Inventory = () => {
       <div key={item.productId} className="ms-4 mb-3">
         <div className="card ">
           <div className="row">
-            <div className="col-md-4 col-sm-12">
+            <div className="col-md-4 col-sm-12 imageitem">
               <img
                 className="img-fluid mt-2 ms-2"
                 src={item.productImage}
                 style={{ width: "150px", height: "100px", objectFit: "cover" }}
               />
             </div>
-            <div className="col-md-6 col-sm-12  mb-1 mt-4 ">
+            <div className="col-md-6 col-sm-12  mb-1 mt-4 itemdetails">
               <div className="h5">{item.productName}</div>
               <span className=" h6 ms-1 fw-bold mt-2">Price: {item.price}</span>
             </div>
-            <div className="col-md-2 col-sm-12  mb-1 mt-4 ">
+            <div className="col-md-2 col-sm-12  mb-1 mt-4 deleteitem ">
               <i
                 className="fa fa-trash-o"
                 onClick={() => removeItemFromCart(item.productId)}
@@ -419,11 +419,14 @@ const Inventory = () => {
                       className="pos-sidebar-body tab-content"
                       data-scrollbar="true"
                     >
-                      <div
+                      <div  className="scrollbar" 
                         style={{
                           maxHeight: "300px",
-                          overflowY: "auto",
+                            overflow: "overlay",
                           paddingRight: "15px",
+                          boxSizing: "content-box",
+                          width:"400px"
+                         
                         }}
                       >
                         {renderCartItems()}

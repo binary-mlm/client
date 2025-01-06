@@ -20,6 +20,9 @@
 .handlesubmitbutton:hover{
   background-color: #134b44;
 }
+.scrollbar{
+   width: 400px
+}
 /* Inventory component mobile responsiveness */
 
 /* Ensure cards and cart items are more compact on mobile */
@@ -48,7 +51,18 @@
     .pos .pos-menu {
        margin-top: -65%;
     }
-  
+    .scrollbar{
+      width: 94% !important
+   }
+   .deleteitem{
+    margin-left: 43%;
+   }
+  .imageitem{
+    text-align: center;
+  }
+  .itemdetails{
+    text-align: center;
+  }
     /* Toggle button for sidebar visibility */
    
   }
