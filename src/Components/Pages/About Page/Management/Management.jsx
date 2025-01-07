@@ -47,8 +47,8 @@ const Management = () => {
         <div className='team-title'>
          Kesto Das
         </div>
-        <div className='designation mt-2' >Co-founder & Director</div><br/>
-        <div className='team-text' style={{textAlign:"justify"}}>Kesto Das, co-founder of Udbhab Marketing Pvt. Ltd., is a visionary leader with 16 years of expertise in business strategy, trading, and marketing. He has been instrumental in shaping the company's vision and leveraging technology to enhance direct selling through digital tools. Under his leadership, the company creates opportunities for individuals to achieve financial independence and personal growth as independent distributors.
+        <div className='designation mt-2' >Chief Executive Officer (CEO)</div><br/>
+        <div className='team-text' style={{textAlign:"justify"}}>Kesto Das, Chief executive officer of Udbhab Marketing Pvt. Ltd., is a visionary leader with 16 years of expertise in business strategy, trading, and marketing. He has been instrumental in shaping the company's vision and leveraging technology to enhance direct selling through digital tools. Under his leadership, the company creates opportunities for individuals to achieve financial independence and personal growth as independent distributors.
 
 Kesto advocates for entrepreneurship that empowers people to unlock their potential while emphasizing ethical practices and sustainability. His innovative approach and focus on community engagement have earned trust and respect from consumers and distributors. A passionate mentor, Kesto shares insights through workshops and seminars, inspiring others to pursue entrepreneurial success.
 
