@@ -4,6 +4,7 @@ import "./management.css"
 import kushal from "../../../../assets/images/kushal.jpg";
 import Dipan from "../../../../assets/images/dipan.jpg";
 import sourav from "../../../../assets/images/sourav.jpg";
+import kesto from "../../../../assets/images/kesto.png";
 
 const Management = () => {
   return (
@@ -44,6 +45,24 @@ const Management = () => {
       <div className='row cardteam mb-2'>
         <div className='col-lg-9 order-lg-1 order-2'>
         <div className='team-title'>
+         Kesto Das
+        </div>
+        <div className='designation mt-2' >Co-founder & Director</div><br/>
+        <div className='team-text' style={{textAlign:"justify"}}>Kesto Das, co-founder of Udbhab Marketing Pvt. Ltd., is a visionary leader with 16 years of expertise in business strategy, trading, and marketing. He has been instrumental in shaping the company's vision and leveraging technology to enhance direct selling through digital tools. Under his leadership, the company creates opportunities for individuals to achieve financial independence and personal growth as independent distributors.
+
+Kesto advocates for entrepreneurship that empowers people to unlock their potential while emphasizing ethical practices and sustainability. His innovative approach and focus on community engagement have earned trust and respect from consumers and distributors. A passionate mentor, Kesto shares insights through workshops and seminars, inspiring others to pursue entrepreneurial success.
+
+With a strong commitment to fostering innovation, Kesto has introduced groundbreaking initiatives to streamline operations and strengthen distributor networks. His dedication to continuous improvement ensures Udbhab Marketing remains at the forefront of the industry. Kesto’s belief in collaborative success makes him a driving force behind the company’s long-term growth and impact. </div>
+      </div>
+      <div className='col-lg-3 order-lg-2 order-1'>
+        <img src={kesto}  className='img-fluid' style={{padding:"4%"}}/>
+        </div></div>
+      <div className='row cardteam mb-2'>
+      <div className='col-lg-3'>
+        <img src={Dipan}  className='img-fluid' style={{padding:"4%"}}/>
+         </div>
+        <div className='col-lg-9'>
+        <div className='team-title'>
         Dipan Das
         </div>
         <div className='designation mt-2'>Co-founder & Director</div><br/>
@@ -52,22 +71,21 @@ His commitment to ethical practices and sustainability has set his company apart
 Overall, Dipan Das exemplifies how passion, integrity, and a focus on community can lead to remarkable success in the direct selling space.  </div>
         
         </div>
-        <div className='col-lg-3 order-lg-2 order-1'>
-        <img src={Dipan}  className='img-fluid' style={{padding:"4%"}}/>
-         </div>
+       
       </div>
       <div className='row cardteam mb-2'>
-        <div className='col-lg-3'>
-        <img src={sourav}  className='img-fluid' style={{padding:"4%"}}/>
-        
-        </div>
-        <div className='col-lg-9'>
+       
+        <div className='col-lg-9 order-lg-1 order-2'>
         <div className='team-title'>
         Sourav Basak
         </div>
         <div className='designation mt-2' >Co-founder & Director</div><br/>
         <div className='team-text' style={{textAlign:"justify"}}>Sourav Basak is the tech backbone of Udbhab marketing pvt. ltd., He plays a crucial role in modern technological innovation and digital transformation in previous. With a strong background in software development and IT strategy, Sourav is responsible for overseeing the company’s technology initiatives, ensuring that they align with business goals. He focuses on developing robust digital platforms that enhance the direct selling experience for distributors and customers alike. Sourav is dedicated to leveraging emerging technologies, such as data analytics and automation, to streamline operations and improve efficiency.Under his guidance, the company has flourished by focusing on comprehensive training and mentorship programs for its distributors. Sourav emphasizes the importance of personal growth alongside business success, helping individuals not only enhance their sales skills but also develop leadership qualities.
         His vision includes leveraging technology to create a more accessible and engaging platform for distributors, allowing them to connect with one another and access resources easily. Sourav is also passionate about promoting ethical practices, ensuring that the company operates transparently and sustainably. </div>
+        </div>
+        <div className='col-lg-3 order-lg-2 order-1'>
+        <img src={sourav}  className='img-fluid' style={{padding:"4%"}}/>
+        
         </div>
       </div>
       </div>
