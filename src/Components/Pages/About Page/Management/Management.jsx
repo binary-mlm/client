@@ -48,11 +48,11 @@ const Management = () => {
          Kesto Das
         </div>
         <div className='designation mt-2' >Chief Executive Officer (CEO)</div><br/>
-        <div className='team-text' style={{textAlign:"justify"}}>Kesto Das, Chief executive officer of Udbhab Marketing Pvt. Ltd., is a visionary leader with 16 years of expertise in business strategy, trading, and marketing. He has been instrumental in shaping the company's vision and leveraging technology to enhance direct selling through digital tools. Under his leadership, the company creates opportunities for individuals to achieve financial independence and personal growth as independent distributors.
+        <div className='team-text' style={{textAlign:"justify"}}>Kesto Das, Chief executive officer of Udbhab Marketing Pvt. Ltd., with 16 years of expertise in business strategy, trading, and marketing. He has been instrumental in shaping the company's vision and leveraging technology to enhance direct selling through digital tools. Under his leadership, the company creates opportunities for individuals to achieve financial independence and personal growth as independent distributors.
 
-Kesto advocates for entrepreneurship that empowers people to unlock their potential while emphasizing ethical practices and sustainability. His innovative approach and focus on community engagement have earned trust and respect from consumers and distributors. A passionate mentor, Kesto shares insights through workshops and seminars, inspiring others to pursue entrepreneurial success.
+Kesto Das advocates for entrepreneurship that empowers people to unlock their potential while emphasizing ethical practices and sustainability. His innovative approach and focus on community engagement have earned trust and respect from consumers and distributors. A passionate mentor, Kesto Das shares insights through workshops and seminars, inspiring others to pursue entrepreneurial success.
 
-With a strong commitment to fostering innovation, Kesto has introduced groundbreaking initiatives to streamline operations and strengthen distributor networks. His dedication to continuous improvement ensures Udbhab Marketing remains at the forefront of the industry. Kesto’s belief in collaborative success makes him a driving force behind the company’s long-term growth and impact. </div>
+With a strong commitment to fostering innovation, Kesto Das has introduced groundbreaking initiatives to streamline operations and strengthen distributor networks. His dedication to continuous improvement ensures Udbhab Marketing remains at the forefront of the industry. Kesto Das’s belief in collaborative success makes him a driving force behind the company’s long-term growth and impact. </div>
       </div>
       <div className='col-lg-3 order-lg-2 order-1'>
         <img src={kesto}  className='img-fluid' style={{padding:"4%"}}/>
