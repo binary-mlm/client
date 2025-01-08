@@ -42,8 +42,8 @@ const Invoice = () => {
       const finalHeight = imgHeight * ratio;
 
       // Add image to PDF with calculated dimensions
-      pdf.addImage(imgData, "PNG", 0, 0, finalWidth, finalHeight);
-      pdf.save("invoice.pdf");
+      pdf.addImage(imgData, "PNG", 0, 0, finalWidth, finalHeight ,undefined, "FAST");
+      pdf.save("invoice.pdf",{ optimize: true });
       // alert("PDF successfully saved");
     });
   };
