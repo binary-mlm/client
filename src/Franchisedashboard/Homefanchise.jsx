@@ -56,7 +56,7 @@ const Homefanchise = () => {
           toggleSidebar={() => setSidebarOpen(!isSidebarOpen)}
         />
 
-        <div className="main-panel mt-5">{renderPage()}</div>
+        <div className="main-panel">{renderPage()}</div>
       </div>
     </>
   );

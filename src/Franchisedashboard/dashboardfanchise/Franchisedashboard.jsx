@@ -29,8 +29,8 @@ const Franchisedashboard = () => {
              
             </div>
             <div className="row">
-              <div className="col-md-3 stretch-card grid-margin">
-                <div className="card bg-gradient-danger card-img-holder text-white">
+              <div className="col-md-4 stretch-card grid-margin">
+                <div className="card bg-gradient-info card-img-holder text-white">
                   <div className="card-body">
                     {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
                     <h4 className="font-weight-normal mb-3">Monthly Sales <i className="mdi mdi-chart-line mdi-24px float-end"></i>
@@ -40,7 +40,41 @@ const Franchisedashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 stretch-card grid-margin">
+              {/* <div className="col-md-3 stretch-card grid-margin">
+                <div className="card bg-gradient-info card-img-holder text-white">
+                  <div className="card-body">
+                    
+                    <h4 className="font-weight-normal mb-3">Total sales<i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>
+                    </h4>
+                    <h2 className="mb-5">₹{pupdashboarddata.totalSalesAmount}</h2>
+                   
+                  </div>
+                </div>
+              </div> */}
+              <div className="col-md-4 stretch-card grid-margin">
+                <div className="card bg-gradient-info card-img-holder text-white">
+                  <div className="card-body">
+                    {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
+                    <h4 className="font-weight-normal mb-3">Monthly order<i className="mdi mdi-diamond mdi-24px float-end"></i>
+                    </h4>
+                    <h2 className="mb-5">{pupdashboarddata.totalOrdersInMonth}</h2>
+                   
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 stretch-card grid-margin">
+                <div className="card bg-gradient-success card-img-holder text-white">
+                  <div className="card-body">
+                    {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
+                    <h4 className="font-weight-normal mb-3">Available stock<i className="mdi mdi-diamond mdi-24px float-end"></i>
+                    </h4>
+                    <h2 className="mb-5">₹{pupdashboarddata.availableStocksValue}</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+            <div className="col-md-6 stretch-card grid-margin">
                 <div className="card bg-gradient-info card-img-holder text-white">
                   <div className="card-body">
                     
@@ -51,53 +85,19 @@ const Franchisedashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 stretch-card grid-margin">
-                <div className="card bg-gradient-success card-img-holder text-white">
+              <div className="col-md-6 stretch-card grid-margin">
+                <div className="card bg-gradient-info card-img-holder text-white">
                   <div className="card-body">
-                    {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
-                    <h4 className="font-weight-normal mb-3">Monthly order<i className="mdi mdi-diamond mdi-24px float-end"></i>
+                    
+                    <h4 className="font-weight-normal mb-3">Total order<i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>
                     </h4>
-                    <h2 className="mb-5">{pupdashboarddata.totalOrdersInMonth}</h2>
+                    <h2 className="mb-5">{pupdashboarddata.totalOrders}</h2>
                    
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 stretch-card grid-margin">
-                <div className="card bg-gradient-success card-img-holder text-white">
-                  <div className="card-body">
-                    {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
-                    <h4 className="font-weight-normal mb-3">Available stock<i className="mdi mdi-diamond mdi-24px float-end"></i>
-                    </h4>
-                    <h2 className="mb-5">₹{pupdashboarddata.availableStocksValue}</h2>
-                    
-                  </div>
-                </div>
-              </div>
+              
             </div>
-            {/* <div className="row">
-              <div className="col-md-7 grid-margin stretch-card">
-                <div className="card">
-                  <div className="card-body">
-                    <div className="clearfix">
-                      <h4 className="card-title float-start">Visit And Sales Statistics</h4>
-                      <div id="visit-sale-chart-legend" className="rounded-legend legend-horizontal legend-top-right float-end"></div>
-                    </div>
-                    <canvas id="visit-sale-chart" className="mt-4"></canvas>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-5 grid-margin stretch-card">
-                <div className="card">
-                  <div className="card-body">
-                    <h4 className="card-title">Traffic Sources</h4>
-                    <div className="doughnutjs-wrapper d-flex justify-content-center">
-                      <canvas id="traffic-chart"></canvas>
-                    </div>
-                    <div id="traffic-chart-legend" className="rounded-legend legend-vertical legend-bottom-left pt-4"></div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
             
           </div>
    </>
