@@ -70,7 +70,7 @@ const Userorderinvoice = () => {
                         Reg office: Indira Nagar Sodepur, North 24 Parganas, Kolkata-700110
                       </p>
                       <p className="mb-1">
-                      Corporate office: Shakshi Appartment, Road no: 6, HB Town, Sodepur, Kol-700110
+                      Corporate office: Shakshi Apartment, Road no: 6, HB Town, Sodepur, Kol-700110
                       </p>
                       <p className="mb-1">
                         <i className="uil uil-envelope-alt me-1"></i>Email:

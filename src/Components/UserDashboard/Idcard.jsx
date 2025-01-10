@@ -112,7 +112,7 @@ const Idcard = () => {
       <div className="office-container">
 
       <div>Udbhab Marketing Pvt Ltd.</div>
-      <div>Shakshi Appartment, Ground floor</div>
+      <div>Shakshi Apartment, Ground floor</div>
       <div>Road no: 6, HB Town,Sodepur, </div>
       <div>North 24 Parganas, Kolkata-700110</div>
       <div>Contact No:+(91)7980964516</div>

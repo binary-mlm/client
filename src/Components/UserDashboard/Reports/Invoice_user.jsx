@@ -81,7 +81,7 @@ const Invoice_user = () => {
                         support@myudbhab.in <i className="fa fa-envelope-o" />
                       </p>
                       <p>
-                      Shakshi Appartment, Road no: 6, HB Town, Sodepur, Kol-700110 <i className="fa fa-location-arrow" />
+                      Shakshi Apartment, Road no: 6, HB Town, Sodepur, Kol-700110 <i className="fa fa-location-arrow" />
                       </p>
                     </div>
                   </div>
