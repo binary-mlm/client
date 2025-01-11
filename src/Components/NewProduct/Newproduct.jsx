@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 import ProductCarousel from "./ProductCarousel";
 import './newproduct.css'
 import axios from 'axios';
-import product1 from "../../assets/images/products/tulsi.jpg";
-import product2 from "../../assets/images/products/imunity.jpg";
-import product3 from "../../assets/images/products/shampoo.jpg";
-import product4 from "../../assets/images/products/herbaltea.jpg";
-import product5 from "../../assets/images/products/facewash.jpg";
-import product6 from "../../assets/images/products/aloverasoap.jpg";
-import product7 from "../../assets/images/products/preniumshop.jpg";
+// import product1 from "../../assets/images/products/tulsi.jpg";
+// import product2 from "../../assets/images/products/imunity.jpg";
+// import product3 from "../../assets/images/products/shampoo.jpg";
+// import product4 from "../../assets/images/products/herbaltea.jpg";
+// import product5 from "../../assets/images/products/facewash.jpg";
+// import product6 from "../../assets/images/products/aloverasoap.jpg";
+// import product7 from "../../assets/images/products/preniumshop.jpg";
 
 // const products = [
 //   { id: 1, name: 'Udbhab Panch Tulsi', price: '190', link: "/tulsiview", image: [product1] },
