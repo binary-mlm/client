@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
         
           
-          <div className="col-xs-12 col-sm-6 col-md-3">
+          <div className="col-xs-12 col-sm-6 col-md-3 customer">
             <div className="module-heading">
               <h4 className="module-title text-white">Customer Service</h4>
             </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
          
           
-          <div className="col-xs-12 col-sm-6 col-md-3">
+          <div className="col-xs-12 col-sm-6 col-md-3 corporation">
             <div className="module-heading">
               <h4 className="module-title text-white">Corporation</h4>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
           
           
-          <div className="col-xs-12 col-sm-6 col-md-3">
+          <div className="col-xs-12 col-sm-6 col-md-3 whychoose">
             <div className="module-heading">
               <h4 className="module-title text-white">Why Choose Us</h4>
             </div>
@@ -108,9 +108,9 @@ const Footer = () => {
     <div className="row">
       
       {/* Payment Methods - First on mobile */}
-      <div className="col-xs-12 col-sm-4 no-padding order-xs-1 order-sm-3">
+      <div className=" col-md-6 col-xs-12 col-sm-4 no-padding order-xs-1 order-sm-3">
         <div className="clearfix payment-methods">
-          <ul className="d-flex justify-content-end">
+          <ul className="d-flex justify-content-end " id='payment_methods'>
             <li className='methods'><img src={pic4} alt="payment"/></li>
             <li className='methods'><img src={pic6} width={40} alt="payment"/></li>
             <li className='methods'><img src={pic2} alt="payment"/></li>
@@ -121,7 +121,7 @@ const Footer = () => {
       </div>
 
       {/* Social Icons - Second on mobile */}
-      <div className="col-xs-12 col-sm-4 no-padding social order-xs-2 order-sm-1">
+      <div className=" col-md-6 col-xs-12 col-sm-4 no-padding social order-xs-2 order-sm-1">
         <ul className="link d-flex">
           <li><a target='_blank' href='https://youtube.com/@udbhab_marketing?si=XTjFU-SXcWmiSYoi'><i className="fa fa-youtube mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "red" }}></i></a></li>
           {/* <li><i className="fa fa-twitter mt-1 me-2 icon_social" style={{ fontSize: "32px", color: "white" }}></i></li> */}
@@ -131,13 +131,19 @@ const Footer = () => {
       </div>
 
       {/* Copyright Text - Third on mobile */}
-      <div className="col-xs-12 col-sm-4 no-padding  order-xs-3 order-sm-2 mt-5">
+      {/* <div className="col-xs-12 col-sm-4 no-padding  order-xs-3 order-sm-2 mt-5">
         <a className='copyright' >Copyright © Udbhab Marketing Pvt Ltd 2024</a>
-      </div>
+      </div> */}
 
     </div>
+    
   </div>
+  <div className='row'><div className="col-xs-12 no-padding text-center">
+        <a className='copyright' >Copyright © Udbhab Marketing Pvt Ltd 2024</a>
+      </div></div>
+  
 </div>
+ 
 
   </footer>
   )

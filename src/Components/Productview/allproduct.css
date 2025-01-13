@@ -14,3 +14,30 @@ font-size: 18px;
     cursor: pointer;
 
 }
+.category .side-menu .health{
+    cursor: pointer !important;
+
+}
+@media (max-width: 768px) {
+    .side-menu .nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;   /* Center items horizontally */
+      }
+    
+      .side-menu .nav li {
+        width: 100%;             /* Make each item take the full width */
+           /* Center the text inside each item */
+        margin: 2px 0;           /* Add spacing between items */
+      }
+    
+      .side-menu .nav li .icon {
+        margin-right: 0;         /* Remove side margin for icons */
+      }
+    
+      .side-menu .nav li span,
+      .side-menu .nav li a {
+        display: inline-block;   /* Ensure text behaves like a block for proper centering */
+      }
+    
+}

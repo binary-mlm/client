@@ -3053,7 +3053,7 @@ font-family: FontAwesome;
 }
 .copyright-bar {
   background: #2e353b;
-  padding: 35px 0px;
+  padding: 21px 0px;
   border-top:1px rgba(255,255,255,0.1) solid
 }
 .copyright-bar .copyright {
@@ -3085,9 +3085,7 @@ font-family: FontAwesome;
   transition: all 0.3s ease;
   border-radius:8px
 }
-.wide-banner:hover img {
-  
-}
+
 .cnt-strip {
   position: relative;
 }

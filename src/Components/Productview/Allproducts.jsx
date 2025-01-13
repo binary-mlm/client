@@ -99,7 +99,7 @@ const Allproducts = () => {
               </li>
              
               
-              <li className="dropdown menu-item p-3 " onClick={() => handleCategoryChange('Health care')}> <i className="icon fa fa-heartbeat me-3"></i>Health Care
+              <li className="menu-item p-3 health " onClick={() => handleCategoryChange('Health care')}> <i className="icon fa fa-heartbeat me-3 " aria-hidden="true"></i>Health Care
              
                 </li>
           

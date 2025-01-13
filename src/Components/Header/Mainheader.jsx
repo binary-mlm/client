@@ -67,7 +67,7 @@ useEffect(() => {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-4 col-sm-8 col-xs-12 top-search-holder">
+            <div className="col-lg-4 col-md-4 col-sm-8 col-xs-12 mt-2 top-search-holder">
               <div className="search-area">
                 <div className="control-group">
                   {/* <ul className="categories-filter animate-dropdown">
@@ -100,7 +100,7 @@ useEffect(() => {
                 }
             </ul>
             </div>
-            <div className="col-lg-4 col-md-5 col-sm-4 col-xs-12 text-end">
+            <div className="col-lg-4 col-md-5 col-sm-4 col-xs-12 mt-3 text-end">
               <div className="d-flex justify-content-end">
                 <a
                   target="_blank"
