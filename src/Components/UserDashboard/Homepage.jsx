@@ -131,9 +131,9 @@ const Homepage = () => {
             </div>
             <div className="d-flex mt-2">
               <div className="card_item text-center">
-                <span className="fw-bold">RANK ACHIEVEMENT BONUS</span>
+                <span className="fw-bold">CURRENT RANK</span>
                 <br />
-                <span>0</span>
+                <span>{data.rank}</span>
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">DIRECT SALES BONUS</span>
