@@ -85,7 +85,7 @@
   .image-container{
     position: absolute;
     top: 25%;
-    left: 25%;
+    left: 25.5%;
   }
   .image_user{
    
@@ -93,4 +93,9 @@
     height: 25%;
     border-radius: 20%;
    
+  }
+  .website{
+    position: absolute;
+    top: 93%;
+    left: 27.3%;
   }

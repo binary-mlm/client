@@ -54,8 +54,6 @@ const Login = () => {
             <p style="font-size: 1.2rem; margin-top: 20px;">You have successfully logged in!</p>
           `,
             
-            
-            
             confirmButtonText: "Go to Dashboard",
             confirmButtonColor: "#6c63ff",
             iconColor: "#4caf50",

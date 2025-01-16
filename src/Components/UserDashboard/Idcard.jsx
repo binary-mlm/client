@@ -2,13 +2,14 @@ import React, { useRef , useState , useEffect} from "react";
 import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import pic from "../../assets/images/srijani.jpg";
 import "./Css/idcard.css";
 const Idcard = () => {
   const invoiceRef = useRef();
   const [userphoto, setUserphoto] = useState(null);
 
 
- ;
+ 
   const downloadPDF = () => {
     const input = invoiceRef.current;
 
@@ -61,13 +62,13 @@ const Idcard = () => {
       <div className="image-container">
       {
         userphoto? (
-          <img src={userphoto}  className="image_user" style={{ width: "18%" }} />
+          <img src={userphoto}  className="image_user"  style={{ width: "15%" , borderRadius:"50%" }} />
         ) : (
           <img
             src=""
            
             alt="No image"
-            style={{ width: "25%%" }}
+           
           />
         )  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image
       }
@@ -82,16 +83,18 @@ const Idcard = () => {
       <div className="userid-container mt-5">
       <div className="d-flex">
       <div className=" h3 text-white">ID:</div>
-      <div className=" h3  text-white"> {mySponsorId}</div>
+      <div className="h3  text-white"> {mySponsorId}</div>
       </div>
       </div>
       <div className="useraddress-container">
       <div className="d-flex text-white">
       <div>Contact Number:</div>
-      <div className="ms-1">{contactNumber}
+      <div className="ms-1">+91 {contactNumber}
       </div>
+      
       </div>
       </div> 
+      <div className=" website text-white">https://myudbhab.in</div>
       {/* <div className="useremail-container">
       <div className="d-flex text-white">
       <div>Email:</div>
@@ -119,11 +122,11 @@ const Idcard = () => {
       </div>
       </div> */}
       <div className="office-container">
-      <div>Udbhab Marketing Pvt Ltd.</div>
+      <div className="fw-bold">Udbhab Marketing Pvt Ltd.</div>
       <div>Shakshi Apartment, Ground floor</div>
       <div>Road no: 6, HB Town,Sodepur, </div>
       <div>North 24 Parganas, Kolkata-700110</div>
-      <div>Contact No:+(91)7980964516</div>
+      <div>Contact No:+91 79 8096 4516</div>
       <div>
       </div>
       </div>     
