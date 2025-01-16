@@ -156,7 +156,7 @@ const Kycverification = () => {
               <div className="card">
                 <div className="row row-xs align-items-center mg-b-20 mb-3">
                   <div className="col-md-6">
-                    <input className="form-control mt-2 ms-2" name="your_bankname_mk" placeholder="Enter Your Bank Name" type="text" required onChange={e =>setbankname(e.target.value)} />
+                    <input className="form-control mt-2 ms-2" name="your_bankname_mk"  placeholder="Enter Your Bank Name" type="text" required onChange={e =>setbankname(e.target.value)} />
                     <input className="form-control mt-2 ms-2" name="your_accountno_mk" placeholder="Enter Your Bank A/c Number" type="text" required onChange={e =>setaccountNumber(e.target.value)}/>
                     <input className="form-control mt-2 ms-2" name="your_pan_no_mk" placeholder="Enter Your PAN" type="text" required onChange={e =>setpanCard(e.target.value)} />
                   </div>
@@ -175,7 +175,7 @@ const Kycverification = () => {
                 <div><label className="upload w-100 p-2">Upload your PAN Card (Front Side) image</label></div>
                   <div className="imagePreview">
                     {panCardFront ? (
-                      <img src={URL.createObjectURL(panCardFront)}   alt="Pan Front" className="img-thumbnail" />
+                      <img src={URL.createObjectURL(panCardFront)}   alt="Pan Front" className="img-thumbnail" style={{ width: '180px', height: 'auto' }}/>
                     ) : (
                       
                      <>
@@ -195,7 +195,7 @@ const Kycverification = () => {
                 <div><label className="upload w-100 p-2">Upload your Aadhar Card (Front Side) image</label></div>
                   <div className="imagePreview">
                     {aadharCardFront ? (
-                      <img src={URL.createObjectURL(aadharCardFront)} alt="Aadhar Front"     className="img-thumbnail" />
+                      <img src={URL.createObjectURL(aadharCardFront)} alt="Aadhar Front"  className="img-thumbnail" />
                     ) : (
                       
                      <>

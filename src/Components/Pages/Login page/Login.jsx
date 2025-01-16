@@ -118,7 +118,7 @@ const Login = () => {
                         </div>
                         <div className="row">
                         <div className='col-md-6'>
-                          <a className='text-success text-decoration-none' href="/">Forgot password?</a>
+                          <a className='text-success text-decoration-none' href="/forgotpage">Forgot password?</a>
                           </div>
                           <div className='col-md-6 text-end'>
                           <span className="mb-5 pb-lg-2 pb-sm-2 ">Do not have an account? <a className="text-success text-decoration-none" href="/signup"

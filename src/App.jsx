@@ -40,7 +40,8 @@ import Myorders from "./Components/UserDashboard/Reports/Myorders"
 import Poppartners from "./Components/UserDashboard/POP partners/Poppartners"
 import Payoutweekly from "./Components/UserDashboard/Payout/Payoutweekly";
 import Registration from "./Components/signupfromleader/Registration";
-
+import Forgotpage from "./Components/Pages/Forgotpassword/Forgotpage";
+import Resetpassword from "./Components/Pages/Forgotpassword/Resetpassword";
 // products
 // import Tulsiview from "./Components/Productview/Tulsiview";
 // import Booster from "./Components/Productview/Booster";
@@ -84,10 +85,12 @@ function App() {
       <Route path="/managment" element={<Userlayout><Management/></Userlayout>} />
       <Route path="/legaldocument" element={<Userlayout><Legaldocument/></Userlayout>} />
       <Route path="/award" element={<Userlayout><Award/></Userlayout>} />
-
+      <Route path="/forgot" element={<Userlayout><forgot/></Userlayout>} />
       <Route path="/education" element={<Userlayout><Education/></Userlayout>} />
       <Route path="/vision" element={<Userlayout><Vision/></Userlayout>} />
       <Route path="/logistic" element={<Userlayout><Logistic/></Userlayout>} />
+      <Route path="/forgotpage" element={<Userlayout><Forgotpage/></Userlayout>} />
+      <Route path="/verify-email" element={<Userlayout><Resetpassword/></Userlayout>} />
       {/* user dashboard */}
       <Route path="/userdashboard" element={<Dashboardlayout><Homepage/></Dashboardlayout>} />
       <Route path="/userdasboard/welcomeuser" element={<Dashboardlayout><Welcomeuser/></Dashboardlayout>} />

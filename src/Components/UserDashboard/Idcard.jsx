@@ -75,16 +75,31 @@ const Idcard = () => {
       </div>
       <div className="username-container">
       <div className="d-flex">
-      <div>Name: </div>
-        <div className="ms-1">{username}</div>
+      <div className="h4 text-white fw-bold">Name: </div>
+        <div className="text-white h4 fw-bold"> {username}</div>
         </div>
       </div>
-      <div className="userid-container">
-      <div className="d-flex mt-2">
-      <div className="">User ID:</div>
-      <div className="ms-1"> {mySponsorId}</div>
+      <div className="userid-container mt-5">
+      <div className="d-flex">
+      <div className=" h3 text-white">ID:</div>
+      <div className=" h3  text-white"> {mySponsorId}</div>
       </div>
-      </div>    
+      </div>
+      <div className="useraddress-container">
+      <div className="d-flex text-white">
+      <div>Contact Number:</div>
+      <div className="ms-1">{contactNumber}
+      </div>
+      </div>
+      </div> 
+      {/* <div className="useremail-container">
+      <div className="d-flex text-white">
+      <div>Email:</div>
+      <div className="ms-1">{contactNumber}
+      </div>
+      </div>
+      </div>  */}
+
             </div>
       </div>
       <div className="col-lg-4">
@@ -95,22 +110,15 @@ const Idcard = () => {
         <div className="ms-1">{sponsorId}</div>
       </div>
       </div> */}
-      <div className="useraddress-container">
-      <div className="d-flex">
-      <div>Contact Number:</div>
-      <div className="ms-1">{contactNumber}
-      </div>
-      </div>
-      </div>
-      <div className="useremercency-container">
+    
+      {/* <div className="useremercency-container">
       <div className="d-flex">
       <div>Emercency Number:</div>
       <div className="ms-1">{contactNumber}
       </div>
       </div>
-      </div>
+      </div> */}
       <div className="office-container">
-
       <div>Udbhab Marketing Pvt Ltd.</div>
       <div>Shakshi Apartment, Ground floor</div>
       <div>Road no: 6, HB Town,Sodepur, </div>
