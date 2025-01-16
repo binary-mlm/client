@@ -65,12 +65,15 @@ const Idcard = () => {
           <img src={userphoto}  className="image_user"  style={{ width: "15%" , borderRadius:"50%" }} />
         ) : (
           <img
-            src=""
+            src={pic}
+            className="image_user"
+            style={{ width: "18%" , borderRadius:"50%" }}
+
            
-            alt="No image"
+            // alt="No image"
            
           />
-        )  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image
+        )   // Replace this with your actual user photo URL. If not available, use a placeholder image. // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image
       }
         
       </div>

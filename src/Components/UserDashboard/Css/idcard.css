@@ -99,3 +99,47 @@
     top: 93%;
     left: 27.3%;
   }
+  @media (max-width: 768px) {
+    .image-container{
+      position: absolute;
+      top: 13%;
+      left: 30.8%;
+      
+    }
+    .image_user{
+      width: 67% !important
+    }
+    .username-container {
+      position: absolute;
+      top: 29%; 
+      margin-left: 28%;/* Adjust this value to move the text to the desired vertical position */ 
+      
+    }
+    .userid-container {
+      position: absolute;
+      margin-top: 10px;
+      top: 31%; 
+      margin-left: 28%;/* Adjust this value to move the text to the desired vertical position */
+      
+    }
+    .office-container{
+      position: absolute;
+     top: 70%; 
+     margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
+     
+     /* Text color (choose based on background) */
+     
+   }
+   .useraddress-container{
+    position: absolute;
+    top: 40%; 
+    margin-left: 10px;
+   }
+   .website{
+    position: absolute;
+    top: 47%;
+    left: 35.3%;
+  
+   }
+    
+  }
