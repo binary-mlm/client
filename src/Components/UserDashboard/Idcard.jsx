@@ -2,7 +2,7 @@ import React, { useRef , useState , useEffect} from "react";
 import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-import pic from "../../assets/images/srijani.jpg";
+// import pic from "../../assets/images/srijani.jpg";
 import "./Css/idcard.css";
 const Idcard = () => {
   const invoiceRef = useRef();
@@ -65,7 +65,7 @@ const Idcard = () => {
           <img src={userphoto}  className="image_user"  style={{ width: "15%" , borderRadius:"50%" }} />
         ) : (
           <img
-            src={pic}
+            src=""
             className="image_user"
             style={{ width: "18%" , borderRadius:"50%" }}
 
