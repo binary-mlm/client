@@ -1,28 +1,12 @@
 import React ,{useState , useEffect} from 'react'
 import "./Css/rankachive.css";
+import axios from "axios";
 const Rankachive = () => {
   const [achievedRank, setAchievedRank] = useState("");
   const sponsorId = sessionStorage.getItem("mySponsorId");
-  useEffect(() => {
-    const fetchDashboardData = async () => {
-      try {
-        const response = await axios.post(
-          'ROOT_URL/api/user/getDashboardData',
-          { sponsorId }
-        );
-        setAchievedRank(response.data.rank); 
-      } catch (err) {
-        console.error(err);
-        
-      }
-    };
-    fetchDashboardData();
-  }, [sponsorId]);
-  const isAchieved = (rankName) => {
-    const achievedIndex = tableData.findIndex(item => item.rankName === achievedRank);
-    const currentIndex = tableData.findIndex(item => item.rankName === rankName);
-    return currentIndex <= achievedIndex;
-  };
+  const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+  
+
     const tableData = [
         { no: 1, rankName: "Star", vbMatching: "25,000 VB MATCHING", reward: "Udbhab T-shirt" },
         { no: 2, rankName: "Double Star", vbMatching: "50,000 VB MATCHING", reward: "Business tool kit" },
@@ -42,9 +26,37 @@ const Rankachive = () => {
         { no: 16, rankName: "Udbhab Unicorn Diamond Club", vbMatching: "10,00,00,000 VB MATCHING", reward: "Rank pin + Rs. 20 lakhs" },
       ];
     
-      
-       
+      useEffect(() => {
+        const fetchDashboardData = async () => {
+          try {
+           
+           const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { sponsorId });
+           const rankFromAPI = response.data.rank?.replace(/[^\w\s]/g, "").trim(); // Removes non-alphanumeric characters
+            setAchievedRank(rankFromAPI); // Assuming the rank field is returned as "STAR⭐"
+          } catch (err) {
+            console.error(err);
+            
+          }
+        };
+        fetchDashboardData();
+      }, [sponsorId]);
     
+      // Helper function to determine if a row is achieved
+      const isAchieved = (rankName) => {
+        if (!achievedRank) return false;
+      
+        // Normalize the rankName and achievedRank for comparison
+        const normalizedRankName = rankName.toLowerCase();
+        const normalizedAchievedRank = achievedRank.toLowerCase();
+        const achievedIndex = tableData.findIndex(
+          item => item.rankName.toLowerCase() === normalizedAchievedRank
+        );
+        const currentIndex = tableData.findIndex(
+          item => item.rankName.toLowerCase() === normalizedRankName
+        );
+      
+        return currentIndex <= achievedIndex;
+      };  
   return (
     <>
          <div className="table-container table-responsive">
@@ -67,10 +79,10 @@ const Rankachive = () => {
                   <td>{item.reward}</td>
                   <td>
                   <button
-                    className={`btn ${isAchieved(item.rankName) ? "btn-success" : "btn-secondary"}`}
+                   className='btn btn-success'
                     disabled={!isAchieved(item.rankName)}
                   >
-                    {isAchieved(item.rankName) ? "Achieved" : "Unachieved"}
+                     {isAchieved(item.rankName) ? "Claimed" : "Unclaimed"}
                   </button>
                   </td>
                 </tr>
