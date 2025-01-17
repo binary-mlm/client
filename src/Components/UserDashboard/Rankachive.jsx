@@ -1,6 +1,28 @@
-import React from 'react'
+import React ,{useState , useEffect} from 'react'
 import "./Css/rankachive.css";
 const Rankachive = () => {
+  const [achievedRank, setAchievedRank] = useState("");
+  const sponsorId = sessionStorage.getItem("mySponsorId");
+  useEffect(() => {
+    const fetchDashboardData = async () => {
+      try {
+        const response = await axios.post(
+          'ROOT_URL/api/user/getDashboardData',
+          { sponsorId }
+        );
+        setAchievedRank(response.data.rank); 
+      } catch (err) {
+        console.error(err);
+        
+      }
+    };
+    fetchDashboardData();
+  }, [sponsorId]);
+  const isAchieved = (rankName) => {
+    const achievedIndex = tableData.findIndex(item => item.rankName === achievedRank);
+    const currentIndex = tableData.findIndex(item => item.rankName === rankName);
+    return currentIndex <= achievedIndex;
+  };
     const tableData = [
         { no: 1, rankName: "Star", vbMatching: "25,000 VB MATCHING", reward: "Udbhab T-shirt" },
         { no: 2, rankName: "Double Star", vbMatching: "50,000 VB MATCHING", reward: "Business tool kit" },
@@ -44,12 +66,12 @@ const Rankachive = () => {
                   <td>{item.vbMatching}</td>
                   <td>{item.reward}</td>
                   <td>
-                    <button
-                      className="view-button"
-                      onClick={() => alert(`Viewing details for ${item.rankName}`)}
-                    >
-                      View
-                    </button>
+                  <button
+                    className={`btn ${isAchieved(item.rankName) ? "btn-success" : "btn-secondary"}`}
+                    disabled={!isAchieved(item.rankName)}
+                  >
+                    {isAchieved(item.rankName) ? "Achieved" : "Unachieved"}
+                  </button>
                   </td>
                 </tr>
               ))}
