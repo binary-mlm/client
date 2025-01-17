@@ -21,7 +21,7 @@
 .username-container {
     position: absolute;
     top: 57%; 
-    margin-left: 7%;/* Adjust this value to move the text to the desired vertical position */
+    margin-left: 6%;/* Adjust this value to move the text to the desired vertical position */
     font-size: 15px;
     color: #000; /* Text color (choose based on background) */
      /* Optional background for contrast */
@@ -96,8 +96,8 @@
   }
   .website{
     position: absolute;
-    top: 93%;
-    left: 27.3%;
+    top: 172%;
+    left: 38.3%;
   }
   @media (max-width: 768px) {
     .image-container{
@@ -112,14 +112,14 @@
     .username-container {
       position: absolute;
       top: 29%; 
-      margin-left: 28%;/* Adjust this value to move the text to the desired vertical position */ 
+      margin-left: 18%;/* Adjust this value to move the text to the desired vertical position */ 
       
     }
     .userid-container {
       position: absolute;
       margin-top: 10px;
-      top: 31%; 
-      margin-left: 28%;/* Adjust this value to move the text to the desired vertical position */
+      top: 30.1%; 
+      margin-left: 26%;/* Adjust this value to move the text to the desired vertical position */
       
     }
     .office-container{
@@ -137,9 +137,15 @@
    }
    .website{
     position: absolute;
-    top: 47%;
+    top: 195%;
     left: 35.3%;
   
+   }
+   .background{
+    width: 339px;
+   }
+   .background_back{
+    width: 339px;
    }
     
   }

@@ -20,7 +20,7 @@ const Idcard = () => {
       const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
 
       pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-      pdf.save("Myidcard.pdf"); // You can customize the name of the file
+      pdf.save("Myidcard.pdf" ,{ optimize: true }); // You can customize the name of the file
     });
   };
   const ROOT_URL= import.meta.env.VITE_LOCALHOST_URL;
@@ -59,27 +59,22 @@ const Idcard = () => {
       <div className="row">
       <div className="col-lg-4 offset-lg-2 col-sm-12">
       <div className="background">
-      <div className="image-container">
+     
       {
         userphoto? (
+          <> <div className="image-container">
           <img src={userphoto}  className="image_user"  style={{ width: "15%" , borderRadius:"50%" }} />
-        ) : (
-          <img
-            src=""
-            className="image_user"
-            style={{ width: "18%" , borderRadius:"50%" }}
-
-           
-            // alt="No image"
-           
-          />
+          </div>
+          </>
+         
+        ) : (""
         )   // Replace this with your actual user photo URL. If not available, use a placeholder image. // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image.  // Replace this with your actual user photo URL. If not available, use a placeholder image
       }
         
       </div>
       <div className="username-container">
-      <div className="d-flex">
-      <div className="h4 text-white fw-bold">Name: </div>
+      <div className="d-flex text-center">
+      {/* <div className="h4 text-white fw-bold">Name: </div> */}
         <div className="text-white h4 fw-bold"> {username}</div>
         </div>
       </div>
@@ -96,8 +91,8 @@ const Idcard = () => {
       </div>
       
       </div>
-      </div> 
-      <div className=" website text-white">https://myudbhab.in</div>
+      
+      <div className=" website text-white">www.myudbhab.in</div>
       {/* <div className="useremail-container">
       <div className="d-flex text-white">
       <div>Email:</div>
