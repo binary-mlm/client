@@ -67,7 +67,7 @@ const Rankachive = () => {
                 <th>Rank Name</th>
                 <th>VB Matching</th>
                 <th>Reward</th>
-                <th>Action</th>
+                <th>Achievement</th>
               </tr>
             </thead>
             <tbody>
@@ -82,7 +82,7 @@ const Rankachive = () => {
                    className='btn btn-success'
                     disabled={!isAchieved(item.rankName)}
                   >
-                     {isAchieved(item.rankName) ? "Claimed" : "Unclaimed"}
+                     {isAchieved(item.rankName) ? "Yes" : "No"}
                   </button>
                   </td>
                 </tr>
