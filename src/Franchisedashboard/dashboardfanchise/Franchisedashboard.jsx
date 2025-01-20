@@ -1,5 +1,6 @@
 import React,{useState , useEffect} from 'react'
 import axios from 'axios';
+// import pic from "../../assets/images/rupee.png"
 
 const Franchisedashboard = () => {
   const [pupdashboarddata , setdashboarddata] = useState('')
@@ -30,9 +31,9 @@ const Franchisedashboard = () => {
             </div>
             <div className="row">
               <div className="col-md-4 stretch-card grid-margin">
-                <div className="card bg-gradient-info card-img-holder text-white">
+                <div className="card card-img-holder text-white">
                   <div className="card-body">
-                    {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
+                    {/* <img src={pic} className="card-img-absolute" alt="circle-image" /> */}
                     <h4 className="font-weight-normal mb-3">Monthly Sales <i className="mdi mdi-chart-line mdi-24px float-end"></i>
                     </h4>
                     <h2 className="mb-5">₹{pupdashboarddata.totalMonthlySales}</h2>
@@ -52,7 +53,7 @@ const Franchisedashboard = () => {
                 </div>
               </div> */}
               <div className="col-md-4 stretch-card grid-margin">
-                <div className="card bg-gradient-info card-img-holder text-white">
+                <div className="card  card-img-holder text-white">
                   <div className="card-body">
                     {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
                     <h4 className="font-weight-normal mb-3">Monthly order<i className="mdi mdi-diamond mdi-24px float-end"></i>
@@ -63,7 +64,7 @@ const Franchisedashboard = () => {
                 </div>
               </div>
               <div className="col-md-4 stretch-card grid-margin">
-                <div className="card bg-gradient-success card-img-holder text-white">
+                <div className="card card-img-holder text-white">
                   <div className="card-body">
                     {/* <img src="assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" /> */}
                     <h4 className="font-weight-normal mb-3">Available stock<i className="mdi mdi-diamond mdi-24px float-end"></i>
@@ -75,7 +76,7 @@ const Franchisedashboard = () => {
             </div>
             <div className="row">
             <div className="col-md-6 stretch-card grid-margin">
-                <div className="card bg-gradient-info card-img-holder text-white">
+                <div className="card card-img-holder text-white">
                   <div className="card-body">
                     
                     <h4 className="font-weight-normal mb-3">Total sales<i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>
@@ -86,7 +87,7 @@ const Franchisedashboard = () => {
                 </div>
               </div>
               <div className="col-md-6 stretch-card grid-margin">
-                <div className="card bg-gradient-info card-img-holder text-white">
+                <div className="card  card-img-holder text-white">
                   <div className="card-body">
                     
                     <h4 className="font-weight-normal mb-3">Total order<i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>

@@ -5,6 +5,7 @@ import doc1 from "../../../../assets/images/Legaldocu/docu2.jpg";
 import doc2 from "../../../../assets/images/Legaldocu/docu3.jpg";
 import doc3 from "../../../../assets/images/Legaldocu/pic4.jpg";
 import doc4 from "../../../../assets/images/Legaldocu/udbhab.jpg";
+import doc5 from "../../../../assets/images/Legaldocu/udbhab_reg.jpg"
 const Legaldocument = () => {
   const [photos, setPhotos] = useState([]);
   useEffect(() => {
@@ -14,7 +15,8 @@ const Legaldocument = () => {
       { id: 2, src: [doc1], alt: 'Image 2' },
       { id: 3, src: [doc2], alt: 'Image 3' },
       { id: 4, src: [doc3], alt: 'Image 4' },
-      { id: 5, src: [doc4], alt: 'Image 5' }
+      { id: 5, src: [doc4], alt: 'Image 5' },
+      { id: 6, src: [doc5], alt: 'Image 6' },
       // { id: 4, src: 'https://marketplace.canva.com/EAFlVDzb7sA/1/0/1600w/canva-white-gold-elegant-modern-certificate-of-participation-bK_WEelNCjo.jpg', alt: 'Image 4' },
       // { id: 5, src: 'https://marketplace.canva.com/EAFlVDzb7sA/1/0/1600w/canva-white-gold-elegant-modern-certificate-of-participation-bK_WEelNCjo.jpg', alt: 'Image 5' },
     ];
