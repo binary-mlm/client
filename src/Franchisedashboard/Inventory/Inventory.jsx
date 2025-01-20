@@ -117,6 +117,10 @@ const Inventory = () => {
         prevCart.filter((item) => item.productId !== productId)
       );
     };
+
+
+  
+   
     return cart.map((item) => (
       <div key={item.productId} className="ms-4 mb-3">
         <div className="card ">
@@ -289,6 +293,15 @@ const Inventory = () => {
       alert("Failed to submit the order.");
     }
   };
+  
+    //total price
+    const calculateTotalPrice = () => {
+      return cart.reduce(
+        (total, item) => total + item.price * (item.quantity || 1),
+        0
+      );
+    };
+  const totalCartPrice = calculateTotalPrice();
   return (
     <>
       <div className="mt-5 content-wrapper">
@@ -445,7 +458,8 @@ const Inventory = () => {
                           <div>Total:</div>
                           <div className="flex-1 text-end h4 mb-0">{totalprice}</div>
                         </div> */}
-                        <div className="mt-3 d-flex justify-content-center">
+                        <div className="mt-3 d-flex justify-content-between align-items-center">
+                        <h5 style={{color:"#095444"}} className="text-start">Total price: ₹{totalCartPrice}</h5>
                           <button
                             type="submit"
                             className="handlesubmitbutton"
