@@ -70,7 +70,7 @@ const Login = () => {
           console.log(err);
           Swal.fire({
             title: "Opps!",
-            text: "Try again",
+            text: err.response.data.message,
             icon: "error",
           });
         });

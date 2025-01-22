@@ -23175,9 +23175,9 @@ code {
 }
 .card.card-img-holder .card-img-absolute {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
+  top: 13px;
+  right: 13px;
+  height: 40%;
 }
 .card.bg-blue-gradient {
   background: linear-gradient(to right, #065efd, #3169fd, #6f79fc);
