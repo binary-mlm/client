@@ -35,8 +35,8 @@ const Franchisedashboard = () => {
              
             </div>
             <div className="row">
-              <div className="col-md-4 stretch-card grid-margin">
-                <div className="card card-img-holder text-white">
+              <div className="col-md-4 stretch-card grid-margin" >
+                <div className="card card-img-holder text-white " style={{backgroundColor:"#d1ecf1"}}>
                   <div className="card-body">
                     <img src={pic} className="card-img-absolute" alt="circle-image"  />
                     <h4 className="font-weight-normal mb-3">Monthly Sales <i className="mdi mdi-chart-line mdi-24px float-end"></i>
@@ -58,7 +58,7 @@ const Franchisedashboard = () => {
                 </div>
               </div> */}
               <div className="col-md-4 stretch-card grid-margin">
-                <div className="card  card-img-holder text-white">
+                <div className="card  card-img-holder text-white" style={{backgroundColor:"#d1ecf1"}}>
                   <div className="card-body">
                     <img src={pic1} className="card-img-absolute" alt="circle-image" />
                     <h4 className="font-weight-normal mb-3">Monthly order<i className="mdi mdi-diamond mdi-24px float-end"></i>
@@ -69,7 +69,7 @@ const Franchisedashboard = () => {
                 </div>
               </div>
               <div className="col-md-4 stretch-card grid-margin">
-                <div className="card card-img-holder text-white">
+                <div className="card card-img-holder text-white" style={{backgroundColor:"#d1ecf1"}}>
                   <div className="card-body">
                     <img src={pic2} className="card-img-absolute" alt="circle-image" />
                     <h4 className="font-weight-normal mb-3">Available stock<i className="mdi mdi-diamond mdi-24px float-end"></i>
@@ -81,7 +81,7 @@ const Franchisedashboard = () => {
             </div>
             <div className="row">
             <div className="col-md-6 stretch-card grid-margin">
-                <div className="card card-img-holder text-white">
+                <div className="card card-img-holder text-white" style={{backgroundColor:"#d1ecf1"}}>
                   <div className="card-body">
                   <img src={pic3} className="card-img-absolute" alt="circle-image" />
                     <h4 className="font-weight-normal mb-3">Total sales<i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>
@@ -92,7 +92,7 @@ const Franchisedashboard = () => {
                 </div>
               </div>
               <div className="col-md-6 stretch-card grid-margin">
-                <div className="card  card-img-holder text-white">
+                <div className="card  card-img-holder text-white" style={{backgroundColor:"#d1ecf1"}}>
                   <div className="card-body">
                     <img src={pic4} className="card-img-absolute" alt="circle-image"/>
                     <h4 className="font-weight-normal mb-3">Total order<i className="mdi mdi-bookmark-outline mdi-24px float-end"></i>
@@ -102,6 +102,7 @@ const Franchisedashboard = () => {
                   </div>
                 </div>
               </div>
+              
               
             </div>
             
