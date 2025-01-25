@@ -3,6 +3,7 @@ import "../Pages/Signup_page/usersignup.css"
 import { useParams , useNavigate } from "react-router-dom";
 import axios from 'axios'
 import swal from 'sweetalert';
+import statesCities from "../../Data/statecity.json"
 
 const Signupright = () => {
   
@@ -14,8 +15,8 @@ const Signupright = () => {
   const [mobileNumber, setmobileNumber] = useState('')
   const [whatsappNumber, setwhatsappNumber] = useState('')
   const [email, setemail] = useState('')
-    const [state_names, setDropdownValue_state] = useState([])
-    const [city, setDropdownValue] = useState([])
+    // const [state_names, setDropdownValue_state] = useState([])
+    // const [city, setDropdownValue] = useState([])
     const [district, setSelectedcities] = useState([])
     const [pincode, setpincode] = useState('');
     const [address, setaddress] = useState('');
@@ -27,13 +28,16 @@ const Signupright = () => {
     const { parentSponsorId } = useParams();
     const API_TOKEN = 'C2dy7lLSGxWm63T6Oem2N9jeUlaE5Y9M59MInjwjc-FksoqRsWk0pa-iKk1LzSfEFy0';
      const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-    const handleDropdownChange_city = (event) => {
-        setSelectedcities(event.target.value);
+  
+     const handleStateChange = (event) => {
+      const selectedState = event.target.value;
+      setSelectedState(selectedState);
     };
-    const handleDropdownChange_state = (event) => {
+  
+    const handleCityChange = (event) => {
+      setSelectedcities(event.target.value);
+    };
 
-        setSelectedState(event.target.value);
-    };
     const handleChange_radiobutton = (event) => {
       setregistrationType(event.target.value);
     };
@@ -42,74 +46,8 @@ const Signupright = () => {
     };
    
     const navigate = useNavigate();
-    useEffect(() => {
-        const getAuthToken = async () => {
-            try {
-                const response = await axios.get("https://www.universal-tutorial.com/api/getaccesstoken", {
-                    headers: {
-                        'api-token': API_TOKEN,
-                        'user-email': 'srijani.banerjee2000@gmail.com',
-                    }
-                });
-                setToken(response.data.auth_token);
-            } catch (error) {
-                console.log(error);
-                // setError(error);
-            }
-        };
-
-        getAuthToken();
-    }, []);
-
-    useEffect(() => {
-        if (token) {
-            const getStates = async () => {
-                try {
-
-                    const response = await axios.get('https://www.universal-tutorial.com/api/states/India', {
-                        headers: {
-                            'Authorization': `Bearer ${token}`,
-                            'Accept': 'application/json'
-                        }
-                    });
-                    console.log(response.data);
-                    setDropdownValue_state(response.data);
-
-                } catch (error) {
-                    // setError(error);
-                    console.log(error);
-
-                }
-            };
-
-            getStates();
-        }
-    }, [token]);
- //city
- useEffect(() => {
-    if (state) {
-        const getCities = async () => {
-
-            try {
-                const response = await axios.get(`https://www.universal-tutorial.com/api/cities/${state}`, {
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Accept': 'application/json'
-                    }
-                });
-                console.log('Cities response:', response.data);
-                setDropdownValue(response.data);
-
-            } catch (error) {
-                console.error('Error fetching cities:', error);
-
-
-            }
-        };
-
-        getCities();
-    }
-}, [state, token]);
+    
+    
 
 const sponsorId = parentSponsorId;
 console.log(sponsorId);
@@ -165,13 +103,13 @@ else{
                     </h5>
                   </div>
               <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Sponsor ID
                     </label>
                     <div className="col-sm-9">
                       <input
                         type="text"
-                        readonly
+                        readOnly
                         className="form-control-plaintext  bg-light textinput ps-2"
                         id="staticEmail"
                         value={parentSponsorId}
@@ -188,7 +126,7 @@ else{
                     </label>
                   <div className="col-sm-9 mt-2">
                       <div className="form-check form-check-inline">
-                      <label className="form-check-label" for="inlineRadio5">
+                      <label className="form-check-label" htmlFor ="inlineRadio5">
                           Individual
                         <input
                           className="form-check-input"
@@ -241,8 +179,8 @@ else{
                         
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
-                      <label class="form-check-label" htmlFor="inlineRadio2">
+                      <div className="form-check form-check-inline">
+                      <label className="form-check-label" htmlFor="inlineRadio2">
                           Female
                         <input
                           className="form-check-input"
@@ -256,11 +194,11 @@ else{
                         
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
-                      <label class="form-check-label" for="inlineRadio1">
+                      <div className="form-check form-check-inline">
+                      <label className="form-check-label" htmlFor="inlineRadio1">
                           Others
                         <input
-                          class="form-check-input"
+                          className ="form-check-input"
                           type="radio"
                           name="inlineRadioOptions"
                           id="inlineRadio1"
@@ -275,7 +213,7 @@ else{
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Name<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
@@ -289,7 +227,7 @@ else{
                   </div>
                   <div className="mb-3 d-flex">
                     <label
-                      for="inputPassword"
+                      htmlFor="inputPassword"
                       className="col-sm-3 col-form-label"
                     >
                       Date of Birth<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
@@ -307,7 +245,7 @@ else{
                   </div>
                   
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Mobile no<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
@@ -320,7 +258,7 @@ else{
                     </div>
                   </div>
                   <div className="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Whatsapp no
                     </label>
                     <div className="col-sm-9">
@@ -334,7 +272,7 @@ else{
                     </div>
                   </div>
                   <div className="mb-3 row">
-                    <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Email<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
@@ -353,11 +291,13 @@ else{
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Select State<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
-                    <select aria-label=" example" className='form-select' onChange={handleDropdownChange_state}>
+                    <select aria-label=" example" className='form-select' onChange={handleStateChange}>
                                 <option value="" label='Enter your State'></option>
-                                {Array.isArray(state_names) && state_names.map(state => (
-                                    <option key={state.state_name} value={state.state_name}>{state.state_name}</option>
-                                ))}
+                                {statesCities.map((item) => (
+                      <option key={item.state} value={item.state}>
+                        {item.state}
+                      </option>
+                    ))}
                             </select>
                     {/* <div className="col-sm-9">
                       <input
@@ -370,11 +310,13 @@ else{
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label ">
                       Select City<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
-                    <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleDropdownChange_city}>
+                    <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleCityChange}>
                                 <option value="Choose city" label=' Enter your city'></option>
-                                {Array.isArray(city) && city.map(city => (
-                                    <option key={city.city_name} value={city.city_name}>{city.city_name}</option>
-                                ))}  
+                                {(statesCities.find((s) => s.state === state)?.cities || []).map((city) => (
+                      <option key={city} value={city}>
+                        {city}
+                      </option>
+                                ))}
                             </select>
                     {/* <div className="col-sm-9">
                       <input
@@ -391,9 +333,7 @@ else{
                       <input
                         type="text"
                         className="form-control-plaintext  bg-light textinput ps-2"
-                        onChange={e => setpincode(e.target.value)}
-                        
-                        
+                        onChange={e => setpincode(e.target.value)}  
                       />
                     </div>
                   </div>
@@ -408,7 +348,7 @@ else{
                   </div>
                   {registrationType === 'Business Entity' && (
                   <div className="mb-3 row">
-                    <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       GST Number<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">
@@ -422,7 +362,7 @@ else{
                   </div>
                   )}
                   <div className="mb-3 row">
-                    <label htmlFor="staticEmail" class="col-sm-3 col-form-label">
+                    <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Password<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <div className="col-sm-9">

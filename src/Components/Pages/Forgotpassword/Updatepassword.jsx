@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import pic from "../../../assets/images/login.png";
+import pic from "../../../assets/images/resetpass.png";
 
 const Updatepassword = ({ email, token }) => {
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;

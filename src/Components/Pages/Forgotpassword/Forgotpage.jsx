@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pic from "../../../assets/images/login.png";
+import pic from "../../../assets/images/forgotpass.png";
 import axios from "axios"
 const Forgotpage = () => {
   const [email, setEmail] = useState("");
@@ -30,8 +30,8 @@ const Forgotpage = () => {
                   <img
                     src={pic}
                     alt="loginform"
-                    className="img-fluid ms-5"
-                    style={{ width: "80%" }}
+                    className="img-fluid mt-5"
+                    style={{ width: "100%" }}
                   />
                 </div>
                 <div

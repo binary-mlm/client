@@ -3,6 +3,7 @@ import "../Pages/Signup_page/usersignup.css"
 import { useParams, useNavigate} from "react-router-dom";
 import axios from 'axios'
 import swal from 'sweetalert';
+import statesCities from "../../Data/statecity.json"
 const Signupleft = () => {
 
   const [registrationType, setregistrationType] = useState('')
@@ -12,31 +13,39 @@ const Signupleft = () => {
   const [mobileNumber, setmobileNumber] = useState('')
   const [whatsappNumber, setwhatsappNumber] = useState('')
   const [email, setemail] = useState('')
-    const [state_names, setDropdownValue_state] = useState([])
-    const [city, setDropdownValue] = useState([])
+    // const [state_names, setDropdownValue_state] = useState([])
+    // const [city, setDropdownValue] = useState([])
     const [district, setSelectedcities] = useState([])
     const [pincode, setpincode] = useState('');
     const [address, setaddress] = useState('');
     const [gstNumber, setgstNumber] = useState('');
     const [password, setpassword] = useState('');
 
-    const [token, setToken] = useState(null);
+    // const [token, setToken] = useState(null);
     const [state, setSelectedState] = useState('');
     const { parentSponsorId } = useParams();
     const [mobilenoerror, setmobileerror] = useState(false)
     const [wpmobileerror, setwpmobileerror] = useState(false)
     const [emailerror, setemailerror] = useState(false)
-    const API_TOKEN = 'C2dy7lLSGxWm63T6Oem2N9jeUlaE5Y9M59MInjwjc-FksoqRsWk0pa-iKk1LzSfEFy0';
+    // const API_TOKEN = 'C2dy7lLSGxWm63T6Oem2N9jeUlaE5Y9M59MInjwjc-FksoqRsWk0pa-iKk1LzSfEFy0';
      const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
       const navigate = useNavigate();
 
-    const handleDropdownChange_city = (event) => {
+      const handleStateChange = (event) => {
+        const selectedState = event.target.value;
+        setSelectedState(selectedState);
+      };
+    
+      const handleCityChange = (event) => {
         setSelectedcities(event.target.value);
-    };
-    const handleDropdownChange_state = (event) => {
+      };
+    // const handleDropdownChange_city = (event) => {
+    //     setSelectedcities(event.target.value);
+    // };
+    // const handleDropdownChange_state = (event) => {
 
-        setSelectedState(event.target.value);
-    };
+    //     setSelectedState(event.target.value);
+    // };
     const handleChange_radiobutton = (event) => {
       setregistrationType(event.target.value);
     };
@@ -44,74 +53,75 @@ const Signupleft = () => {
       setgender(event.target.value);
     };
    
-    useEffect(() => {
-        const getAuthToken = async () => {
-            try {
-                const response = await axios.get("https://www.universal-tutorial.com/api/getaccesstoken", {
-                    headers: {
-                        'api-token': API_TOKEN,
-                        'user-email': 'srijani.banerjee2000@gmail.com',
-                    }
-                });
-                setToken(response.data.auth_token);
-            } catch (error) {
-                console.log(error);
-                // setError(error);
-            }
-        };
+//     useEffect(() => {
+//         const getAuthToken = async () => {
+//             try {
+//                 const response = await axios.get("https://www.universal-tutorial.com/api/getaccesstoken", {
+//                     headers: {
+//                         'api-token': API_TOKEN,
+//                         'user-email': 'srijani.banerjee2000@gmail.com',
+//                     }
+//                 });
+//                 setToken(response.data.auth_token);
+//             } catch (error) {
+//                 console.log(error);
+//                 // setError(error);
+//             }
+//         };
 
-        getAuthToken();
-    }, []);
+//         getAuthToken();
+//     }, []);
 
-    useEffect(() => {
-        if (token) {
-            const getStates = async () => {
-                try {
+//     useEffect(() => {
+//         if (token) {
+//             const getStates = async () => {
+//                 try {
 
-                    const response = await axios.get('https://www.universal-tutorial.com/api/states/India', {
-                        headers: {
-                            'Authorization': `Bearer ${token}`,
-                            'Accept': 'application/json'
-                        }
-                    });
-                    console.log(response.data);
-                    setDropdownValue_state(response.data);
+//                     const response = await axios.get('https://www.universal-tutorial.com/api/states/India', {
+//                         headers: {
+//                             'Authorization': `Bearer ${token}`,
+//                             'Accept': 'application/json'
+//                         }
+//                     });
+//                     console.log(response.data);
+//                     setDropdownValue_state(response.data);
 
-                } catch (error) {
-                    // setError(error);
-                    console.log(error);
+//                 } catch (error) {
+//                     // setError(error);
+//                     console.log(error);
 
-                }
-            };
+//                 }
+//             };
 
-            getStates();
-        }
-    }, [token]);
- //city
- useEffect(() => {
-    if (state) {
-        const getCities = async () => {
+//             getStates();
+//         }
+//     }, [token]);
+//  //city
+//  useEffect(() => {
+//     if (state) {
+//         const getCities = async () => {
 
-            try {
-                const response = await axios.get(`https://www.universal-tutorial.com/api/cities/${state}`, {
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Accept': 'application/json'
-                    }
-                });
-                console.log('Cities response:', response.data);
-                setDropdownValue(response.data);
+//             try {
+//                 const response = await axios.get(`https://www.universal-tutorial.com/api/cities/${state}`, {
+//                     headers: {
+//                         'Authorization': `Bearer ${token}`,
+//                         'Accept': 'application/json'
+//                     }
+//                 });
+//                 console.log('Cities response:', response.data);
+//                 setDropdownValue(response.data);
 
-            } catch (error) {
-                console.error('Error fetching cities:', error);
+//             } catch (error) {
+//                 console.error('Error fetching cities:', error);
 
 
-            }
-        };
+//             }
+//         };
 
-        getCities();
-    }
-}, [state, token]);
+//         getCities();
+//     }
+// }, [state, token]);
+
 function mobileHandler(e) {
   let item = e.target.value;
   if (item.length != 10) {
@@ -389,35 +399,35 @@ else{
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
                       Select State<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
-                    <select aria-label=" example" className='form-select' onChange={handleDropdownChange_state}>
+                    <select aria-label=" example" className='form-select' onChange={handleStateChange}>
                                 <option value="" label='Enter your State'></option>
-                                {Array.isArray(state_names) && state_names.map(state => (
+                                {statesCities.map((item) => (
+                      <option key={item.state} value={item.state}>
+                        {item.state}
+                      </option>
+                    ))}
+                                {/* {Array.isArray(state_names) && state_names.map(state => (
                                     <option key={state.state_name} value={state.state_name}>{state.state_name}</option>
-                                ))}
+                                ))} */}
                             </select>
-                    {/* <div className="col-sm-9">
-                      <input
-                        type="text"
-                        className="form-control-plaintext  bg-light textinput"  
-                      />
-                    </div> */}
+                   
                   </div>
                   <div className="mb-3 d-flex">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label ">
                       Select City<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
-                    <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleDropdownChange_city}>
+                    <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleCityChange}>
                                 <option value="Choose city" label=' Enter your city'></option>
-                                {Array.isArray(city) && city.map(city => (
+                                {(statesCities.find((s) => s.state === state)?.cities || []).map((city) => (
+                      <option key={city} value={city}>
+                        {city}
+                      </option>
+                    ))}
+                                {/* {Array.isArray(city) && city.map(city => (
                                     <option key={city.city_name} value={city.city_name}>{city.city_name}</option>
-                                ))}  
+                                ))}   */}
                             </select>
-                    {/* <div className="col-sm-9">
-                      <input
-                        type="text"
-                        className="form-control-plaintext  bg-light textinput"  
-                      />
-                    </div> */}
+                   
                   </div>
                   <div className="mb-3 row">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label">
