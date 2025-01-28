@@ -13,7 +13,7 @@ const Legaldocument = () => {
     const fetchedPhotos = [
       { id: 1, src: [pan], alt: 'Image 51' },
       { id: 2, src: [doc1], alt: 'Image 2' },
-      { id: 3, src: [doc2], alt: 'Image 3' },
+      { id: 3, src: [doc2], alt: 'Image 3' }, 
       { id: 4, src: [doc3], alt: 'Image 4' },
       { id: 5, src: [doc4], alt: 'Image 5' },
       { id: 6, src: [doc5], alt: 'Image 6' },
