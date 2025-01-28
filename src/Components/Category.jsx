@@ -9,7 +9,7 @@ const Category = () => {
           <div className="head"><i className="icon fa fa-align-justify fa-fw"></i> Categories</div>
           <nav className="yamm megamenu-horizontal bg-white">
             <ul className="nav">
-              <li className="item p-3"> <a href="/allproduct?category=personal care" className="text-decoration-none"><i className="icon fa fa-hand-o-right" aria-hidden="true"></i>Personal Care</a>
+              <li className="item p-3"> <a href="/allproduct?category=Personal Care" className="text-decoration-none"><i className="icon fa fa-hand-o-right" aria-hidden="true"></i>Personal Care</a>
                 {/* <ul className="dropdown-menu mega-menu">
                   <li className="yamm-content">
                     <div className="row">
@@ -63,7 +63,7 @@ const Category = () => {
               </li>
              
               
-              <li className=" menu-item p-3"> <a href="/allproduct?category= Health care" className=" text-decoration-none"><i className="icon fa fa-heartbeat"></i>Health Care</a>
+              <li className=" menu-item p-3"> <a href="/allproduct?category= Health Care" className=" text-decoration-none"><i className="icon fa fa-heartbeat"></i>Health Care</a>
              
                 </li>
            

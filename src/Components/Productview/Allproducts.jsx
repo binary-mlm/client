@@ -90,7 +90,7 @@ const Allproducts = () => {
                
               <li></li>
            
-              <li className=" menu-item p-3"><i className="icon fa fa-hand-o-right me-3" aria-hidden="true"></i><span onClick={() => handleCategoryChange('personal care')}>Personal Care</span>
+              <li className=" menu-item p-3"><i className="icon fa fa-hand-o-right me-3" aria-hidden="true"></i><span onClick={() => handleCategoryChange('Personal Care')}>Personal Care</span>
               
                 </li>
               <li className=" menu-item p-3"> <a href="#" className=" text-decoration-none text-dark"><i className="icon fa fa-heart me-3" aria-hidden="true"></i>Beauty Care</a>
@@ -99,7 +99,7 @@ const Allproducts = () => {
               </li>
              
               
-              <li className="menu-item p-3 health " onClick={() => handleCategoryChange('Health care')}> <i className="icon fa fa-heartbeat me-3 " aria-hidden="true"></i>Health Care
+              <li className="menu-item p-3 health " onClick={() => handleCategoryChange('Health Care')}> <i className="icon fa fa-heartbeat me-3 " aria-hidden="true"></i>Health Care
              
                 </li>
           
