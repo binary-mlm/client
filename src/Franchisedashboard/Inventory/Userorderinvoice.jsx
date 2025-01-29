@@ -60,8 +60,9 @@ const Userorderinvoice = () => {
             <div ref={invoicepdf}>
               <div
                 className="card w-100 mb-4 text-center"
-                style={{ backgroundColor: "white", color: "black" }}
+                style={{ backgroundColor: "white", color: "black" , }}
               >
+              <div style={{padding:"3%"}}>
                 <div className="card-body">
                   <div className="row">
                     <div className="col-sm-12 text-center">
@@ -202,6 +203,7 @@ const Userorderinvoice = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

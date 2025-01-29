@@ -308,10 +308,10 @@ else{
                   </div>
                   <div className="mb-3 d-flex">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label ">
-                      Select City<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
+                      Select District<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleCityChange}>
-                                <option value="Choose city" label=' Enter your city'></option>
+                                <option value="Choose district" label=' Enter your district'></option>
                                 {(statesCities.find((s) => s.state === state)?.cities || []).map((city) => (
                       <option key={city} value={city}>
                         {city}

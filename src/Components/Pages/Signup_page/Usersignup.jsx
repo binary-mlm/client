@@ -416,14 +416,14 @@ function wp_mobileHandler(e) {
                   </div>
                   <div className="mb-3 d-flex">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label ">
-                      Select City<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
+                      Select District<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleCityChange}>
                                 
                                 {/* {Array.isArray(city) && city.map(city => (
                                     <option key={city.city_name} value={city.city_name}>{city.city_name}</option>
                                 ))}   */}
-                                <option value="">Select City</option>
+                                <option value="">Select district</option>
                                
                     {(statesCities.find((s) => s.state === state)?.cities || []).map((city) => (
                       <option key={city} value={city}>

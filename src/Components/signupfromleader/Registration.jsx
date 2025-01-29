@@ -388,7 +388,7 @@ const handleSubmit = async (event) => {
                     </label>
                     <select aria-label=" example" className='form-select' onChange={handleStateChange}>
                                 <option value="" label='Enter your State'></option>
-                                <option value="" label='Enter your State'></option>
+                                
                                 {statesCities.map((item) => (
                       <option key={item.state} value={item.state}>
                         {item.state}
@@ -404,7 +404,7 @@ const handleSubmit = async (event) => {
                   </div>
                   <div className="mb-3 d-flex">
                     <label htmlFor="staticEmail" className="col-sm-3 col-form-label ">
-                      Select City<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
+                      Select District<sup><i className="fa fa-asterisk text-danger asterisk"></i> </sup>
                     </label>
                     <select className="form-select mb-3 inputform" aria-label=".form-select-lg example" onChange={handleCityChange}>
                                 <option value="Choose city" label=' Enter your city'></option>
