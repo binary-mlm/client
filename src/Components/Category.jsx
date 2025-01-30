@@ -1,5 +1,10 @@
 import React from 'react'
 import "../assets/css/main.css";
+import  personalcare from "../assets/icons/cream.png";
+import beautycare from "../assets/icons/skin-care.png";
+import healthcare from "../assets/icons/healthcare.png";
+import home from "../assets/icons/home.png";
+import grocery from "../assets/icons/grocery-cart.png";
 
 
 const Category = () => {
@@ -9,7 +14,7 @@ const Category = () => {
           <div className="head"><i className="icon fa fa-align-justify fa-fw"></i> Categories</div>
           <nav className="yamm megamenu-horizontal bg-white">
             <ul className="nav">
-              <li className="item p-3"> <a href="/allproduct?category=Personal Care" className="text-decoration-none"><i className="icon fa fa-hand-o-right" aria-hidden="true"></i>Personal Care</a>
+              <li className="item p-3"><img src={personalcare} width={25}/> <a href="/allproduct?category=Personal Care" className="text-decoration-none"> Personal Care</a>
                 {/* <ul className="dropdown-menu mega-menu">
                   <li className="yamm-content">
                     <div className="row">
@@ -57,20 +62,20 @@ const Category = () => {
               
                
               
-              <li className=" menu-item p-3"> <a href="#" className=" text-decoration-none"><i className="icon fa fa-heart" aria-hidden="true"></i>Beauty Care</a>
+              <li className=" menu-item p-3"><img src={beautycare} width={25}/> <a href="#" className=" text-decoration-none"> Beauty Care</a>
               <span className="blink inline-badge" >Coming soon!</span>
            
               </li>
              
               
-              <li className=" menu-item p-3"> <a href="/allproduct?category= Health Care" className=" text-decoration-none"><i className="icon fa fa-heartbeat"></i>Health Care</a>
+              <li className=" menu-item p-3"> <img src={healthcare} width={25}/><a href="/allproduct?category= Health Care" className=" text-decoration-none"> Health Care</a>
              
                 </li>
            
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none"><i className="icon fa fa-home"></i>Home Care</a>
+              <li className="dropdown menu-item p-3"><img src={home} width={25} /> <a href="#" className=" text-decoration-none">Home Care</a>
               <span className="blink inline-badge" >Coming soon!</span>
               </li>
-             <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none" ><i className="icon fa fa-shopping-cart"></i>Grocery</a>
+             <li className="dropdown menu-item p-3"> <img src={grocery} width={23}/><a href="#" className=" text-decoration-none" > Grocery</a>
               <span className="blink inline-badge" >Coming soon!</span>
                 </li>
              

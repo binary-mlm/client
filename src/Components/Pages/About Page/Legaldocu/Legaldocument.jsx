@@ -40,8 +40,7 @@ const Legaldocument = () => {
             <img src={photo.src} alt={photo.alt} />
           </div>
         ))}
-        
-        
+
       </div>
 
       {isOpen && (

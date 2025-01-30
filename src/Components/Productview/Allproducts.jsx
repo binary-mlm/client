@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'; 
 import "./allproduct.css";
 import { useLocation , useNavigate } from 'react-router-dom';
+import  personalcare from "../../assets/icons/cream.png";
+import beautycare from "../../assets/icons/skin-care.png";
+import healthcare from "../../assets/icons/healthcare.png";
+import home from "../../assets/icons/home.png";
+import grocery from "../../assets/icons/grocery-cart.png";
+import allproduct from "../../assets/icons/allpro.png";
 
 const Allproducts = () => {
    
@@ -84,32 +90,32 @@ const Allproducts = () => {
           <nav className="yamm megamenu-horizontal bg-white">
             <ul className="nav">
            
-              <li className="item p-3" > <i className="icon fa fa-square me-3" aria-hidden="true"></i><span onClick={() =>  handleCategoryChange('')}>All Execlusive Products</span>
+              <li className="item p-3" ><img src={allproduct} width={24}/><span  className='ms-2' onClick={() =>  handleCategoryChange('')}>All Execlusive Products</span>
                 
                </li>
                
               <li></li>
            
-              <li className=" menu-item p-3"><i className="icon fa fa-hand-o-right me-3" aria-hidden="true"></i><span onClick={() => handleCategoryChange('Personal Care')}>Personal Care</span>
+              <li className=" menu-item p-3"><img src={personalcare} width={25}/><span className='ms-2' onClick={() => handleCategoryChange('Personal Care')}> Personal Care</span>
               
                 </li>
-              <li className=" menu-item p-3"> <a href="#" className=" text-decoration-none text-dark"><i className="icon fa fa-heart me-3" aria-hidden="true"></i>Beauty Care</a>
+              <li className=" menu-item p-3"><img src={beautycare} width={25}/> <a href="#" className="ms-2 text-decoration-none text-dark"> Beauty Care</a>
               <span className="blink inline-badge ms-3" >Coming soon!</span>
            
               </li>
              
               
-              <li className="menu-item p-3 health " onClick={() => handleCategoryChange('Health Care')}> <i className="icon fa fa-heartbeat me-3 " aria-hidden="true"></i>Health Care
+              <li className="menu-item p-3 health " onClick={() => handleCategoryChange('Health Care')}><img src={healthcare} width={25}/>  <span className='ms-2'>Health Care</span>
              
                 </li>
           
               
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none text-dark" data-bs-toggle="dropdown"><i className="icon fa fa-home me-3"></i>Home Care</a>
+              <li className="dropdown menu-item p-3"> <img src={home} width={23}/><a href="#" className="ms-2 text-decoration-none text-dark" data-bs-toggle="dropdown"> Home Care</a>
               <span className="blink inline-badge ms-3" >Coming soon!</span>
               </li>
             
               
-              <li className="dropdown menu-item p-3"> <a href="#" className=" text-decoration-none text-dark" data-bs-toggle="dropdown"><i className="icon fa fa-shopping-cart me-3"></i>Grocery</a>
+              <li className="dropdown menu-item p-3"> <img src={grocery} width={23}/> <a href="#" className="ms-2 text-decoration-none text-dark" data-bs-toggle="dropdown">  Grocery</a>
               <span className="blink inline-badge ms-3" >Coming soon!</span>
                 </li>
             </ul>
