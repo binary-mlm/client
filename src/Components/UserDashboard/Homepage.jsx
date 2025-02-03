@@ -158,7 +158,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">WEEKLY EARNING(₹)</span>
                 <br />
-                ₹{data.weeklyEarning}
+                ₹0
               </div>
             </div>
             <div className="d-flex mt-2">
@@ -180,7 +180,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">MONTHLY EARNING(₹)</span>
                 <br />
-                ₹{data.monthlyEarning}
+                ₹0
               </div>
             </div>
             <div className="d-flex mt-2">
@@ -197,7 +197,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">TOTAL EARNING (₹)</span>
                 <br />
-                ₹{data.lifetimeEarning}
+                ₹0
               </div>
             </div>
           </>
