@@ -3,6 +3,7 @@ import axios from "axios";
 import swal from "sweetalert";
 import "./kyc.css";
 import { useNavigate } from 'react-router-dom'
+import imageCompression from 'browser-image-compression';
 const Kycverification = () => {
   const mySponsorId = sessionStorage.getItem('mySponsorId');
   const myname = sessionStorage.getItem('username');
@@ -24,21 +25,44 @@ const Kycverification = () => {
   const navigate = useNavigate()
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const [kycStatus, setKycStatus] = useState("loading");
-  const MAX_FILE_SIZE_MB = 2; 
-  const handleImageChange = (event, setPreview) => {
+  
+
+  
+  const handleImageChange = async (event, setPreview) => {
     const file = event.target.files[0];
+  
     if (file) {
-      const fileSizeInMB = file.size / (1024 * 1024); // Convert size to MB
+      const fileSizeInMB = file.size / (1024 * 1024); // Convert bytes to MB
+      const MAX_FILE_SIZE_MB = 1; // Maximum file size allowed for upload
+      const TARGET_FILE_SIZE_KB = 200; // Target size after compression (in KB)
+  
       if (fileSizeInMB > MAX_FILE_SIZE_MB) {
         swal("Error!", `File size should be less than ${MAX_FILE_SIZE_MB}MB. Please select a smaller file.`, "error");
-        return; // Do not set the file if it exceeds the size limit
+        return;
       }
-      setPreview(file); // Set the preview URL for the specific image
+  
+      try {
+        // Compression settings
+        const options = {
+          maxSizeMB: TARGET_FILE_SIZE_KB / 1024, // Convert KB to MB
+          maxWidthOrHeight: 1024, // Resize image if necessary
+          useWebWorker: true, // Perform compression in background for performance
+        };
+  
+        const compressedFile = await imageCompression(file, options);
+  
+        console.log(`Original size: ${(file.size / 1024).toFixed(2)} KB`);
+        console.log(`Compressed size: ${(compressedFile.size / 1024).toFixed(2)} KB`);
+  
+        setPreview(compressedFile); // Set the compressed file in state
+      } catch (error) {
+        console.error('Error during image compression:', error);
+      }
     }
   };
   
   const handlekycsubmit = async (event)=>{
-    const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+    
     event.preventDefault();
     await axios.post(ROOT_URL+'/api/user/submitKycDetails/', { mySponsorId, name,  mobileNumber, 
       bankName, 
@@ -64,8 +88,11 @@ const Kycverification = () => {
             
         })
         .catch(err => {
-            console.log(err);
-            swal("Error!", err.response.data.message || 'Error submitting KYC. Please try again.', "error");
+          if (err.code === 'ERR_NETWORK') {
+            swal("Error",'Network error occurred. Please check your connection.',"error");
+          } else {
+            swal("error",'An error occurred: ' + err.response,"error");
+          }
         })
   }
 
