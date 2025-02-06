@@ -28,8 +28,6 @@ Overall, the direct selling industry continues to grow, providing individuals wi
       </div>
     </div>
     
-
- 
    
     <div className='row'>
      
