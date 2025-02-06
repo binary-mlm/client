@@ -206,13 +206,13 @@ const Kycverification = () => {
                     ) : (
                       
                      <>
-                      <span>noimage</span>
+                      <span> No image</span>
                      </>
                     )}
                   </div>
                  
                     <div>
-                    <input type="file" className="uploadFile img mt-2" onChange={(e) => handleImageChange(e, setpanCardFront)} />
+                    <input type="file" className="uploadFile img mt-2"  accept=".png, .jpg, .jpeg" onChange={(e) => handleImageChange(e, setpanCardFront)} />
                     </div>
                 </div>
               
@@ -226,13 +226,13 @@ const Kycverification = () => {
                     ) : (
                       
                      <>
-                      <span>noimage</span>
+                      <span> No image</span>
                      </>
                     )}
                   </div>
                  
                     <div>
-                    <input type="file" className="uploadFile img mt-2" onChange={(e) => handleImageChange(e, setaadharCardFront)} />
+                    <input type="file" className="uploadFile img mt-2"  accept=".png, .jpg, .jpeg" onChange={(e) => handleImageChange(e, setaadharCardFront)} />
                     </div>
                 </div>
 
@@ -244,12 +244,12 @@ const Kycverification = () => {
                       <img  src={URL.createObjectURL(aadharCardBack)} alt="Aadhar Back" className="img-thumbnail" />
                     ) : (   
                      <>
-                      <span>noimage</span>
+                      <span> No image</span>
                      </>
                     )}
                   </div>
                     <div>
-                    <input type="file" className="uploadFile img mt-2" onChange={(e) => handleImageChange(e, setaadharCardBack)} />
+                    <input type="file" className="uploadFile img mt-2"  accept=".png, .jpg, .jpeg" onChange={(e) => handleImageChange(e, setaadharCardBack)} />
                     </div>
                 </div>
 
@@ -262,13 +262,13 @@ const Kycverification = () => {
                     ) : (
                       
                      <>
-                      <span>noimage</span>
+                      <span> No image</span>
                      </>
                     )}
                   </div>
                  
                     <div>
-                    <input type="file" className="uploadFile img mt-2" onChange={(e) => handleImageChange(e, setbankCard)} />
+                    <input type="file" className="uploadFile img mt-2"  accept=".png, .jpg, .jpeg" onChange={(e) => handleImageChange(e, setbankCard)} />
                     </div>
                 </div>
                 {/* profilephoto */}
@@ -280,13 +280,13 @@ const Kycverification = () => {
                     ) : (
                       
                      <>
-                      <span>noimage</span>
+                      <span> No image</span>
                      </>
                     )}
                   </div>
                  
                     <div>
-                    <input type="file" className="uploadFile img mt-2" onChange={(e) => handleImageChange(e, setprofilephoto)} />
+                    <input type="file" className="uploadFile img mt-2"  accept=".png, .jpg, .jpeg" onChange={(e) => handleImageChange(e, setprofilephoto)} />
                     </div>
                 </div>
               </div>
