@@ -28,19 +28,19 @@ const Idcard = () => {
   const mySponsorId = sessionStorage.getItem("mySponsorId");
   const contactNumber = sessionStorage.getItem("usermobilenumber");
 
-  useEffect(() => {
-    if(mySponsorId){
-      axios.post(ROOT_URL + `/api/user/profilephoto`,{ mySponsorId })
-      .then((res) => {
-         console.log(res);
-        setUserphoto(res.data.profilephoto);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    }
+  // useEffect(() => {
+  //   if(mySponsorId){
+  //     axios.post(ROOT_URL + `/api/user/profilephoto`,{ mySponsorId })
+  //     .then((res) => {
+  //        console.log(res);
+  //       setUserphoto(res.data.profilephoto);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   }
 
-  })
+  // })
   return (
     <div>
       <div className="d-flex justify-content-end">
@@ -63,7 +63,7 @@ const Idcard = () => {
       {
         userphoto? (
           <> <div className="image-container">
-          <img src={userphoto}  className="image_user"  style={{ width: "15%" , borderRadius:"50%" }} />
+          {/* <img src={userphoto}  className="image_user"  style={{ width: "15%" , borderRadius:"50%" }} /> */}
           </div>
           </>
          
