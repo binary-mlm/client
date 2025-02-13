@@ -36,7 +36,7 @@ const Education = () => {
             <div className="col-lg-3">
             <div className="trainer-box text-center my-2">
               <img src={trainerview4}  className="rounded-circle"  width={80} height={80} alt='trainer' />
-              <div className="trainer-name fw-bold">M Nilachandra Singh</div>
+              <div className="trainer-name fw-bold">M Nilachandra Singha</div>
               <div className="trainer-designation" style={{fontSize:"13px"}}>Trainer</div>
             </div>
             </div>
