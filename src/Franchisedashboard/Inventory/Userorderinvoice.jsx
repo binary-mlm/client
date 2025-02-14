@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import logo from "../../assets/images/udbhab.png";
+import logo1 from "../../assets/images/udbhab_icon.png"
+// import logo from "../../assets/images/udbhab_icon.png";
 import { useLocation } from "react-router-dom";
 
 const Userorderinvoice = () => {
@@ -65,7 +66,25 @@ const Userorderinvoice = () => {
               <div style={{padding:"3%"}}>
                 <div className="card-body">
                   <div className="row">
-                    <div className="col-sm-12 text-center">
+                  <header className="voucher-header mt-2">
+                        <div className="row">
+                          <div className="col-lg-4 text-start">
+                              <img src={logo1} style={{width:"40%"}}/>
+                          </div>
+                          <div className="col-lg-8">
+                          <h1 className="fw-bold" style={{color:"#075444"}}>UDBHAB MARKETING PVT. LTD</h1>
+                          <p className="fw-bold">(GSTIN: 19AADCU7009B1ZJ)</p>
+                          <p className="fw-bold">Indira nagar Sodepur, North 24 Parganas. Kol-700110
+                            
+                          </p>
+                          
+                          {/* <p>Email: info.ecofynity@gmail.com</p> */}
+                          <p className="fw-bold">Website: www.myudbhab.in</p>
+                          </div>
+                        </div>
+                          
+                        </header>
+                    {/* <div className="col-sm-12 text-center">
                       <img className="img-fuild" src={logo} width={140} />
                       <p className="mb-1">
                         Reg office: Indira Nagar Sodepur, North 24 Parganas, Kolkata-700110
@@ -81,7 +100,7 @@ const Userorderinvoice = () => {
                         <i className="uil uil-phone me-1"></i>
                         +(91)7980964516
                       </p>
-                    </div>
+                    </div> */}
                     {/* <div className="col-sm-6 invoice-title text-start mt-3">
                         <div>
                           <span className="h4">

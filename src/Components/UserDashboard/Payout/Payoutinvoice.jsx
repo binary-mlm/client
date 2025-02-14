@@ -85,12 +85,7 @@ const Payoutinvoice = () => {
       <section className="voucher-section">
         <h2>BUSINESS DETAILS (MONTH: October 2024) (From: 01-10-2024 To: 31-10-2024)</h2>
         <table className="voucher-table">
-          <tbody>
-            <tr>
-              <td><strong>Matching BV</strong></td>
-              <td>584142</td>
-            </tr>
-          </tbody>
+          
         </table>
       </section>
 
@@ -101,7 +96,7 @@ const Payoutinvoice = () => {
             <tr>
               <th>Bonus Type</th>
               <th>Status</th>
-              <th>Points</th>
+              
               <th>Income</th>
             </tr>
           </thead>
@@ -109,63 +104,53 @@ const Payoutinvoice = () => {
             <tr>
               <td>Direct sales Bonus</td>
               <td>Y</td>
-              <td>142.00</td>
+             
               <td>58414.20</td>
             </tr>
             <tr>
               <td>Team  sales Bonus</td>
               <td>Y</td>
-              <td>-</td>
+             
               <td>2080.00</td>
             </tr>
-            <tr>
-              <td>Mentoring Bonus</td>
-              <td>Y</td>
-              <td>-</td>
-              <td>48420.00</td>
-            </tr>
+            
             <tr>
               <td>Car achievement Bonus</td>
               <td>Y</td>
-              <td>-</td>
+             
               <td>48420.00</td>
             </tr>
             <tr>
               <td>House achievement Bonus</td>
               <td>Y</td>
-              <td>-</td>
+             
               <td>48420.00</td>
             </tr>
             
-            <tr>
-              <td>International tour achievement Bonus</td>
-              <td>Y</td>
-              <td>-</td>
-              <td>48420.00</td>
-            </tr>
+           
             <tr>
               <td>Life time royalty</td>
               <td>Y</td>
-              <td>-</td>
+              
               <td>48420.00</td>
             </tr>
             {/* Add other rows similarly */}
             <tr>
               <td><strong>Total Income</strong></td>
               <td>-</td>
-              <td>-</td>
+              
               <td>204246.2</td>
             </tr>
             <tr>
               <td><strong>TDS</strong></td>
               <td>-</td>
-              <td>-</td>
+              
               <td>10212.31</td>
             </tr>
             <tr>
               <td><strong>Total Income (After Deduction)</strong></td>
               <td>-</td>
-              <td>-</td>
+              
               <td>194033.89</td>
             </tr>
           </tbody>
