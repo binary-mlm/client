@@ -36,6 +36,7 @@ const Payoutmonthly = () => {
     <tr>
       <th className='text-center' scope="col">Month</th>
       <th className='text-center' scope="col">Payout Amount</th>
+      <th className='text-center' scope="col">View Invoice</th>
       
     </tr>
   </thead>
