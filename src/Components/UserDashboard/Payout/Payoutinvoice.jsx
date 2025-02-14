@@ -47,14 +47,14 @@ const Payoutinvoice = () => {
             <img src={logo} style={{width:"150px"}}/>
         </div>
         <div className="col-lg-8">
-        <h1>UDBHAB MARKETING PVT. LTD</h1>
-        <p>(CIN: U47890WB2024PTC274607)</p>
-        <p>Indira nagar Sodepur, North 24 Parganas. Kol-700110
+        <h1 className="fw-bold" style={{color:"#075444"}}>UDBHAB MARKETING PVT. LTD</h1>
+        <p className="fw-bold ">(GSTIN: 19AADCU7009B1ZJ)</p>
+        <p className="fw-bold">Indira nagar Sodepur, North 24 Parganas. Kol-700110
           
         </p>
         
         {/* <p>Email: info.ecofynity@gmail.com</p> */}
-        <p>Web: www.myudbhab.in</p>
+        <p className="fw-bold">Website: www.myudbhab.in</p>
         </div>
       </div>
         

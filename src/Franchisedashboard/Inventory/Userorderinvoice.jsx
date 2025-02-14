@@ -68,15 +68,16 @@ const Userorderinvoice = () => {
                   <div className="row">
                   <header className="voucher-header mt-2">
                         <div className="row">
-                          <div className="col-lg-4 text-start">
-                              <img src={logo1} style={{width:"40%"}}/>
+                          <div className="col-lg-2 text-start">
+                              <img src={logo1} style={{width:"100%"}}/>
                           </div>
-                          <div className="col-lg-8">
+                          <div className="col-lg-10 text-center">
                           <h1 className="fw-bold" style={{color:"#075444"}}>UDBHAB MARKETING PVT. LTD</h1>
                           <p className="fw-bold">(GSTIN: 19AADCU7009B1ZJ)</p>
-                          <p className="fw-bold">Indira nagar Sodepur, North 24 Parganas. Kol-700110
+                          <p className="fw-bold">Reg. Office: Indira nagar Sodepur, North 24 Parganas. Kol-700110
                             
                           </p>
+                          <p className="fw-bold">Corporate office: Shakshi Apartment, Ground floor , Road no: 6, HB Town, Sodepur, Kol-700110</p>
                           
                           {/* <p>Email: info.ecofynity@gmail.com</p> */}
                           <p className="fw-bold">Website: www.myudbhab.in</p>
