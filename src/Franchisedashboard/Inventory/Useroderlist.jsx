@@ -1,48 +1,72 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import swal from 'sweetalert'
-import { useNavigate } from 'react-router-dom';
-const Useroderlist = () => {
-    const franchiseId = sessionStorage.getItem('franchiseid');
-    const [orderhistory, setorderhistory] = useState([]);
-    const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
-    const navigate = useNavigate();
-    useEffect(() => {
-        const fetchorderhistory = async () => {
-          if (franchiseId) {
-            try {
-              const response = await axios.post(ROOT_URL+`/api/franchise/createdOrders`,{franchiseId}); // Adjust this endpoint to match your API
-              if (response.data.length === 0) {
-                  swal('Opps!', 'No inventory found for this franchise!', 'error')
-              } else {
-                setorderhistory(response.data.franchiseOrders);
-                console.log(response.data.franchiseOrders)
-               
-              }
-            } catch (error) {
-              console.error('Error fetching:', error);
-            }
-          } else {
-            setorderhistory([]);
-          }
-        };
-    
-        fetchorderhistory();
-      }, []);
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
-      const handleInvoice = (order) => {
-        navigate('/franchise/userorderinvoice', { state: { franchiseId, order } });
-      };
+const Userorderlist = () => {
+  const franchiseId = sessionStorage.getItem("franchiseid");
+  const [orderhistory, setorderhistory] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const ordersPerPage = 20; // Number of orders per page
+  const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchorderhistory = async () => {
+      if (franchiseId) {
+        try {
+          const response = await axios.post(
+            ROOT_URL + `/api/franchise/createdOrders`,
+            { franchiseId }
+          );
+
+          if (response.data.length === 0) {
+            swal("Oops!", "No inventory found for this franchise!", "error");
+          } else {
+            setorderhistory(response.data.franchiseOrders);
+            console.log(response.data.franchiseOrders);
+          }
+        } catch (error) {
+          console.error("Error fetching:", error);
+        }
+      } else {
+        setorderhistory([]);
+      }
+    };
+
+    fetchorderhistory();
+  }, []);
+
+  const handleInvoice = (order) => {
+    navigate("/franchise/userorderinvoice", { state: { franchiseId, order } });
+  };
+
+  // ** Pagination Logic **
+  const totalPages = Math.ceil(orderhistory.length / ordersPerPage);
+
+  const indexOfLastOrder = currentPage * ordersPerPage;
+  const indexOfFirstOrder = indexOfLastOrder - ordersPerPage;
+  const currentOrders = orderhistory.slice(indexOfFirstOrder, indexOfLastOrder);
+
+  const nextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
+
   return (
     <>
-    
-    <div className='mt-5'>
-   <div className='h3 text-center'>Customer invoice history</div>
-   {orderhistory.length > 0 ? (
+      <div className="mt-5">
+        <div className="h3 text-center">Customer Invoice History</div>
+
+        {orderhistory.length > 0 ? (
           <div className="table-responsive">
             <table className="table table-striped">
-              <thead style={{ backgroundColor: '#095444' }}>
+              <thead style={{ backgroundColor: "#095444" }}>
                 <tr>
+                  <th className="text-center text-white">S/N</th>
                   <th className="text-center text-white">Order Number</th>
                   <th className="text-center text-white">Total Amount</th>
                   <th className="text-center text-white">Order Date</th>
@@ -51,12 +75,21 @@ const Useroderlist = () => {
                 </tr>
               </thead>
               <tbody>
-                {orderhistory.map((order) => (
+                {currentOrders.map((order, index) => (
                   <tr key={order._id}>
-                    <td className="text-center">{order.orderDetails.orderNumber}</td>
-                    <td className="text-center">{order.orderDetails.totalAmount}/-</td>
                     <td className="text-center">
-                      {new Date(order.orderDetails.orderDate).toLocaleDateString()}
+                      {indexOfFirstOrder + index + 1}
+                    </td>
+                    <td className="text-center">
+                      {order.orderDetails.orderNumber}
+                    </td>
+                    <td className="text-center">
+                      {order.orderDetails.totalAmount}/-
+                    </td>
+                    <td className="text-center">
+                      {new Date(
+                        order.orderDetails.orderDate
+                      ).toLocaleDateString()}
                     </td>
                     <td className="text-center">{order.userDetails.userName}</td>
                     <td className="text-center">
@@ -64,7 +97,7 @@ const Useroderlist = () => {
                         <i
                           className="fa fa-eye"
                           onClick={() => handleInvoice(order)}
-                          style={{ fontSize: '20px', cursor: 'pointer' }}
+                          style={{ fontSize: "20px", cursor: "pointer" }}
                         ></i>
                       </span>
                     </td>
@@ -72,6 +105,29 @@ const Useroderlist = () => {
                 ))}
               </tbody>
             </table>
+
+            {/* Pagination Buttons */}
+            <div className="d-flex justify-content-center mt-4 mb-3">
+              <button
+                className="verifybutton me-2"
+                
+                onClick={prevPage}
+                disabled={currentPage === 1}
+              >
+                Previous
+              </button>
+              <span className="align-self-center">
+                Page {currentPage} of {totalPages}
+              </span>
+              <button
+                className="verifybutton ms-2"
+                
+                onClick={nextPage}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </div>
           </div>
         ) : (
           <div className="text-center mt-5">
@@ -80,8 +136,7 @@ const Useroderlist = () => {
         )}
       </div>
     </>
-    
-  )
-}
+  );
+};
 
-export default Useroderlist
+export default Userorderlist;

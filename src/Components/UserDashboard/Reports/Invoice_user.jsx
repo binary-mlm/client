@@ -61,7 +61,21 @@ const Invoice_user = () => {
               <div className="receipt-main col-xs-10 col-sm-10 col-md-12">
                 {/* Header */}
                 <div className="row">
-                  <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                 <div className="col-lg-2 text-start">
+                                              <img src={logo} style={{width:"100%"}}/>
+                                          </div>
+                                          <div className="col-lg-10 text-center">
+                                          <h2 className="fw-bold" style={{color:"#075444"}}>UDBHAB MARKETING PVT. LTD</h2>
+                                          <p className="fw-bold" style={{fontSize:"17px"}}>(GSTIN: 19AADCU7009B1ZJ)</p>
+                                          <p >Reg. Office: Indira nagar Sodepur, North 24 Parganas. Kol-700110
+                                            
+                                          </p>
+                                          <p>Corporate office: Shakshi Apartment, Ground floor , Road no: 6, HB Town, Sodepur, Kol-700110</p>
+                                          
+                                          {/* <p>Email: info.ecofynity@gmail.com</p> */}
+                                          <p>Website: www.myudbhab.in</p>
+                                          </div>
+                  {/* <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div className="receipt-start">
                       <img
                         className="img-responsive"
@@ -70,8 +84,8 @@ const Invoice_user = () => {
                         style={{ width: "30%" }}
                       />
                     </div>
-                  </div>
-                  <div className="col-xs-6 col-sm-6 col-md-6 text-end ">
+                  </div> */}
+                  {/* <div className="col-xs-6 col-sm-6 col-md-6 text-end ">
                     <div className="receipt-right">
                       <h5>Udbhab Marketing Pvt Ltd</h5>
                       <p>
@@ -84,7 +98,7 @@ const Invoice_user = () => {
                       Shakshi Apartment, Road no: 6, HB Town, Sodepur, Kol-700110 <i className="fa fa-location-arrow" />
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Customer Details */}

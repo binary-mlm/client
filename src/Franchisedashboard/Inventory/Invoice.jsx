@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import logo from "../../assets/images/udbhab.png";
+import logo from "../../assets/images/udbhab_icon.png";
 import { useLocation } from "react-router-dom";
 const Invoice = () => {
   const location = useLocation();
@@ -66,24 +66,20 @@ const Invoice = () => {
                 >
                   <div className="card-body">
                     <div className="row">
-                    <div className="col-sm-12 text-center">
-                    <img className="img-fuild" src={logo} width={140} />
-                    <p className="mb-1">
-                        Reg office: Indira Nagar Sodepur, North 24 Parganas, Kolkata-700110
-                      </p>
-                      <p className="mb-1">
-                      Corporate office: Shakshi Apartment, Road no: 6, HB Town, Sodepur, Kol-700110
-                      </p>
-                          <p className="mb-1">
-                            <i className="uil uil-envelope-alt me-1"></i>Email:
-                            support@myudbhab.in
-                          </p>
-                          <p>
-                            <i className="uil uil-phone me-1"></i>
-                            +(91)7980964516
-                          </p>
-                          
-                    </div>
+                   <div className="col-lg-2 text-start">
+                                                <img src={logo} style={{width:"100%"}}/>
+                                            </div>
+                                            <div className="col-lg-10 text-center">
+                                            <h2 className="fw-bold" style={{color:"#075444"}}>UDBHAB MARKETING PVT. LTD</h2>
+                                            <p className="fw-bold" style={{fontSize:"16px"}}>(GSTIN: 19AADCU7009B1ZJ)</p>
+                                            <p className="fw-bold">Reg. Office: Indira nagar Sodepur, North 24 Parganas. Kol-700110
+                                              
+                                            </p>
+                                            <p className="fw-bold">Corporate office: Shakshi Apartment, Ground floor , Road no: 6, HB Town, Sodepur, Kol-700110</p>
+                                            
+                                            {/* <p>Email: info.ecofynity@gmail.com</p> */}
+                                            <p className="fw-bold">Website: www.myudbhab.in</p>
+                                            </div>
                       {/* <div className="col-sm-6 invoice-title text-start mt-3">
                         <div>
                           <span className="h4">

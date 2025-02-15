@@ -73,7 +73,7 @@ const Userorderinvoice = () => {
                           </div>
                           <div className="col-lg-10 text-center">
                           <h1 className="fw-bold" style={{color:"#075444"}}>UDBHAB MARKETING PVT. LTD</h1>
-                          <p className="fw-bold">(GSTIN: 19AADCU7009B1ZJ)</p>
+                          <p className="fw-bold" style={{fontSize:"16px"}}>(GSTIN: 19AADCU7009B1ZJ)</p>
                           <p className="fw-bold">Reg. Office: Indira nagar Sodepur, North 24 Parganas. Kol-700110
                             
                           </p>
