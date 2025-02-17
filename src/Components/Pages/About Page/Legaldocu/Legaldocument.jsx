@@ -7,6 +7,7 @@ import doc2 from "../../../../assets/images/Legaldocu/docu3.jpg";
 import doc3 from "../../../../assets/images/Legaldocu/pic4.jpg";
 import doc4 from "../../../../assets/images/Legaldocu/udbhab.jpg";
 import doc5 from "../../../../assets/images/Legaldocu/udbhab_reg.jpg";
+import doc6 from "../../../../assets/images/Legaldocu/gst5.jpg";
 const Legaldocument = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
@@ -18,6 +19,7 @@ const Legaldocument = () => {
           { id: 4, src: doc3, alt: 'Image 4' },
           { id: 5, src: doc4, alt: 'Image 5' },
           { id: 6, src: doc5, alt: 'Image 6' },
+          { id: 7, src: doc6, alt: 'Image 6' },
   ];
 
   const openLightbox = (src) => {
