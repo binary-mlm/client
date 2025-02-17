@@ -16,7 +16,7 @@ const About = () => {
           <div className="row">
             <div className="col-md-12 mt-4">
               <div className="alert alert_info">
-                <p className="text_style px-5">
+                <p className="text_style px-5" style={{lineHeight:"26px"}}>
                   Established in 2024, with a powerful vision of providing
                   genuine health and wealth solutions to common people,
                   Utbhab Marketing Pvt Ltd today has emerged as one of the
@@ -29,7 +29,7 @@ const About = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="about_company ">
-                <p className="mt-4 text_style" style={{textAlign:"justify"}}>
+                <p className="mt-4 text_style" style={{textAlign:"justify" , lineHeight:"26px"}}>
                 Udbhab Marketing Private Limited is a dynamic direct selling company committed to empowering individuals through
                  innovative products and opportunities. With a focus on quality and customer satisfaction, we provide a diverse range of items that enhance daily living. Our unique business model allows entrepreneurs to thrive, offering flexible earning potential and personal growth. Join us in transforming lives and building a successful future together, one sale at a time. Experience the Udbhab difference today!
                 </p>

@@ -50,7 +50,7 @@ const Navbar = () => {
           <a className="nav-link" href="/success_story">Industy & success story</a>
         </li>
         <li className="nav-item item_nav">
-          <a className="nav-link" href="/News">News</a>
+          <a className="nav-link" href="/News">News & events</a>
         </li>
         {/* <li className="nav-item dropdown item_nav ms-4">
           <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

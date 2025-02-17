@@ -18,7 +18,7 @@ const Education = () => {
           <div className='container'>
             <div className='row'>
               <div className='col-lg-10 col-md-12 col-sm-12 col-xs-12 education'>
-              <p className='mb-3'>Online Zoom education for a marketing company offers flexible, interactive training sessions that enhance team collaboration. With features like breakout rooms and recording capabilities, it accommodates diverse learning styles and allows for real-time engagement. This approach ensures teams stay updated on industry trends while maximizing cost-effectiveness and accessibility.</p>
+              <p className='mb-3' style={{lineHeight:"26px"}}>Online Zoom education for a marketing company offers flexible, interactive training sessions that enhance team collaboration. With features like breakout rooms and recording capabilities, it accommodates diverse learning styles and allows for real-time engagement. This approach ensures teams stay updated on industry trends while maximizing cost-effectiveness and accessibility.</p>
               </div>
             </div>
             <div className='trainer my-3'>

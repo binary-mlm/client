@@ -15,7 +15,7 @@ const Management = () => {
             <div className="col-md-12 mt-4">
               <div className="alert alert_info">
                 <p className="text_style px-5" >
-                <blockquote className='blockquote'>
+                <blockquote className='blockquote' style={{lineHeight:"26px"}}>
                 Utbhab is spearheaded by a team of extremely committed promoters as well as a team of young, enthusiastic and experienced professionals who are ever-ready to serve our Preferred Customers and Independent Business Owners, with a smile.
                 <footer className="blockquote-footer mt-2">From Utbhab team</footer>
                 </blockquote>
