@@ -158,7 +158,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">WEEKLY EARNING(₹)</span>
                 <br />
-                ₹0
+                ₹{data.totalWeeklyEarnings}
               </div>
             </div>
             <div className="d-flex mt-2">
