@@ -22,7 +22,7 @@ const Inventory = () => {
     const fetchSponsors = async () => {
       try {
         const response = await axios.get(
-          "https://www.api.myudbhab.in/api/franchise/getAllUsers"
+          ROOT_URL + `/api/franchise/getAllUsers`
         );
         if (response.status === 200) {
           setSponsors(response.data);

@@ -1,15 +1,10 @@
 .background{
-    background-image: url('../../../assets/images/1.jpg');  
+    background-image: url('../../../assets/images/backimg.png');  
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 578px;
-    width: 360px;
-    border: 1px solid #179aab;
-    /* width:100%;
-    height: 8.27in; */
+
 }
-.background_back{
+/* .background_back{
     background-image: url('../../../assets/images/2.jpg');  
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +12,7 @@
     height: 578px;
     width: 360px;
     border: 1px solid #1790ab;
-}
+} */
 .username-container {
     position: absolute;
     top: 57%; 
@@ -98,6 +93,26 @@
     position: absolute;
     top: 172%;
     left: 38.3%;
+  }
+  .username_id{
+    font-size: 20px;
+    color: rgb(9, 84, 68);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .fontcontact{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+  }
+  .fontoffice{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: 200;
+  }
+  .office{
+    margin-top: 5%;
+    margin-left: 7%;
   }
   @media (max-width: 768px) {
     .image-container{
