@@ -125,7 +125,7 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">ACCUMULATE BV</span>
-                <br />{data.totalBVPointsEarned.leftBV} | {data.totalBVPointsEarned.rightBV}
+                <br />{data.totalaccumulatedbv.leftBV} | {data.totalaccumulatedbv.rightBV}
                
               </div>
             </div>
