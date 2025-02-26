@@ -142,7 +142,7 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold"> MY TOTAL DIRECT TEAM BV</span>
-                <br /> {data.totalDirectBV.total}
+                <br /> {data?.totalDirectBV?.total ?? 0}
               </div>
             </div>
             <div className="d-flex mt-2">
