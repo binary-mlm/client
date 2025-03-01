@@ -2,10 +2,10 @@ import React, { useRef , useState , useEffect} from "react";
 import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-import photo from "../../assets/images/kusig.png"
+import photo from "../../assets/images/idba.jpg"
 // import pic from "../../assets/images/srijani.jpg";
 import "./Css/idcard.css";
-import logo from "../../assets/images/udbhab.png";
+import bg1 from "../../assets/images/1.jpg";
 const Idcard = () => {
   const invoiceRef = useRef();
   const [userphoto, setUserphoto] = useState(null);
@@ -57,108 +57,127 @@ const Idcard = () => {
         </button>
       </div>
       <div className="container">
-      <div  ref={invoiceRef} className="card w-50">
-      <div className="card-body background" style={{border:" 10px solid #6C957E"}}>
-      <div className="row" >
-      <div className="col-lg-6 col-sm-12">
-      <div className="d-flex justify-content-center">
-      <img src={logo} width={150}/>
-      </div>
-     
-      <div className="h4 text-center" style={{color:"rgb(9, 84, 68)"}}>UDBHAB MARKETING PVT. LTD.</div>
-      <div className="d-flex justify-content-center mt-3 text-align-center">
-      {
-        userphoto? (
-          <> 
-          <img src={userphoto}  style={{ width: "30%" , borderRadius:"28%" }} />
-          
-          </>
-         
-        ) : ("")    
-        }
-        </div>
-        <div className="d-flex justify-content-center mt-4">
-        <span className="username_id h5 fw-bold">{username}</span>
-        </div>
-        <div className="d-flex justify-content-center mt-3">
-          <div className="text-center p-2" style={{backgroundColor:"rgb(9, 46, 38)" , borderRadius:"10px"}}>
-            <span className="h4 text-white">ID: </span><span className="h4 text-white">{mySponsorId}</span>
+   
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <div className="card">
+            <div className="card-body">
+              <div className="row" id="section-to-print">
+                
+                {/* ID Card Front */}
+                <div className="col-lg-4 col-sm-12 offset-lg-2">
+                  <div className="bg_front"
+                    style={{
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      height: "578px",
+                      width: "360px",
+                      border: "1px solid #175fab",
+                    }}
+                  >
+                    <div className="iboprofileimg text-center p-3">
+                      <img
+                        src="https://myshpl.com/business/profileImage/SH2814552.jpg"
+                        className="img-fluid"
+                        alt="Profile"
+                        id="proimg"
+                      />
+                    </div>
+
+                    <div className="iboprofiledata text-center text-dark">
+                      <span className="iboname fw-bold d-block" id="memname">
+                        AVIJIT CHAKRABORTY
+                      </span>
+                      <span className="ibodesignation d-block">
+                        Independent Business Owner
+                      </span>
+                      <table className="table text-dark">
+                        <tbody>
+                          <tr>
+                            <td>User ID</td>
+                            <td>:</td>
+                            <td id="iuserid">SH2814552</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                {/* ID Card Back */}
+                <div className="col-lg-4 col-sm-12">
+                  <div
+                    style={{
+                      backgroundImage: "url(/ibo_assets/idcard-back.png)",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      height: "578px",
+                      width: "360px",
+                      border: "1px solid #175fab",
+                    }}
+                  >
+                    <table className="table text-dark m-3">
+                      <tbody>
+                        <tr>
+                          <td>Date of Birth</td>
+                          <td>:</td>
+                          <td id="dob_show">01 Jan 1970</td>
+                        </tr>
+                        <tr>
+                          <td>SHPL IBO Since</td>
+                          <td>:</td>
+                          <td id="ibo_joining_date_show">21 Apr 2022</td>
+                        </tr>
+                        <tr>
+                          <td>Blood Group</td>
+                          <td>:</td>
+                          <td id="blood_group_show">-</td>
+                        </tr>
+                        <tr>
+                          <td>Contact No</td>
+                          <td>:</td>
+                          <td id="contact_show">9836314437</td>
+                        </tr>
+                        <tr>
+                          <td>Emergency Contact No.</td>
+                          <td>:</td>
+                          <td id="emerjency_contact_show">9836314437</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Print Button */}
+              <div className="text-center mt-3 mb-3">
+                <button
+                  className="signupbutton px-4"
+                  onClick={() => window.print()}
+                >
+                  PRINT ID CARD
+                </button>
+                <p className="mt-3">
+                  <strong>Note:</strong> Kindly take a printout of this ID card
+                  on High Glossy Photo Paper. Do not forget to adjust the 'Print
+                  Size' to 3.375″ x 2.125″. <br />
+                  You may take help from a professional printer for the same.
+                </p>
+              </div>
+
+            </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center mt-4">
-          <div className="d-flex">
-            <div className="fw-bold fontcontact">Phone Number:</div>
-            <div className="ms-1 fw-bold fontcontact">+91 {contactNumber}
-            </div>
-            
-          </div>
-          
-          <div className="website text-white">www.myudbhab.in</div>
-        </div>
-       
       </div>
-      {/* <div className="username-container">
-      <div className="d-flex text-center">
-      
-        <div className="text-white h4 fw-bold"> {username}</div>
-        </div>
-      </div> */}
-      {/* <div className="userid-container mt-5">
-      <div className="d-flex">
-      <div className=" h3 text-white">ID:</div>
-      <div className="h3  text-white"> {mySponsorId}</div>
-      </div>
-      </div> */}
-      {/* <div className="useraddress-container">
-      <div className="d-flex text-white">
-      <div>Contact Number:</div>
-      <div className="ms-1">+91 {contactNumber}
-      </div>
-      
-      </div>
-      
-      <div className=" website text-white">www.myudbhab.in</div>
-     
+    </div>
 
-            </div> */}
-      
-     
-      <div className="col-lg-6" >
-      <div className="d-flex justify-content-center">
-      <img src={logo} width={150}/>
-      
-      </div>
-      <div className="h4 text-center" style={{color:"rgb(9, 84, 68)"}}>UDBHAB MARKETING PVT. LTD.</div>
-      <div className=" office d-flex justify-content-center flex-column">
-      <div className="fontoffice">Shakshi Apartment, Ground floor</div>
-      <div className="fontoffice">Road no: 6, HB Town,Sodepur, </div>
-      <div className="fontoffice">North 24 Parganas, Kolkata-700110</div>
-      <div className="fontoffice">Contact No:+91 79 8096 4516</div>
-      </div>
-<div className="d-flex justify-content-end">
-<img  src={photo} style={{width:"40%"}}/>
 
-</div>
-      <div className="d-flex justify-content-end">
-      <div className="fw-bold text-end">Authorised Signatory</div>
-      </div>
-      {/* <div className="background_back">
 
-      <div className="office-container">
-      <div className="fw-bold">Udbhab Marketing Pvt Ltd.</div>
-      <div>Shakshi Apartment, Ground floor</div>
-      <div>Road no: 6, HB Town,Sodepur, </div>
-      <div>North 24 Parganas, Kolkata-700110</div>
-      <div>Contact No:+91 79 8096 4516</div>
-      <div>
-      </div>
-      </div>     
-            </div> */}
-            </div>
 
-      </div>
-      </div>
-</div>
       </div>
       </div>
        

@@ -1,6 +1,6 @@
 import React from 'react'
-import pic1 from "../../assets/images/banners/home-banner.jpg";
-import pic2 from "../../assets/images/banners/home-banner48.jpg";
+import pic1 from "../../assets/images/banners/home-banner.png";
+import pic2 from "../../assets/images/banners/home-banner48.png";
 
 const Wide2 = () => {
   return (

@@ -4,15 +4,10 @@
     background-size: cover;
 
 }
-/* .background_back{
+.bg_front{
     background-image: url('../../../assets/images/2.jpg');  
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 578px;
-    width: 360px;
-    border: 1px solid #1790ab;
-} */
+   
+}
 .username-container {
     position: absolute;
     top: 57%; 

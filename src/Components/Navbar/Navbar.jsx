@@ -44,7 +44,7 @@ const Navbar = () => {
           <a className="nav-link" href="/brand">Brands</a>
         </li> */}
         <li className="nav-item item_nav">
-          <a className="nav-link" href="/education">Education</a>
+          <a className="nav-link" href="/education">Udbhab education academy </a>
         </li>
         <li className="nav-item item_nav">
           <a className="nav-link" href="/success_story">Industy & success story</a>
