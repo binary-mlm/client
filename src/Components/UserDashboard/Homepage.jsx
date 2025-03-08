@@ -124,10 +124,9 @@ const Homepage = () => {
                 <span> L - {data.totalBVPointsEarned.leftBV} | R - {data.totalBVPointsEarned.rightBV}</span>
               </div>
               <div className="card_item text-center ms-5">
-                <span className="fw-bold">ACCUMULATE BV</span><br/>
-                {data?.totalaccumulatedbv?.leftBV ?? 0} | {data?.totalaccumulatedbv?.rightBV ?? 0}
+                <span className="fw-bold">TOTAL MATCHED BV</span><br/>
+                {data?.totalMatchedBV ?? 0}
                 {/* <br />{data.totalaccumulatedbv.leftBV} | {data.totalaccumulatedbv.rightBV} */}
-               
               </div>
             </div>
             <div className="d-flex mt-2">
