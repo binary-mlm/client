@@ -1,161 +1,120 @@
-.background{
-    background-image: url('../../../assets/images/backimg.png');  
-    background-repeat: no-repeat;
-    background-size: cover;
+/* .idcard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+} */
 
+
+.userid-container {
+  position: absolute;
+  margin-top: 10px;
+  top: 62%; 
+  /* Adjust this value to move the text to the desired vertical position */
+  font-size: 30px;
+  font-weight: 700;
+  
 }
-.bg_front{
-    background-image: url('../../../assets/images/2.jpg');  
-   
+.idcard {
+  width: 481px;
+  height: 804px;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-container {
+  position: absolute;
+  top: 24%;
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #2C5545;
+}
+.user-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.placeholder-photo {
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+}
+.details {
+  position: absolute;
+  /* bottom: 10%; */
+  top: 76%;
+  text-align: center;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: #0E3B2E;
+}
+.username {
+  font-size: 24px;
+  font-weight: bold;
+}
+.sponsor-id {
+ 
+  position: absolute;
+  /* top: 24%; */
+  width: 275px;
+  height: 275px;
+}
+.useraddress-container{
+  position: absolute;
+  top: 29%; 
+  margin-left: 25%;/* Adjust this value to move the text to the desired vertical position */
+  font-size: 20px;
+  color: #000; /* Text color (choose based on background) */
+   /* Optional background for contrast */
+  padding: 64px 0px;
+ }
+
+.download-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1A4D3C;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.download-btn:hover {
+  background-color: #0E3B2E;
 }
 .username-container {
-    position: absolute;
-    top: 57%; 
-    margin-left: 6%;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 15px;
-    color: #000; /* Text color (choose based on background) */
-     /* Optional background for contrast */
-    padding: 10px 20px; /* Optional padding for readability */
-    
-  }
-  .userid-container {
-    position: absolute;
-    margin-top: 10px;
-    top: 60%; 
-    margin-left: 8%;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 15px;
-    color: #000; /* Text color (choose based on background) */
-     /* Optional background for contrast */
-    /* Optional rounded corners */
-  }
-  .userdateofbirth-container {
-    position: absolute;
-    top: 18%; 
-    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 15px;
-    color: #000; /* Text color (choose based on background) */
-     /* Optional background for contrast */
-    padding: 10px 20px; /* Optional padding for readability */
-    
-  }
-  .useraddress-container{
-    position: absolute;
-    top: 80%; 
-    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 15px;
-    color: #000; /* Text color (choose based on background) */
-    padding: 10px 20px;
-    
-  }
-  .useremail-container{
-    position: absolute;
-    top: 90%; 
-    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 15px;
-    color: #000; /* Text color (choose based on background) */
-    padding: 10px 20px;
-    
-  }
-  .useremercency-container{
-    position: absolute;
-    top: 30%; 
-    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 15px;
-    color: #000; /* Text color (choose based on background) */
-    padding: 10px 20px; 
-  }
-  .office-container{
-     position: absolute;
-    top: 40%; 
-    margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
-    font-size: 15px;
-    color: #000; /* Text color (choose based on background) */
-    padding: 10px 20px; 
-  }
-  .image-container{
-    position: absolute;
-    top: 25%;
-    left: 25.5%;
-  }
-  .image_user{
-   
-    width: 25%;
-    height: 25%;
-    border-radius: 20%;
-   
-  }
-  .website{
-    position: absolute;
-    top: 172%;
-    left: 38.3%;
-  }
-  .username_id{
-    font-size: 20px;
-    color: rgb(9, 84, 68);
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .fontcontact{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;
-  }
-  .fontoffice{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;
-    font-weight: 200;
-  }
-  .office{
-    margin-top: 5%;
-    margin-left: 7%;
-  }
-  @media (max-width: 768px) {
-    .image-container{
-      position: absolute;
-      top: 13%;
-      left: 30.8%;
-      
-    }
-    .image_user{
-      width: 67% !important
-    }
-    .username-container {
-      position: absolute;
-      top: 29%; 
-      margin-left: 18%;/* Adjust this value to move the text to the desired vertical position */ 
-      
-    }
-    .userid-container {
-      position: absolute;
-      margin-top: 10px;
-      top: 30.1%; 
-      margin-left: 26%;/* Adjust this value to move the text to the desired vertical position */
-      
-    }
-    .office-container{
-      position: absolute;
-     top: 70%; 
-     margin-left: 10px;/* Adjust this value to move the text to the desired vertical position */
-     
-     /* Text color (choose based on background) */
-     
-   }
-   .useraddress-container{
-    position: absolute;
-    top: 40%; 
-    margin-left: 10px;
-   }
-   .website{
-    position: absolute;
-    top: 195%;
-    left: 35.3%;
+  position: absolute;
+  top: 29%; 
+  margin-left: 25%;/* Adjust this value to move the text to the desired vertical position */
+  font-size: 25px;
+  color: #000; /* Text color (choose based on background) */
+   /* Optional background for contrast */
+  padding: 10px 20px; /* Optional padding for readability */
   
-   }
-   .background{
-    width: 339px;
-   }
-   .background_back{
-    width: 339px;
-   }
-    
-  }
+}
+.website{
+  position: absolute;
+ 
+  margin-top: 31%;
+    font-size: 17px;
+    left: 34%;
+
+ }
+ .office-container{
+  position: absolute;
+ top: 40%; 
+ /* margin-left: 10px; */
+ font-size: 20px;
+ color: #000; /* Text color (choose based on background) */
+ padding: 10px 20px; 
+}
