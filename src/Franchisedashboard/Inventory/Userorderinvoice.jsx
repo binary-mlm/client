@@ -158,9 +158,17 @@ const Userorderinvoice = () => {
                     <h5 className="font-size-15 text-start">Order Summary</h5>
                     <div className="row">
                     <div className=" col-lg-3 col-md-6 col-sm-12 text-start font-size-13">Order Number: {order.orderDetails.orderNumber}</div>
-                    <span className=" col-lg-9 col-md-6 col-sm-12 text-end font-size-13">Order date:{new Date(
+                    <div className="col-lg-9 col-md-6 col-sm-12 text-end font-size-13">
+                    <div className="d-flex flex-column justify-content-end">
+                    <span >Order date:{new Date(
                           order.orderDetails.orderDate
                         ).toLocaleDateString()}</span>
+                         {order.orderDetails.paymentoption ? <span>Mode of payment: {order.orderDetails.paymentoption}</span>: ""}
+                    </div>
+                    
+
+                    </div>
+                    
                         </div>
                     {/* <p>Order Date: <strong>{new Date(
                           order.orderDetails.orderDate

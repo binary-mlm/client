@@ -23,7 +23,12 @@ const Userorderlist = () => {
           if (response.data.length === 0) {
             swal("Oops!", "No inventory found for this franchise!", "error");
           } else {
-            setorderhistory(response.data.franchiseOrders);
+            // setorderhistory(response.data.franchiseOrders);
+            const sortedOrders = response.data.franchiseOrders.sort((a, b) => {
+              return new Date(b.orderDetails.orderDate) - new Date(a.orderDetails.orderDate);
+              
+            });
+            setorderhistory(sortedOrders);
             console.log(response.data.franchiseOrders);
           }
         } catch (error) {
@@ -70,6 +75,7 @@ const Userorderlist = () => {
                   <th className="text-center text-white">Order Number</th>
                   <th className="text-center text-white">Total Amount</th>
                   <th className="text-center text-white">Order Date</th>
+                  <th className="text-center text-white">Payment mode</th>
                   <th className="text-center text-white">User Name</th>
                   <th className="text-center text-white">Invoice</th>
                 </tr>
@@ -91,6 +97,7 @@ const Userorderlist = () => {
                         order.orderDetails.orderDate
                       ).toLocaleDateString()}
                     </td>
+                    <td className="text-center">{order.orderDetails.paymentoption ? <span>{order.orderDetails.paymentoption}</span>  : "-"}</td>
                     <td className="text-center">{order.userDetails.userName}</td>
                     <td className="text-center">
                       <span>
