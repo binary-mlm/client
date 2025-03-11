@@ -66,6 +66,14 @@
     /* Toggle button for sidebar visibility */
    
   }
+  .paymentoption{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  .optionmenu{
+    border: none;
+  }
   
    /* on larger screens */ 
   @media (min-width: 768px) {

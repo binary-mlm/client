@@ -14,6 +14,7 @@ const Inventory = () => {
   const [sponsors, setSponsors] = useState([]);
   const [userSponsorId, setSearchSponsorId] = useState("");
   const [selectedSponsorName, setSelectedSponsorName] = useState("");
+  const [payment, setSelectedpayment] = useState('');
   //  const [totalprice , settotalprice] = useState("");
 
   //user id search
@@ -177,6 +178,12 @@ const Inventory = () => {
       </div>
     ));
   };
+
+  
+  const handlepaymentoption = (event) => {
+    const selectedpayment = event.target.value;
+    setSelectedpayment(selectedpayment);
+  };
   //product
   const renderproductcard = (productdata) => {
     return (
@@ -246,11 +253,14 @@ const Inventory = () => {
 
       const franchiseId = sessionStorage.getItem("franchiseid");
 
-      if (!userSponsorId || !franchiseId) {
-        swal("opps", "User Sponsor ID or Franchise ID is missing", "error");
+      if (!userSponsorId || !franchiseId ) {
+        swal("Opps!", "User Sponsor ID or Franchise ID is missing", "error");
         return;
       }
-
+      if(!payment){
+        swal("Opps!", "Please select payment option", "error");
+        return;
+      }
       const products = cart.map(({ productId, quantity }) => ({
         productId: productId,
         quantity,
@@ -263,6 +273,7 @@ const Inventory = () => {
         userSponsorId,
         franchiseId,
         products,
+        payment
       });
       const response = await axios.post(
         ROOT_URL + "/api/franchise/calculateTotalBill",
@@ -270,6 +281,7 @@ const Inventory = () => {
           userSponsorId,
           franchiseId,
           products,
+          payment,
         }
       );
       console.log(response);
@@ -468,6 +480,18 @@ const Inventory = () => {
                             Submit Order
                           </button>
                         </div>
+                        <div className="d-flex">
+                        <div style={{color:"#095444"}} className="h6 mt-2">Payment option:</div>
+                        <div className="ms-2">
+                        <select className="mt-1 paymentoption"  onClick={handlepaymentoption}>
+                        <option value="">Select one</option>
+                          <option className="optionmenu" value="Cash">Cash</option>
+                          <option className="optionmenu" value="Card">Card</option>
+                          <option className="optionmenu" value="UPI">UPI</option>
+                        </select>
+                        </div>
+                        </div>
+                        
                       </div>
                     </div>
                   </div>
