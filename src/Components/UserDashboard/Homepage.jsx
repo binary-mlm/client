@@ -5,6 +5,7 @@ import "./homepage.css";
 const Homepage = () => {
   const [userdata, setUserdata] = useState([]);
   const [data, setData] = useState(null);
+  const [promotionbv , setpromotionbv] = useState(null);
   const [error, setError] = useState(null);
   const [referralleftLink, setReferralleftLink] = useState([]);
   const [referralrightLink, setReferralrightLink] = useState([]);
@@ -15,6 +16,7 @@ const Homepage = () => {
   const logIn = () => {
     const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
     const userId = sessionStorage.getItem("userid");
+    console.log(userId);
     //  console.log(token);
     if (!userdata.length) {
       axios
@@ -27,6 +29,7 @@ const Homepage = () => {
           sessionStorage.setItem("usermobilenumber", res.data.mobileNumber);
           // after successfully logged in, redirect to dashboard page
           dashboardData();
+          dashboardpromotionbv();
         })
         .catch((err) => {
           console.log(err);
@@ -36,10 +39,19 @@ const Homepage = () => {
   const dashboardData = async () => {
     try {
       const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { sponsorId });
-      console.log(response.data);
+      // console.log(response.data);
       setData(response.data);
-       
-     
+    } catch (err) {
+      console.log(err);
+      setError("Data not found");
+    }
+  };
+  const dashboardpromotionbv = async () => {
+    try {
+      const userId = sessionStorage.getItem("userid");
+      const response = await axios.get(`${ROOT_URL}/api/user/sponsorBVTree/${userId}`);
+       console.log(response.data);
+      setpromotionbv(response.data);
     } catch (err) {
       console.log(err);
       setError("Data not found");
@@ -150,7 +162,7 @@ const Homepage = () => {
                 <br />
                 ₹0
               </div>
-              <div className="card_item text-center ms-5 fw-bold">
+              <div className="card_item text-center ms-5 ">
                 <span className="fw-bold">TEAM SALES BONUS</span>
                 <br/>₹{data.teamSalesBonus}
                 {/* <br />L - {data.leftTreeUsersCount} | R - {data.rightTreeUsersCount} */}
@@ -198,6 +210,32 @@ const Homepage = () => {
                 <span className="fw-bold">TOTAL EARNING (₹)</span>
                 <br />
                 ₹0
+              </div>
+            </div>
+            <div className="d-flex mt-2">
+              <div className="card_item text-center">
+                <span className="fw-bold">INTERNATIONAL TOUR ACHIEVEMENT BONUS</span>
+                <br />
+                ₹0
+              </div>
+              <div className="card_item text-center ms-5 pe-4">
+                <span className="fw-bold">PROMOTION OFFER ACHIEVEMENT</span>
+                <br />
+                <span className="fw-bold" style={{color:"#106d85"}}>Mandarmani tour🏖️</span><br/>
+                {promotionbv === null ? (
+    <span className="text-warning">Loading...</span>
+  ) : promotionbv.withTimeLimit.totalBVLeft === 60000 &&
+    promotionbv.withTimeLimit.totalBVRight === 60000 ? (
+    <span className="text-success">Achieved</span>
+  ) : (
+    <span className="text-danger">Not achieved</span>
+  )} 
+              </div>
+              <div className="card_item text-center ms-5">
+                <span className="fw-bold">PROMOTION QUALIFIER BV</span>
+                <br />
+                {promotionbv === null ? ( <span className="text-warning">Loading...</span>) : 
+              <span>{promotionbv.withTimeLimit.totalBVLeft} | {promotionbv.withTimeLimit.totalBVRight}</span>   }
               </div>
             </div>
           </>
