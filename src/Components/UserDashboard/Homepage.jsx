@@ -138,7 +138,10 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">ACCUMULATE BV</span>
                 {/* {data?.totalMatchedBV ?? 0} */}
-                <br />{data?.totalaccumulatedbv?.leftBV ?? 0 } | {data?.totalaccumulatedbv?.rightBV ?? 0}
+                <br />
+                {promotionbv === null ? ( <span className="text-warning">Loading...</span>) : 
+                  <span>{promotionbv.withoutTimeLimit.totalBVLeft} | {promotionbv.withoutTimeLimit.totalBVRight}</span>   }
+                  {/* {data?.totalaccumulatedbv?.leftBV ?? 0 } | {data?.totalaccumulatedbv?.rightBV ?? 0} */}
               </div>
             </div>
             <div className="d-flex mt-2">
