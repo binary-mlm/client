@@ -195,7 +195,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">MONTHLY EARNING(₹)</span>
                 <br />
-                ₹0
+                ₹{data.monthlyEarning}
               </div>
             </div>
             <div className="d-flex mt-2">
