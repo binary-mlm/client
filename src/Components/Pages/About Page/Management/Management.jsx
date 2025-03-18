@@ -73,7 +73,7 @@ Overall, Dipan Das exemplifies how passion, integrity, and a focus on community 
         </div>
        
       </div>
-      <div className='row cardteam mb-2'>
+      {/* <div className='row cardteam mb-2'>
        
         <div className='col-lg-9 order-lg-1 order-2'>
         <div className='team-title'>
@@ -87,7 +87,7 @@ Overall, Dipan Das exemplifies how passion, integrity, and a focus on community 
         <img src={sourav}  className='img-fluid' style={{padding:"4%"}}/>
         
         </div>
-      </div>
+      </div> */}
       </div>
     </>
   )
