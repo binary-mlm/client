@@ -96,6 +96,10 @@ const Inventory = () => {
   }, [productdata]);
 
   const addToCart = (product) => {
+    if (product.stock === 0) {
+      swal("Out of Stock", "This product is currently unavailable.", "error");
+      return; // Prevent adding to the cart
+    }
     setCart((prevCart) => {
       // Check if the product is already in the cart
       const isProductInCart = prevCart.find(
