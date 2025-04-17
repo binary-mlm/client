@@ -1,6 +1,7 @@
 import React from 'react'
 import  pdf from "../../assets/images/udbhabpdf.pdf"
 import pdf2 from "../../assets/images/udbhabbengali.pdf"
+import pdf3 from "../../assets/images/UdbhabHindi.pdf"
 import imagepdf from "../../assets/images/imagepdf.png"
 
 
@@ -13,10 +14,15 @@ const Download = () => {
            <div className='text-center fw-bold text-dark'>Udbhab Product Brochure</div>
            <div className='text-center fw-bold text-dark'>(English)</div>
         </a>
-        <a href={pdf2} download >
+        <a className='me-5' href={pdf2} download >
            <img src={imagepdf}  width={150} alt='pdf download'/><br/>
            <div className='text-center fw-bold text-dark'>Udbhab Product Brochure</div>
            <div className='text-center fw-bold text-dark'>(Bengali)</div>
+        </a>
+        <a href={pdf3} download >
+           <img src={imagepdf}  width={150} alt='pdf download'/><br/>
+           <div className='text-center fw-bold text-dark'>Udbhab Product Brochure</div>
+           <div className='text-center fw-bold text-dark'>(Hindi)</div>
         </a>
         </div>
 
