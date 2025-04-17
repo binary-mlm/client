@@ -33,21 +33,21 @@ const Education = () => {
               <div className="trainer-designation" style={{fontSize:"13px"}}>Trainer</div>
             </div>
             </div> */}
-            <div className="col-lg-4">
+            <div className="col-lg-6">
             <div className="trainer-box text-center my-2">
               <img src={trainerview4}  className="rounded-circle"  width={80} height={80} alt='trainer' />
               <div className="trainer-name fw-bold">M Nilachandra Singha</div>
               <div className="trainer-designation" style={{fontSize:"13px"}}>Trainer</div>
             </div>
             </div>
-            <div className="col-lg-4 text-center my-2">
+            {/* <div className="col-lg-4 text-center my-2">
             <div className="trainer-box">
               <img src={trainerview1}  className="rounded-circle"  width={80} alt='trainer' />
               <div className="trainer-name fw-bold" style={{fontSize:"18px"}}>Zahangir Sardar</div>
               <div className="trainer-designation" style={{fontSize:"13px"}}>Trainer</div>
             </div>
-            </div>
-            <div className="col-lg-4 text-center my-2">
+            </div> */}
+            <div className="col-lg-6 text-center my-2">
             <div className="trainer-box">
               <img src={trainerview2}  className="rounded-circle"  width={80} height={80} alt='trainer' />
               <div className="trainer-name fw-bold" style={{fontSize:"18px"}}>Srijani Banerjee</div>
