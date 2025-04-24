@@ -1,20 +1,20 @@
 import React from 'react'
 import add1 from "../assets/images/add2.jpg"
-import add2 from "../assets/images/tourmondar.jpg";
+// import add2 from "../assets/images/tourmondar.jpg";
 import breaking from "../assets/images/breakingnews.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import rank1 from "../assets/images/Achivement/rank_1.jpg";
+// import rank1 from "../assets/images/Achivement/rank_1.jpg";
 import rank2 from "../assets/images/Achivement/rank2.jpg";
 import rank3 from "../assets/images/Achivement/rank3.jpg";
-import rank4 from "../assets/images/Achivement/rank4.jpg";
+// import rank4 from "../assets/images/Achivement/rank4.jpg";
 const Upcomingnews = () => {
   const images = [
-    [rank1],
+    // [rank1],
     [rank2],
     [rank3],
-    [rank4],
+    // [rank4],
   ];
   const settings = {
     dots: false,
@@ -41,7 +41,7 @@ const Upcomingnews = () => {
           <div className='d-flex flex-column'>
           <div className='text-center mt-2'><img  className="img-fluid blink2" src={breaking} style={{width:"80%"}}/></div>
         <div className='mt-2'>
-        <img className='mb-3' src={add2} style={{width:"100%"}}/>
+        {/* <img className='mb-3' src={add2} style={{width:"100%"}}/> */}
         
           <img src={add1} style={{width:"100%"}}/>
          
