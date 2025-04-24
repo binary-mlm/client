@@ -224,21 +224,21 @@ const Homepage = () => {
               <div className="card_item text-center ms-5 pe-4">
                 <span className="fw-bold">PROMOTION OFFER ACHIEVEMENT</span>
                 <br />
-                <span className="fw-bold" style={{color:"#106d85"}}>Mandarmani tour🏖️</span><br/>
-                {promotionbv === null ? (
+                {/* <span className="fw-bold" style={{color:"#106d85"}}>Mandarmani tour🏖️</span><br/> */}
+                {/* {promotionbv === null ? (
     <span className="text-warning">Loading...</span>
   ) : promotionbv.withTimeLimit.totalBVLeft === 60000 &&
     promotionbv.withTimeLimit.totalBVRight === 60000 ? (
     <span className="text-success">Achieved</span>
   ) : (
     <span className="text-danger">Not achieved</span>
-  )} 
+  )}  */}
               </div>
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">PROMOTION QUALIFIER BV</span>
                 <br />
-                {promotionbv === null ? ( <span className="text-warning">Loading...</span>) : 
-              <span>{promotionbv.withTimeLimit.totalBVLeft} | {promotionbv.withTimeLimit.totalBVRight}</span>   }
+                {/* {promotionbv === null ? ( <span className="text-warning">Loading...</span>) : 
+              <span>{promotionbv.withTimeLimit.totalBVLeft} | {promotionbv.withTimeLimit.totalBVRight}</span>   } */}
               </div>
             </div>
           </>
