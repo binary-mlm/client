@@ -8,12 +8,18 @@ import "slick-carousel/slick/slick-theme.css";
 // import rank1 from "../assets/images/Achivement/rank_1.jpg";
 import rank2 from "../assets/images/Achivement/rank2.jpg";
 import rank3 from "../assets/images/Achivement/rank3.jpg";
+import rank5 from "../assets/images/Achivement/rank5.jpg";
+import rank6 from "../assets/images/Achivement/rank6.jpg";
+import rank7 from "../assets/images/Achivement/rank7.jpg";
 // import rank4 from "../assets/images/Achivement/rank4.jpg";
 const Upcomingnews = () => {
   const images = [
     // [rank1],
     [rank2],
     [rank3],
+    [rank5],
+    [rank6],
+    [rank7]
     // [rank4],
   ];
   const settings = {
