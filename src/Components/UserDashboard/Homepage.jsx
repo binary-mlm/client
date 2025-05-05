@@ -9,6 +9,8 @@ const Homepage = () => {
   const [error, setError] = useState(null);
   const [referralleftLink, setReferralleftLink] = useState([]);
   const [referralrightLink, setReferralrightLink] = useState([]);
+  const [teamSalesBonus, setTeamSalesBonus] = useState(0);
+  const [weeklyEarning, setWeeklyearning] = useState(0);
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const sponsorId = sessionStorage.getItem("mySponsorId");
   const [copied, setCopied] = useState(false);
@@ -41,6 +43,14 @@ const Homepage = () => {
       const response = await axios.post(ROOT_URL + '/api/user/getDashboardData', { sponsorId });
       // console.log(response.data);
       setData(response.data);
+      let teamSalesBonus = Math.min(
+        response.data.totalBVPointsEarned.leftBV, response.data.totalBVPointsEarned.rightBV
+      ) * 0.1;
+      setTeamSalesBonus(teamSalesBonus);
+      const totalAmount = (response.data.directSalesBonus) + teamSalesBonus;
+      const tds = Math.round(totalAmount * 0.05); // 5% TDS
+      const payoutAmount = Math.round(totalAmount - tds);
+      setWeeklyearning(payoutAmount);
     } catch (err) {
       console.log(err);
       setError("Data not found");
@@ -167,13 +177,14 @@ const Homepage = () => {
               </div>
               <div className="card_item text-center ms-5 ">
                 <span className="fw-bold">TEAM SALES BONUS</span>
-                <br/>₹{data.teamSalesBonus}
+                <br/>₹{teamSalesBonus}
                 {/* <br />L - {data.leftTreeUsersCount} | R - {data.rightTreeUsersCount} */}
               </div>
               <div className="card_item text-center ms-5 fw-bold">
                 <span className="fw-bold">WEEKLY EARNING(₹)</span>
                 <br />
-                ₹{data.weeklyEarning}
+                {/* ₹{data.weeklyEarning} */}
+                ₹{weeklyEarning}
               </div>
             </div>
             <div className="d-flex mt-2">
@@ -195,7 +206,7 @@ const Homepage = () => {
               <div className="card_item text-center ms-5">
                 <span className="fw-bold">MONTHLY EARNING(₹)</span>
                 <br />
-                ₹{data.monthlyEarning}
+                --
               </div>
             </div>
             <div className="d-flex mt-2">
