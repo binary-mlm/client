@@ -7,7 +7,8 @@ const Userorderlist = () => {
   const franchiseId = sessionStorage.getItem("franchiseid");
   const [orderhistory, setorderhistory] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const ordersPerPage = 20; // Number of orders per page
+  const [searchQuery, setSearchQuery] = useState("");
+  const ordersPerPage = 30;
   const ROOT_URL = import.meta.env.VITE_LOCALHOST_URL;
   const navigate = useNavigate();
 
@@ -23,13 +24,11 @@ const Userorderlist = () => {
           if (response.data.length === 0) {
             swal("Oops!", "No inventory found for this franchise!", "error");
           } else {
-            // setorderhistory(response.data.franchiseOrders);
             const sortedOrders = response.data.franchiseOrders.sort((a, b) => {
               return new Date(b.orderDetails.orderDate) - new Date(a.orderDetails.orderDate);
-              
             });
             setorderhistory(sortedOrders);
-            console.log(response.data.franchiseOrders);
+            console.log("Order history:", sortedOrders);
           }
         } catch (error) {
           console.error("Error fetching:", error);
@@ -46,12 +45,20 @@ const Userorderlist = () => {
     navigate("/franchise/userorderinvoice", { state: { franchiseId, order } });
   };
 
-  // ** Pagination Logic **
-  const totalPages = Math.ceil(orderhistory.length / ordersPerPage);
+  // Filtered data based on search query
+  const filteredOrders = orderhistory.filter((order) => {
+    const userName = order.userDetails.userName?.toLowerCase() || "";
+    const userId = order.userDetails.user.mySponsorId?.toLowerCase() || "";
+    const query = searchQuery.toLowerCase();
 
+    return userName.includes(query) || userId.includes(query);
+  });
+
+  // Pagination Logic
+  const totalPages = Math.ceil(filteredOrders.length / ordersPerPage);
   const indexOfLastOrder = currentPage * ordersPerPage;
   const indexOfFirstOrder = indexOfLastOrder - ordersPerPage;
-  const currentOrders = orderhistory.slice(indexOfFirstOrder, indexOfLastOrder);
+  const currentOrders = filteredOrders.slice(indexOfFirstOrder, indexOfLastOrder);
 
   const nextPage = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
@@ -64,7 +71,28 @@ const Userorderlist = () => {
   return (
     <>
       <div className="mt-5">
-        <div className="h3 text-center">Customer Invoice History</div>
+        <div className="row">
+          <div className="col-7 h3 text-end">Customer Invoice History</div>
+          <div className="col-5">
+            <div className="d-flex justify-content-end">
+              <label className="mt-2 fw-bold" htmlFor="searchFranchise" style={{ fontSize: "17px" }}>
+                Search user name/id:
+              </label>
+              <div>
+                <input
+                  className="ms-3 p-2 border-0 rounded-3"
+                  id="searchFranchise"
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setCurrentPage(1); // Reset to first page on search
+                  }}
+                  placeholder="Search..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
 
         {orderhistory.length > 0 ? (
           <div className="table-responsive">
@@ -93,11 +121,11 @@ const Userorderlist = () => {
                       {order.orderDetails.totalAmount}/-
                     </td>
                     <td className="text-center">
-                      {new Date(
-                        order.orderDetails.orderDate
-                      ).toLocaleDateString()}
+                      {new Date(order.orderDetails.orderDate).toLocaleDateString()}
                     </td>
-                    <td className="text-center">{order.orderDetails.paymentoption ? <span>{order.orderDetails.paymentoption}</span>  : "-"}</td>
+                    <td className="text-center">
+                      {order.orderDetails.paymentoption || "-"}
+                    </td>
                     <td className="text-center">{order.userDetails.userName}</td>
                     <td className="text-center">
                       <span>
@@ -113,11 +141,10 @@ const Userorderlist = () => {
               </tbody>
             </table>
 
-            {/* Pagination Buttons */}
+            {/* Pagination Controls */}
             <div className="d-flex justify-content-center mt-4 mb-3">
               <button
                 className="verifybutton me-2"
-                
                 onClick={prevPage}
                 disabled={currentPage === 1}
               >
@@ -128,7 +155,6 @@ const Userorderlist = () => {
               </span>
               <button
                 className="verifybutton ms-2"
-                
                 onClick={nextPage}
                 disabled={currentPage === totalPages}
               >
